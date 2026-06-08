@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { dbSave, dbSubscribe } from "./firebase";
-import { ALL_TEAMS, COLORS, GROUPS, getSnakeOrder, calcPlayerPoints, flagUrl } from "./data";
+import { ALL_TEAMS, COLORS, GROUPS, getSnakeOrder, buildStandings, flagUrl } from "./data";
 
 // ─── FLAG IMAGE COMPONENT ─────────────────────────────────────────────────────
 // Uses flagcdn.com for real flag images — works on Windows, all browsers
@@ -22,6 +22,33 @@ function Flag({ iso, size = 24, style: extra }) {
       loading="lazy"
       onError={e => { e.target.style.display = "none"; }}
     />
+  );
+}
+
+// ─── BRANDMARK ────────────────────────────────────────────────────────────────
+// Original "26" wordmark with the three host-nation flags (Canada · Mexico · USA).
+// Not the trademarked official FIFA artwork — an in-app mark built from our flags.
+function Brandmark({ size = 28 }) {
+  const flagH = Math.round(size * 0.46);
+  return (
+    <span style={{ display: "inline-flex", alignItems: "center", gap: size * 0.32 }}>
+      <span style={{
+        display: "inline-flex", flexDirection: "column", gap: 1.5,
+        borderRadius: 3, overflow: "hidden",
+        boxShadow: "0 1px 4px rgba(0,0,0,0.4)",
+      }}>
+        {["ca", "mx", "us"].map(iso => (
+          <img key={iso} src={flagUrl(iso, 40)} alt={iso}
+            width={Math.round(flagH * 1.5)} height={Math.round(flagH / 1.5)}
+            style={{ objectFit: "cover", display: "block" }}
+            loading="lazy" onError={e => { e.target.style.display = "none"; }} />
+        ))}
+      </span>
+      <span style={{
+        fontSize: size, fontWeight: 900, lineHeight: 1, letterSpacing: "-0.04em",
+        color: T.accent, fontStyle: "italic",
+      }}>26</span>
+    </span>
   );
 }
 
@@ -211,7 +238,9 @@ function Setup({ onStart }) {
     <div style={{ maxWidth: 520, margin: "0 auto" }}>
       {/* Hero */}
       <div style={{ textAlign: "center", padding: "40px 0 32px" }}>
-        <div style={{ fontSize: 48, marginBottom: 12 }}>⚽</div>
+        <div style={{ display: "flex", justifyContent: "center", marginBottom: 16 }}>
+          <Brandmark size={52} />
+        </div>
         <h1 style={{ fontSize: 26, fontWeight: 800, color: T.text, marginBottom: 8 }}>World Cup 2026 Pool</h1>
         <p style={{ fontSize: 14, color: T.muted, lineHeight: 1.6 }}>
           Snake draft · 48 teams · Live leaderboard<br />June 11 – July 19
@@ -643,9 +672,8 @@ function Scores({ players, draft, scores, setScores, lastFetched, setLastFetched
     dbSave({ players, draft, scores: next, lastFetched });
   };
 
-  const standings = players
-    .map((name, idx) => ({ name, idx, ...calcPlayerPoints(idx, draft, scores) }))
-    .sort((a, b) => b.pts - a.pts || b.goals - a.goals);
+  const standings = buildStandings(players, draft, scores);
+  const anyScored = standings.some(p => p.pts > 0 || p.goals > 0);
 
   const filtered = ALL_TEAMS.filter(t =>
     (filterGroup === "All" || t.group === filterGroup) &&
@@ -663,18 +691,20 @@ function Scores({ players, draft, scores, setScores, lastFetched, setLastFetched
           }}>Full view →</button>
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-          {standings.map((p, rank) => {
+          {standings.map((p) => {
             const medals = ["🥇", "🥈", "🥉"];
+            const isFirst = anyScored && p.rank === 0;
             return (
               <div key={p.idx} style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                <span style={{ fontSize: 16, minWidth: 24 }}>{medals[rank] || `${rank + 1}`}</span>
-                <div style={{ flex: 1 }}>
+                <span style={{ fontSize: 16, minWidth: 24, textAlign: "center" }}>{anyScored ? (medals[p.rank] || `${p.rank + 1}`) : "–"}</span>
+                <div style={{ flex: 1, minWidth: 0 }}>
                   <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
                     <span style={{ width: 8, height: 8, borderRadius: "50%", background: COLORS[p.idx], flexShrink: 0, display: "inline-block" }} />
                     <span style={{ fontSize: 13, fontWeight: 600 }}>{p.name}</span>
+                    {!isFirst && p.gap > 0 && <span style={{ fontSize: 11, color: T.muted }}>−{p.gap}</span>}
                   </div>
                 </div>
-                <span style={{ fontWeight: 700, color: rank === 0 ? T.accent : T.text, fontSize: 14 }}>{p.pts}</span>
+                <span style={{ fontWeight: 700, color: isFirst ? T.accent : T.text, fontSize: 14 }}>{p.pts}</span>
                 <span style={{ color: T.muted, fontSize: 11 }}>pts</span>
               </div>
             );
@@ -719,17 +749,22 @@ function Scores({ players, draft, scores, setScores, lastFetched, setLastFetched
       {/* Rosters tab */}
       {tab === "rosters" && (
         <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-          {standings.map((p, rank) => {
+          {standings.map((p) => {
             return (
               <Card key={p.idx} accent={COLORS[p.idx]}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 12 }}>
                   <div>
-                    <div style={{ fontSize: 15, fontWeight: 700, color: COLORS[p.idx], marginBottom: 2 }}>{p.name}</div>
+                    <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 2 }}>
+                      {anyScored && <span style={{ fontSize: 13 }}>{["🥇","🥈","🥉"][p.rank] || `#${p.rank + 1}`}</span>}
+                      <span style={{ fontSize: 15, fontWeight: 700, color: COLORS[p.idx] }}>{p.name}</span>
+                    </div>
                     <div style={{ fontSize: 12, color: T.muted }}>{p.teams.length} teams · {p.goals} goals</div>
                   </div>
                   <div style={{ textAlign: "right" }}>
-                    <div style={{ fontSize: 22, fontWeight: 800, color: rank === 0 ? T.accent : T.text }}>{p.pts}</div>
-                    <div style={{ fontSize: 11, color: T.muted }}>points</div>
+                    <div style={{ fontSize: 22, fontWeight: 800, color: anyScored && p.rank === 0 ? T.accent : T.text }}>{p.pts}</div>
+                    <div style={{ fontSize: 11, color: T.muted }}>
+                      {p.bonusPts > 0 ? `${p.groupPts} grp +${p.bonusPts} bonus` : "points"}
+                    </div>
                   </div>
                 </div>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
@@ -840,26 +875,39 @@ function Scores({ players, draft, scores, setScores, lastFetched, setLastFetched
 
 // ─── STANDINGS SCREEN ─────────────────────────────────────────────────────────
 function Standings({ players, draft, scores, lastFetched, onBack }) {
-  const standings = players
-    .map((name, idx) => ({ name, idx, ...calcPlayerPoints(idx, draft, scores) }))
-    .sort((a, b) => b.pts - a.pts || b.goals - a.goals);
+  const standings = buildStandings(players, draft, scores);
+  const anyScored = standings.some(p => p.pts > 0 || p.goals > 0);
 
   return (
     <div style={{ maxWidth: 520, margin: "0 auto" }}>
       <div style={{ textAlign: "center", padding: "32px 0 24px" }}>
-        <div style={{ fontSize: 40, marginBottom: 8 }}>🏆</div>
+        <div style={{ display: "flex", justifyContent: "center", marginBottom: 12 }}>
+          <Brandmark size={36} />
+        </div>
         <h2 style={{ fontSize: 22, fontWeight: 800, color: T.text }}>Leaderboard</h2>
-        {lastFetched > 0 && (
-          <div style={{ fontSize: 12, color: T.muted, marginTop: 6 }}>
-            Scores as of {new Date(lastFetched).toLocaleString()} · Tiebreaker: total goals
-          </div>
-        )}
+        <div style={{ fontSize: 12, color: T.muted, marginTop: 6 }}>
+          {lastFetched > 0
+            ? `Scores as of ${new Date(lastFetched).toLocaleString()} · Tiebreaker: total goals`
+            : "Tiebreaker: total goals scored"}
+        </div>
       </div>
 
+      {!anyScored && (
+        <div style={{
+          background: T.accent + "12", border: `1px solid ${T.accent}30`,
+          borderRadius: T.radius, padding: "14px 16px", marginBottom: 14,
+          fontSize: 13, color: T.text, lineHeight: 1.6, textAlign: "center",
+        }}>
+          ⚽ The tournament hasn't kicked off yet — everyone starts at 0.
+          Standings update automatically as results come in.
+        </div>
+      )}
+
       <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-        {standings.map((p, rank) => {
+        {standings.map((p) => {
           const medals = ["🥇", "🥈", "🥉"];
-          const isFirst = rank === 0;
+          const isFirst = anyScored && p.rank === 0;
+          const rankLabel = anyScored ? (medals[p.rank] || `${p.rank + 1}`) : "–";
           return (
             <div key={p.idx} style={{
               background: isFirst ? `linear-gradient(135deg, ${T.accentDim}40, ${T.surface})` : T.surface,
@@ -868,18 +916,22 @@ function Standings({ players, draft, scores, lastFetched, onBack }) {
               borderRadius: T.radius, padding: 18,
             }}>
               <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
-                <div style={{ fontSize: rank < 3 ? 28 : 15, minWidth: 32, textAlign: "center", fontWeight: 700, color: T.muted }}>
-                  {medals[rank] || `${rank + 1}`}
+                <div style={{ fontSize: p.rank < 3 ? 28 : 15, minWidth: 32, textAlign: "center", fontWeight: 700, color: T.muted }}>
+                  {rankLabel}
                 </div>
-                <div style={{ flex: 1 }}>
+                <div style={{ flex: 1, minWidth: 0 }}>
                   <div style={{ fontSize: 16, fontWeight: 700, color: isFirst ? T.accent : T.text }}>{p.name}</div>
                   <div style={{ fontSize: 12, color: T.muted, marginTop: 2 }}>
                     {p.teams.length} teams · {p.goals} goals
+                    {!isFirst && p.gap > 0 && <span style={{ color: T.red }}> · −{p.gap} behind</span>}
+                    {isFirst && anyScored && <span style={{ color: T.accent }}> · leader</span>}
                   </div>
                 </div>
                 <div style={{ textAlign: "right" }}>
                   <div style={{ fontSize: 24, fontWeight: 800, color: isFirst ? T.accent : T.text }}>{p.pts}</div>
-                  <div style={{ fontSize: 11, color: T.muted }}>points</div>
+                  <div style={{ fontSize: 11, color: T.muted }}>
+                    {p.bonusPts > 0 ? `${p.groupPts} grp +${p.bonusPts} bonus` : "points"}
+                  </div>
                 </div>
               </div>
 
@@ -890,6 +942,7 @@ function Standings({ players, draft, scores, lastFetched, onBack }) {
                   const c = ADV_COLOR[adv];
                   return (
                     <span key={t.name} style={{
+                      display: "inline-flex", alignItems: "center", gap: 4,
                       padding: "3px 8px", borderRadius: 999, fontSize: 11, fontWeight: 500,
                       background: c ? c + "20" : T.surface2,
                       color: c || T.muted,
@@ -974,7 +1027,7 @@ export default function App() {
       <>
         <style>{globalStyle}</style>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "center", minHeight: "100vh", flexDirection: "column", gap: 16 }}>
-          <div style={{ fontSize: 36 }}>⚽</div>
+          <Brandmark size={44} />
           <div style={{ fontSize: 13, color: T.muted, letterSpacing: "0.06em" }}>Connecting…</div>
         </div>
       </>
@@ -993,8 +1046,8 @@ export default function App() {
           borderBottom: `1px solid ${T.border}`,
         }}>
           <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 10px", display: "flex", alignItems: "center", gap: 0, height: 52 }}>
-            <span style={{ fontSize: 18, marginRight: 10 }}>⚽</span>
-            <span style={{ fontSize: 14, fontWeight: 700, color: T.text, marginRight: "auto" }}>WC26 Pool</span>
+            <span style={{ marginRight: 10, display: "inline-flex" }}><Brandmark size={20} /></span>
+            <span style={{ fontSize: 14, fontWeight: 700, color: T.text, marginRight: "auto" }}>Pool</span>
 
             {/* Stage tabs — hide Players/Draft when draft is locked */}
             <div style={{ display: "flex", gap: 2 }}>

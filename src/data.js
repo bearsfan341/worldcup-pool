@@ -101,13 +101,32 @@ export function calcPlayerPoints(playerIdx, draft, scores) {
   const teams = draft
     .filter(d => d.playerIdx === playerIdx)
     .map(d => ALL_TEAMS[d.teamIdx]);
-  let pts = 0, goals = 0;
+  let groupPts = 0, bonusPts = 0, goals = 0;
   teams.forEach(t => {
     const s = scores[t.name];
     if (!s) return;
-    pts += (s.w || 0) * POINT_SYSTEM.groupWin + (s.d || 0) * POINT_SYSTEM.groupDraw;
-    pts += ADVANCEMENT_BONUS[s.advancement] || 0;
+    groupPts += (s.w || 0) * POINT_SYSTEM.groupWin + (s.d || 0) * POINT_SYSTEM.groupDraw;
+    bonusPts += ADVANCEMENT_BONUS[s.advancement] || 0;
     goals += s.gf || 0;
   });
-  return { pts, goals, teams };
+  return { pts: groupPts + bonusPts, groupPts, bonusPts, goals, teams };
+}
+
+// Build a sorted leaderboard with competition ranking (ties share a rank) and
+// each player's point gap behind the leader.
+export function buildStandings(players, draft, scores) {
+  const rows = players
+    .map((name, idx) => ({ name, idx, ...calcPlayerPoints(idx, draft, scores) }))
+    .sort((a, b) => b.pts - a.pts || b.goals - a.goals);
+  const leaderPts = rows.length ? rows[0].pts : 0;
+  let prevPts = null, prevGoals = null, prevRank = 0;
+  rows.forEach((r, i) => {
+    if (r.pts === prevPts && r.goals === prevGoals) {
+      r.rank = prevRank;          // tie → same rank as the player above
+    } else {
+      r.rank = i; prevRank = i; prevPts = r.pts; prevGoals = r.goals;
+    }
+    r.gap = leaderPts - r.pts;
+  });
+  return rows;
 }
