@@ -8,7 +8,7 @@ import { getDatabase, ref, onValue, set, get } from "firebase/database";
 const firebaseConfig = {
   apiKey:            "AIzaSyD6ZKl9_7KQrIr7BhZWqtEoul-pYQsLCTw",
   authDomain:        "worldcup-pool-61157.firebaseapp.com",
-  databaseURL:       "https://worldcup-pool-61157-default-rtdb.firebaseio.com"",
+  databaseURL:       "https://worldcup-pool-61157-default-rtdb.firebaseio.com",
   projectId:         "worldcup-pool-61157",
   storageBucket:     "worldcup-pool-61157.firebasestorage.app",
   messagingSenderId: "26462789319",
