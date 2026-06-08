@@ -63,7 +63,7 @@ Advancement values: "group" | "r32" | "r16" | "qf" | "sf" | "final" | "champion"
 Teams: ${ALL_TEAMS.map(t => t.name).join(", ")}
 Include ALL teams. Use 0s and "group" for teams that haven't played yet.`;
 
-  const res = await fetch("/api/fetch-scores", {
+  const res = await fetch("/api/fetch-scores.js", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ apiKey, prompt }),
