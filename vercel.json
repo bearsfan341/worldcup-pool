@@ -1,9 +1,5 @@
 {
   "version": 2,
-  "builds": [
-    { "src": "api/fetch-scores.js", "use": "@vercel/node" },
-    { "src": "package.json", "use": "@vercel/static-build", "config": { "distDir": "build" } }
-  ],
   "routes": [
     { "src": "/api/fetch-scores", "dest": "/api/fetch-scores.js" },
     { "src": "/(.*)", "dest": "/index.html" }
