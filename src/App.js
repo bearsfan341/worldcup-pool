@@ -63,7 +63,7 @@ Advancement values: "group" | "r32" | "r16" | "qf" | "sf" | "final" | "champion"
 Teams: ${ALL_TEAMS.map(t => t.name).join(", ")}
 Include ALL teams. Use 0s and "group" for teams that haven't played yet.`;
 
-  const res = await fetch("/api/fetch-scores.js", {
+  const res = await fetch("/api/fetch-scores", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ apiKey, prompt }),
@@ -117,13 +117,18 @@ const T = {
 const globalStyle = `
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: ${T.bg}; color: ${T.text}; font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  body { background: ${T.bg}; color: ${T.text}; font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%; }
   input[type=number]::-webkit-inner-spin-button { opacity: 1; }
   ::-webkit-scrollbar { width: 4px; height: 4px; }
   ::-webkit-scrollbar-track { background: transparent; }
   ::-webkit-scrollbar-thumb { background: ${T.border}; border-radius: 2px; }
-  button { font-family: inherit; cursor: pointer; }
-  input { font-family: inherit; }
+  button { font-family: inherit; cursor: pointer; -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+  input { font-family: inherit; font-size: 16px; } /* 16px prevents iOS zoom on focus */
+  select { font-family: inherit; }
+  @media (max-width: 480px) {
+    .hide-mobile { display: none !important; }
+    .full-mobile { width: 100% !important; }
+  }
 `;
 
 // ─── REUSABLE UI COMPONENTS ───────────────────────────────────────────────────
@@ -282,17 +287,22 @@ function Setup({ onStart }) {
 }
 
 // ─── DRAFT SCREEN ─────────────────────────────────────────────────────────────
-function Draft({ players, onComplete }) {
-  const totalPicks = ALL_TEAMS.length;
-  const snakeOrder = useRef(getSnakeOrder(players.length, totalPicks)).current;
-  const [draft, setDraft] = useState([]);
+function Draft({ players, onComplete, onLockDraft, isCommissioner, draftLocked }) {
+  const totalPicks   = ALL_TEAMS.length;
+  const numRounds    = Math.ceil(totalPicks / players.length);
+  const snakeOrder   = useRef(getSnakeOrder(players.length, totalPicks)).current;
+  const [draft, setDraft]             = useState([]);
   const [filterGroup, setFilterGroup] = useState("All");
-  const [search, setSearch] = useState("");
+  const [search, setSearch]           = useState("");
+  const [lastPick, setLastPick]       = useState(null);
+  const [view, setView]               = useState("board");
 
-  const currentPick = draft.length;
-  const isDone = currentPick >= totalPicks;
-  const pickedIdxs = new Set(draft.map(d => d.teamIdx));
+  const currentPick      = draft.length;
+  const isDone           = currentPick >= totalPicks;
   const currentPlayerIdx = !isDone ? snakeOrder[currentPick] : null;
+  const pickedIdxs       = new Set(draft.map(d => d.teamIdx));
+  const round            = Math.floor(currentPick / players.length) + 1;
+  const upcoming         = !isDone ? snakeOrder.slice(currentPick, currentPick + 6) : [];
 
   const available = ALL_TEAMS
     .map((t, i) => ({ ...t, idx: i }))
@@ -302,109 +312,290 @@ function Draft({ players, onComplete }) {
       (search === "" || t.name.toLowerCase().includes(search.toLowerCase()))
     );
 
-  const upcoming = !isDone ? snakeOrder.slice(currentPick, currentPick + 5) : [];
-  const round = Math.floor(currentPick / players.length) + 1;
-
   const pick = useCallback((teamIdx) => {
     if (isDone) return;
     const next = [...draft, { playerIdx: snakeOrder[currentPick], teamIdx }];
+    setLastPick({ teamIdx });
     setDraft(next);
+    setSearch(""); setFilterGroup("All");
     if (next.length >= totalPicks) onComplete(next);
+    else setView("board");
   }, [draft, currentPick, isDone, onComplete, snakeOrder, totalPicks]);
 
+  const playerTeams = (pIdx) =>
+    draft.filter(d => d.playerIdx === pIdx).map(d => ALL_TEAMS[d.teamIdx]);
+
+  // Board grid: rows=rounds, cols=players (snake order aware)
+  const board = Array.from({ length: numRounds }, (_, r) =>
+    Array.from({ length: players.length }, (_, p) => {
+      const pickNum = r * players.length + p;
+      const d = draft[pickNum];
+      return { team: d ? ALL_TEAMS[d.teamIdx] : null, ownerIdx: d?.playerIdx, pickNum };
+    })
+  );
+
+  const pct = Math.round((currentPick / totalPicks) * 100);
+
   return (
-    <div style={{ maxWidth: 680, margin: "0 auto" }}>
-      {/* Pick header */}
-      {!isDone && (
-        <div style={{
-          background: T.surface, border: `1px solid ${T.border}`,
-          borderTop: `3px solid ${COLORS[currentPlayerIdx]}`,
-          borderRadius: T.radius, padding: 20, marginBottom: 16, textAlign: "center",
-        }}>
-          <div style={{ fontSize: 11, color: T.muted, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 6 }}>
-            Round {round} · Pick {currentPick + 1} of {totalPicks}
-          </div>
-          <div style={{ fontSize: 22, fontWeight: 800, color: T.text, marginBottom: 12 }}>
-            <span style={{ color: COLORS[currentPlayerIdx] }}>{players[currentPlayerIdx]}</span>'s pick
-          </div>
-          {/* Up next */}
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 6, flexWrap: "wrap" }}>
-            <span style={{ fontSize: 11, color: T.muted }}>Up next:</span>
-            {upcoming.slice(1).map((pIdx, i) => (
-              <span key={i} style={{
-                padding: "3px 10px", borderRadius: 999, fontSize: 11, fontWeight: 500,
-                background: COLORS[pIdx] + "20", color: COLORS[pIdx],
-                border: `1px solid ${COLORS[pIdx]}40`,
-              }}>{players[pIdx]}</span>
+    <div style={{ minHeight: "100vh", background: T.bg, display: "flex", flexDirection: "column" }}>
+      <style>{`
+        @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.45} }
+        @keyframes flashIn { 0%{transform:scale(1.06);filter:brightness(1.4)} 100%{transform:scale(1);filter:brightness(1)} }
+        @keyframes slideUp { from{transform:translateY(12px);opacity:0} to{transform:translateY(0);opacity:1} }
+        .team-btn:active { transform: scale(0.96); }
+      `}</style>
+
+      {/* ── TOP BAR ── */}
+      <div style={{
+        background: T.surface, borderBottom: `1px solid ${T.border}`,
+        padding: "10px 12px", position: "sticky", top: 0, zIndex: 50,
+      }}>
+        {/* Row 1: spotlight + view toggle */}
+        <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 8 }}>
+          {!isDone ? (
+            <div style={{
+              display: "flex", alignItems: "center", gap: 10, flex: 1,
+              background: COLORS[currentPlayerIdx] + "18",
+              border: `1px solid ${COLORS[currentPlayerIdx]}40`,
+              borderRadius: T.radiusSm, padding: "8px 12px",
+            }}>
+              <div style={{
+                width: 36, height: 36, borderRadius: "50%", background: COLORS[currentPlayerIdx],
+                display: "flex", alignItems: "center", justifyContent: "center",
+                fontSize: 14, fontWeight: 800, color: "#fff", flexShrink: 0,
+              }}>{players[currentPlayerIdx][0].toUpperCase()}</div>
+              <div style={{ minWidth: 0 }}>
+                <div style={{ fontSize: 10, color: T.muted, letterSpacing: "0.06em" }}>ROUND {round} · PICK {currentPick + 1}</div>
+                <div style={{ fontSize: 16, fontWeight: 800, color: COLORS[currentPlayerIdx], overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+                  {players[currentPlayerIdx]}
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div style={{ display: "flex", alignItems: "center", gap: 12, flex: 1, flexWrap: "wrap" }}>
+              <span style={{ fontSize: 16, fontWeight: 800, color: T.accent }}>🏆 Draft Complete!</span>
+              {isCommissioner && !draftLocked && (
+                <button onClick={onLockDraft} style={{
+                  padding: "7px 14px", background: T.green, border: "none",
+                  borderRadius: T.radiusSm, color: "#fff", fontSize: 12, fontWeight: 700, cursor: "pointer",
+                }}>🔒 Save &amp; Lock Draft</button>
+              )}
+              {draftLocked && (
+                <span style={{ fontSize: 11, color: T.green, fontWeight: 600 }}>🔒 Locked</span>
+              )}
+            </div>
+          )}
+
+          {/* View toggle */}
+          <div style={{ display: "flex", background: T.surface2, borderRadius: T.radiusSm, padding: 3, flexShrink: 0 }}>
+            {[["board","📋"],["pick","⚽"]].map(([key, icon]) => (
+              <button key={key} onClick={() => setView(key)} style={{
+                padding: "6px 12px", borderRadius: 6, fontSize: 13, border: "none",
+                background: view === key ? T.accent : "transparent",
+                color: view === key ? "#000" : T.muted,
+                fontWeight: view === key ? 700 : 400, cursor: "pointer",
+              }}>{icon} {key === "board" ? "Board" : "Pick"}</button>
             ))}
           </div>
         </div>
+
+        {/* Row 2: progress + up next */}
+        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+          <div style={{ flex: 1 }}>
+            <div style={{ height: 5, background: T.border, borderRadius: 3 }}>
+              <div style={{ width: `${pct}%`, height: "100%", background: T.accent, borderRadius: 3, transition: "width 0.3s" }} />
+            </div>
+          </div>
+          <div style={{ fontSize: 10, color: T.muted, flexShrink: 0 }}>{pct}%</div>
+          {!isDone && (
+            <div style={{ display: "flex", gap: 4, alignItems: "center", flexShrink: 0 }}>
+              <span style={{ fontSize: 9, color: T.muted }}>NEXT</span>
+              {upcoming.slice(1, 4).map((pIdx, i) => (
+                <div key={i} title={players[pIdx]} style={{
+                  width: 22, height: 22, borderRadius: "50%",
+                  background: COLORS[pIdx] + "40", border: `1.5px solid ${COLORS[pIdx]}80`,
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                  fontSize: 9, fontWeight: 700, color: COLORS[pIdx],
+                }}>{players[pIdx][0]}</div>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* ── BOARD VIEW ── */}
+      {view === "board" && (
+        <div style={{ flex: 1, overflowX: "auto", WebkitOverflowScrolling: "touch", padding: "12px 8px" }}>
+          <table style={{ borderCollapse: "separate", borderSpacing: 3, tableLayout: "fixed" }}>
+            <colgroup>
+              <col style={{ width: 32 }} />
+              {players.map((_, i) => <col key={i} style={{ width: 100 }} />)}
+            </colgroup>
+            <thead>
+              <tr>
+                <th style={{ padding: "6px 4px", fontSize: 9, color: T.muted, fontWeight: 600, textAlign: "center" }}>#</th>
+                {players.map((p, i) => (
+                  <th key={i} style={{
+                    padding: "6px 4px",
+                    background: i === currentPlayerIdx && !isDone ? COLORS[i] + "18" : "transparent",
+                    borderBottom: `2px solid ${i === currentPlayerIdx && !isDone ? COLORS[i] : "transparent"}`,
+                    borderRadius: "6px 6px 0 0",
+                  }}>
+                    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 3 }}>
+                      <div style={{
+                        width: 24, height: 24, borderRadius: "50%", background: COLORS[i],
+                        display: "flex", alignItems: "center", justifyContent: "center",
+                        fontSize: 10, fontWeight: 800, color: "#fff",
+                      }}>{p[0].toUpperCase()}</div>
+                      <span style={{ fontSize: 10, fontWeight: 700, color: COLORS[i], overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", maxWidth: 90, display: "block" }}>{p}</span>
+                    </div>
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {board.map((row, r) => (
+                <tr key={r}>
+                  <td style={{ textAlign: "center", padding: "3px 2px" }}>
+                    <div style={{ fontSize: 9, color: T.muted, fontWeight: 600 }}>{r + 1}</div>
+                    <div style={{ fontSize: 8, color: T.border }}>{r % 2 === 0 ? "→" : "←"}</div>
+                  </td>
+                  {row.map(({ team, ownerIdx, pickNum }, p) => {
+                    const isActive = pickNum === currentPick;
+                    const isFlash  = lastPick && team && team === ALL_TEAMS[lastPick.teamIdx];
+                    return (
+                      <td key={p} style={{ padding: "2px" }}>
+                        {team ? (
+                          <div style={{
+                            background: COLORS[ownerIdx] + "22",
+                            border: `1px solid ${COLORS[ownerIdx]}50`,
+                            borderRadius: 6, padding: "4px 5px",
+                            display: "flex", alignItems: "center", gap: 4,
+                            animation: isFlash ? "flashIn 0.5s ease" : "none",
+                            minHeight: 36,
+                          }}>
+                            <Flag iso={team.iso} size={16} />
+                            <div style={{ minWidth: 0 }}>
+                              <div style={{ fontSize: 9, fontWeight: 600, color: T.text, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{team.name}</div>
+                              <div style={{ fontSize: 8, color: T.muted }}>Grp {team.group}</div>
+                            </div>
+                          </div>
+                        ) : isActive ? (
+                          <div style={{
+                            background: COLORS[currentPlayerIdx] + "20",
+                            border: `1.5px dashed ${COLORS[currentPlayerIdx]}`,
+                            borderRadius: 6, minHeight: 36,
+                            display: "flex", alignItems: "center", justifyContent: "center",
+                            animation: "pulse 1.4s infinite",
+                          }}>
+                            <span style={{ fontSize: 9, color: COLORS[currentPlayerIdx], fontWeight: 700 }}>…</span>
+                          </div>
+                        ) : (
+                          <div style={{
+                            background: T.surface2 + "60", border: `1px solid ${T.border}20`,
+                            borderRadius: 6, minHeight: 36, opacity: 0.25,
+                          }} />
+                        )}
+                      </td>
+                    );
+                  })}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       )}
 
-      {/* Filters */}
-      <div style={{ display: "flex", gap: 8, marginBottom: 12, flexWrap: "wrap", alignItems: "center" }}>
-        <div style={{ position: "relative", flex: 1, minWidth: 160 }}>
-          <span style={{ position: "absolute", left: 12, top: "50%", transform: "translateY(-50%)", color: T.muted, fontSize: 14, pointerEvents: "none" }}>🔍</span>
-          <input
-            value={search} onChange={e => setSearch(e.target.value)} placeholder="Search teams…"
-            style={{
-              width: "100%", background: T.surface2, border: `1px solid ${T.border}`,
-              borderRadius: T.radiusSm, padding: "8px 12px 8px 36px", color: T.text,
-              fontSize: 13, outline: "none",
-            }}
-          />
-        </div>
-        <div style={{ display: "flex", gap: 6, overflowX: "auto", paddingBottom: 2 }}>
-          {["All", ...GROUPS].map(g => (
-            <Pill key={g} active={filterGroup === g} onClick={() => setFilterGroup(g)}>
-              {g === "All" ? "All" : g}
-            </Pill>
-          ))}
-        </div>
-      </div>
+      {/* ── PICK VIEW ── */}
+      {view === "pick" && (
+        <div style={{ flex: 1, overflowY: "auto", WebkitOverflowScrolling: "touch", padding: "12px" }}>
 
-      {/* Team grid */}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: 8 }}>
-        {available.map(t => (
-          <button key={t.idx} onClick={() => pick(t.idx)} style={{
-            padding: "14px 12px", background: T.surface, border: `1px solid ${T.border}`,
-            borderRadius: T.radius, color: T.text, textAlign: "left",
-            display: "flex", alignItems: "center", gap: 10, transition: "all 0.15s",
-          }}
-            onMouseEnter={e => { e.currentTarget.style.borderColor = T.accent; e.currentTarget.style.background = T.surface2; }}
-            onMouseLeave={e => { e.currentTarget.style.borderColor = T.border; e.currentTarget.style.background = T.surface; }}>
-            <Flag iso={t.iso} size={28} />
-            <div>
-              <div style={{ fontSize: 13, fontWeight: 600, lineHeight: 1.3 }}>{t.name}</div>
-              <div style={{ fontSize: 11, color: T.muted, marginTop: 2 }}>Group {t.group}</div>
+          {/* Current player's picks so far */}
+          {!isDone && playerTeams(currentPlayerIdx).length > 0 && (
+            <div style={{ marginBottom: 14 }}>
+              <div style={{ fontSize: 10, color: T.muted, letterSpacing: "0.06em", marginBottom: 8 }}>
+                {players[currentPlayerIdx].toUpperCase()}'S PICKS
+              </div>
+              <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+                {playerTeams(currentPlayerIdx).map(t => (
+                  <div key={t.name} style={{
+                    display: "flex", alignItems: "center", gap: 5,
+                    background: COLORS[currentPlayerIdx] + "20",
+                    border: `1px solid ${COLORS[currentPlayerIdx]}40`,
+                    borderRadius: T.radiusSm, padding: "5px 8px",
+                  }}>
+                    <Flag iso={t.iso} size={16} />
+                    <span style={{ fontSize: 11, fontWeight: 600, color: T.text }}>{t.name}</span>
+                  </div>
+                ))}
+              </div>
             </div>
-          </button>
-        ))}
-        {available.length === 0 && (
-          <div style={{ gridColumn: "1/-1", textAlign: "center", padding: 40, color: T.muted, fontSize: 14 }}>
-            No teams match your filter
-          </div>
-        )}
-      </div>
+          )}
 
-      {/* Sidebar: draft log */}
-      {draft.length > 0 && (
-        <Card style={{ marginTop: 16 }}>
-          <SectionLabel>Draft Log — {draft.length} picks made</SectionLabel>
-          <div style={{ display: "flex", flexDirection: "column", gap: 4, maxHeight: 200, overflowY: "auto" }}>
-            {[...draft].reverse().map((d, i) => {
-              const team = ALL_TEAMS[d.teamIdx];
-              return (
-                <div key={i} style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 13, padding: "4px 0" }}>
-                  <span style={{ color: COLORS[d.playerIdx], fontWeight: 600, minWidth: 80 }}>{players[d.playerIdx]}</span>
-                  <Flag iso={team.iso} size={18} />
-                  <span style={{ color: T.text }}>{team.name}</span>
-                  <span style={{ color: T.muted, fontSize: 11, marginLeft: "auto" }}>Pick {draft.length - i}</span>
-                </div>
-              );
-            })}
+          {/* Search */}
+          <div style={{ position: "relative", marginBottom: 10 }}>
+            <span style={{ position: "absolute", left: 10, top: "50%", transform: "translateY(-50%)", color: T.muted, fontSize: 13, pointerEvents: "none" }}>🔍</span>
+            <input value={search} onChange={e => setSearch(e.target.value)} placeholder="Search teams…"
+              style={{ width: "100%", background: T.surface2, border: `1px solid ${T.border}`, borderRadius: T.radiusSm, padding: "10px 12px 10px 34px", color: T.text, fontSize: 14, outline: "none", boxSizing: "border-box" }} />
           </div>
-        </Card>
+
+          {/* Group filter */}
+          <div style={{ display: "flex", gap: 5, overflowX: "auto", marginBottom: 12, paddingBottom: 2 }}>
+            {["All", ...GROUPS].map(g => <Pill key={g} active={filterGroup === g} onClick={() => setFilterGroup(g)}>{g === "All" ? "All" : g}</Pill>)}
+          </div>
+
+          {/* Team grid — bigger touch targets on mobile */}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(130px, 1fr))", gap: 8 }}>
+            {available.map(t => (
+              <button key={t.idx} className="team-btn" onClick={() => pick(t.idx)} style={{
+                padding: "12px 10px", background: T.surface, border: `1px solid ${T.border}`,
+                borderRadius: T.radius, color: T.text, textAlign: "left",
+                display: "flex", alignItems: "center", gap: 8,
+                cursor: "pointer", WebkitTapHighlightColor: "transparent",
+                transition: "border-color 0.1s, background 0.1s",
+              }}
+                onMouseEnter={e => { e.currentTarget.style.borderColor = COLORS[currentPlayerIdx]; e.currentTarget.style.background = COLORS[currentPlayerIdx] + "15"; }}
+                onMouseLeave={e => { e.currentTarget.style.borderColor = T.border; e.currentTarget.style.background = T.surface; }}>
+                <Flag iso={t.iso} size={26} />
+                <div>
+                  <div style={{ fontSize: 12, fontWeight: 600, lineHeight: 1.3 }}>{t.name}</div>
+                  <div style={{ fontSize: 10, color: T.muted }}>Group {t.group}</div>
+                </div>
+              </button>
+            ))}
+            {available.length === 0 && (
+              <div style={{ gridColumn: "1/-1", textAlign: "center", padding: 40, color: T.muted, fontSize: 14 }}>No teams match</div>
+            )}
+          </div>
+
+          {isDone && (
+            <div style={{ textAlign: "center", padding: 40 }}>
+              <div style={{ fontSize: 48, marginBottom: 12 }}>🏆</div>
+              <div style={{ fontSize: 22, fontWeight: 800, color: T.accent, marginBottom: 20 }}>Draft Complete!</div>
+              {isCommissioner && !draftLocked && (
+                <div style={{ marginBottom: 12 }}>
+                  <p style={{ fontSize: 13, color: T.muted, marginBottom: 16 }}>
+                    Lock the draft to save it permanently and hide the Players &amp; Draft tabs from everyone.
+                  </p>
+                  <button onClick={onLockDraft} style={{
+                    padding: "14px 32px", background: T.green, border: "none",
+                    borderRadius: T.radiusSm, color: "#fff", fontSize: 15, fontWeight: 700,
+                    cursor: "pointer",
+                  }}>
+                    🔒 Save &amp; Lock Draft
+                  </button>
+                </div>
+              )}
+              {draftLocked && (
+                <div style={{
+                  padding: "10px 20px", background: T.green + "20",
+                  border: `1px solid ${T.green}40`, borderRadius: T.radiusSm,
+                  fontSize: 13, color: T.green, fontWeight: 600, display: "inline-block",
+                }}>✅ Draft locked &amp; saved — Players and Draft tabs are now hidden</div>
+              )}
+            </div>
+          )}
+        </div>
       )}
     </div>
   );
@@ -744,6 +935,7 @@ export default function App() {
   const [scores, setScores]           = useState(defaultScores());
   const [lastFetched, setLastFetched] = useState(ls.getInt("wc2026_lastfetched"));
   const [isCommissioner, setIsCommissioner] = useState(false);
+  const [draftLocked, setDraftLocked] = useState(false);
   const [synced, setSynced]           = useState(false);
   const [fbError, setFbError]         = useState(false);
 
@@ -775,6 +967,7 @@ export default function App() {
           ls.set("wc2026_lastfetched", data.lastFetched);
         }
         if (data.draft?.length > 0) setStage(prev => prev < 2 ? 2 : prev);
+        if (data.draftLocked) setDraftLocked(true);
         setSynced(true);
       });
     } catch (e) {
@@ -807,14 +1000,19 @@ export default function App() {
 
   const handleStart = (p) => {
     setPlayers(p);
-    dbSave({ players: p, draft: [], scores: defaultScores(), lastFetched: 0 });
+    dbSave({ players: p, draft: [], scores: defaultScores(), lastFetched: 0, draftLocked: false });
     setStage(1);
   };
 
   const handleDraftComplete = (d) => {
     setDraft(d);
-    dbSave({ players, draft: d, scores, lastFetched });
+    dbSave({ players, draft: d, scores, lastFetched, draftLocked: false });
     setStage(2);
+  };
+
+  const handleLockDraft = () => {
+    setDraftLocked(true);
+    dbSave({ players, draft, scores, lastFetched, draftLocked: true });
   };
 
   // Loading
@@ -841,24 +1039,27 @@ export default function App() {
           background: T.bg + "f0", backdropFilter: "blur(12px)",
           borderBottom: `1px solid ${T.border}`,
         }}>
-          <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 16px", display: "flex", alignItems: "center", gap: 0, height: 52 }}>
+          <div style={{ maxWidth: 720, margin: "0 auto", padding: "0 10px", display: "flex", alignItems: "center", gap: 0, height: 52 }}>
             <span style={{ fontSize: 18, marginRight: 10 }}>⚽</span>
             <span style={{ fontSize: 14, fontWeight: 700, color: T.text, marginRight: "auto" }}>WC26 Pool</span>
 
-            {/* Stage tabs */}
+            {/* Stage tabs — hide Players/Draft when draft is locked */}
             <div style={{ display: "flex", gap: 2 }}>
-              {STAGES.map((s, i) => (
-                <button key={s} onClick={() => { if (stage > i) setStage(i); }}
-                  disabled={stage < i}
-                  style={{
-                    padding: "6px 12px", background: "none", border: "none",
-                    fontSize: 12, fontWeight: stage === i ? 700 : 400,
-                    color: stage === i ? T.accent : stage > i ? T.text : T.muted,
-                    cursor: stage > i ? "pointer" : stage === i ? "default" : "not-allowed",
-                    borderBottom: stage === i ? `2px solid ${T.accent}` : "2px solid transparent",
-                    marginBottom: -1,
-                  }}>{s}</button>
-              ))}
+              {STAGES.map((s, i) => {
+                if (draftLocked && i < 2) return null; // hide Players + Draft tabs when locked
+                return (
+                  <button key={s} onClick={() => { if (!draftLocked && stage > i) setStage(i); else if (draftLocked && i >= 2) setStage(i); }}
+                    disabled={draftLocked ? false : stage < i}
+                    style={{
+                      padding: "6px 12px", background: "none", border: "none",
+                      fontSize: 12, fontWeight: stage === i ? 700 : 400,
+                      color: stage === i ? T.accent : (draftLocked || stage > i) ? T.text : T.muted,
+                      cursor: (draftLocked || stage > i) ? "pointer" : stage === i ? "default" : "not-allowed",
+                      borderBottom: stage === i ? `2px solid ${T.accent}` : "2px solid transparent",
+                      marginBottom: -1,
+                    }}>{s}</button>
+                );
+              })}
             </div>
 
             {/* Commissioner toggle + sync dot */}
@@ -893,15 +1094,16 @@ export default function App() {
         </header>
 
         {/* Page content */}
-        <main style={{ padding: "16px 16px 60px" }}>
+        <main style={{ padding: "12px 10px 60px" }}>
           {stage === 0 && <Setup onStart={handleStart} />}
-          {stage === 1 && <Draft players={players} onComplete={handleDraftComplete} />}
+          {stage === 1 && <Draft players={players} onComplete={handleDraftComplete} onLockDraft={handleLockDraft} isCommissioner={isCommissioner} draftLocked={draftLocked} />}
           {stage === 2 && (
             <Scores
               players={players} draft={draft} scores={scores} setScores={setScores}
               lastFetched={lastFetched} setLastFetched={setLastFetched}
               onViewStandings={() => setStage(3)}
               isCommissioner={isCommissioner}
+              draftLocked={draftLocked}
             />
           )}
           {stage === 3 && (

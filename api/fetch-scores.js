@@ -1,13 +1,18 @@
-export default async function handler(req, res) {
+export const config = { runtime: "edge" };
+
+export default async function handler(req) {
   if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
+    return new Response(JSON.stringify({ error: "Method not allowed" }), { status: 405 });
   }
 
-  const { prompt } = req.body || {};
-  if (!prompt) return res.status(400).json({ error: "Missing prompt" });
+  let body;
+  try { body = await req.json(); } catch { return new Response(JSON.stringify({ error: "Invalid JSON" }), { status: 400 }); }
+
+  const { prompt } = body || {};
+  if (!prompt) return new Response(JSON.stringify({ error: "Missing prompt" }), { status: 400 });
 
   const apiKey = process.env.ANTHROPIC_API_KEY;
-  if (!apiKey) return res.status(500).json({ error: "API key not configured" });
+  if (!apiKey) return new Response(JSON.stringify({ error: "API key not configured" }), { status: 500 });
 
   try {
     const response = await fetch("https://api.anthropic.com/v1/messages", {
@@ -26,8 +31,8 @@ export default async function handler(req, res) {
     });
 
     const data = await response.json();
-    return res.status(response.status).json(data);
+    return new Response(JSON.stringify(data), { status: response.status, headers: { "Content-Type": "application/json" } });
   } catch (e) {
-    return res.status(500).json({ error: e.message });
+    return new Response(JSON.stringify({ error: e.message }), { status: 500 });
   }
 }
