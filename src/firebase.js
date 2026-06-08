@@ -6,13 +6,13 @@ import { initializeApp } from "firebase/app";
 import { getDatabase, ref, onValue, set, get } from "firebase/database";
 
 const firebaseConfig = {
-  apiKey:            "REPLACE_WITH_YOUR_API_KEY",
-  authDomain:        "REPLACE_WITH_YOUR_AUTH_DOMAIN",
-  databaseURL:       "REPLACE_WITH_YOUR_DATABASE_URL",
-  projectId:         "REPLACE_WITH_YOUR_PROJECT_ID",
-  storageBucket:     "REPLACE_WITH_YOUR_STORAGE_BUCKET",
-  messagingSenderId: "REPLACE_WITH_YOUR_MESSAGING_SENDER_ID",
-  appId:             "REPLACE_WITH_YOUR_APP_ID",
+  apiKey:            "AIzaSyD6ZKl9_7KQrIr7BhZWqtEoul-pYQsLCTw",
+  authDomain:        "worldcup-pool-61157.firebaseapp.com",
+  databaseURL:       "https://worldcup-pool-61157-default-rtdb.firebaseio.com"",
+  projectId:         "worldcup-pool-61157",
+  storageBucket:     "worldcup-pool-61157.firebasestorage.app",
+  messagingSenderId: "26462789319",
+  appId:             "1:26462789319:web:651355fb3a4723757868e2",
 };
 
 const app = initializeApp(firebaseConfig);
