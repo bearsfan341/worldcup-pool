@@ -1,16 +1,14 @@
 // Vercel serverless function — proxies requests to Anthropic API
-// This avoids CORS issues when calling from the browser
 export default async function handler(req, res) {
-  // Only allow POST
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
-  }
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
-  const { apiKey, prompt } = req.body;
+  if (req.method === "OPTIONS") return res.status(200).end();
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
 
-  if (!apiKey || !prompt) {
-    return res.status(400).json({ error: "Missing apiKey or prompt" });
-  }
+  const { apiKey, prompt } = req.body || {};
+  if (!apiKey || !prompt) return res.status(400).json({ error: "Missing apiKey or prompt" });
 
   try {
     const response = await fetch("https://api.anthropic.com/v1/messages", {
@@ -28,13 +26,8 @@ export default async function handler(req, res) {
       }),
     });
 
-    if (!response.ok) {
-      const err = await response.text();
-      return res.status(response.status).json({ error: err });
-    }
-
     const data = await response.json();
-    return res.status(200).json(data);
+    return res.status(response.status).json(data);
   } catch (e) {
     return res.status(500).json({ error: e.message });
   }
