@@ -658,10 +658,6 @@ function Scores({ players, draft, scores, setScores, lastFetched, setLastFetched
     (search === "" || t.name.toLowerCase().includes(search.toLowerCase()))
   );
 
-  const nextIn = lastFetched
-    ? Math.max(0, Math.ceil((lastFetched + TWENTY_FOUR_HOURS - Date.now()) / 3600000))
-    : null;
-
   return (
     <div style={{ maxWidth: 680, margin: "0 auto" }}>
       {/* Mini standings at top for quick check */}
@@ -697,7 +693,8 @@ function Scores({ players, draft, scores, setScores, lastFetched, setLastFetched
         <Card style={{ marginBottom: 16, borderTop: `2px solid ${T.green}` }}>
           <SectionLabel>Auto-update scores</SectionLabel>
           <p style={{ fontSize: 13, color: T.muted, marginBottom: 12, lineHeight: 1.6 }}>
-            Fetches live results via the Claude API, then syncs to all friends instantly.
+            Scores update automatically once a day on the server and sync to everyone — no need to keep the app open.
+            Use the button below to fetch right now (e.g. just after a game ends).
             Get a free key at <a href="https://console.anthropic.com" target="_blank" rel="noreferrer"
               style={{ color: T.accent }}>console.anthropic.com</a>
           </p>
@@ -711,8 +708,8 @@ function Scores({ players, draft, scores, setScores, lastFetched, setLastFetched
             </PrimaryButton>
             <div style={{ fontSize: 12, color: fetchStatus === "ok" ? T.green : fetchStatus === "error" ? T.red : T.muted }}>
               {fetchMsg || (lastFetched
-                ? `Updated ${timeSince(lastFetched)}${nextIn > 0 ? ` · auto in ~${nextIn}h` : ""}`
-                : apiKey ? "Key saved · daily auto-fetch active" : ""
+                ? `Updated ${timeSince(lastFetched)} · auto-updates daily`
+                : "Auto-updates daily on the server"
               )}
             </div>
           </div>
