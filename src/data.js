@@ -1,52 +1,64 @@
 export const ALL_TEAMS = [
-  { name: "Mexico",          group: "A", iso: "mx"     },
-  { name: "South Korea",     group: "A", iso: "kr"     },
-  { name: "South Africa",    group: "A", iso: "za"     },
-  { name: "Czech Republic",  group: "A", iso: "cz"     },
-  { name: "Canada",          group: "B", iso: "ca"     },
-  { name: "Switzerland",     group: "B", iso: "ch"     },
-  { name: "Qatar",           group: "B", iso: "qa"     },
-  { name: "Bosnia & Herz.",  group: "B", iso: "ba"     },
-  { name: "Brazil",          group: "C", iso: "br"     },
-  { name: "Morocco",         group: "C", iso: "ma"     },
-  { name: "Scotland",        group: "C", iso: "gb-sct" },
-  { name: "Haiti",           group: "C", iso: "ht"     },
-  { name: "USA",             group: "D", iso: "us"     },
-  { name: "Australia",       group: "D", iso: "au"     },
-  { name: "Paraguay",        group: "D", iso: "py"     },
-  { name: "Türkiye",         group: "D", iso: "tr"     },
-  { name: "Germany",         group: "E", iso: "de"     },
-  { name: "Japan",           group: "E", iso: "jp"     },
-  { name: "Saudi Arabia",    group: "E", iso: "sa"     },
-  { name: "New Zealand",     group: "E", iso: "nz"     },
-  { name: "Portugal",        group: "F", iso: "pt"     },
-  { name: "Argentina",       group: "F", iso: "ar"     },
-  { name: "Senegal",         group: "F", iso: "sn"     },
-  { name: "DR Congo",        group: "F", iso: "cd"     },
-  { name: "Spain",           group: "G", iso: "es"     },
-  { name: "Belgium",         group: "G", iso: "be"     },
-  { name: "Croatia",         group: "G", iso: "hr"     },
-  { name: "Venezuela",       group: "G", iso: "ve"     },
-  { name: "France",          group: "H", iso: "fr"     },
-  { name: "Uruguay",         group: "H", iso: "uy"     },
-  { name: "Nigeria",         group: "H", iso: "ng"     },
-  { name: "Guatemala",       group: "H", iso: "gt"     },
-  { name: "England",         group: "I", iso: "gb-eng" },
-  { name: "Netherlands",     group: "I", iso: "nl"     },
-  { name: "Cameroon",        group: "I", iso: "cm"     },
-  { name: "Algeria",         group: "I", iso: "dz"     },
-  { name: "Colombia",        group: "J", iso: "co"     },
-  { name: "Ecuador",         group: "J", iso: "ec"     },
-  { name: "Serbia",          group: "J", iso: "rs"     },
-  { name: "Slovenia",        group: "J", iso: "si"     },
-  { name: "Italy",           group: "K", iso: "it"     },
-  { name: "Chile",           group: "K", iso: "cl"     },
-  { name: "Ivory Coast",     group: "K", iso: "ci"     },
-  { name: "Peru",            group: "K", iso: "pe"     },
-  { name: "Denmark",         group: "L", iso: "dk"     },
-  { name: "Iran",            group: "L", iso: "ir"     },
-  { name: "Ghana",           group: "L", iso: "gh"     },
-  { name: "Honduras",        group: "L", iso: "hn"     },
+  // Group A
+  { name: "Mexico",               group: "A", iso: "mx"     },
+  { name: "South Korea",          group: "A", iso: "kr"     },
+  { name: "South Africa",         group: "A", iso: "za"     },
+  { name: "Czechia",              group: "A", iso: "cz"     },
+  // Group B
+  { name: "Canada",               group: "B", iso: "ca"     },
+  { name: "Switzerland",          group: "B", iso: "ch"     },
+  { name: "Qatar",                group: "B", iso: "qa"     },
+  { name: "Bosnia & Herz.",       group: "B", iso: "ba"     },
+  // Group C
+  { name: "Brazil",               group: "C", iso: "br"     },
+  { name: "Morocco",              group: "C", iso: "ma"     },
+  { name: "Scotland",             group: "C", iso: "gb-sct" },
+  { name: "Haiti",                group: "C", iso: "ht"     },
+  // Group D
+  { name: "USA",                  group: "D", iso: "us"     },
+  { name: "Australia",            group: "D", iso: "au"     },
+  { name: "Paraguay",             group: "D", iso: "py"     },
+  { name: "Türkiye",              group: "D", iso: "tr"     },
+  // Group E
+  { name: "Germany",              group: "E", iso: "de"     },
+  { name: "Ecuador",              group: "E", iso: "ec"     },
+  { name: "Ivory Coast",          group: "E", iso: "ci"     },
+  { name: "Curaçao",              group: "E", iso: "cw"     },
+  // Group F
+  { name: "Netherlands",          group: "F", iso: "nl"     },
+  { name: "Japan",                group: "F", iso: "jp"     },
+  { name: "Tunisia",              group: "F", iso: "tn"     },
+  { name: "Sweden",               group: "F", iso: "se"     },
+  // Group G
+  { name: "Belgium",              group: "G", iso: "be"     },
+  { name: "Iran",                 group: "G", iso: "ir"     },
+  { name: "Egypt",                group: "G", iso: "eg"     },
+  { name: "New Zealand",          group: "G", iso: "nz"     },
+  // Group H
+  { name: "Spain",                group: "H", iso: "es"     },
+  { name: "Uruguay",              group: "H", iso: "uy"     },
+  { name: "Saudi Arabia",         group: "H", iso: "sa"     },
+  { name: "Cape Verde",           group: "H", iso: "cv"     },
+  // Group I
+  { name: "France",               group: "I", iso: "fr"     },
+  { name: "Senegal",              group: "I", iso: "sn"     },
+  { name: "Norway",               group: "I", iso: "no"     },
+  { name: "Iraq",                 group: "I", iso: "iq"     },
+  // Group J
+  { name: "Argentina",            group: "J", iso: "ar"     },
+  { name: "Austria",              group: "J", iso: "at"     },
+  { name: "Algeria",              group: "J", iso: "dz"     },
+  { name: "Jordan",               group: "J", iso: "jo"     },
+  // Group K
+  { name: "Portugal",             group: "K", iso: "pt"     },
+  { name: "Colombia",             group: "K", iso: "co"     },
+  { name: "Uzbekistan",           group: "K", iso: "uz"     },
+  { name: "DR Congo",             group: "K", iso: "cd"     },
+  // Group L
+  { name: "England",              group: "L", iso: "gb-eng" },
+  { name: "Croatia",              group: "L", iso: "hr"     },
+  { name: "Panama",               group: "L", iso: "pa"     },
+  { name: "Ghana",                group: "L", iso: "gh"     },
 ];
 
 export const POINT_SYSTEM = {
@@ -98,11 +110,4 @@ export function calcPlayerPoints(playerIdx, draft, scores) {
     goals += s.gf || 0;
   });
   return { pts, goals, teams };
-}
-
-export function saveState(state) {
-  try { localStorage.setItem("wc2026_pool", JSON.stringify(state)); } catch {}
-}
-export function loadState() {
-  try { const r = localStorage.getItem("wc2026_pool"); return r ? JSON.parse(r) : null; } catch { return null; }
 }
