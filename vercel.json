@@ -2,6 +2,7 @@
   "version": 2,
   "routes": [
     { "src": "/api/fetch-scores", "dest": "/api/fetch-scores.js" },
+    { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
