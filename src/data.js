@@ -8,7 +8,7 @@ export const ALL_TEAMS = [
   { name: "Canada",               group: "B", iso: "ca"     },
   { name: "Switzerland",          group: "B", iso: "ch"     },
   { name: "Qatar",                group: "B", iso: "qa"     },
-  { name: "Bosnia & Herz.",       group: "B", iso: "ba"     },
+  { name: "Bosnia-Herz.",       group: "B", iso: "ba"     },
   // Group C
   { name: "Brazil",               group: "C", iso: "br"     },
   { name: "Morocco",              group: "C", iso: "ma"     },
