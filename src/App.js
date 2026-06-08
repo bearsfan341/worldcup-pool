@@ -26,7 +26,6 @@ function Flag({ iso, size = 24, style: extra }) {
 }
 
 // ─── CONSTANTS ────────────────────────────────────────────────────────────────
-const TWENTY_FOUR_HOURS = 24 * 60 * 60 * 1000;
 const STAGES = ["Players", "Draft", "Scores", "Standings"];
 
 // ─── LOCAL STORAGE HELPERS ────────────────────────────────────────────────────
@@ -48,7 +47,7 @@ function isFirebaseConfigured() {
 // ─── SCORE FETCHER ────────────────────────────────────────────────────────────
 // Calls our Vercel serverless proxy (/api/fetch-scores) to avoid CORS issues.
 // The proxy forwards the request to Anthropic with web_search enabled.
-async function fetchLiveScores(apiKey) {
+async function fetchLiveScores() {
   const prompt = `Search the web for the latest 2026 FIFA World Cup results (today: ${new Date().toDateString()}).
 
 Return ONLY a valid JSON object — no markdown, no explanation:
@@ -66,7 +65,7 @@ Include ALL teams. Use 0s and "group" for teams that haven't played yet.`;
   const res = await fetch("/api/fetch-scores", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ apiKey, prompt }),
+    body: JSON.stringify({ prompt }),
   });
   if (!res.ok) throw new Error(`Proxy error ${res.status}`);
   const data = await res.json();
@@ -608,17 +607,12 @@ function Scores({ players, draft, scores, setScores, lastFetched, setLastFetched
   const [fetchStatus, setFetchStatus] = useState("idle"); // idle | loading | ok | error
   const [filterGroup, setFilterGroup] = useState("All");
   const [tab, setTab] = useState("rosters");
-  const [apiKey, setApiKey] = useState(() => ls.get("wc2026_apikey"));
   const [search, setSearch] = useState("");
 
-  const handleKeyChange = (e) => { setApiKey(e.target.value); ls.set("wc2026_apikey", e.target.value); };
-
   const doFetch = async () => {
-    const k = apiKey.trim();
-    if (!k) { setFetchMsg("Enter your API key above"); setFetchStatus("error"); return; }
     setFetching(true); setFetchStatus("loading"); setFetchMsg("Searching the web for live scores…");
     try {
-      const result = await fetchLiveScores(k);
+      const result = await fetchLiveScores();
       const next = { ...scores };
       Object.entries(result.teams || {}).forEach(([name, data]) => {
         if (next[name]) next[name] = { ...next[name], ...data };
@@ -695,13 +689,7 @@ function Scores({ players, draft, scores, setScores, lastFetched, setLastFetched
           <p style={{ fontSize: 13, color: T.muted, marginBottom: 12, lineHeight: 1.6 }}>
             Scores update automatically once a day on the server and sync to everyone — no need to keep the app open.
             Use the button below to fetch right now (e.g. just after a game ends).
-            Get a free key at <a href="https://console.anthropic.com" target="_blank" rel="noreferrer"
-              style={{ color: T.accent }}>console.anthropic.com</a>
           </p>
-          <Input
-            type="password" value={apiKey} onChange={handleKeyChange}
-            placeholder="sk-ant-api03-…" style={{ fontFamily: "monospace", fontSize: 12, marginBottom: 10 }}
-          />
           <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
             <PrimaryButton onClick={doFetch} disabled={fetching} small>
               {fetching ? "Fetching…" : "Fetch & sync now"}
@@ -936,18 +924,6 @@ export default function App() {
   const [synced, setSynced]           = useState(false);
   const [fbError, setFbError]         = useState(false);
 
-  // Refs to latest values for use inside effects without stale closures
-  const playersRef = useRef(players);
-  const draftRef   = useRef(draft);
-  const scoresRef  = useRef(scores);
-  const lastFetchedRef = useRef(lastFetched);
-  useEffect(() => { playersRef.current = players; }, [players]);
-  useEffect(() => { draftRef.current = draft; }, [draft]);
-  useEffect(() => { scoresRef.current = scores; }, [scores]);
-  useEffect(() => { lastFetchedRef.current = lastFetched; }, [lastFetched]);
-
-  const autoFetchedRef = useRef(false);
-
   // ── Firebase subscription ─────────────────────────────────────────────────
   useEffect(() => {
     let unsub;
@@ -974,26 +950,6 @@ export default function App() {
     }
     return () => { clearTimeout(timeout); try { unsub?.(); } catch {} };
   }, []);
-
-  // ── Daily auto-fetch (fires after Firebase loads, using refs for fresh values)
-  useEffect(() => {
-    if (!synced || autoFetchedRef.current) return;
-    autoFetchedRef.current = true;
-    const key = ls.get("wc2026_apikey");
-    const last = ls.getInt("wc2026_lastfetched");
-    if (!key || Date.now() - last <= TWENTY_FOUR_HOURS) return;
-    fetchLiveScores(key).then(result => {
-      const next = { ...scoresRef.current };
-      Object.entries(result.teams || {}).forEach(([name, data]) => {
-        if (next[name]) next[name] = { ...next[name], ...data };
-      });
-      const now = Date.now();
-      dbSave({ players: playersRef.current, draft: draftRef.current, scores: next, lastFetched: now });
-      ls.set("wc2026_lastfetched", now);
-      setScores(next);
-      setLastFetched(now);
-    }).catch(() => {});
-  }, [synced]);
 
   const handleStart = (p) => {
     setPlayers(p);
