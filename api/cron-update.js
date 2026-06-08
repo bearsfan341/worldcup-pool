@@ -56,10 +56,10 @@ Include ALL teams. Use 0s and "group" for teams that haven't played yet.`;
     });
     const data = await r.json();
     if (data.error) throw new Error(data.error.message || JSON.stringify(data.error));
-    const textBlocks = (data.content || []).filter(b => b.type === "text");
-    if (!textBlocks.length) throw new Error("No response text from model");
-    const raw = textBlocks[textBlocks.length - 1].text.replace(/```json|```/g, "").trim();
-    result = JSON.parse(raw);
+    const text = (data.content || []).filter(b => b.type === "text").map(b => b.text).join("\n");
+    const m = text.match(/\{[\s\S]*\}/);
+    if (!m) throw new Error("No JSON object in model response");
+    result = JSON.parse(m[0]);
   } catch (e) {
     return res.status(502).json({ error: `Score fetch failed: ${e.message}` });
   }

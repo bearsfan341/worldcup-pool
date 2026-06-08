@@ -71,10 +71,10 @@ Include ALL teams. Use 0s and "group" for teams that haven't played yet.`;
   if (!res.ok) throw new Error(`Proxy error ${res.status}`);
   const data = await res.json();
   if (data.error) throw new Error(data.error);
-  const textBlocks = data.content.filter(b => b.type === "text");
-  if (!textBlocks.length) throw new Error("No response text");
-  const raw = textBlocks[textBlocks.length - 1].text.replace(/```json|```/g, "").trim();
-  return JSON.parse(raw);
+  const text = (data.content || []).filter(b => b.type === "text").map(b => b.text).join("\n");
+  const m = text.match(/\{[\s\S]*\}/);
+  if (!m) throw new Error("No JSON in response");
+  return JSON.parse(m[0]);
 }
 
 // ─── HELPERS ──────────────────────────────────────────────────────────────────
