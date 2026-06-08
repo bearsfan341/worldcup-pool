@@ -287,11 +287,11 @@ function Setup({ onStart }) {
 }
 
 // ─── DRAFT SCREEN ─────────────────────────────────────────────────────────────
-function Draft({ players, onComplete, onLockDraft, isCommissioner, draftLocked }) {
+function Draft({ players, initialDraft, onComplete, onLockDraft, isCommissioner, draftLocked }) {
   const totalPicks   = ALL_TEAMS.length;
   const numRounds    = Math.ceil(totalPicks / players.length);
   const snakeOrder   = useRef(getSnakeOrder(players.length, totalPicks)).current;
-  const [draft, setDraft]             = useState([]);
+  const [draft, setDraft]             = useState(initialDraft || []);
   const [filterGroup, setFilterGroup] = useState("All");
   const [search, setSearch]           = useState("");
   const [lastPick, setLastPick]       = useState(null);
@@ -1064,11 +1064,11 @@ export default function App() {
 
             {/* Commissioner toggle + sync dot */}
             <div style={{ display: "flex", alignItems: "center", gap: 10, marginLeft: 16 }}>
-              {stage >= 2 && (
+              {stage >= 1 && (
                 <label style={{ display: "flex", alignItems: "center", gap: 6, cursor: "pointer", fontSize: 12, color: T.muted }}>
                   <input type="checkbox" checked={isCommissioner} onChange={e => setIsCommissioner(e.target.checked)}
                     style={{ accentColor: T.accent, cursor: "pointer" }} />
-                  <span style={{ display: "none", "@media(min-width:480px)": { display: "inline" } }}>Admin</span>
+                  <span>Admin</span>
                 </label>
               )}
               <div title={fbError ? "Firebase not configured" : "Live sync active"} style={{
@@ -1096,7 +1096,7 @@ export default function App() {
         {/* Page content */}
         <main style={{ padding: "12px 10px 60px" }}>
           {stage === 0 && <Setup onStart={handleStart} />}
-          {stage === 1 && <Draft players={players} onComplete={handleDraftComplete} onLockDraft={handleLockDraft} isCommissioner={isCommissioner} draftLocked={draftLocked} />}
+          {stage === 1 && <Draft players={players} initialDraft={draft} onComplete={handleDraftComplete} onLockDraft={handleLockDraft} isCommissioner={isCommissioner} draftLocked={draftLocked} />}
           {stage === 2 && (
             <Scores
               players={players} draft={draft} scores={scores} setScores={setScores}
