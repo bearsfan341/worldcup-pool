@@ -769,8 +769,11 @@ export default function App() {
   // ── Firebase subscription ─────────────────────────────────────────────────
   useEffect(() => {
     let unsub;
+    // Fallback: if Firebase hasn't responded in 3s (empty database), show app anyway
+    const timeout = setTimeout(() => setSynced(true), 3000);
     try {
       unsub = dbSubscribe((data) => {
+        clearTimeout(timeout);
         if (data.players) setPlayers(data.players);
         if (data.draft)   setDraft(data.draft);
         if (data.scores)  setScores(data.scores);
@@ -782,10 +785,11 @@ export default function App() {
         setSynced(true);
       });
     } catch (e) {
+      clearTimeout(timeout);
       setFbError(true);
-      setSynced(true); // still let the app work
+      setSynced(true);
     }
-    return () => { try { unsub?.(); } catch {} };
+    return () => { clearTimeout(timeout); try { unsub?.(); } catch {} };
   }, []);
 
   // ── Daily auto-fetch (fires after Firebase loads, using refs for fresh values)
