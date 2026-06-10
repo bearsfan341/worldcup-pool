@@ -289,12 +289,12 @@ function Setup({ onStart }) {
         <SectionLabel>Scoring</SectionLabel>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "6px 20px" }}>
           {[
-            ["Group Win", "3 pts"], ["Reach Round of 32", "+5"],
-            ["Group Draw", "1 pt"],  ["Reach Round of 16", "+8"],
-            ["Group Loss", "0 pts"], ["Quarterfinal", "+13"],
-            ["", ""],                ["Semifinal", "+21"],
-            ["", ""],                ["Final", "+34"],
-            ["", ""],                ["Champion 🏆", "+55"],
+            ["Group Win", "5 pts"], ["Reach Round of 32", "+5"],
+            ["Group Draw", "2 pts"], ["Reach Round of 16", "+8"],
+            ["Group Loss", "0 pts"], ["Quarterfinal", "+10"],
+            ["", ""],                ["Semifinal", "+12"],
+            ["", ""],                ["Final", "+15"],
+            ["", ""],                ["Champion 🏆", "+18"],
           ].map(([l, v], i) => l ? (
             <div key={i} style={{ display: "flex", justifyContent: "space-between", fontSize: 13, padding: "2px 0" }}>
               <span style={{ color: T.muted }}>{l}</span>

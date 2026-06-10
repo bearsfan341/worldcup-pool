@@ -61,13 +61,18 @@ export const ALL_TEAMS = [
   { name: "Ghana",                group: "L", iso: "gh"     },
 ];
 
+// Per-stage values. The r32…champion entries are the INCREMENTAL bonus for
+// reaching each stage (these are what the Setup scoring card displays).
 export const POINT_SYSTEM = {
-  groupWin: 3, groupDraw: 1, groupLoss: 0,
-  r32: 5, r16: 8, qf: 13, sf: 21, final: 34, champion: 55,
+  groupWin: 5, groupDraw: 2, groupLoss: 0,
+  r32: 5, r16: 8, qf: 10, sf: 12, final: 15, champion: 18,
 };
 
+// CUMULATIVE advancement bonus actually awarded in calcPlayerPoints — the sum
+// of every stage increment up to and including the team's furthest stage.
+// (e.g. champion = 5 + 8 + 10 + 12 + 15 + 18 = 68)
 export const ADVANCEMENT_BONUS = {
-  group: 0, r32: 5, r16: 13, qf: 26, sf: 47, final: 81, champion: 136,
+  group: 0, r32: 5, r16: 13, qf: 23, sf: 35, final: 50, champion: 68,
 };
 
 export const COLORS = [
