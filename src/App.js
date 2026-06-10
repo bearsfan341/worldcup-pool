@@ -232,7 +232,24 @@ function SectionLabel({ children }) {
 // ─── SETUP SCREEN ─────────────────────────────────────────────────────────────
 function Setup({ onStart }) {
   const [players, setPlayers] = useState(["", "", ""]);
+  const [randomized, setRandomized] = useState(false);
   const valid = players.filter(p => p.trim());
+
+  // Editing the roster invalidates a previous shuffle's "order locked in" note.
+  const update = (next) => { setPlayers(next); setRandomized(false); };
+
+  // Snake draft order follows the player-list order, so shuffling the list of
+  // entered names randomizes who picks 1st, 2nd, 3rd… Re-rollable before start.
+  const randomizeOrder = () => {
+    const names = players.map(p => p.trim()).filter(Boolean);
+    if (names.length < 2) return;
+    for (let i = names.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [names[i], names[j]] = [names[j], names[i]];
+    }
+    setPlayers(names);
+    setRandomized(true);
+  };
 
   return (
     <div style={{ maxWidth: 520, margin: "0 auto" }}>
@@ -250,6 +267,9 @@ function Setup({ onStart }) {
       {/* Players */}
       <Card style={{ marginBottom: 16 }}>
         <SectionLabel>Players (2–12)</SectionLabel>
+        <div style={{ fontSize: 12, color: T.muted, marginTop: -6, marginBottom: 12 }}>
+          The number beside each name is their pick order in the snake draft.
+        </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
           {players.map((name, i) => (
             <div key={i} style={{ display: "flex", alignItems: "center", gap: 10 }}>
@@ -260,10 +280,10 @@ function Setup({ onStart }) {
               }}>{i + 1}</div>
               <Input
                 value={name} placeholder={`Player ${i + 1}`}
-                onChange={e => { const n = [...players]; n[i] = e.target.value; setPlayers(n); }}
+                onChange={e => { const n = [...players]; n[i] = e.target.value; update(n); }}
               />
               {players.length > 2 && (
-                <button onClick={() => setPlayers(players.filter((_, j) => j !== i))}
+                <button onClick={() => update(players.filter((_, j) => j !== i))}
                   style={{ background: "none", border: "none", color: T.muted, fontSize: 18, padding: "0 4px", flexShrink: 0, lineHeight: 1 }}>
                   ×
                 </button>
@@ -272,7 +292,7 @@ function Setup({ onStart }) {
           ))}
         </div>
         {players.length < 12 && (
-          <button onClick={() => setPlayers([...players, ""])} style={{
+          <button onClick={() => update([...players, ""])} style={{
             marginTop: 12, width: "100%", padding: "10px", background: "transparent",
             border: `1px dashed ${T.border}`, borderRadius: T.radiusSm,
             color: T.muted, fontSize: 13, transition: "border-color 0.15s",
@@ -306,6 +326,25 @@ function Setup({ onStart }) {
           Tiebreaker: total goals scored by your teams
         </div>
       </Card>
+
+      {/* Randomize draft order */}
+      <button onClick={randomizeOrder} disabled={valid.length < 2} style={{
+        width: "100%", marginBottom: 10, padding: "12px",
+        background: "transparent", border: `1px solid ${valid.length < 2 ? T.border : T.accent}`,
+        borderRadius: T.radiusSm, color: valid.length < 2 ? T.muted : T.accent,
+        fontSize: 14, fontWeight: 600, cursor: valid.length < 2 ? "not-allowed" : "pointer",
+      }}>
+        🎲 Randomize draft order
+      </button>
+      {randomized && (
+        <div style={{
+          marginBottom: 12, padding: "10px 12px", textAlign: "center",
+          background: T.green + "15", border: `1px solid ${T.green}30`,
+          borderRadius: T.radiusSm, fontSize: 13, color: T.green,
+        }}>
+          🎲 Draft order randomized — <strong>{valid[0]}</strong> picks first. Re-roll or start below.
+        </div>
+      )}
 
       <PrimaryButton disabled={valid.length < 2} onClick={() => onStart(valid)}>
         Start Draft with {valid.length} player{valid.length !== 1 ? "s" : ""} →
