@@ -71,37 +71,9 @@ function isFirebaseConfigured() {
   } catch { return true; }
 }
 
-// ─── SCORE FETCHER ────────────────────────────────────────────────────────────
-// Calls our Vercel serverless proxy (/api/fetch-scores) to avoid CORS issues.
-// The proxy forwards the request to Anthropic with web_search enabled.
-async function fetchLiveScores() {
-  const prompt = `Search the web for the latest 2026 FIFA World Cup results (today: ${new Date().toDateString()}).
-
-Return ONLY a valid JSON object — no markdown, no explanation:
-{
-  "lastUpdated": "ISO timestamp",
-  "teams": {
-    "Mexico": { "w": 2, "d": 1, "l": 0, "gf": 5, "ga": 2, "advancement": "r32" }
-  }
-}
-
-Advancement values: "group" | "r32" | "r16" | "qf" | "sf" | "final" | "champion"
-Teams: ${ALL_TEAMS.map(t => t.name).join(", ")}
-Include ALL teams. Use 0s and "group" for teams that haven't played yet.`;
-
-  const res = await fetch("/api/fetch-scores", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ prompt }),
-  });
-  if (!res.ok) throw new Error(`Proxy error ${res.status}`);
-  const data = await res.json();
-  if (data.error) throw new Error(data.error);
-  const text = (data.content || []).filter(b => b.type === "text").map(b => b.text).join("\n");
-  const m = text.match(/\{[\s\S]*\}/);
-  if (!m) throw new Error("No JSON in response");
-  return JSON.parse(m[0]);
-}
+// Live scores come from FIFA's official feed via /api/cron-update (server-side),
+// which recomputes the standings and writes them to Firebase. The manual
+// "Fetch & sync now" button and the daily cron both hit that one endpoint.
 
 // ─── HELPERS ──────────────────────────────────────────────────────────────────
 function defaultScores() {
@@ -678,23 +650,18 @@ function Scores({ players, draft, scores, setScores, lastFetched, setLastFetched
   const [search, setSearch] = useState("");
 
   const doFetch = async () => {
-    setFetching(true); setFetchStatus("loading"); setFetchMsg("Searching the web for live scores…");
+    setFetching(true); setFetchStatus("loading"); setFetchMsg("Fetching live results from FIFA…");
     try {
-      const result = await fetchLiveScores();
-      const next = { ...scores };
-      Object.entries(result.teams || {}).forEach(([name, data]) => {
-        if (next[name]) next[name] = { ...next[name], ...data };
-      });
-      const now = Date.now();
-      await dbSave({ players, draft, scores: next, lastFetched: now });
-      ls.set("wc2026_lastfetched", now);
-      setLastFetched(now);
-      setScores(next);
+      // Server pulls FIFA's official feed, recomputes scores, and writes them to
+      // Firebase. The live subscription then pushes the update to everyone.
+      const res = await fetch("/api/cron-update", { method: "GET" });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || data.error) throw new Error(data.error || `Update failed (${res.status})`);
       setFetchStatus("ok");
-      setFetchMsg("Scores updated and synced to all friends");
+      setFetchMsg(`Scores updated from FIFA — ${data.matchesCounted || 0} match${data.matchesCounted === 1 ? "" : "es"} counted`);
     } catch (e) {
       setFetchStatus("error");
-      setFetchMsg(e.message);
+      setFetchMsg(e.message || "Fetch failed");
     }
     setFetching(false);
   };
