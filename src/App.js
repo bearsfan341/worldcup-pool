@@ -1006,7 +1006,9 @@ function Standings({ players, draft, scores, lastFetched, onBack }) {
 
 // ─── ROOT APP ─────────────────────────────────────────────────────────────────
 export default function App() {
-  const [stage, setStage]             = useState(0);
+  // Draft is over and permanently locked — the app opens straight to Scores and
+  // only ever shows the Scores/Standings views (see nav + routing below).
+  const [stage, setStage]             = useState(2);
   const [players, setPlayers]         = useState([]);
   const [draft, setDraft]             = useState([]);
   const [scores, setScores]           = useState(defaultScores());
@@ -1091,15 +1093,14 @@ export default function App() {
             {/* Stage tabs — hide Players/Draft when draft is locked */}
             <div style={{ display: "flex", gap: 2 }}>
               {STAGES.map((s, i) => {
-                if (draftLocked && i < 2) return null; // hide Players + Draft tabs when locked
+                if (i < 2) return null; // Players & Draft are never shown — the draft is locked
                 return (
-                  <button key={s} onClick={() => { if (!draftLocked && stage > i) setStage(i); else if (draftLocked && i >= 2) setStage(i); }}
-                    disabled={draftLocked ? false : stage < i}
+                  <button key={s} onClick={() => setStage(i)}
                     style={{
                       padding: "6px 12px", background: "none", border: "none",
                       fontSize: 12, fontWeight: stage === i ? 700 : 400,
-                      color: stage === i ? T.accent : (draftLocked || stage > i) ? T.text : T.muted,
-                      cursor: (draftLocked || stage > i) ? "pointer" : stage === i ? "default" : "not-allowed",
+                      color: stage === i ? T.accent : T.text,
+                      cursor: "pointer",
                       borderBottom: stage === i ? `2px solid ${T.accent}` : "2px solid transparent",
                       marginBottom: -1,
                     }}>{s}</button>
