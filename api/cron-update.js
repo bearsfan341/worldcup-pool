@@ -53,20 +53,28 @@ export default async function handler(req, res) {
     scores[name] = { w: 0, d: 0, l: 0, gf: 0, ga: 0, advancement: "group" };
   });
   const bump = (team, tier) => {
-    if (RANK[tier] > RANK[scores[team].advancement]) scores[team].advancement = tier;
+    if (team && RANK[tier] > RANK[scores[team].advancement]) scores[team].advancement = tier;
   };
 
   let finished = 0;
   for (const m of rows) {
-    if (m.MatchStatus !== 0) continue; // 0 = finished; skip fixtures/live
     const home = CODE_TO_TEAM[m.Home && m.Home.Abbreviation];
     const away = CODE_TO_TEAM[m.Away && m.Away.Abbreviation];
+    const stage = (m.StageName && m.StageName[0] || {}).Description || "";
+    const reached = STAGE_REACHED[stage];
+
+    // A team slotted into a knockout fixture has, by definition, qualified for
+    // that round — promote it now, even before the match is played. This is what
+    // makes qualified teams read "Round of 32" the moment the groups conclude.
+    if (reached) { bump(home, reached); bump(away, reached); }
+
+    // Results (W/D/L, goals, champion) only come from finished matches.
+    if (m.MatchStatus !== 0) continue; // 0 = finished; skip fixtures/live
     if (!home || !away) continue; // placeholder ("Winner Group A") or unknown
     const hs = m.HomeTeamScore, as = m.AwayTeamScore;
     if (hs == null || as == null) continue;
     finished++;
 
-    const stage = (m.StageName && m.StageName[0] || {}).Description || "";
     scores[home].gf += hs; scores[home].ga += as;
     scores[away].gf += as; scores[away].ga += hs;
 
@@ -74,17 +82,15 @@ export default async function handler(req, res) {
       if (hs > as) { scores[home].w++; scores[away].l++; }
       else if (as > hs) { scores[away].w++; scores[home].l++; }
       else { scores[home].d++; scores[away].d++; }
-    } else {
-      const reached = STAGE_REACHED[stage];
-      if (reached) {
-        bump(home, reached); bump(away, reached);
-        let win = hs > as ? "home" : as > hs ? "away" : null;
-        if (!win) {
-          const hp = m.HomeTeamPenaltyScore, ap = m.AwayTeamPenaltyScore;
-          if (hp != null && ap != null) win = hp > ap ? "home" : "away";
-        }
-        if (win) bump(win === "home" ? home : away, NEXT[reached]);
+    } else if (reached) {
+      // Winner advances to the next round (Final winner → champion). This keeps
+      // the winner correct in the brief window before FIFA fills the next bracket.
+      let win = hs > as ? "home" : as > hs ? "away" : null;
+      if (!win) {
+        const hp = m.HomeTeamPenaltyScore, ap = m.AwayTeamPenaltyScore;
+        if (hp != null && ap != null) win = hp > ap ? "home" : "away";
       }
+      if (win) bump(win === "home" ? home : away, NEXT[reached]);
     }
   }
 
