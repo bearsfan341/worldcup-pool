@@ -201,7 +201,24 @@ def build_trades_waivers(year, league, raw_tx):
         scoring_period = t.get("scoringPeriodId")
         tx_id = t.get("id")
         bid = t.get("bidAmount", 0)
-        acting_team_id = t.get("teamId")
+        # ESPN's top-level `teamId` is unreliable for some waiver/FA transactions
+        # (observed returning the sentinel -2147483648 for a batch of 2018 records).
+        # The per-item fromTeamId/toTeamId values are authoritative, so derive the
+        # acting team from an ADD item's toTeamId (or a DROP item's fromTeamId) first,
+        # and only fall back to the top-level field if items are empty.
+        items_for_id = t.get("items", [])
+        acting_team_id = None
+        for item in items_for_id:
+            if item.get("type") == "ADD" and item.get("toTeamId") not in (None, 0):
+                acting_team_id = item.get("toTeamId")
+                break
+        if acting_team_id is None:
+            for item in items_for_id:
+                if item.get("type") == "DROP" and item.get("fromTeamId") not in (None, 0):
+                    acting_team_id = item.get("fromTeamId")
+                    break
+        if acting_team_id is None:
+            acting_team_id = t.get("teamId")
         acting_team_name, acting_oid, acting_oname = team_name_owner(acting_team_id)
 
         if ttype == "TRADE_ACCEPT":

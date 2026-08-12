@@ -162,6 +162,50 @@
           "luck": -1.45
         }
       },
+      "championship_runs": [
+        {
+          "season": "2025",
+          "reg_season_avg": 135.4,
+          "reg_season_games": 14,
+          "playoff_games": [
+            {
+              "week": "15",
+              "score": 211.8,
+              "opp_score": 66.88,
+              "opponent": "Johnny Marcks",
+              "result": "W"
+            },
+            {
+              "week": "16",
+              "score": 137.12,
+              "opp_score": 135.2,
+              "opponent": "Corey Ploss",
+              "result": "W"
+            },
+            {
+              "week": "17",
+              "score": 146.02,
+              "opp_score": 106.18,
+              "opponent": "Angelo Hernandez",
+              "result": "W"
+            }
+          ]
+        }
+      ],
+      "best_rival": {
+        "opponent": "Andrew Campbell",
+        "w": 11,
+        "l": 3,
+        "t": 0,
+        "margin": 8
+      },
+      "worst_rival": {
+        "opponent": "Tyler Scarlett",
+        "w": 6,
+        "l": 10,
+        "t": 0,
+        "margin": -4
+      },
       "early_round_position_counts": {
         "TE": 7,
         "WR": 10,
@@ -192,9 +236,170 @@
         "points_rank": 190,
         "value_score": -189
       },
+      "best_draft_picks_top2": [
+        {
+          "season": "2016",
+          "team_id": "1",
+          "manager": "Derek Booker",
+          "round_num": 14,
+          "overall_pick": 168,
+          "player_name": "Jameis Winston",
+          "position": "QB",
+          "total_points": 243.0,
+          "points_rank": 19,
+          "value_score": 149
+        },
+        {
+          "season": "2016",
+          "team_id": "1",
+          "manager": "Derek Booker",
+          "round_num": 16,
+          "overall_pick": 192,
+          "player_name": "Vikings D/ST",
+          "position": "D/ST",
+          "total_points": 157.0,
+          "points_rank": 43,
+          "value_score": 149
+        }
+      ],
+      "worst_draft_picks_top2": [
+        {
+          "season": "2016",
+          "team_id": "1",
+          "manager": "Derek Booker",
+          "round_num": 1,
+          "overall_pick": 1,
+          "player_name": "Adrian Peterson",
+          "position": "RB",
+          "total_points": 4.0,
+          "points_rank": 190,
+          "value_score": -189
+        },
+        {
+          "season": "2024",
+          "team_id": "1",
+          "manager": "Derek Booker",
+          "round_num": 2,
+          "overall_pick": 17,
+          "player_name": "Isiah Pacheco",
+          "position": "RB",
+          "total_points": 56.9,
+          "points_rank": 157,
+          "value_score": -140
+        }
+      ],
       "avg_draft_value_score": 4.85,
       "trade_count": 8,
-      "waiver_add_count": 567,
+      "trade_ledger": [
+        {
+          "season": "2023",
+          "trade_id": "97c112f3-19cf-4c31-b1b5-a0a137ff170d",
+          "counterparty": "Jarett Coy",
+          "received": [
+            "Breece Hall"
+          ],
+          "given": [
+            "Evan Engram"
+          ],
+          "net": 56.9
+        },
+        {
+          "season": "2018",
+          "trade_id": "e1cb58aa-dd82-33ae-bb44-302092e9d2a5",
+          "counterparty": "Dakota Bender",
+          "received": [
+            "Dion Lewis"
+          ],
+          "given": [
+            "Golden Tate"
+          ],
+          "net": 15.1
+        },
+        {
+          "season": "2018",
+          "trade_id": "8bdadd1c-738b-3206-b6ee-fea839824320",
+          "counterparty": "Pj Lannon",
+          "received": [
+            "Rob Gronkowski",
+            "Demaryius Thomas"
+          ],
+          "given": [
+            "Travis Kelce"
+          ],
+          "net": -12.1
+        },
+        {
+          "season": "2018",
+          "trade_id": "c96c38d2-f095-33ad-9073-6b7a97583a6c",
+          "counterparty": "Dakota Bender",
+          "received": [
+            "Devin Funchess"
+          ],
+          "given": [
+            "Kyle Rudolph"
+          ],
+          "net": -39.8
+        },
+        {
+          "season": "2024",
+          "trade_id": "4be18897-b25b-44e0-9e93-e987be544779",
+          "counterparty": "Tyler Scarlett",
+          "received": [
+            "Ty Chandler",
+            "Brian Robinson Jr."
+          ],
+          "given": [
+            "Curtis Samuel",
+            "Rhamondre Stevenson"
+          ],
+          "net": -51.4
+        },
+        {
+          "season": "2018",
+          "trade_id": "4e073a76-fba9-3310-a5a1-42f425d6301b",
+          "counterparty": "Dakota Bender",
+          "received": [
+            "Golden Tate",
+            "David Johnson"
+          ],
+          "given": [
+            "Tyler Boyd",
+            "Tevin Coleman",
+            "Dion Lewis"
+          ],
+          "net": -68.6
+        },
+        {
+          "season": "2023",
+          "trade_id": "b92652ab-23b6-46d1-af57-54be293c738f",
+          "counterparty": "Jarett Coy",
+          "received": [
+            "Mike Evans"
+          ],
+          "given": [
+            "Kareem Hunt",
+            "Davante Adams",
+            "Royce Freeman"
+          ],
+          "net": -101.3
+        },
+        {
+          "season": "2018",
+          "trade_id": "7782edff-10c7-3897-96b4-41c975646c20",
+          "counterparty": "Angelo Hernandez",
+          "received": [
+            "Devonta Freeman"
+          ],
+          "given": [
+            "James Conner"
+          ],
+          "net": -198.7
+        }
+      ],
+      "trades_won": 2,
+      "trades_lost": 6,
+      "trades_net_total": -399.9,
+      "waiver_add_count": 599,
       "best_waiver_pickup": {
         "season": "2025",
         "team_id": "1",
@@ -365,6 +570,50 @@
           "luck": 1.09
         }
       },
+      "championship_runs": [
+        {
+          "season": "2017",
+          "reg_season_avg": 97.0,
+          "reg_season_games": 11,
+          "playoff_games": [
+            {
+              "week": "13",
+              "score": 117.0,
+              "opp_score": 78.0,
+              "opponent": "Dustin Gamble",
+              "result": "W"
+            },
+            {
+              "week": "14",
+              "score": 114.0,
+              "opp_score": 71.0,
+              "opponent": "Kyle Torpey",
+              "result": "W"
+            },
+            {
+              "week": "15",
+              "score": 119.0,
+              "opp_score": 117.0,
+              "opponent": "Derek Booker",
+              "result": "W"
+            }
+          ]
+        }
+      ],
+      "best_rival": {
+        "opponent": "Derek Booker",
+        "w": 10,
+        "l": 6,
+        "t": 0,
+        "margin": 4
+      },
+      "worst_rival": {
+        "opponent": "Dakota Bender",
+        "w": 5,
+        "l": 10,
+        "t": 0,
+        "margin": -5
+      },
       "early_round_position_counts": {
         "RB": 13,
         "WR": 12,
@@ -395,9 +644,94 @@
         "points_rank": 139,
         "value_score": -138
       },
+      "best_draft_picks_top2": [
+        {
+          "season": "2017",
+          "team_id": "2",
+          "manager": "Tyler Scarlett",
+          "round_num": 15,
+          "overall_pick": 162,
+          "player_name": "Eagles D/ST",
+          "position": "D/ST",
+          "total_points": 159.0,
+          "points_rank": 34,
+          "value_score": 128
+        },
+        {
+          "season": "2020",
+          "team_id": "2",
+          "manager": "Tyler Scarlett",
+          "round_num": 13,
+          "overall_pick": 145,
+          "player_name": "Cam Newton",
+          "position": "QB",
+          "total_points": 259.98,
+          "points_rank": 19,
+          "value_score": 126
+        }
+      ],
+      "worst_draft_picks_top2": [
+        {
+          "season": "2020",
+          "team_id": "2",
+          "manager": "Tyler Scarlett",
+          "round_num": 1,
+          "overall_pick": 1,
+          "player_name": "Christian McCaffrey",
+          "position": "RB",
+          "total_points": 81.9,
+          "points_rank": 139,
+          "value_score": -138
+        },
+        {
+          "season": "2021",
+          "team_id": "2",
+          "manager": "Tyler Scarlett",
+          "round_num": 3,
+          "overall_pick": 29,
+          "player_name": "Allen Robinson II",
+          "position": "WR",
+          "total_points": 87.0,
+          "points_rank": 145,
+          "value_score": -116
+        }
+      ],
       "avg_draft_value_score": 1.89,
       "trade_count": 2,
-      "waiver_add_count": 182,
+      "trade_ledger": [
+        {
+          "season": "2022",
+          "trade_id": "85d76156-4145-4843-8b50-64596d10841d",
+          "counterparty": "Jarett Coy",
+          "received": [
+            "Christian Kirk",
+            "Dameon Pierce"
+          ],
+          "given": [
+            "Gabe Davis",
+            "Cordarrelle Patterson"
+          ],
+          "net": 62.1
+        },
+        {
+          "season": "2024",
+          "trade_id": "4be18897-b25b-44e0-9e93-e987be544779",
+          "counterparty": "Derek Booker",
+          "received": [
+            "Curtis Samuel",
+            "Rhamondre Stevenson"
+          ],
+          "given": [
+            "Ty Chandler",
+            "Brian Robinson Jr."
+          ],
+          "net": 51.4
+        }
+      ],
+      "trades_won": 2,
+      "trades_lost": 0,
+      "trades_net_total": 113.5,
+      "waiver_add_count": 198,
       "best_waiver_pickup": {
         "season": "2025",
         "team_id": "2",
@@ -572,6 +906,50 @@
           "luck": 1.45
         }
       },
+      "championship_runs": [
+        {
+          "season": "2018",
+          "reg_season_avg": 126.5,
+          "reg_season_games": 11,
+          "playoff_games": [
+            {
+              "week": "12",
+              "score": 150.58,
+              "opp_score": 75.74,
+              "opponent": "Kyle Torpey",
+              "result": "W"
+            },
+            {
+              "week": "13",
+              "score": 167.1,
+              "opp_score": 119.06,
+              "opponent": "Tyler Scarlett",
+              "result": "W"
+            },
+            {
+              "week": "14",
+              "score": 150.38,
+              "opp_score": 133.1,
+              "opponent": "Jarett Coy",
+              "result": "W"
+            }
+          ]
+        }
+      ],
+      "best_rival": {
+        "opponent": "Dakota Bender",
+        "w": 12,
+        "l": 4,
+        "t": 0,
+        "margin": 8
+      },
+      "worst_rival": {
+        "opponent": "Jarett Coy",
+        "w": 5,
+        "l": 11,
+        "t": 0,
+        "margin": -6
+      },
       "early_round_position_counts": {
         "RB": 19,
         "WR": 13,
@@ -601,9 +979,104 @@
         "points_rank": 188,
         "value_score": -154
       },
+      "best_draft_picks_top2": [
+        {
+          "season": "2020",
+          "team_id": "3",
+          "manager": "Alex Topham",
+          "round_num": 14,
+          "overall_pick": 157,
+          "player_name": "Ben Roethlisberger",
+          "position": "QB",
+          "total_points": 267.22,
+          "points_rank": 15,
+          "value_score": 142
+        },
+        {
+          "season": "2018",
+          "team_id": "3",
+          "manager": "Alex Topham",
+          "round_num": 12,
+          "overall_pick": 133,
+          "player_name": "Patrick Mahomes",
+          "position": "QB",
+          "total_points": 417.08,
+          "points_rank": 1,
+          "value_score": 132
+        }
+      ],
+      "worst_draft_picks_top2": [
+        {
+          "season": "2016",
+          "team_id": "3",
+          "manager": "Alex Topham",
+          "round_num": 3,
+          "overall_pick": 34,
+          "player_name": "Keenan Allen",
+          "position": "WR",
+          "total_points": 6.0,
+          "points_rank": 188,
+          "value_score": -154
+        },
+        {
+          "season": "2022",
+          "team_id": "3",
+          "manager": "Alex Topham",
+          "round_num": 3,
+          "overall_pick": 33,
+          "player_name": "Javonte Williams",
+          "position": "RB",
+          "total_points": 42.0,
+          "points_rank": 174,
+          "value_score": -141
+        }
+      ],
       "avg_draft_value_score": -4.38,
       "trade_count": 3,
-      "waiver_add_count": 226,
+      "trade_ledger": [
+        {
+          "season": "2018",
+          "trade_id": "ffda1076-cfcd-338b-8501-be84e5c47a75",
+          "counterparty": "Johnny Marcks",
+          "received": [
+            "Davante Adams"
+          ],
+          "given": [
+            "Mark Ingram II"
+          ],
+          "net": 108.4
+        },
+        {
+          "season": "2022",
+          "trade_id": "596efc28-0eb7-45fe-98bb-3e8b02abe83f",
+          "counterparty": "Jarett Coy",
+          "received": [
+            "Khalil Herbert",
+            "Dalvin Cook"
+          ],
+          "given": [
+            "Nick Chubb"
+          ],
+          "net": 26.7
+        },
+        {
+          "season": "2018",
+          "trade_id": "578c9256-f8bf-3b78-8fe4-fd085bf1c97e",
+          "counterparty": "Andrew Campbell",
+          "received": [
+            "Keenan Allen"
+          ],
+          "given": [
+            "Mike Williams",
+            "John Brown"
+          ],
+          "net": -9.5
+        }
+      ],
+      "trades_won": 2,
+      "trades_lost": 1,
+      "trades_net_total": 125.6,
+      "waiver_add_count": 242,
       "best_waiver_pickup": {
         "season": "2019",
         "team_id": "3",
@@ -775,6 +1248,21 @@
           "luck": 1.82
         }
       },
+      "championship_runs": [],
+      "best_rival": {
+        "opponent": "Kyle Torpey",
+        "w": 13,
+        "l": 4,
+        "t": 0,
+        "margin": 9
+      },
+      "worst_rival": {
+        "opponent": "Derek Booker",
+        "w": 7,
+        "l": 11,
+        "t": 0,
+        "margin": -4
+      },
       "early_round_position_counts": {
         "RB": 13,
         "WR": 17,
@@ -805,9 +1293,104 @@
         "points_rank": 176,
         "value_score": -174
       },
+      "best_draft_picks_top2": [
+        {
+          "season": "2024",
+          "team_id": "4",
+          "manager": "Johnny Marcks",
+          "round_num": 13,
+          "overall_pick": 146,
+          "player_name": "Jared Goff",
+          "position": "QB",
+          "total_points": 324.46,
+          "points_rank": 10,
+          "value_score": 136
+        },
+        {
+          "season": "2018",
+          "team_id": "4",
+          "manager": "Johnny Marcks",
+          "round_num": 13,
+          "overall_pick": 149,
+          "player_name": "Dak Prescott",
+          "position": "QB",
+          "total_points": 285.9,
+          "points_rank": 15,
+          "value_score": 134
+        }
+      ],
+      "worst_draft_picks_top2": [
+        {
+          "season": "2020",
+          "team_id": "4",
+          "manager": "Johnny Marcks",
+          "round_num": 1,
+          "overall_pick": 2,
+          "player_name": "Saquon Barkley",
+          "position": "RB",
+          "total_points": 12.4,
+          "points_rank": 176,
+          "value_score": -174
+        },
+        {
+          "season": "2020",
+          "team_id": "4",
+          "manager": "Johnny Marcks",
+          "round_num": 2,
+          "overall_pick": 23,
+          "player_name": "Kenny Golladay",
+          "position": "WR",
+          "total_points": 55.8,
+          "points_rank": 161,
+          "value_score": -138
+        }
+      ],
       "avg_draft_value_score": -0.84,
       "trade_count": 3,
-      "waiver_add_count": 151,
+      "trade_ledger": [
+        {
+          "season": "2018",
+          "trade_id": "ffda1076-cfcd-338b-8501-be84e5c47a75",
+          "counterparty": "Alex Topham",
+          "received": [
+            "Mark Ingram II"
+          ],
+          "given": [
+            "Davante Adams"
+          ],
+          "net": -108.4
+        },
+        {
+          "season": "2020",
+          "trade_id": "3da36738-9988-4ed1-9b80-fb8ad91308b5",
+          "counterparty": "Jarett Coy",
+          "received": [
+            "Clyde Edwards-Helaire",
+            "Dalton Schultz"
+          ],
+          "given": [
+            "Amari Cooper",
+            "Darren Waller"
+          ],
+          "net": -131.5
+        },
+        {
+          "season": "2024",
+          "trade_id": "f1e32130-a73f-4527-99fa-09af45a876ca",
+          "counterparty": "Dustin Gamble",
+          "received": [
+            "Chris Olave"
+          ],
+          "given": [
+            "James Cook"
+          ],
+          "net": -190.0
+        }
+      ],
+      "trades_won": 0,
+      "trades_lost": 3,
+      "trades_net_total": -429.9,
+      "waiver_add_count": 165,
       "best_waiver_pickup": {
         "season": "2020",
         "team_id": "4",
@@ -982,6 +1565,99 @@
           "luck": -1.27
         }
       },
+      "championship_runs": [
+        {
+          "season": "2015",
+          "reg_season_avg": 86.4,
+          "reg_season_games": 14,
+          "playoff_games": [
+            {
+              "week": "15",
+              "score": 134.0,
+              "opp_score": 89.0,
+              "opponent": "Phil Lannon",
+              "result": "W"
+            },
+            {
+              "week": "16",
+              "score": 107.0,
+              "opp_score": 58.0,
+              "opponent": "Corey Ploss",
+              "result": "W"
+            },
+            {
+              "week": "17",
+              "score": 72.0,
+              "opp_score": 47.0,
+              "opponent": "Tyler Scarlett",
+              "result": "W"
+            }
+          ]
+        },
+        {
+          "season": "2016",
+          "reg_season_avg": 83.5,
+          "reg_season_games": 12,
+          "playoff_games": [
+            {
+              "week": "13",
+              "score": 87.0,
+              "opp_score": 63.0,
+              "opponent": "Pj Lannon",
+              "result": "W"
+            },
+            {
+              "week": "14",
+              "score": 78.0,
+              "opp_score": 61.0,
+              "opponent": "Dustin Gamble",
+              "result": "W"
+            },
+            {
+              "week": "15",
+              "score": 93.0,
+              "opp_score": 72.0,
+              "opponent": "Johnny Marcks",
+              "result": "W"
+            }
+          ]
+        },
+        {
+          "season": "2021",
+          "reg_season_avg": 125.6,
+          "reg_season_games": 14,
+          "playoff_games": [
+            {
+              "week": "16",
+              "score": 139.2,
+              "opp_score": 129.52,
+              "opponent": "Alex Topham",
+              "result": "W"
+            },
+            {
+              "week": "17",
+              "score": 116.52,
+              "opp_score": 116.06,
+              "opponent": "Derek Booker",
+              "result": "W"
+            }
+          ]
+        }
+      ],
+      "best_rival": {
+        "opponent": "Alex Topham",
+        "w": 11,
+        "l": 5,
+        "t": 0,
+        "margin": 6
+      },
+      "worst_rival": {
+        "opponent": "Pj Lannon",
+        "w": 5,
+        "l": 11,
+        "t": 0,
+        "margin": -6
+      },
       "early_round_position_counts": {
         "RB": 19,
         "QB": 2,
@@ -1011,9 +1687,296 @@
         "points_rank": 132,
         "value_score": -126
       },
+      "best_draft_picks_top2": [
+        {
+          "season": "2022",
+          "team_id": "5",
+          "manager": "Jarett Coy",
+          "round_num": 15,
+          "overall_pick": 173,
+          "player_name": "Justin Fields",
+          "position": "QB",
+          "total_points": 295.98,
+          "points_rank": 16,
+          "value_score": 157
+        },
+        {
+          "season": "2015",
+          "team_id": "5",
+          "manager": "Jarett Coy",
+          "round_num": 13,
+          "overall_pick": 150,
+          "player_name": "Carson Palmer",
+          "position": "QB",
+          "total_points": 300.0,
+          "points_rank": 5,
+          "value_score": 145
+        }
+      ],
+      "worst_draft_picks_top2": [
+        {
+          "season": "2015",
+          "team_id": "5",
+          "manager": "Jarett Coy",
+          "round_num": 1,
+          "overall_pick": 6,
+          "player_name": "Jamaal Charles",
+          "position": "RB",
+          "total_points": 75.0,
+          "points_rank": 132,
+          "value_score": -126
+        },
+        {
+          "season": "2016",
+          "team_id": "5",
+          "manager": "Jarett Coy",
+          "round_num": 5,
+          "overall_pick": 54,
+          "player_name": "Eric Decker",
+          "position": "WR",
+          "total_points": 30.0,
+          "points_rank": 176,
+          "value_score": -122
+        }
+      ],
       "avg_draft_value_score": 5.43,
       "trade_count": 17,
-      "waiver_add_count": 206,
+      "trade_ledger": [
+        {
+          "season": "2023",
+          "trade_id": "046a272c-a224-4f4b-9815-76af2ee39b89",
+          "counterparty": "Angelo Hernandez",
+          "received": [
+            "Calvin Ridley",
+            "Mike Evans"
+          ],
+          "given": [
+            "Bijan Robinson"
+          ],
+          "net": 216.6
+        },
+        {
+          "season": "2025",
+          "trade_id": "5035df98-720b-4fa5-8e47-1bb3361c5000",
+          "counterparty": "Corey Ploss",
+          "received": [
+            "Michael Carter",
+            "Derrick Henry",
+            "Ja'Marr Chase"
+          ],
+          "given": [
+            "Jordan Addison",
+            "Bijan Robinson"
+          ],
+          "net": 141.1
+        },
+        {
+          "season": "2020",
+          "trade_id": "3da36738-9988-4ed1-9b80-fb8ad91308b5",
+          "counterparty": "Johnny Marcks",
+          "received": [
+            "Amari Cooper",
+            "Darren Waller"
+          ],
+          "given": [
+            "Clyde Edwards-Helaire",
+            "Dalton Schultz"
+          ],
+          "net": 131.5
+        },
+        {
+          "season": "2023",
+          "trade_id": "b92652ab-23b6-46d1-af57-54be293c738f",
+          "counterparty": "Derek Booker",
+          "received": [
+            "Kareem Hunt",
+            "Davante Adams",
+            "Royce Freeman"
+          ],
+          "given": [
+            "Mike Evans"
+          ],
+          "net": 101.3
+        },
+        {
+          "season": "2024",
+          "trade_id": "a50f6f99-18f2-427c-b5bd-cf22f2069ea5",
+          "counterparty": "Andrew Campbell",
+          "received": [
+            "Cooper Kupp",
+            "Chuba Hubbard"
+          ],
+          "given": [
+            "Younghoe Koo",
+            "Tyreek Hill"
+          ],
+          "net": 80.6
+        },
+        {
+          "season": "2025",
+          "trade_id": "1f29a606-af42-41fd-a696-6c84ba404ff5",
+          "counterparty": "Andrew Campbell",
+          "received": [
+            "Nico Collins",
+            "Travis Etienne Jr."
+          ],
+          "given": [
+            "Ja'Marr Chase"
+          ],
+          "net": 79.3
+        },
+        {
+          "season": "2018",
+          "trade_id": "41c9a359-2898-3b19-aa17-d3f22e6893fc",
+          "counterparty": "Angelo Hernandez",
+          "received": [
+            "Brandin Cooks",
+            "JuJu Smith-Schuster"
+          ],
+          "given": [
+            "Joe Mixon",
+            "Emmanuel Sanders"
+          ],
+          "net": 24.4
+        },
+        {
+          "season": "2018",
+          "trade_id": "5fedc587-8fc2-30f9-9de0-5b82679ba256",
+          "counterparty": "Corey Ploss",
+          "received": [
+            "Cam Newton"
+          ],
+          "given": [
+            "Adrian Peterson"
+          ],
+          "net": 22.8
+        },
+        {
+          "season": "2024",
+          "trade_id": "331d45a0-ea5d-4d89-9602-79bf94079a2c",
+          "counterparty": "Dustin Gamble",
+          "received": [
+            "Patrick Mahomes",
+            "Nick Chubb",
+            "J.K. Dobbins"
+          ],
+          "given": [
+            "Tank Dell",
+            "Saquon Barkley"
+          ],
+          "net": 17.2
+        },
+        {
+          "season": "2023",
+          "trade_id": "744555c0-09f4-4f43-818a-6dcc7a782a12",
+          "counterparty": "Andrew Campbell",
+          "received": [
+            "Jayden Reed",
+            "James Cook"
+          ],
+          "given": [
+            "CeeDee Lamb"
+          ],
+          "net": 4.5
+        },
+        {
+          "season": "2025",
+          "trade_id": "13561911-c90e-4645-a7e4-4b508dbecf66",
+          "counterparty": "Dakota Bender",
+          "received": [
+            "A.J. Brown"
+          ],
+          "given": [
+            "DeVonta Smith",
+            "Omarion Hampton"
+          ],
+          "net": -18.5
+        },
+        {
+          "season": "2022",
+          "trade_id": "596efc28-0eb7-45fe-98bb-3e8b02abe83f",
+          "counterparty": "Alex Topham",
+          "received": [
+            "Nick Chubb"
+          ],
+          "given": [
+            "Khalil Herbert",
+            "Dalvin Cook"
+          ],
+          "net": -26.7
+        },
+        {
+          "season": "2023",
+          "trade_id": "97c112f3-19cf-4c31-b1b5-a0a137ff170d",
+          "counterparty": "Derek Booker",
+          "received": [
+            "Evan Engram"
+          ],
+          "given": [
+            "Breece Hall"
+          ],
+          "net": -56.9
+        },
+        {
+          "season": "2022",
+          "trade_id": "85d76156-4145-4843-8b50-64596d10841d",
+          "counterparty": "Tyler Scarlett",
+          "received": [
+            "Gabe Davis",
+            "Cordarrelle Patterson"
+          ],
+          "given": [
+            "Christian Kirk",
+            "Dameon Pierce"
+          ],
+          "net": -62.1
+        },
+        {
+          "season": "2024",
+          "trade_id": "a4d70d11-96c0-47ae-86ca-159ffe5d454b",
+          "counterparty": "Corey Ploss",
+          "received": [
+            "Saquon Barkley"
+          ],
+          "given": [
+            "Xavier Worthy",
+            "Travis Etienne Jr.",
+            "Tank Bigsby",
+            "Cooper Kupp"
+          ],
+          "net": -167.6
+        },
+        {
+          "season": "2025",
+          "trade_id": "230f3699-8618-4db4-a0fe-6226053e13e8",
+          "counterparty": "Angelo Hernandez",
+          "received": [
+            "Brian Thomas Jr."
+          ],
+          "given": [
+            "Jake Ferguson",
+            "Tony Pollard"
+          ],
+          "net": -211.8
+        },
+        {
+          "season": "2025",
+          "trade_id": "15162aeb-b007-43cc-8ba5-156ce2f64a3b",
+          "counterparty": "Kyle Torpey",
+          "received": [
+            "Trey Benson"
+          ],
+          "given": [
+            "Quentin Johnston",
+            "George Pickens"
+          ],
+          "net": -355.4
+        }
+      ],
+      "trades_won": 10,
+      "trades_lost": 7,
+      "trades_net_total": -79.7,
+      "waiver_add_count": 221,
       "best_waiver_pickup": {
         "season": "2024",
         "team_id": "5",
@@ -1182,6 +2145,21 @@
           "luck": -0.27
         }
       },
+      "championship_runs": [],
+      "best_rival": {
+        "opponent": "Tyler Scarlett",
+        "w": 10,
+        "l": 5,
+        "t": 0,
+        "margin": 5
+      },
+      "worst_rival": {
+        "opponent": "Alex Topham",
+        "w": 4,
+        "l": 12,
+        "t": 0,
+        "margin": -8
+      },
       "early_round_position_counts": {
         "RB": 18,
         "WR": 13,
@@ -1211,9 +2189,132 @@
         "points_rank": 158,
         "value_score": -157
       },
+      "best_draft_picks_top2": [
+        {
+          "season": "2015",
+          "team_id": "6",
+          "manager": "Dakota Bender",
+          "round_num": 16,
+          "overall_pick": 190,
+          "player_name": "Doug Baldwin",
+          "position": "WR",
+          "total_points": 184.0,
+          "points_rank": 28,
+          "value_score": 162
+        },
+        {
+          "season": "2015",
+          "team_id": "6",
+          "manager": "Dakota Bender",
+          "round_num": 15,
+          "overall_pick": 171,
+          "player_name": "Tyrod Taylor",
+          "position": "QB",
+          "total_points": 258.0,
+          "points_rank": 12,
+          "value_score": 159
+        }
+      ],
+      "worst_draft_picks_top2": [
+        {
+          "season": "2017",
+          "team_id": "6",
+          "manager": "Dakota Bender",
+          "round_num": 1,
+          "overall_pick": 1,
+          "player_name": "David Johnson",
+          "position": "RB",
+          "total_points": 6.0,
+          "points_rank": 158,
+          "value_score": -157
+        },
+        {
+          "season": "2023",
+          "team_id": "6",
+          "manager": "Dakota Bender",
+          "round_num": 1,
+          "overall_pick": 6,
+          "player_name": "Nick Chubb",
+          "position": "RB",
+          "total_points": 23.1,
+          "points_rank": 163,
+          "value_score": -157
+        }
+      ],
       "avg_draft_value_score": -4.63,
       "trade_count": 5,
-      "waiver_add_count": 298,
+      "trade_ledger": [
+        {
+          "season": "2018",
+          "trade_id": "4e073a76-fba9-3310-a5a1-42f425d6301b",
+          "counterparty": "Derek Booker",
+          "received": [
+            "Tyler Boyd",
+            "Tevin Coleman",
+            "Dion Lewis"
+          ],
+          "given": [
+            "Golden Tate",
+            "David Johnson"
+          ],
+          "net": 68.6
+        },
+        {
+          "season": "2018",
+          "trade_id": "c96c38d2-f095-33ad-9073-6b7a97583a6c",
+          "counterparty": "Derek Booker",
+          "received": [
+            "Kyle Rudolph"
+          ],
+          "given": [
+            "Devin Funchess"
+          ],
+          "net": 39.8
+        },
+        {
+          "season": "2018",
+          "trade_id": "f4ebb720-a064-3903-8cee-ee074d361fa8",
+          "counterparty": "Andrew Campbell",
+          "received": [
+            "Jarvis Landry",
+            "Dalvin Cook"
+          ],
+          "given": [
+            "Jimmy Graham",
+            "Phillip Lindsay"
+          ],
+          "net": 29.2
+        },
+        {
+          "season": "2025",
+          "trade_id": "13561911-c90e-4645-a7e4-4b508dbecf66",
+          "counterparty": "Jarett Coy",
+          "received": [
+            "DeVonta Smith",
+            "Omarion Hampton"
+          ],
+          "given": [
+            "A.J. Brown"
+          ],
+          "net": 18.5
+        },
+        {
+          "season": "2018",
+          "trade_id": "e1cb58aa-dd82-33ae-bb44-302092e9d2a5",
+          "counterparty": "Derek Booker",
+          "received": [
+            "Golden Tate"
+          ],
+          "given": [
+            "Dion Lewis"
+          ],
+          "net": -15.1
+        }
+      ],
+      "trades_won": 4,
+      "trades_lost": 1,
+      "trades_net_total": 141.0,
+      "waiver_add_count": 314,
       "best_waiver_pickup": {
         "season": "2024",
         "team_id": "6",
@@ -1383,6 +2484,21 @@
           "luck": 0.82
         }
       },
+      "championship_runs": [],
+      "best_rival": {
+        "opponent": "Dakota Bender",
+        "w": 13,
+        "l": 6,
+        "t": 0,
+        "margin": 7
+      },
+      "worst_rival": {
+        "opponent": "Derek Booker",
+        "w": 5,
+        "l": 12,
+        "t": 0,
+        "margin": -7
+      },
       "early_round_position_counts": {
         "RB": 14,
         "QB": 3,
@@ -1413,17 +2529,116 @@
         "points_rank": 178,
         "value_score": -143
       },
+      "best_draft_picks_top2": [
+        {
+          "season": "2024",
+          "team_id": "7",
+          "manager": "Corey Ploss",
+          "round_num": 14,
+          "overall_pick": 157,
+          "player_name": "Justin Herbert",
+          "position": "QB",
+          "total_points": 285.4,
+          "points_rank": 17,
+          "value_score": 140
+        },
+        {
+          "season": "2022",
+          "team_id": "7",
+          "manager": "Corey Ploss",
+          "round_num": 13,
+          "overall_pick": 148,
+          "player_name": "Kirk Cousins",
+          "position": "QB",
+          "total_points": 291.58,
+          "points_rank": 18,
+          "value_score": 130
+        }
+      ],
+      "worst_draft_picks_top2": [
+        {
+          "season": "2020",
+          "team_id": "7",
+          "manager": "Corey Ploss",
+          "round_num": 3,
+          "overall_pick": 35,
+          "player_name": "Courtland Sutton",
+          "position": "WR",
+          "total_points": 8.1,
+          "points_rank": 178,
+          "value_score": -143
+        },
+        {
+          "season": "2015",
+          "team_id": "7",
+          "manager": "Corey Ploss",
+          "round_num": 1,
+          "overall_pick": 8,
+          "player_name": "Marshawn Lynch",
+          "position": "RB",
+          "total_points": 66.0,
+          "points_rank": 144,
+          "value_score": -136
+        }
+      ],
       "avg_draft_value_score": 0.19,
       "trade_count": 3,
-      "waiver_add_count": 161,
+      "trade_ledger": [
+        {
+          "season": "2024",
+          "trade_id": "a4d70d11-96c0-47ae-86ca-159ffe5d454b",
+          "counterparty": "Jarett Coy",
+          "received": [
+            "Xavier Worthy",
+            "Travis Etienne Jr.",
+            "Tank Bigsby",
+            "Cooper Kupp"
+          ],
+          "given": [
+            "Saquon Barkley"
+          ],
+          "net": 167.6
+        },
+        {
+          "season": "2018",
+          "trade_id": "5fedc587-8fc2-30f9-9de0-5b82679ba256",
+          "counterparty": "Jarett Coy",
+          "received": [
+            "Adrian Peterson"
+          ],
+          "given": [
+            "Cam Newton"
+          ],
+          "net": -22.8
+        },
+        {
+          "season": "2025",
+          "trade_id": "5035df98-720b-4fa5-8e47-1bb3361c5000",
+          "counterparty": "Jarett Coy",
+          "received": [
+            "Jordan Addison",
+            "Bijan Robinson"
+          ],
+          "given": [
+            "Michael Carter",
+            "Derrick Henry",
+            "Ja'Marr Chase"
+          ],
+          "net": -141.1
+        }
+      ],
+      "trades_won": 1,
+      "trades_lost": 2,
+      "trades_net_total": 3.7,
+      "waiver_add_count": 163,
       "best_waiver_pickup": {
-        "season": "2023",
+        "season": "2018",
         "team_id": "7",
         "manager": "Corey Ploss",
-        "player_name": "Jordan Love",
+        "player_name": "Jared Goff",
         "position": "QB",
-        "scoring_period_added": 5,
-        "rest_of_season_points": 233.8,
+        "scoring_period_added": 4,
+        "rest_of_season_points": 249.2,
         "bid_amount": 0.0
       }
     },
@@ -1582,6 +2797,21 @@
           "luck": 1.09
         }
       },
+      "championship_runs": [],
+      "best_rival": {
+        "opponent": "Angelo Hernandez",
+        "w": 10,
+        "l": 6,
+        "t": 0,
+        "margin": 4
+      },
+      "worst_rival": {
+        "opponent": "Johnny Marcks",
+        "w": 4,
+        "l": 13,
+        "t": 0,
+        "margin": -9
+      },
       "early_round_position_counts": {
         "RB": 19,
         "WR": 11,
@@ -1611,9 +2841,79 @@
         "points_rank": 179,
         "value_score": -156
       },
+      "best_draft_picks_top2": [
+        {
+          "season": "2016",
+          "team_id": "8",
+          "manager": "Kyle Torpey",
+          "round_num": 14,
+          "overall_pick": 160,
+          "player_name": "Andy Dalton",
+          "position": "QB",
+          "total_points": 250.0,
+          "points_rank": 16,
+          "value_score": 144
+        },
+        {
+          "season": "2022",
+          "team_id": "8",
+          "manager": "Kyle Torpey",
+          "round_num": 13,
+          "overall_pick": 152,
+          "player_name": "Trevor Lawrence",
+          "position": "QB",
+          "total_points": 295.62,
+          "points_rank": 17,
+          "value_score": 135
+        }
+      ],
+      "worst_draft_picks_top2": [
+        {
+          "season": "2018",
+          "team_id": "8",
+          "manager": "Kyle Torpey",
+          "round_num": 2,
+          "overall_pick": 23,
+          "player_name": "Jerick McKinnon",
+          "position": "RB",
+          "total_points": 0.0,
+          "points_rank": 179,
+          "value_score": -156
+        },
+        {
+          "season": "2015",
+          "team_id": "8",
+          "manager": "Kyle Torpey",
+          "round_num": 2,
+          "overall_pick": 15,
+          "player_name": "Dez Bryant",
+          "position": "WR",
+          "total_points": 54.0,
+          "points_rank": 155,
+          "value_score": -140
+        }
+      ],
       "avg_draft_value_score": -2.49,
       "trade_count": 1,
-      "waiver_add_count": 102,
+      "trade_ledger": [
+        {
+          "season": "2025",
+          "trade_id": "15162aeb-b007-43cc-8ba5-156ce2f64a3b",
+          "counterparty": "Jarett Coy",
+          "received": [
+            "Quentin Johnston",
+            "George Pickens"
+          ],
+          "given": [
+            "Trey Benson"
+          ],
+          "net": 355.4
+        }
+      ],
+      "trades_won": 1,
+      "trades_lost": 0,
+      "trades_net_total": 355.4,
+      "waiver_add_count": 111,
       "best_waiver_pickup": {
         "season": "2023",
         "team_id": "8",
@@ -1679,6 +2979,21 @@
           "luck": -2.32
         }
       },
+      "championship_runs": [],
+      "best_rival": {
+        "opponent": "Angelo Hernandez",
+        "w": 2,
+        "l": 2,
+        "t": 0,
+        "margin": 0
+      },
+      "worst_rival": {
+        "opponent": "Derek Booker",
+        "w": 1,
+        "l": 3,
+        "t": 0,
+        "margin": -2
+      },
       "early_round_position_counts": {
         "WR": 3,
         "RB": 2,
@@ -1708,8 +3023,64 @@
         "points_rank": 170,
         "value_score": -143
       },
+      "best_draft_picks_top2": [
+        {
+          "season": "2015",
+          "team_id": "9",
+          "manager": "Phil Lannon",
+          "round_num": 14,
+          "overall_pick": 160,
+          "player_name": "Broncos D/ST",
+          "position": "D/ST",
+          "total_points": 182.0,
+          "points_rank": 29,
+          "value_score": 131
+        },
+        {
+          "season": "2016",
+          "team_id": "9",
+          "manager": "Phil Lannon",
+          "round_num": 14,
+          "overall_pick": 166,
+          "player_name": "Justin Tucker",
+          "position": "K",
+          "total_points": 174.0,
+          "points_rank": 37,
+          "value_score": 129
+        }
+      ],
+      "worst_draft_picks_top2": [
+        {
+          "season": "2016",
+          "team_id": "9",
+          "manager": "Phil Lannon",
+          "round_num": 3,
+          "overall_pick": 27,
+          "player_name": "Eddie Lacy",
+          "position": "RB",
+          "total_points": 36.0,
+          "points_rank": 170,
+          "value_score": -143
+        },
+        {
+          "season": "2016",
+          "team_id": "9",
+          "manager": "Phil Lannon",
+          "round_num": 6,
+          "overall_pick": 70,
+          "player_name": "John Brown",
+          "position": "WR",
+          "total_points": 60.0,
+          "points_rank": 154,
+          "value_score": -84
+        }
+      ],
       "avg_draft_value_score": -3.78,
       "trade_count": 0,
+      "trade_ledger": [],
+      "trades_won": 0,
+      "trades_lost": 0,
+      "trades_net_total": 0,
       "waiver_add_count": 0,
       "best_waiver_pickup": null
     },
@@ -1872,6 +3243,50 @@
           "luck": -4.09
         }
       },
+      "championship_runs": [
+        {
+          "season": "2024",
+          "reg_season_avg": 130.3,
+          "reg_season_games": 14,
+          "playoff_games": [
+            {
+              "week": "15",
+              "score": 154.72,
+              "opp_score": 147.24,
+              "opponent": "Johnny Marcks",
+              "result": "W"
+            },
+            {
+              "week": "16",
+              "score": 166.32,
+              "opp_score": 95.56,
+              "opponent": "Angelo Hernandez",
+              "result": "W"
+            },
+            {
+              "week": "17",
+              "score": 136.06,
+              "opp_score": 91.12,
+              "opponent": "Tyler Scarlett",
+              "result": "W"
+            }
+          ]
+        }
+      ],
+      "best_rival": {
+        "opponent": "Angelo Hernandez",
+        "w": 11,
+        "l": 4,
+        "t": 0,
+        "margin": 7
+      },
+      "worst_rival": {
+        "opponent": "Pj Lannon",
+        "w": 4,
+        "l": 11,
+        "t": 0,
+        "margin": -7
+      },
       "early_round_position_counts": {
         "RB": 16,
         "WR": 15,
@@ -1901,9 +3316,93 @@
         "points_rank": 178,
         "value_score": -175
       },
+      "best_draft_picks_top2": [
+        {
+          "season": "2023",
+          "team_id": "10",
+          "manager": "Dustin Gamble",
+          "round_num": 14,
+          "overall_pick": 165,
+          "player_name": "Jared Goff",
+          "position": "QB",
+          "total_points": 289.1,
+          "points_rank": 11,
+          "value_score": 154
+        },
+        {
+          "season": "2016",
+          "team_id": "10",
+          "manager": "Dustin Gamble",
+          "round_num": 14,
+          "overall_pick": 161,
+          "player_name": "Derek Carr",
+          "position": "QB",
+          "total_points": 257.0,
+          "points_rank": 11,
+          "value_score": 150
+        }
+      ],
+      "worst_draft_picks_top2": [
+        {
+          "season": "2018",
+          "team_id": "10",
+          "manager": "Dustin Gamble",
+          "round_num": 1,
+          "overall_pick": 3,
+          "player_name": "Le'Veon Bell",
+          "position": "RB",
+          "total_points": 0.0,
+          "points_rank": 178,
+          "value_score": -175
+        },
+        {
+          "season": "2024",
+          "team_id": "10",
+          "manager": "Dustin Gamble",
+          "round_num": 2,
+          "overall_pick": 22,
+          "player_name": "Chris Olave",
+          "position": "WR",
+          "total_points": 76.7,
+          "points_rank": 147,
+          "value_score": -125
+        }
+      ],
       "avg_draft_value_score": -0.88,
       "trade_count": 2,
-      "waiver_add_count": 129,
+      "trade_ledger": [
+        {
+          "season": "2024",
+          "trade_id": "f1e32130-a73f-4527-99fa-09af45a876ca",
+          "counterparty": "Johnny Marcks",
+          "received": [
+            "James Cook"
+          ],
+          "given": [
+            "Chris Olave"
+          ],
+          "net": 190.0
+        },
+        {
+          "season": "2024",
+          "trade_id": "331d45a0-ea5d-4d89-9602-79bf94079a2c",
+          "counterparty": "Jarett Coy",
+          "received": [
+            "Tank Dell",
+            "Saquon Barkley"
+          ],
+          "given": [
+            "Patrick Mahomes",
+            "Nick Chubb",
+            "J.K. Dobbins"
+          ],
+          "net": -17.2
+        }
+      ],
+      "trades_won": 1,
+      "trades_lost": 1,
+      "trades_net_total": 172.8,
+      "waiver_add_count": 134,
       "best_waiver_pickup": {
         "season": "2024",
         "team_id": "10",
@@ -2075,6 +3574,43 @@
           "luck": 3.09
         }
       },
+      "championship_runs": [
+        {
+          "season": "2022",
+          "reg_season_avg": 129.8,
+          "reg_season_games": 14,
+          "playoff_games": [
+            {
+              "week": "16",
+              "score": 143.46,
+              "opp_score": 78.26,
+              "opponent": "Dakota Bender",
+              "result": "W"
+            },
+            {
+              "week": "17",
+              "score": 128.62,
+              "opp_score": 122.46,
+              "opponent": "Johnny Marcks",
+              "result": "W"
+            }
+          ]
+        }
+      ],
+      "best_rival": {
+        "opponent": "Dustin Gamble",
+        "w": 11,
+        "l": 4,
+        "t": 0,
+        "margin": 7
+      },
+      "worst_rival": {
+        "opponent": "Derek Booker",
+        "w": 5,
+        "l": 10,
+        "t": 0,
+        "margin": -5
+      },
       "early_round_position_counts": {
         "RB": 14,
         "QB": 4,
@@ -2105,9 +3641,79 @@
         "points_rank": 159,
         "value_score": -158
       },
+      "best_draft_picks_top2": [
+        {
+          "season": "2016",
+          "team_id": "11",
+          "manager": "Pj Lannon",
+          "round_num": 14,
+          "overall_pick": 165,
+          "player_name": "Dak Prescott",
+          "position": "QB",
+          "total_points": 271.0,
+          "points_rank": 8,
+          "value_score": 157
+        },
+        {
+          "season": "2021",
+          "team_id": "11",
+          "manager": "Pj Lannon",
+          "round_num": 15,
+          "overall_pick": 170,
+          "player_name": "Kirk Cousins",
+          "position": "QB",
+          "total_points": 300.34,
+          "points_rank": 20,
+          "value_score": 150
+        }
+      ],
+      "worst_draft_picks_top2": [
+        {
+          "season": "2024",
+          "team_id": "11",
+          "manager": "Pj Lannon",
+          "round_num": 1,
+          "overall_pick": 1,
+          "player_name": "Christian McCaffrey",
+          "position": "RB",
+          "total_points": 47.8,
+          "points_rank": 159,
+          "value_score": -158
+        },
+        {
+          "season": "2016",
+          "team_id": "11",
+          "manager": "Pj Lannon",
+          "round_num": 1,
+          "overall_pick": 4,
+          "player_name": "Rob Gronkowski",
+          "position": "TE",
+          "total_points": 69.0,
+          "points_rank": 141,
+          "value_score": -137
+        }
+      ],
       "avg_draft_value_score": 1.6,
       "trade_count": 1,
-      "waiver_add_count": 166,
+      "trade_ledger": [
+        {
+          "season": "2018",
+          "trade_id": "8bdadd1c-738b-3206-b6ee-fea839824320",
+          "counterparty": "Derek Booker",
+          "received": [
+            "Travis Kelce"
+          ],
+          "given": [
+            "Rob Gronkowski",
+            "Demaryius Thomas"
+          ],
+          "net": 12.1
+        }
+      ],
+      "trades_won": 1,
+      "trades_lost": 0,
+      "trades_net_total": 12.1,
+      "waiver_add_count": 170,
       "best_waiver_pickup": {
         "season": "2023",
         "team_id": "11",
@@ -2278,6 +3884,43 @@
           "luck": -1.27
         }
       },
+      "championship_runs": [
+        {
+          "season": "2023",
+          "reg_season_avg": 114.1,
+          "reg_season_games": 14,
+          "playoff_games": [
+            {
+              "week": "16",
+              "score": 160.78,
+              "opp_score": 108.7,
+              "opponent": "Tyler Scarlett",
+              "result": "W"
+            },
+            {
+              "week": "17",
+              "score": 150.04,
+              "opp_score": 149.58,
+              "opponent": "Derek Booker",
+              "result": "W"
+            }
+          ]
+        }
+      ],
+      "best_rival": {
+        "opponent": "Tyler Scarlett",
+        "w": 11,
+        "l": 6,
+        "t": 0,
+        "margin": 5
+      },
+      "worst_rival": {
+        "opponent": "Dustin Gamble",
+        "w": 4,
+        "l": 11,
+        "t": 0,
+        "margin": -7
+      },
       "early_round_position_counts": {
         "WR": 20,
         "RB": 12,
@@ -2307,9 +3950,118 @@
         "points_rank": 185,
         "value_score": -167
       },
+      "best_draft_picks_top2": [
+        {
+          "season": "2016",
+          "team_id": "12",
+          "manager": "Angelo Hernandez",
+          "round_num": 14,
+          "overall_pick": 162,
+          "player_name": "Matt Ryan",
+          "position": "QB",
+          "total_points": 334.0,
+          "points_rank": 2,
+          "value_score": 160
+        },
+        {
+          "season": "2019",
+          "team_id": "12",
+          "manager": "Angelo Hernandez",
+          "round_num": 13,
+          "overall_pick": 155,
+          "player_name": "Dak Prescott",
+          "position": "QB",
+          "total_points": 337.78,
+          "points_rank": 3,
+          "value_score": 152
+        }
+      ],
+      "worst_draft_picks_top2": [
+        {
+          "season": "2016",
+          "team_id": "12",
+          "manager": "Angelo Hernandez",
+          "round_num": 2,
+          "overall_pick": 18,
+          "player_name": "Jamaal Charles",
+          "position": "RB",
+          "total_points": 10.0,
+          "points_rank": 185,
+          "value_score": -167
+        },
+        {
+          "season": "2018",
+          "team_id": "12",
+          "manager": "Angelo Hernandez",
+          "round_num": 2,
+          "overall_pick": 14,
+          "player_name": "Devonta Freeman",
+          "position": "RB",
+          "total_points": 11.6,
+          "points_rank": 174,
+          "value_score": -160
+        }
+      ],
       "avg_draft_value_score": -2.77,
       "trade_count": 4,
-      "waiver_add_count": 233,
+      "trade_ledger": [
+        {
+          "season": "2025",
+          "trade_id": "230f3699-8618-4db4-a0fe-6226053e13e8",
+          "counterparty": "Jarett Coy",
+          "received": [
+            "Jake Ferguson",
+            "Tony Pollard"
+          ],
+          "given": [
+            "Brian Thomas Jr."
+          ],
+          "net": 211.8
+        },
+        {
+          "season": "2018",
+          "trade_id": "7782edff-10c7-3897-96b4-41c975646c20",
+          "counterparty": "Derek Booker",
+          "received": [
+            "James Conner"
+          ],
+          "given": [
+            "Devonta Freeman"
+          ],
+          "net": 198.7
+        },
+        {
+          "season": "2018",
+          "trade_id": "41c9a359-2898-3b19-aa17-d3f22e6893fc",
+          "counterparty": "Jarett Coy",
+          "received": [
+            "Joe Mixon",
+            "Emmanuel Sanders"
+          ],
+          "given": [
+            "Brandin Cooks",
+            "JuJu Smith-Schuster"
+          ],
+          "net": -24.4
+        },
+        {
+          "season": "2023",
+          "trade_id": "046a272c-a224-4f4b-9815-76af2ee39b89",
+          "counterparty": "Jarett Coy",
+          "received": [
+            "Bijan Robinson"
+          ],
+          "given": [
+            "Calvin Ridley",
+            "Mike Evans"
+          ],
+          "net": -216.6
+        }
+      ],
+      "trades_won": 2,
+      "trades_lost": 2,
+      "trades_net_total": 169.5,
+      "waiver_add_count": 245,
       "best_waiver_pickup": {
         "season": "2025",
         "team_id": "12",
@@ -2450,6 +4202,78 @@
           "luck": -1.0
         }
       },
+      "championship_runs": [
+        {
+          "season": "2019",
+          "reg_season_avg": 111.2,
+          "reg_season_games": 11,
+          "playoff_games": [
+            {
+              "week": "13",
+              "score": 93.24,
+              "opp_score": 84.34,
+              "opponent": "Johnny Marcks",
+              "result": "W"
+            },
+            {
+              "week": "14",
+              "score": 111.56,
+              "opp_score": 82.1,
+              "opponent": "Kyle Torpey",
+              "result": "W"
+            },
+            {
+              "week": "15",
+              "score": 128.26,
+              "opp_score": 114.38,
+              "opponent": "Pj Lannon",
+              "result": "W"
+            }
+          ]
+        },
+        {
+          "season": "2020",
+          "reg_season_avg": 118.0,
+          "reg_season_games": 11,
+          "playoff_games": [
+            {
+              "week": "13",
+              "score": 124.5,
+              "opp_score": 76.7,
+              "opponent": "Johnny Marcks",
+              "result": "W"
+            },
+            {
+              "week": "14",
+              "score": 140.72,
+              "opp_score": 100.72,
+              "opponent": "Pj Lannon",
+              "result": "W"
+            },
+            {
+              "week": "15",
+              "score": 165.36,
+              "opp_score": 102.14,
+              "opponent": "Dustin Gamble",
+              "result": "W"
+            }
+          ]
+        }
+      ],
+      "best_rival": {
+        "opponent": "Kyle Torpey",
+        "w": 10,
+        "l": 2,
+        "t": 0,
+        "margin": 8
+      },
+      "worst_rival": {
+        "opponent": "Derek Booker",
+        "w": 3,
+        "l": 11,
+        "t": 0,
+        "margin": -8
+      },
       "early_round_position_counts": {
         "WR": 9,
         "RB": 10,
@@ -2480,9 +4304,133 @@
         "points_rank": 127,
         "value_score": -110
       },
+      "best_draft_picks_top2": [
+        {
+          "season": "2019",
+          "team_id": "13",
+          "manager": "Andrew Campbell",
+          "round_num": 14,
+          "overall_pick": 164,
+          "player_name": "Kirk Cousins",
+          "position": "QB",
+          "total_points": 244.42,
+          "points_rank": 19,
+          "value_score": 145
+        },
+        {
+          "season": "2023",
+          "team_id": "13",
+          "manager": "Andrew Campbell",
+          "round_num": 14,
+          "overall_pick": 164,
+          "player_name": "Nico Collins",
+          "position": "WR",
+          "total_points": 260.4,
+          "points_rank": 24,
+          "value_score": 140
+        }
+      ],
+      "worst_draft_picks_top2": [
+        {
+          "season": "2021",
+          "team_id": "13",
+          "manager": "Andrew Campbell",
+          "round_num": 2,
+          "overall_pick": 17,
+          "player_name": "Clyde Edwards-Helaire",
+          "position": "RB",
+          "total_points": 117.6,
+          "points_rank": 127,
+          "value_score": -110
+        },
+        {
+          "season": "2018",
+          "team_id": "13",
+          "manager": "Andrew Campbell",
+          "round_num": 6,
+          "overall_pick": 63,
+          "player_name": "Rex Burkhead",
+          "position": "RB",
+          "total_points": 42.7,
+          "points_rank": 166,
+          "value_score": -103
+        }
+      ],
       "avg_draft_value_score": 3.91,
       "trade_count": 5,
-      "waiver_add_count": 123,
+      "trade_ledger": [
+        {
+          "season": "2018",
+          "trade_id": "578c9256-f8bf-3b78-8fe4-fd085bf1c97e",
+          "counterparty": "Alex Topham",
+          "received": [
+            "Mike Williams",
+            "John Brown"
+          ],
+          "given": [
+            "Keenan Allen"
+          ],
+          "net": 9.5
+        },
+        {
+          "season": "2023",
+          "trade_id": "744555c0-09f4-4f43-818a-6dcc7a782a12",
+          "counterparty": "Jarett Coy",
+          "received": [
+            "CeeDee Lamb"
+          ],
+          "given": [
+            "Jayden Reed",
+            "James Cook"
+          ],
+          "net": -4.5
+        },
+        {
+          "season": "2018",
+          "trade_id": "f4ebb720-a064-3903-8cee-ee074d361fa8",
+          "counterparty": "Dakota Bender",
+          "received": [
+            "Jimmy Graham",
+            "Phillip Lindsay"
+          ],
+          "given": [
+            "Jarvis Landry",
+            "Dalvin Cook"
+          ],
+          "net": -29.2
+        },
+        {
+          "season": "2025",
+          "trade_id": "1f29a606-af42-41fd-a696-6c84ba404ff5",
+          "counterparty": "Jarett Coy",
+          "received": [
+            "Ja'Marr Chase"
+          ],
+          "given": [
+            "Nico Collins",
+            "Travis Etienne Jr."
+          ],
+          "net": -79.3
+        },
+        {
+          "season": "2024",
+          "trade_id": "a50f6f99-18f2-427c-b5bd-cf22f2069ea5",
+          "counterparty": "Jarett Coy",
+          "received": [
+            "Younghoe Koo",
+            "Tyreek Hill"
+          ],
+          "given": [
+            "Cooper Kupp",
+            "Chuba Hubbard"
+          ],
+          "net": -80.6
+        }
+      ],
+      "trades_won": 1,
+      "trades_lost": 4,
+      "trades_net_total": -184.1,
+      "waiver_add_count": 136,
       "best_waiver_pickup": {
         "season": "2022",
         "team_id": "13",
@@ -3630,18 +5578,6 @@
       "trade_id": "15162aeb-b007-43cc-8ba5-156ce2f64a3b",
       "season": "2025",
       "teams": {
-        "Jarett Coy": {
-          "received_players": [
-            "Trey Benson"
-          ],
-          "given_players": [
-            "Quentin Johnston",
-            "George Pickens"
-          ],
-          "rest_of_season_points_received": 10.4,
-          "rest_of_season_points_given": 365.8,
-          "net": -355.4
-        },
         "Kyle Torpey": {
           "received_players": [
             "Quentin Johnston",
@@ -3653,11 +5589,23 @@
           "rest_of_season_points_received": 365.8,
           "rest_of_season_points_given": 10.4,
           "net": 355.4
+        },
+        "Jarett Coy": {
+          "received_players": [
+            "Trey Benson"
+          ],
+          "given_players": [
+            "Quentin Johnston",
+            "George Pickens"
+          ],
+          "rest_of_season_points_received": 10.4,
+          "rest_of_season_points_given": 365.8,
+          "net": -355.4
         }
       },
       "team_ids": [
-        "5",
-        "8"
+        "8",
+        "5"
       ],
       "lopsidedness": 710.8
     },
@@ -3693,17 +5641,6 @@
       "trade_id": "7782edff-10c7-3897-96b4-41c975646c20",
       "season": "2018",
       "teams": {
-        "Angelo Hernandez": {
-          "received_players": [
-            "James Conner"
-          ],
-          "given_players": [
-            "Devonta Freeman"
-          ],
-          "rest_of_season_points_received": 203.8,
-          "rest_of_season_points_given": 5.1,
-          "net": 198.7
-        },
         "Derek Booker": {
           "received_players": [
             "Devonta Freeman"
@@ -3714,11 +5651,22 @@
           "rest_of_season_points_received": 5.1,
           "rest_of_season_points_given": 203.8,
           "net": -198.7
+        },
+        "Angelo Hernandez": {
+          "received_players": [
+            "James Conner"
+          ],
+          "given_players": [
+            "Devonta Freeman"
+          ],
+          "rest_of_season_points_received": 203.8,
+          "rest_of_season_points_given": 5.1,
+          "net": 198.7
         }
       },
       "team_ids": [
-        "12",
-        "1"
+        "1",
+        "12"
       ],
       "lopsidedness": 397.4
     },
@@ -3726,17 +5674,6 @@
       "trade_id": "ffda1076-cfcd-338b-8501-be84e5c47a75",
       "season": "2018",
       "teams": {
-        "Johnny Marcks": {
-          "received_players": [
-            "Mark Ingram II"
-          ],
-          "given_players": [
-            "Davante Adams"
-          ],
-          "rest_of_season_points_received": 132.0,
-          "rest_of_season_points_given": 240.4,
-          "net": -108.4
-        },
         "Alex Topham": {
           "received_players": [
             "Davante Adams"
@@ -3747,11 +5684,22 @@
           "rest_of_season_points_received": 240.4,
           "rest_of_season_points_given": 132.0,
           "net": 108.4
+        },
+        "Johnny Marcks": {
+          "received_players": [
+            "Mark Ingram II"
+          ],
+          "given_players": [
+            "Davante Adams"
+          ],
+          "rest_of_season_points_received": 132.0,
+          "rest_of_season_points_given": 240.4,
+          "net": -108.4
         }
       },
       "team_ids": [
-        "4",
-        "3"
+        "3",
+        "4"
       ],
       "lopsidedness": 216.8
     },
@@ -3759,19 +5707,6 @@
       "trade_id": "41c9a359-2898-3b19-aa17-d3f22e6893fc",
       "season": "2018",
       "teams": {
-        "Angelo Hernandez": {
-          "received_players": [
-            "Joe Mixon",
-            "Emmanuel Sanders"
-          ],
-          "given_players": [
-            "Brandin Cooks",
-            "JuJu Smith-Schuster"
-          ],
-          "rest_of_season_points_received": 291.3,
-          "rest_of_season_points_given": 315.7,
-          "net": -24.4
-        },
         "Jarett Coy": {
           "received_players": [
             "Brandin Cooks",
@@ -3784,11 +5719,24 @@
           "rest_of_season_points_received": 315.7,
           "rest_of_season_points_given": 291.3,
           "net": 24.4
+        },
+        "Angelo Hernandez": {
+          "received_players": [
+            "Joe Mixon",
+            "Emmanuel Sanders"
+          ],
+          "given_players": [
+            "Brandin Cooks",
+            "JuJu Smith-Schuster"
+          ],
+          "rest_of_season_points_received": 291.3,
+          "rest_of_season_points_given": 315.7,
+          "net": -24.4
         }
       },
       "team_ids": [
-        "12",
-        "5"
+        "5",
+        "12"
       ],
       "lopsidedness": 48.8
     },
@@ -4078,19 +6026,6 @@
       "trade_id": "85d76156-4145-4843-8b50-64596d10841d",
       "season": "2022",
       "teams": {
-        "Jarett Coy": {
-          "received_players": [
-            "Gabe Davis",
-            "Cordarrelle Patterson"
-          ],
-          "given_players": [
-            "Christian Kirk",
-            "Dameon Pierce"
-          ],
-          "rest_of_season_points_received": 251.8,
-          "rest_of_season_points_given": 313.9,
-          "net": -62.1
-        },
         "Tyler Scarlett": {
           "received_players": [
             "Christian Kirk",
@@ -4103,11 +6038,24 @@
           "rest_of_season_points_received": 313.9,
           "rest_of_season_points_given": 251.8,
           "net": 62.1
+        },
+        "Jarett Coy": {
+          "received_players": [
+            "Gabe Davis",
+            "Cordarrelle Patterson"
+          ],
+          "given_players": [
+            "Christian Kirk",
+            "Dameon Pierce"
+          ],
+          "rest_of_season_points_received": 251.8,
+          "rest_of_season_points_given": 313.9,
+          "net": -62.1
         }
       },
       "team_ids": [
-        "5",
-        "2"
+        "2",
+        "5"
       ],
       "lopsidedness": 124.2
     },
@@ -4115,18 +6063,6 @@
       "trade_id": "596efc28-0eb7-45fe-98bb-3e8b02abe83f",
       "season": "2022",
       "teams": {
-        "Jarett Coy": {
-          "received_players": [
-            "Nick Chubb"
-          ],
-          "given_players": [
-            "Khalil Herbert",
-            "Dalvin Cook"
-          ],
-          "rest_of_season_points_received": 118.3,
-          "rest_of_season_points_given": 145.0,
-          "net": -26.7
-        },
         "Alex Topham": {
           "received_players": [
             "Khalil Herbert",
@@ -4138,11 +6074,23 @@
           "rest_of_season_points_received": 145.0,
           "rest_of_season_points_given": 118.3,
           "net": 26.7
+        },
+        "Jarett Coy": {
+          "received_players": [
+            "Nick Chubb"
+          ],
+          "given_players": [
+            "Khalil Herbert",
+            "Dalvin Cook"
+          ],
+          "rest_of_season_points_received": 118.3,
+          "rest_of_season_points_given": 145.0,
+          "net": -26.7
         }
       },
       "team_ids": [
-        "5",
-        "3"
+        "3",
+        "5"
       ],
       "lopsidedness": 53.4
     },
@@ -4185,18 +6133,6 @@
       "trade_id": "744555c0-09f4-4f43-818a-6dcc7a782a12",
       "season": "2023",
       "teams": {
-        "Jarett Coy": {
-          "received_players": [
-            "Jayden Reed",
-            "James Cook"
-          ],
-          "given_players": [
-            "CeeDee Lamb"
-          ],
-          "rest_of_season_points_received": 345.7,
-          "rest_of_season_points_given": 341.2,
-          "net": 4.5
-        },
         "Andrew Campbell": {
           "received_players": [
             "CeeDee Lamb"
@@ -4208,11 +6144,23 @@
           "rest_of_season_points_received": 341.2,
           "rest_of_season_points_given": 345.7,
           "net": -4.5
+        },
+        "Jarett Coy": {
+          "received_players": [
+            "Jayden Reed",
+            "James Cook"
+          ],
+          "given_players": [
+            "CeeDee Lamb"
+          ],
+          "rest_of_season_points_received": 345.7,
+          "rest_of_season_points_given": 341.2,
+          "net": 4.5
         }
       },
       "team_ids": [
-        "5",
-        "13"
+        "13",
+        "5"
       ],
       "lopsidedness": 9.0
     },
@@ -4290,17 +6238,6 @@
       "trade_id": "f1e32130-a73f-4527-99fa-09af45a876ca",
       "season": "2024",
       "teams": {
-        "Johnny Marcks": {
-          "received_players": [
-            "Chris Olave"
-          ],
-          "given_players": [
-            "James Cook"
-          ],
-          "rest_of_season_points_received": 76.7,
-          "rest_of_season_points_given": 266.7,
-          "net": -190.0
-        },
         "Dustin Gamble": {
           "received_players": [
             "James Cook"
@@ -4311,11 +6248,22 @@
           "rest_of_season_points_received": 266.7,
           "rest_of_season_points_given": 76.7,
           "net": 190.0
+        },
+        "Johnny Marcks": {
+          "received_players": [
+            "Chris Olave"
+          ],
+          "given_players": [
+            "James Cook"
+          ],
+          "rest_of_season_points_received": 76.7,
+          "rest_of_season_points_given": 266.7,
+          "net": -190.0
         }
       },
       "team_ids": [
-        "4",
-        "10"
+        "10",
+        "4"
       ],
       "lopsidedness": 380.0
     },
@@ -4323,19 +6271,6 @@
       "trade_id": "4be18897-b25b-44e0-9e93-e987be544779",
       "season": "2024",
       "teams": {
-        "Derek Booker": {
-          "received_players": [
-            "Ty Chandler",
-            "Brian Robinson Jr."
-          ],
-          "given_players": [
-            "Curtis Samuel",
-            "Rhamondre Stevenson"
-          ],
-          "rest_of_season_points_received": 188.2,
-          "rest_of_season_points_given": 239.6,
-          "net": -51.4
-        },
         "Tyler Scarlett": {
           "received_players": [
             "Curtis Samuel",
@@ -4348,11 +6283,24 @@
           "rest_of_season_points_received": 239.6,
           "rest_of_season_points_given": 188.2,
           "net": 51.4
+        },
+        "Derek Booker": {
+          "received_players": [
+            "Ty Chandler",
+            "Brian Robinson Jr."
+          ],
+          "given_players": [
+            "Curtis Samuel",
+            "Rhamondre Stevenson"
+          ],
+          "rest_of_season_points_received": 188.2,
+          "rest_of_season_points_given": 239.6,
+          "net": -51.4
         }
       },
       "team_ids": [
-        "1",
-        "2"
+        "2",
+        "1"
       ],
       "lopsidedness": 102.8
     },
@@ -4360,19 +6308,6 @@
       "trade_id": "a50f6f99-18f2-427c-b5bd-cf22f2069ea5",
       "season": "2024",
       "teams": {
-        "Jarett Coy": {
-          "received_players": [
-            "Cooper Kupp",
-            "Chuba Hubbard"
-          ],
-          "given_players": [
-            "Younghoe Koo",
-            "Tyreek Hill"
-          ],
-          "rest_of_season_points_received": 281.1,
-          "rest_of_season_points_given": 200.5,
-          "net": 80.6
-        },
         "Andrew Campbell": {
           "received_players": [
             "Younghoe Koo",
@@ -4385,11 +6320,24 @@
           "rest_of_season_points_received": 200.5,
           "rest_of_season_points_given": 281.1,
           "net": -80.6
+        },
+        "Jarett Coy": {
+          "received_players": [
+            "Cooper Kupp",
+            "Chuba Hubbard"
+          ],
+          "given_players": [
+            "Younghoe Koo",
+            "Tyreek Hill"
+          ],
+          "rest_of_season_points_received": 281.1,
+          "rest_of_season_points_given": 200.5,
+          "net": 80.6
         }
       },
       "team_ids": [
-        "5",
-        "13"
+        "13",
+        "5"
       ],
       "lopsidedness": 161.2
     },
@@ -4436,20 +6384,6 @@
       "trade_id": "331d45a0-ea5d-4d89-9602-79bf94079a2c",
       "season": "2024",
       "teams": {
-        "Jarett Coy": {
-          "received_players": [
-            "Patrick Mahomes",
-            "Nick Chubb",
-            "J.K. Dobbins"
-          ],
-          "given_players": [
-            "Tank Dell",
-            "Saquon Barkley"
-          ],
-          "rest_of_season_points_received": 237.8,
-          "rest_of_season_points_given": 220.6,
-          "net": 17.2
-        },
         "Dustin Gamble": {
           "received_players": [
             "Tank Dell",
@@ -4463,11 +6397,25 @@
           "rest_of_season_points_received": 220.6,
           "rest_of_season_points_given": 237.8,
           "net": -17.2
+        },
+        "Jarett Coy": {
+          "received_players": [
+            "Patrick Mahomes",
+            "Nick Chubb",
+            "J.K. Dobbins"
+          ],
+          "given_players": [
+            "Tank Dell",
+            "Saquon Barkley"
+          ],
+          "rest_of_season_points_received": 237.8,
+          "rest_of_season_points_given": 220.6,
+          "net": 17.2
         }
       },
       "team_ids": [
-        "5",
-        "10"
+        "10",
+        "5"
       ],
       "lopsidedness": 34.4
     },
@@ -4475,18 +6423,6 @@
       "trade_id": "230f3699-8618-4db4-a0fe-6226053e13e8",
       "season": "2025",
       "teams": {
-        "Angelo Hernandez": {
-          "received_players": [
-            "Jake Ferguson",
-            "Tony Pollard"
-          ],
-          "given_players": [
-            "Brian Thomas Jr."
-          ],
-          "rest_of_season_points_received": 332.7,
-          "rest_of_season_points_given": 120.9,
-          "net": 211.8
-        },
         "Jarett Coy": {
           "received_players": [
             "Brian Thomas Jr."
@@ -4498,11 +6434,23 @@
           "rest_of_season_points_received": 120.9,
           "rest_of_season_points_given": 332.7,
           "net": -211.8
+        },
+        "Angelo Hernandez": {
+          "received_players": [
+            "Jake Ferguson",
+            "Tony Pollard"
+          ],
+          "given_players": [
+            "Brian Thomas Jr."
+          ],
+          "rest_of_season_points_received": 332.7,
+          "rest_of_season_points_given": 120.9,
+          "net": 211.8
         }
       },
       "team_ids": [
-        "12",
-        "5"
+        "5",
+        "12"
       ],
       "lopsidedness": 423.6
     },
@@ -4510,18 +6458,6 @@
       "trade_id": "15162aeb-b007-43cc-8ba5-156ce2f64a3b",
       "season": "2025",
       "teams": {
-        "Jarett Coy": {
-          "received_players": [
-            "Trey Benson"
-          ],
-          "given_players": [
-            "Quentin Johnston",
-            "George Pickens"
-          ],
-          "rest_of_season_points_received": 10.4,
-          "rest_of_season_points_given": 365.8,
-          "net": -355.4
-        },
         "Kyle Torpey": {
           "received_players": [
             "Quentin Johnston",
@@ -4533,11 +6469,23 @@
           "rest_of_season_points_received": 365.8,
           "rest_of_season_points_given": 10.4,
           "net": 355.4
+        },
+        "Jarett Coy": {
+          "received_players": [
+            "Trey Benson"
+          ],
+          "given_players": [
+            "Quentin Johnston",
+            "George Pickens"
+          ],
+          "rest_of_season_points_received": 10.4,
+          "rest_of_season_points_given": 365.8,
+          "net": -355.4
         }
       },
       "team_ids": [
-        "5",
-        "8"
+        "8",
+        "5"
       ],
       "lopsidedness": 710.8
     },
@@ -4584,18 +6532,6 @@
       "trade_id": "1f29a606-af42-41fd-a696-6c84ba404ff5",
       "season": "2025",
       "teams": {
-        "Jarett Coy": {
-          "received_players": [
-            "Nico Collins",
-            "Travis Etienne Jr."
-          ],
-          "given_players": [
-            "Ja'Marr Chase"
-          ],
-          "rest_of_season_points_received": 199.2,
-          "rest_of_season_points_given": 119.9,
-          "net": 79.3
-        },
         "Andrew Campbell": {
           "received_players": [
             "Ja'Marr Chase"
@@ -4607,11 +6543,23 @@
           "rest_of_season_points_received": 119.9,
           "rest_of_season_points_given": 199.2,
           "net": -79.3
+        },
+        "Jarett Coy": {
+          "received_players": [
+            "Nico Collins",
+            "Travis Etienne Jr."
+          ],
+          "given_players": [
+            "Ja'Marr Chase"
+          ],
+          "rest_of_season_points_received": 199.2,
+          "rest_of_season_points_given": 119.9,
+          "net": 79.3
         }
       },
       "team_ids": [
-        "5",
-        "13"
+        "13",
+        "5"
       ],
       "lopsidedness": 158.6
     },
@@ -4619,18 +6567,6 @@
       "trade_id": "13561911-c90e-4645-a7e4-4b508dbecf66",
       "season": "2025",
       "teams": {
-        "Jarett Coy": {
-          "received_players": [
-            "A.J. Brown"
-          ],
-          "given_players": [
-            "DeVonta Smith",
-            "Omarion Hampton"
-          ],
-          "rest_of_season_points_received": 93.6,
-          "rest_of_season_points_given": 112.1,
-          "net": -18.5
-        },
         "Dakota Bender": {
           "received_players": [
             "DeVonta Smith",
@@ -4642,11 +6578,23 @@
           "rest_of_season_points_received": 112.1,
           "rest_of_season_points_given": 93.6,
           "net": 18.5
+        },
+        "Jarett Coy": {
+          "received_players": [
+            "A.J. Brown"
+          ],
+          "given_players": [
+            "DeVonta Smith",
+            "Omarion Hampton"
+          ],
+          "rest_of_season_points_received": 93.6,
+          "rest_of_season_points_given": 112.1,
+          "net": -18.5
         }
       },
       "team_ids": [
-        "5",
-        "6"
+        "6",
+        "5"
       ],
       "lopsidedness": 37.0
     }

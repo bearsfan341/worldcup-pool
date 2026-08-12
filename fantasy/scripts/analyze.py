@@ -101,6 +101,7 @@ def main():
             profiles[tid]["playoff_seasons"] = sorted(seasons)
 
     for tid, p in profiles.items():
+        p["finishes"] = sorted(p["finishes"], key=lambda f: f["season"])
         games = p["wins"] + p["losses"] + p["ties"]
         p["games"] = games
         p["win_pct"] = round((p["wins"] + 0.5 * p["ties"]) / games, 4) if games else None
@@ -167,6 +168,40 @@ def main():
         p["actual_wins_all_time_allplay_basis"] = round(d["actual_wins"], 2)
         p["luck_by_season"] = luck_by_team_season_out.get(tid, {})
 
+    # ---------- Championship playoff-scoring deep dive ----------
+    # For every championship season, compare regular-season scoring average to
+    # what the team actually put up in each playoff (WINNERS_BRACKET) game that year.
+    team_season_games = defaultdict(lambda: {"reg_scores": [], "playoff_games": []})
+    for m in matchups:
+        for side, other in (("home", "away"), ("away", "home")):
+            tid_side = m[f"{side}_team_id"]
+            key = (tid_side, m["season"])
+            score = to_float(m[f"{side}_score"])
+            opp_score = to_float(m[f"{other}_score"])
+            opp_tid = m[f"{other}_team_id"]
+            if m["matchup_type"] == "WINNERS_BRACKET":
+                team_season_games[key]["playoff_games"].append({
+                    "week": m["week"], "score": score, "opp_score": opp_score,
+                    "opponent": owner_map.get(opp_tid, opp_tid),
+                    "result": "W" if score > opp_score else ("L" if score < opp_score else "T"),
+                })
+            elif m["matchup_type"] == "NONE":
+                team_season_games[key]["reg_scores"].append(score)
+
+    for tid, p in profiles.items():
+        runs = []
+        for season in p["championship_seasons"]:
+            key = (tid, season)
+            g = team_season_games.get(key, {"reg_scores": [], "playoff_games": []})
+            reg_avg = round(sum(g["reg_scores"]) / len(g["reg_scores"]), 1) if g["reg_scores"] else None
+            runs.append({
+                "season": season,
+                "reg_season_avg": reg_avg,
+                "reg_season_games": len(g["reg_scores"]),
+                "playoff_games": sorted(g["playoff_games"], key=lambda x: x["week"]),
+            })
+        p["championship_runs"] = runs
+
     # ---------- Head-to-head matrix ----------
     h2h = defaultdict(lambda: defaultdict(lambda: {"w": 0, "l": 0, "t": 0, "pf": 0.0, "pa": 0.0}))
     for m in matchups:
@@ -189,6 +224,25 @@ def main():
             h2h[a][h]["t"] += 1
 
     h2h_out = {tid: {opp: v for opp, v in opps.items()} for tid, opps in h2h.items()}
+
+    # best/worst rival per manager (min 4 games played, current managers only)
+    for tid, p in profiles.items():
+        opps = h2h_out.get(tid, {})
+        best_rival, worst_rival = None, None
+        for opp, rec in opps.items():
+            if opp not in current_team_ids:
+                continue
+            total = rec["w"] + rec["l"] + rec["t"]
+            if total < 4:
+                continue
+            margin = rec["w"] - rec["l"]
+            entry = {"opponent": owner_map.get(opp, opp), "w": rec["w"], "l": rec["l"], "t": rec["t"], "margin": margin}
+            if best_rival is None or margin > best_rival["margin"]:
+                best_rival = entry
+            if worst_rival is None or margin < worst_rival["margin"]:
+                worst_rival = entry
+        p["best_rival"] = best_rival
+        p["worst_rival"] = worst_rival
 
     # ---------- Draft tendencies + pick value ----------
     draft_by_season = defaultdict(list)
@@ -238,14 +292,18 @@ def main():
         p["early_round_position_counts"] = dict(counts)
         mine = [row for row in pick_value_rows if row["team_id"] == tid and row["value_score"] is not None]
         if mine:
-            best = max(mine, key=lambda r: r["value_score"])
-            worst = min(mine, key=lambda r: r["value_score"])
-            p["best_draft_pick"] = best
-            p["worst_draft_pick"] = worst
+            ranked_best = sorted(mine, key=lambda r: -r["value_score"])
+            ranked_worst = sorted(mine, key=lambda r: r["value_score"])
+            p["best_draft_pick"] = ranked_best[0]
+            p["worst_draft_pick"] = ranked_worst[0]
+            p["best_draft_picks_top2"] = ranked_best[:2]
+            p["worst_draft_picks_top2"] = ranked_worst[:2]
             p["avg_draft_value_score"] = round(sum(r["value_score"] for r in mine) / len(mine), 2)
         else:
             p["best_draft_pick"] = None
             p["worst_draft_pick"] = None
+            p["best_draft_picks_top2"] = []
+            p["worst_draft_picks_top2"] = []
             p["avg_draft_value_score"] = None
 
     # ---------- Trades ----------
@@ -311,6 +369,28 @@ def main():
 
     for tid, p in profiles.items():
         p["trade_count"] = trade_counts.get(tid, 0)
+
+    # per-manager trade ledger (all trades, with net rest-of-season result)
+    for tid, p in profiles.items():
+        manager_name = p["manager"]
+        mine = [t for t in trade_summaries if manager_name in t["teams"]]
+        ledger = []
+        for t in mine:
+            v = t["teams"][manager_name]
+            other_managers = [m for m in t["teams"] if m != manager_name]
+            ledger.append({
+                "season": t["season"],
+                "trade_id": t["trade_id"],
+                "counterparty": ", ".join(other_managers),
+                "received": v["received_players"],
+                "given": v["given_players"],
+                "net": v["net"],
+            })
+        ledger.sort(key=lambda x: -x["net"])
+        p["trade_ledger"] = ledger
+        p["trades_won"] = sum(1 for x in ledger if x["net"] > 0)
+        p["trades_lost"] = sum(1 for x in ledger if x["net"] < 0)
+        p["trades_net_total"] = round(sum(x["net"] for x in ledger), 1)
 
     # ---------- Waivers ----------
     waiver_counts = defaultdict(int)
