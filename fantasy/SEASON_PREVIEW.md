@@ -82,7 +82,7 @@ Ranked on recent form (2023–2025 average finish), luck-adjusted context, and c
 **All-time:** 64-76-0 (.457), 6.00 avg finish, **3 championships (2015, 2016, 2021 — most in league)**, 2 last-place finishes (2017, 2020), 6/11 playoff appearances.
 **Luck:** -2.82 all-time.
 **Draft tendency:** RB-heavy (19 early picks). Best pick: Justin Fields, round 15 of 2022 (157 value). Worst: Jamaal Charles, 2015 (-126 value).
-**Trades/Waivers:** **17 trades — the most of anyone in the league by a wide margin (next closest is Andrew Campbell/Dakota Bender at 5).** Best pickup: Sam Darnold, week-add in 2024 (250.2 rest-of-season points).
+**Trades/Waivers:** **17 trades — the most of anyone in the league by a wide margin (next closest is Derek Booker at 8; Andrew Campbell and Dakota Bender are tied for third at 5).** Best pickup: Sam Darnold, week-add in 2024 (250.2 rest-of-season points).
 **Infamous:** Party to 4 of the 6 most lopsided trades in league history — and lost 3 of them, including the single worst trade in league history, giving up Quentin Johnston + George Pickens (365.8 combined rest-of-season points) for Trey Benson (10.4 points) in 2025.
 **Head-to-head:** Struggles against Pj Lannon (5-11) and Dustin Gamble (5-10); dominates Alex Topham (11-5).
 **Bold prediction:** Either the 4th championship or another last-place finish. There is no in-between gear.
