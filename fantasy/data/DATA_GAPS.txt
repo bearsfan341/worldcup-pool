@@ -1,0 +1,5 @@
+Known data gaps / limitations from this pull:
+
+- 2015: no_transaction_data_before_2018
+- 2016: no_transaction_data_before_2018
+- 2017: no_transaction_data_before_2018

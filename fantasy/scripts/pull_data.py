@@ -235,6 +235,8 @@ def build_trades_waivers(year, league, raw_tx):
             drop_items = [i for i in t.get("items", []) if i.get("type") == "DROP"]
             add_names = [league.player_map.get(i.get("playerId"), "Unknown") for i in add_items]
             drop_names = [league.player_map.get(i.get("playerId"), "Unknown") for i in drop_items]
+            add_ids = [i.get("playerId") for i in add_items]
+            drop_ids = [i.get("playerId") for i in drop_items]
             waivers.append(
                 {
                     "season": year,
@@ -249,7 +251,9 @@ def build_trades_waivers(year, league, raw_tx):
                     "owner_id": acting_oid,
                     "owner_name": acting_oname,
                     "players_added": "; ".join(add_names),
+                    "players_added_ids": ";".join(str(x) for x in add_ids),
                     "players_dropped": "; ".join(drop_names),
+                    "players_dropped_ids": ";".join(str(x) for x in drop_ids),
                 }
             )
 
@@ -326,7 +330,8 @@ def main():
         [
             "season", "transaction_id", "date_epoch_ms", "scoring_period",
             "type", "status", "bid_amount", "team_id", "team_name",
-            "owner_id", "owner_name", "players_added", "players_dropped",
+            "owner_id", "owner_name", "players_added", "players_added_ids",
+            "players_dropped", "players_dropped_ids",
         ],
     )
 
