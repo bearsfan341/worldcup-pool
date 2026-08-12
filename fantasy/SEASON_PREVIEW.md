@@ -70,6 +70,14 @@ Ranked on recent form (2023–2025 average finish), luck-adjusted context, and c
 **Bold prediction:** This is the year. Positive career luck has to convert eventually, and a .568 win percentage with no trophies is unsustainable variance, not a pattern.
 **Roast:** The Buffalo Bills of this league — except the Bills have actually been to a Super Bowl. Ten playoff berths and a permanently empty trophy case.
 
+### Tyler Scarlett
+**All-time:** 69-70-1 (.496), 5.91 avg finish, 1 championship (2017), 0 last-place finishes, 7/11 playoff appearances.
+**Luck:** +0.47 all-time — close to neutral.
+**Draft tendency:** Balanced RB/WR (13 and 12 early picks). Best pick: Eagles D/ST, round 2 of 2017 (128 value) — a defense that outscored half the draft class that year. Worst: Christian McCaffrey, 2020 (-138 value).
+**Trades/Waivers:** 2 trades, 182 waiver moves. Best pickup: Jared Goff, 2025 (252.2 rest-of-season points).
+**Bold prediction:** The 2025 face-plant (10th, after 3rd and 2nd the two years before) was the outlier, not the new normal — back to the top half in 2026.
+**Roast:** Won a championship in 2017 with a defense as his best-ever draft pick and hasn't topped that value score since. The scouting report used to say "boom-or-bust." Lately it's just saying "bust."
+
 ### Jarett Coy
 **All-time:** 64-76-0 (.457), 6.00 avg finish, **3 championships (2015, 2016, 2021 — most in league)**, 2 last-place finishes (2017, 2020), 6/11 playoff appearances.
 **Luck:** -2.82 all-time.
