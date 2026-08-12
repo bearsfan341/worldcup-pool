@@ -1,0 +1,5382 @@
+{
+  "profiles": {
+    "1": {
+      "manager": "Derek Booker",
+      "note": "",
+      "seasons": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "wins": 79,
+      "losses": 61,
+      "ties": 0,
+      "points_for": 15770.519999999999,
+      "points_against": 14754.960000000001,
+      "finishes": [
+        {
+          "season": "2015",
+          "final_standing": 6,
+          "team_name": "Reggie Ray's Last Concussion"
+        },
+        {
+          "season": "2016",
+          "final_standing": 5,
+          "team_name": "Reggie Ray's Last Concussion"
+        },
+        {
+          "season": "2017",
+          "final_standing": 2,
+          "team_name": "Reggie Ray's Last Concussion"
+        },
+        {
+          "season": "2018",
+          "final_standing": 3,
+          "team_name": "Mixon and McCoy Womens Shelter2"
+        },
+        {
+          "season": "2019",
+          "final_standing": 5,
+          "team_name": "JHH Wasps"
+        },
+        {
+          "season": "2020",
+          "final_standing": 5,
+          "team_name": "JHH Wasps"
+        },
+        {
+          "season": "2021",
+          "final_standing": 2,
+          "team_name": "RIP Ms. Betty White"
+        },
+        {
+          "season": "2022",
+          "final_standing": 5,
+          "team_name": "The Rise Of Kenny Skywalker"
+        },
+        {
+          "season": "2023",
+          "final_standing": 2,
+          "team_name": "Roof Shopping Cart Guys"
+        },
+        {
+          "season": "2024",
+          "final_standing": 9,
+          "team_name": "IfYourReadingThisUSuckBalls"
+        },
+        {
+          "season": "2025",
+          "final_standing": 1,
+          "team_name": "Wheaton Warbirds"
+        }
+      ],
+      "playoff_appearances": 10,
+      "championships": 1,
+      "last_place_finishes": 0,
+      "championship_seasons": [
+        "2025"
+      ],
+      "last_place_seasons": [],
+      "playoff_seasons": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2025"
+      ],
+      "games": 140,
+      "win_pct": 0.5643,
+      "avg_finish": 4.09,
+      "avg_points_for": 112.65,
+      "avg_points_against": 105.39,
+      "luck_all_time": -0.27,
+      "expected_wins_all_time": 101.27,
+      "actual_wins_all_time_allplay_basis": 101.0,
+      "luck_by_season": {
+        "2015": {
+          "actual_wins": 11.0,
+          "expected_wins": 11.0,
+          "luck": 0.0
+        },
+        "2016": {
+          "actual_wins": 8.0,
+          "expected_wins": 8.41,
+          "luck": -0.41
+        },
+        "2017": {
+          "actual_wins": 9.0,
+          "expected_wins": 7.83,
+          "luck": 1.17
+        },
+        "2018": {
+          "actual_wins": 8.0,
+          "expected_wins": 8.27,
+          "luck": -0.27
+        },
+        "2019": {
+          "actual_wins": 8.0,
+          "expected_wins": 8.55,
+          "luck": -0.55
+        },
+        "2020": {
+          "actual_wins": 9.0,
+          "expected_wins": 8.45,
+          "luck": 0.55
+        },
+        "2021": {
+          "actual_wins": 11.0,
+          "expected_wins": 10.55,
+          "luck": 0.45
+        },
+        "2022": {
+          "actual_wins": 11.0,
+          "expected_wins": 10.38,
+          "luck": 0.62
+        },
+        "2023": {
+          "actual_wins": 9.0,
+          "expected_wins": 9.92,
+          "luck": -0.92
+        },
+        "2024": {
+          "actual_wins": 6.0,
+          "expected_wins": 5.45,
+          "luck": 0.55
+        },
+        "2025": {
+          "actual_wins": 11.0,
+          "expected_wins": 12.45,
+          "luck": -1.45
+        }
+      },
+      "early_round_position_counts": {
+        "TE": 7,
+        "WR": 10,
+        "RB": 15,
+        "QB": 1
+      },
+      "best_draft_pick": {
+        "season": "2016",
+        "team_id": "1",
+        "manager": "Derek Booker",
+        "round_num": 14,
+        "overall_pick": 168,
+        "player_name": "Jameis Winston",
+        "position": "QB",
+        "total_points": 243.0,
+        "points_rank": 19,
+        "value_score": 149
+      },
+      "worst_draft_pick": {
+        "season": "2016",
+        "team_id": "1",
+        "manager": "Derek Booker",
+        "round_num": 1,
+        "overall_pick": 1,
+        "player_name": "Adrian Peterson",
+        "position": "RB",
+        "total_points": 4.0,
+        "points_rank": 190,
+        "value_score": -189
+      },
+      "avg_draft_value_score": 4.85,
+      "trade_count": 8,
+      "waiver_add_count": 567,
+      "best_waiver_pickup": {
+        "season": "2025",
+        "team_id": "1",
+        "manager": "Derek Booker",
+        "player_name": "Trevor Lawrence",
+        "position": "QB",
+        "scoring_period_added": 1,
+        "rest_of_season_points": 338.2,
+        "bid_amount": 0.0
+      }
+    },
+    "2": {
+      "manager": "Tyler Scarlett",
+      "note": "",
+      "seasons": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "wins": 69,
+      "losses": 70,
+      "ties": 1,
+      "points_for": 14791.62,
+      "points_against": 14782.64,
+      "finishes": [
+        {
+          "season": "2015",
+          "final_standing": 2,
+          "team_name": "Ouchtown Population You"
+        },
+        {
+          "season": "2016",
+          "final_standing": 8,
+          "team_name": "Eastbound And Brown"
+        },
+        {
+          "season": "2017",
+          "final_standing": 1,
+          "team_name": "Saving  Ryan's Privates"
+        },
+        {
+          "season": "2018",
+          "final_standing": 4,
+          "team_name": "Ertz McGertz"
+        },
+        {
+          "season": "2019",
+          "final_standing": 7,
+          "team_name": "Ertz McGertz"
+        },
+        {
+          "season": "2020",
+          "final_standing": 10,
+          "team_name": "Dairy Sanders"
+        },
+        {
+          "season": "2021",
+          "final_standing": 7,
+          "team_name": "Here's to you Mr. Robinson"
+        },
+        {
+          "season": "2022",
+          "final_standing": 11,
+          "team_name": "Broncos Country Lets Ride"
+        },
+        {
+          "season": "2023",
+          "final_standing": 3,
+          "team_name": "Hold Metcalk"
+        },
+        {
+          "season": "2024",
+          "final_standing": 2,
+          "team_name": "Cleaveland Beamers"
+        },
+        {
+          "season": "2025",
+          "final_standing": 10,
+          "team_name": "Bowers Castle"
+        }
+      ],
+      "playoff_appearances": 7,
+      "championships": 1,
+      "last_place_finishes": 0,
+      "championship_seasons": [
+        "2017"
+      ],
+      "last_place_seasons": [],
+      "playoff_seasons": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2023",
+        "2024"
+      ],
+      "games": 140,
+      "win_pct": 0.4964,
+      "avg_finish": 5.91,
+      "avg_points_for": 105.65,
+      "avg_points_against": 105.59,
+      "luck_all_time": 0.47,
+      "expected_wins_all_time": 87.03,
+      "actual_wins_all_time_allplay_basis": 87.5,
+      "luck_by_season": {
+        "2015": {
+          "actual_wins": 8.5,
+          "expected_wins": 7.36,
+          "luck": 1.14
+        },
+        "2016": {
+          "actual_wins": 8.0,
+          "expected_wins": 8.45,
+          "luck": -0.45
+        },
+        "2017": {
+          "actual_wins": 10.0,
+          "expected_wins": 10.0,
+          "luck": 0.0
+        },
+        "2018": {
+          "actual_wins": 8.0,
+          "expected_wins": 9.09,
+          "luck": -1.09
+        },
+        "2019": {
+          "actual_wins": 8.0,
+          "expected_wins": 8.45,
+          "luck": -0.45
+        },
+        "2020": {
+          "actual_wins": 4.0,
+          "expected_wins": 4.82,
+          "luck": -0.82
+        },
+        "2021": {
+          "actual_wins": 6.0,
+          "expected_wins": 8.23,
+          "luck": -2.23
+        },
+        "2022": {
+          "actual_wins": 8.0,
+          "expected_wins": 6.09,
+          "luck": 1.91
+        },
+        "2023": {
+          "actual_wins": 10.0,
+          "expected_wins": 8.16,
+          "luck": 1.84
+        },
+        "2024": {
+          "actual_wins": 9.0,
+          "expected_wins": 9.45,
+          "luck": -0.45
+        },
+        "2025": {
+          "actual_wins": 8.0,
+          "expected_wins": 6.91,
+          "luck": 1.09
+        }
+      },
+      "early_round_position_counts": {
+        "RB": 13,
+        "WR": 12,
+        "TE": 7,
+        "QB": 1
+      },
+      "best_draft_pick": {
+        "season": "2017",
+        "team_id": "2",
+        "manager": "Tyler Scarlett",
+        "round_num": 15,
+        "overall_pick": 162,
+        "player_name": "Eagles D/ST",
+        "position": "D/ST",
+        "total_points": 159.0,
+        "points_rank": 34,
+        "value_score": 128
+      },
+      "worst_draft_pick": {
+        "season": "2020",
+        "team_id": "2",
+        "manager": "Tyler Scarlett",
+        "round_num": 1,
+        "overall_pick": 1,
+        "player_name": "Christian McCaffrey",
+        "position": "RB",
+        "total_points": 81.9,
+        "points_rank": 139,
+        "value_score": -138
+      },
+      "avg_draft_value_score": 1.89,
+      "trade_count": 2,
+      "waiver_add_count": 182,
+      "best_waiver_pickup": {
+        "season": "2025",
+        "team_id": "2",
+        "manager": "Tyler Scarlett",
+        "player_name": "Jared Goff",
+        "position": "QB",
+        "scoring_period_added": 3,
+        "rest_of_season_points": 252.2,
+        "bid_amount": 0.0
+      }
+    },
+    "3": {
+      "manager": "Alex Topham",
+      "note": "ESPN account/SWID changed starting 2020; same person confirmed by team_id continuity",
+      "seasons": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "wins": 77,
+      "losses": 62,
+      "ties": 1,
+      "points_for": 15223.220000000001,
+      "points_against": 14691.44,
+      "finishes": [
+        {
+          "season": "2015",
+          "final_standing": 5,
+          "team_name": "Adrian  BeaterSon"
+        },
+        {
+          "season": "2016",
+          "final_standing": 3,
+          "team_name": "Phil r up with  Davids' Johnson"
+        },
+        {
+          "season": "2017",
+          "final_standing": 6,
+          "team_name": "Kareem in Her Hunt"
+        },
+        {
+          "season": "2018",
+          "final_standing": 1,
+          "team_name": "Pjs Japanese  PeePee Pats"
+        },
+        {
+          "season": "2019",
+          "final_standing": 11,
+          "team_name": "Phillip Rivers"
+        },
+        {
+          "season": "2020",
+          "final_standing": 7,
+          "team_name": "Less offensive  Name"
+        },
+        {
+          "season": "2021",
+          "final_standing": 3,
+          "team_name": "Mean  Machine"
+        },
+        {
+          "season": "2022",
+          "final_standing": 12,
+          "team_name": "Hacked Account Please Report!"
+        },
+        {
+          "season": "2023",
+          "final_standing": 6,
+          "team_name": "Tee Niqqins"
+        },
+        {
+          "season": "2024",
+          "final_standing": 4,
+          "team_name": "Rachaawwwdy's"
+        },
+        {
+          "season": "2025",
+          "final_standing": 5,
+          "team_name": "Easy Company"
+        }
+      ],
+      "playoff_appearances": 9,
+      "championships": 1,
+      "last_place_finishes": 1,
+      "championship_seasons": [
+        "2018"
+      ],
+      "last_place_seasons": [
+        "2022"
+      ],
+      "playoff_seasons": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2020",
+        "2021",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "games": 140,
+      "win_pct": 0.5536,
+      "avg_finish": 5.73,
+      "avg_points_for": 108.74,
+      "avg_points_against": 104.94,
+      "luck_all_time": 2.14,
+      "expected_wins_all_time": 92.36,
+      "actual_wins_all_time_allplay_basis": 94.5,
+      "luck_by_season": {
+        "2015": {
+          "actual_wins": 10.0,
+          "expected_wins": 10.5,
+          "luck": -0.5
+        },
+        "2016": {
+          "actual_wins": 7.0,
+          "expected_wins": 8.27,
+          "luck": -1.27
+        },
+        "2017": {
+          "actual_wins": 9.5,
+          "expected_wins": 8.89,
+          "luck": 0.61
+        },
+        "2018": {
+          "actual_wins": 10.0,
+          "expected_wins": 10.64,
+          "luck": -0.64
+        },
+        "2019": {
+          "actual_wins": 7.0,
+          "expected_wins": 6.18,
+          "luck": 0.82
+        },
+        "2020": {
+          "actual_wins": 9.0,
+          "expected_wins": 8.36,
+          "luck": 0.64
+        },
+        "2021": {
+          "actual_wins": 10.0,
+          "expected_wins": 8.19,
+          "luck": 1.81
+        },
+        "2022": {
+          "actual_wins": 3.0,
+          "expected_wins": 4.81,
+          "luck": -1.81
+        },
+        "2023": {
+          "actual_wins": 8.0,
+          "expected_wins": 8.24,
+          "luck": -0.24
+        },
+        "2024": {
+          "actual_wins": 11.0,
+          "expected_wins": 9.73,
+          "luck": 1.27
+        },
+        "2025": {
+          "actual_wins": 10.0,
+          "expected_wins": 8.55,
+          "luck": 1.45
+        }
+      },
+      "early_round_position_counts": {
+        "RB": 19,
+        "WR": 13,
+        "QB": 1
+      },
+      "best_draft_pick": {
+        "season": "2020",
+        "team_id": "3",
+        "manager": "Alex Topham",
+        "round_num": 14,
+        "overall_pick": 157,
+        "player_name": "Ben Roethlisberger",
+        "position": "QB",
+        "total_points": 267.22,
+        "points_rank": 15,
+        "value_score": 142
+      },
+      "worst_draft_pick": {
+        "season": "2016",
+        "team_id": "3",
+        "manager": "Alex Topham",
+        "round_num": 3,
+        "overall_pick": 34,
+        "player_name": "Keenan Allen",
+        "position": "WR",
+        "total_points": 6.0,
+        "points_rank": 188,
+        "value_score": -154
+      },
+      "avg_draft_value_score": -4.38,
+      "trade_count": 3,
+      "waiver_add_count": 226,
+      "best_waiver_pickup": {
+        "season": "2019",
+        "team_id": "3",
+        "manager": "Alex Topham",
+        "player_name": "Jameis Winston",
+        "position": "QB",
+        "scoring_period_added": 3,
+        "rest_of_season_points": 285.1,
+        "bid_amount": 0.0
+      }
+    },
+    "4": {
+      "manager": "Johnny Marcks",
+      "note": "",
+      "seasons": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "wins": 79,
+      "losses": 60,
+      "ties": 1,
+      "points_for": 14986.84,
+      "points_against": 14628.84,
+      "finishes": [
+        {
+          "season": "2015",
+          "final_standing": 3,
+          "team_name": "Da Fl8G8"
+        },
+        {
+          "season": "2016",
+          "final_standing": 2,
+          "team_name": "Da FL8G8 ENDS 10/9"
+        },
+        {
+          "season": "2017",
+          "final_standing": 4,
+          "team_name": "Make Fantasy Great Again"
+        },
+        {
+          "season": "2018",
+          "final_standing": 7,
+          "team_name": "Keep Fantasy Great"
+        },
+        {
+          "season": "2019",
+          "final_standing": 6,
+          "team_name": "Keep Fantasy Great"
+        },
+        {
+          "season": "2020",
+          "final_standing": 8,
+          "team_name": "Gon' Fishin'"
+        },
+        {
+          "season": "2021",
+          "final_standing": 8,
+          "team_name": "Herberts And Spices"
+        },
+        {
+          "season": "2022",
+          "final_standing": 2,
+          "team_name": "Make Fantasy  Great Again"
+        },
+        {
+          "season": "2023",
+          "final_standing": 4,
+          "team_name": "Make Fantasy  Great Again"
+        },
+        {
+          "season": "2024",
+          "final_standing": 6,
+          "team_name": "Fight, Fight, Fight"
+        },
+        {
+          "season": "2025",
+          "final_standing": 8,
+          "team_name": "Ward on Mcconkey"
+        }
+      ],
+      "playoff_appearances": 10,
+      "championships": 0,
+      "last_place_finishes": 0,
+      "championship_seasons": [],
+      "last_place_seasons": [],
+      "playoff_seasons": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "games": 140,
+      "win_pct": 0.5679,
+      "avg_finish": 5.27,
+      "avg_points_for": 107.05,
+      "avg_points_against": 104.49,
+      "luck_all_time": 3.38,
+      "expected_wins_all_time": 88.12,
+      "actual_wins_all_time_allplay_basis": 91.5,
+      "luck_by_season": {
+        "2015": {
+          "actual_wins": 8.5,
+          "expected_wins": 7.59,
+          "luck": 0.91
+        },
+        "2016": {
+          "actual_wins": 10.0,
+          "expected_wins": 8.18,
+          "luck": 1.82
+        },
+        "2017": {
+          "actual_wins": 5.0,
+          "expected_wins": 6.33,
+          "luck": -1.33
+        },
+        "2018": {
+          "actual_wins": 7.0,
+          "expected_wins": 9.45,
+          "luck": -2.45
+        },
+        "2019": {
+          "actual_wins": 8.0,
+          "expected_wins": 6.73,
+          "luck": 1.27
+        },
+        "2020": {
+          "actual_wins": 5.0,
+          "expected_wins": 4.55,
+          "luck": 0.45
+        },
+        "2021": {
+          "actual_wins": 9.0,
+          "expected_wins": 9.43,
+          "luck": -0.43
+        },
+        "2022": {
+          "actual_wins": 10.0,
+          "expected_wins": 10.58,
+          "luck": -0.58
+        },
+        "2023": {
+          "actual_wins": 13.0,
+          "expected_wins": 10.55,
+          "luck": 2.45
+        },
+        "2024": {
+          "actual_wins": 8.0,
+          "expected_wins": 8.55,
+          "luck": -0.55
+        },
+        "2025": {
+          "actual_wins": 8.0,
+          "expected_wins": 6.18,
+          "luck": 1.82
+        }
+      },
+      "early_round_position_counts": {
+        "RB": 13,
+        "WR": 17,
+        "TE": 2,
+        "QB": 1
+      },
+      "best_draft_pick": {
+        "season": "2024",
+        "team_id": "4",
+        "manager": "Johnny Marcks",
+        "round_num": 13,
+        "overall_pick": 146,
+        "player_name": "Jared Goff",
+        "position": "QB",
+        "total_points": 324.46,
+        "points_rank": 10,
+        "value_score": 136
+      },
+      "worst_draft_pick": {
+        "season": "2020",
+        "team_id": "4",
+        "manager": "Johnny Marcks",
+        "round_num": 1,
+        "overall_pick": 2,
+        "player_name": "Saquon Barkley",
+        "position": "RB",
+        "total_points": 12.4,
+        "points_rank": 176,
+        "value_score": -174
+      },
+      "avg_draft_value_score": -0.84,
+      "trade_count": 3,
+      "waiver_add_count": 151,
+      "best_waiver_pickup": {
+        "season": "2020",
+        "team_id": "4",
+        "manager": "Johnny Marcks",
+        "player_name": "Justin Herbert",
+        "position": "QB",
+        "scoring_period_added": 3,
+        "rest_of_season_points": 310.6,
+        "bid_amount": 0.0
+      }
+    },
+    "5": {
+      "manager": "Jarett Coy",
+      "note": "league requester",
+      "seasons": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "wins": 64,
+      "losses": 76,
+      "ties": 0,
+      "points_for": 14556.94,
+      "points_against": 14800.320000000003,
+      "finishes": [
+        {
+          "season": "2015",
+          "final_standing": 1,
+          "team_name": "Team Coy"
+        },
+        {
+          "season": "2016",
+          "final_standing": 1,
+          "team_name": "BACK 2 BACK FFL WORLD CHAMP"
+        },
+        {
+          "season": "2017",
+          "final_standing": 11,
+          "team_name": "BACK 2 BACK FFL WORLD CHAMP"
+        },
+        {
+          "season": "2018",
+          "final_standing": 2,
+          "team_name": "Mixon and McCoy Womens Shelter"
+        },
+        {
+          "season": "2019",
+          "final_standing": 9,
+          "team_name": "Mixon and McCoy Womens Shelter"
+        },
+        {
+          "season": "2020",
+          "final_standing": 12,
+          "team_name": "Coy's Quarantine Boys"
+        },
+        {
+          "season": "2021",
+          "final_standing": 1,
+          "team_name": "Ships' Out For The Coys"
+        },
+        {
+          "season": "2022",
+          "final_standing": 4,
+          "team_name": "The One Timers"
+        },
+        {
+          "season": "2023",
+          "final_standing": 11,
+          "team_name": "Coy's Comeback Kids"
+        },
+        {
+          "season": "2024",
+          "final_standing": 10,
+          "team_name": "Stanley Ipkiss"
+        },
+        {
+          "season": "2025",
+          "final_standing": 4,
+          "team_name": "Vino's Victors"
+        }
+      ],
+      "playoff_appearances": 6,
+      "championships": 3,
+      "last_place_finishes": 2,
+      "championship_seasons": [
+        "2015",
+        "2016",
+        "2021"
+      ],
+      "last_place_seasons": [
+        "2017",
+        "2020"
+      ],
+      "playoff_seasons": [
+        "2015",
+        "2016",
+        "2018",
+        "2021",
+        "2022",
+        "2025"
+      ],
+      "games": 140,
+      "win_pct": 0.4571,
+      "avg_finish": 6.0,
+      "avg_points_for": 103.98,
+      "avg_points_against": 105.72,
+      "luck_all_time": -2.82,
+      "expected_wins_all_time": 84.82,
+      "actual_wins_all_time_allplay_basis": 82.0,
+      "luck_by_season": {
+        "2015": {
+          "actual_wins": 10.0,
+          "expected_wins": 10.32,
+          "luck": -0.32
+        },
+        "2016": {
+          "actual_wins": 9.0,
+          "expected_wins": 7.59,
+          "luck": 1.41
+        },
+        "2017": {
+          "actual_wins": 4.0,
+          "expected_wins": 5.33,
+          "luck": -1.33
+        },
+        "2018": {
+          "actual_wins": 10.0,
+          "expected_wins": 8.36,
+          "luck": 1.64
+        },
+        "2019": {
+          "actual_wins": 5.0,
+          "expected_wins": 6.36,
+          "luck": -1.36
+        },
+        "2020": {
+          "actual_wins": 3.0,
+          "expected_wins": 5.36,
+          "luck": -2.36
+        },
+        "2021": {
+          "actual_wins": 11.0,
+          "expected_wins": 9.91,
+          "luck": 1.09
+        },
+        "2022": {
+          "actual_wins": 10.0,
+          "expected_wins": 8.55,
+          "luck": 1.45
+        },
+        "2023": {
+          "actual_wins": 6.0,
+          "expected_wins": 6.3,
+          "luck": -0.3
+        },
+        "2024": {
+          "actual_wins": 5.0,
+          "expected_wins": 6.45,
+          "luck": -1.45
+        },
+        "2025": {
+          "actual_wins": 9.0,
+          "expected_wins": 10.27,
+          "luck": -1.27
+        }
+      },
+      "early_round_position_counts": {
+        "RB": 19,
+        "QB": 2,
+        "WR": 12
+      },
+      "best_draft_pick": {
+        "season": "2022",
+        "team_id": "5",
+        "manager": "Jarett Coy",
+        "round_num": 15,
+        "overall_pick": 173,
+        "player_name": "Justin Fields",
+        "position": "QB",
+        "total_points": 295.98,
+        "points_rank": 16,
+        "value_score": 157
+      },
+      "worst_draft_pick": {
+        "season": "2015",
+        "team_id": "5",
+        "manager": "Jarett Coy",
+        "round_num": 1,
+        "overall_pick": 6,
+        "player_name": "Jamaal Charles",
+        "position": "RB",
+        "total_points": 75.0,
+        "points_rank": 132,
+        "value_score": -126
+      },
+      "avg_draft_value_score": 5.43,
+      "trade_count": 17,
+      "waiver_add_count": 206,
+      "best_waiver_pickup": {
+        "season": "2024",
+        "team_id": "5",
+        "manager": "Jarett Coy",
+        "player_name": "Sam Darnold",
+        "position": "QB",
+        "scoring_period_added": 4,
+        "rest_of_season_points": 250.2,
+        "bid_amount": 5.0
+      }
+    },
+    "6": {
+      "manager": "Dakota Bender",
+      "note": "ESPN account/SWID changed starting 2019; same person confirmed by team_id continuity",
+      "seasons": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "wins": 61,
+      "losses": 79,
+      "ties": 0,
+      "points_for": 14385.1,
+      "points_against": 14977.86,
+      "finishes": [
+        {
+          "season": "2015",
+          "final_standing": 12,
+          "team_name": "Le'Veon a Prayer"
+        },
+        {
+          "season": "2016",
+          "final_standing": 9,
+          "team_name": "Le'Veon a Prayer"
+        },
+        {
+          "season": "2017",
+          "final_standing": 8,
+          "team_name": "Wilsons Johnson"
+        },
+        {
+          "season": "2018",
+          "final_standing": 11,
+          "team_name": "Coleman for ya golden taint"
+        },
+        {
+          "season": "2019",
+          "final_standing": 12,
+          "team_name": "Dakota Bender"
+        },
+        {
+          "season": "2020",
+          "final_standing": 11,
+          "team_name": "Dakota Bender"
+        },
+        {
+          "season": "2021",
+          "final_standing": 5,
+          "team_name": "Big Booty  Jeudy"
+        },
+        {
+          "season": "2022",
+          "final_standing": 3,
+          "team_name": "Hurts Mcgurts"
+        },
+        {
+          "season": "2023",
+          "final_standing": 7,
+          "team_name": "Najee By Nature"
+        },
+        {
+          "season": "2024",
+          "final_standing": 5,
+          "team_name": "2 gurl 1 Kupp"
+        },
+        {
+          "season": "2025",
+          "final_standing": 11,
+          "team_name": "Make Kamaraca Great Again"
+        }
+      ],
+      "playoff_appearances": 4,
+      "championships": 0,
+      "last_place_finishes": 2,
+      "championship_seasons": [],
+      "last_place_seasons": [
+        "2015",
+        "2019"
+      ],
+      "playoff_seasons": [
+        "2017",
+        "2021",
+        "2022",
+        "2024"
+      ],
+      "games": 140,
+      "win_pct": 0.4357,
+      "avg_finish": 8.55,
+      "avg_points_for": 102.75,
+      "avg_points_against": 106.98,
+      "luck_all_time": -1.48,
+      "expected_wins_all_time": 79.98,
+      "actual_wins_all_time_allplay_basis": 78.5,
+      "luck_by_season": {
+        "2015": {
+          "actual_wins": 5.5,
+          "expected_wins": 6.82,
+          "luck": -1.32
+        },
+        "2016": {
+          "actual_wins": 5.0,
+          "expected_wins": 5.14,
+          "luck": -0.14
+        },
+        "2017": {
+          "actual_wins": 8.0,
+          "expected_wins": 8.83,
+          "luck": -0.83
+        },
+        "2018": {
+          "actual_wins": 5.0,
+          "expected_wins": 4.73,
+          "luck": 0.27
+        },
+        "2019": {
+          "actual_wins": 1.0,
+          "expected_wins": 2.73,
+          "luck": -1.73
+        },
+        "2020": {
+          "actual_wins": 6.0,
+          "expected_wins": 5.73,
+          "luck": 0.27
+        },
+        "2021": {
+          "actual_wins": 11.0,
+          "expected_wins": 9.72,
+          "luck": 1.28
+        },
+        "2022": {
+          "actual_wins": 11.0,
+          "expected_wins": 9.97,
+          "luck": 1.03
+        },
+        "2023": {
+          "actual_wins": 9.0,
+          "expected_wins": 9.05,
+          "luck": -0.05
+        },
+        "2024": {
+          "actual_wins": 10.0,
+          "expected_wins": 10.0,
+          "luck": 0.0
+        },
+        "2025": {
+          "actual_wins": 7.0,
+          "expected_wins": 7.27,
+          "luck": -0.27
+        }
+      },
+      "early_round_position_counts": {
+        "RB": 18,
+        "WR": 13,
+        "QB": 2
+      },
+      "best_draft_pick": {
+        "season": "2015",
+        "team_id": "6",
+        "manager": "Dakota Bender",
+        "round_num": 16,
+        "overall_pick": 190,
+        "player_name": "Doug Baldwin",
+        "position": "WR",
+        "total_points": 184.0,
+        "points_rank": 28,
+        "value_score": 162
+      },
+      "worst_draft_pick": {
+        "season": "2017",
+        "team_id": "6",
+        "manager": "Dakota Bender",
+        "round_num": 1,
+        "overall_pick": 1,
+        "player_name": "David Johnson",
+        "position": "RB",
+        "total_points": 6.0,
+        "points_rank": 158,
+        "value_score": -157
+      },
+      "avg_draft_value_score": -4.63,
+      "trade_count": 5,
+      "waiver_add_count": 298,
+      "best_waiver_pickup": {
+        "season": "2024",
+        "team_id": "6",
+        "manager": "Dakota Bender",
+        "player_name": "Chase Brown",
+        "position": "RB",
+        "scoring_period_added": 4,
+        "rest_of_season_points": 237.7,
+        "bid_amount": 4.0
+      }
+    },
+    "7": {
+      "manager": "Corey Ploss",
+      "note": "",
+      "seasons": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "wins": 68,
+      "losses": 72,
+      "ties": 0,
+      "points_for": 14718.440000000002,
+      "points_against": 15111.060000000001,
+      "finishes": [
+        {
+          "season": "2015",
+          "final_standing": 4,
+          "team_name": "Tyrone Long Dick Style"
+        },
+        {
+          "season": "2016",
+          "final_standing": 7,
+          "team_name": "Tyrone Long Dick Style"
+        },
+        {
+          "season": "2017",
+          "final_standing": 5,
+          "team_name": "Oprah Winfrey"
+        },
+        {
+          "season": "2018",
+          "final_standing": 10,
+          "team_name": "Oprah Winfrey"
+        },
+        {
+          "season": "2019",
+          "final_standing": 8,
+          "team_name": "Florida Man"
+        },
+        {
+          "season": "2020",
+          "final_standing": 9,
+          "team_name": "Derek Booker's Team"
+        },
+        {
+          "season": "2021",
+          "final_standing": 4,
+          "team_name": "Nick O'Teen"
+        },
+        {
+          "season": "2022",
+          "final_standing": 9,
+          "team_name": "Student Loan Forgiveness"
+        },
+        {
+          "season": "2023",
+          "final_standing": 12,
+          "team_name": "City Wok"
+        },
+        {
+          "season": "2024",
+          "final_standing": 11,
+          "team_name": "Big Sausage Pizza"
+        },
+        {
+          "season": "2025",
+          "final_standing": 3,
+          "team_name": "Cursed"
+        }
+      ],
+      "playoff_appearances": 6,
+      "championships": 0,
+      "last_place_finishes": 1,
+      "championship_seasons": [],
+      "last_place_seasons": [
+        "2023"
+      ],
+      "playoff_seasons": [
+        "2015",
+        "2016",
+        "2017",
+        "2019",
+        "2021",
+        "2025"
+      ],
+      "games": 140,
+      "win_pct": 0.4857,
+      "avg_finish": 7.45,
+      "avg_points_for": 105.13,
+      "avg_points_against": 107.94,
+      "luck_all_time": -1.3,
+      "expected_wins_all_time": 83.3,
+      "actual_wins_all_time_allplay_basis": 82.0,
+      "luck_by_season": {
+        "2015": {
+          "actual_wins": 7.0,
+          "expected_wins": 7.95,
+          "luck": -0.95
+        },
+        "2016": {
+          "actual_wins": 12.0,
+          "expected_wins": 9.14,
+          "luck": 2.86
+        },
+        "2017": {
+          "actual_wins": 8.0,
+          "expected_wins": 8.39,
+          "luck": -0.39
+        },
+        "2018": {
+          "actual_wins": 5.0,
+          "expected_wins": 5.36,
+          "luck": -0.36
+        },
+        "2019": {
+          "actual_wins": 5.0,
+          "expected_wins": 7.36,
+          "luck": -2.36
+        },
+        "2020": {
+          "actual_wins": 6.0,
+          "expected_wins": 5.73,
+          "luck": 0.27
+        },
+        "2021": {
+          "actual_wins": 9.0,
+          "expected_wins": 11.0,
+          "luck": -2.0
+        },
+        "2022": {
+          "actual_wins": 7.0,
+          "expected_wins": 7.36,
+          "luck": -0.36
+        },
+        "2023": {
+          "actual_wins": 6.0,
+          "expected_wins": 6.82,
+          "luck": -0.82
+        },
+        "2024": {
+          "actual_wins": 8.0,
+          "expected_wins": 6.0,
+          "luck": 2.0
+        },
+        "2025": {
+          "actual_wins": 9.0,
+          "expected_wins": 8.18,
+          "luck": 0.82
+        }
+      },
+      "early_round_position_counts": {
+        "RB": 14,
+        "QB": 3,
+        "WR": 15,
+        "TE": 1
+      },
+      "best_draft_pick": {
+        "season": "2024",
+        "team_id": "7",
+        "manager": "Corey Ploss",
+        "round_num": 14,
+        "overall_pick": 157,
+        "player_name": "Justin Herbert",
+        "position": "QB",
+        "total_points": 285.4,
+        "points_rank": 17,
+        "value_score": 140
+      },
+      "worst_draft_pick": {
+        "season": "2020",
+        "team_id": "7",
+        "manager": "Corey Ploss",
+        "round_num": 3,
+        "overall_pick": 35,
+        "player_name": "Courtland Sutton",
+        "position": "WR",
+        "total_points": 8.1,
+        "points_rank": 178,
+        "value_score": -143
+      },
+      "avg_draft_value_score": 0.19,
+      "trade_count": 3,
+      "waiver_add_count": 161,
+      "best_waiver_pickup": {
+        "season": "2023",
+        "team_id": "7",
+        "manager": "Corey Ploss",
+        "player_name": "Jordan Love",
+        "position": "QB",
+        "scoring_period_added": 5,
+        "rest_of_season_points": 233.8,
+        "bid_amount": 0.0
+      }
+    },
+    "8": {
+      "manager": "Kyle Torpey",
+      "note": "",
+      "seasons": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "wins": 61,
+      "losses": 77,
+      "ties": 1,
+      "points_for": 13960.800000000003,
+      "points_against": 15020.44,
+      "finishes": [
+        {
+          "season": "2015",
+          "final_standing": 11,
+          "team_name": "Team Torpey"
+        },
+        {
+          "season": "2016",
+          "final_standing": 11,
+          "team_name": "Team Torpey"
+        },
+        {
+          "season": "2017",
+          "final_standing": 3,
+          "team_name": "Team Torpey"
+        },
+        {
+          "season": "2018",
+          "final_standing": 6,
+          "team_name": "Team Torpey"
+        },
+        {
+          "season": "2019",
+          "final_standing": 4,
+          "team_name": "Team Torpey"
+        },
+        {
+          "season": "2020",
+          "final_standing": 6,
+          "team_name": "Team Torpey"
+        },
+        {
+          "season": "2021",
+          "final_standing": 9,
+          "team_name": "Team Torpey"
+        },
+        {
+          "season": "2022",
+          "final_standing": 8,
+          "team_name": "Team Torpey"
+        },
+        {
+          "season": "2023",
+          "final_standing": 10,
+          "team_name": "Bye Week"
+        },
+        {
+          "season": "2024",
+          "final_standing": 8,
+          "team_name": "Bye Week"
+        },
+        {
+          "season": "2025",
+          "final_standing": 9,
+          "team_name": "Bye Week"
+        }
+      ],
+      "playoff_appearances": 5,
+      "championships": 0,
+      "last_place_finishes": 0,
+      "championship_seasons": [],
+      "last_place_seasons": [],
+      "playoff_seasons": [
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2024"
+      ],
+      "games": 139,
+      "win_pct": 0.4424,
+      "avg_finish": 7.73,
+      "avg_points_for": 100.44,
+      "avg_points_against": 108.06,
+      "luck_all_time": 1.61,
+      "expected_wins_all_time": 74.39,
+      "actual_wins_all_time_allplay_basis": 76.0,
+      "luck_by_season": {
+        "2015": {
+          "actual_wins": 5.5,
+          "expected_wins": 6.59,
+          "luck": -1.09
+        },
+        "2016": {
+          "actual_wins": 5.5,
+          "expected_wins": 5.82,
+          "luck": -0.32
+        },
+        "2017": {
+          "actual_wins": 7.0,
+          "expected_wins": 7.17,
+          "luck": -0.17
+        },
+        "2018": {
+          "actual_wins": 7.0,
+          "expected_wins": 6.45,
+          "luck": 0.55
+        },
+        "2019": {
+          "actual_wins": 9.0,
+          "expected_wins": 7.36,
+          "luck": 1.64
+        },
+        "2020": {
+          "actual_wins": 5.0,
+          "expected_wins": 6.09,
+          "luck": -1.09
+        },
+        "2021": {
+          "actual_wins": 7.0,
+          "expected_wins": 5.95,
+          "luck": 1.05
+        },
+        "2022": {
+          "actual_wins": 10.0,
+          "expected_wins": 8.01,
+          "luck": 1.99
+        },
+        "2023": {
+          "actual_wins": 5.0,
+          "expected_wins": 7.68,
+          "luck": -2.68
+        },
+        "2024": {
+          "actual_wins": 8.0,
+          "expected_wins": 7.36,
+          "luck": 0.64
+        },
+        "2025": {
+          "actual_wins": 7.0,
+          "expected_wins": 5.91,
+          "luck": 1.09
+        }
+      },
+      "early_round_position_counts": {
+        "RB": 19,
+        "WR": 11,
+        "QB": 3
+      },
+      "best_draft_pick": {
+        "season": "2016",
+        "team_id": "8",
+        "manager": "Kyle Torpey",
+        "round_num": 14,
+        "overall_pick": 160,
+        "player_name": "Andy Dalton",
+        "position": "QB",
+        "total_points": 250.0,
+        "points_rank": 16,
+        "value_score": 144
+      },
+      "worst_draft_pick": {
+        "season": "2018",
+        "team_id": "8",
+        "manager": "Kyle Torpey",
+        "round_num": 2,
+        "overall_pick": 23,
+        "player_name": "Jerick McKinnon",
+        "position": "RB",
+        "total_points": 0.0,
+        "points_rank": 179,
+        "value_score": -156
+      },
+      "avg_draft_value_score": -2.49,
+      "trade_count": 1,
+      "waiver_add_count": 102,
+      "best_waiver_pickup": {
+        "season": "2023",
+        "team_id": "8",
+        "manager": "Kyle Torpey",
+        "player_name": "Dak Prescott",
+        "position": "QB",
+        "scoring_period_added": 3,
+        "rest_of_season_points": 316.9,
+        "bid_amount": 0.0
+      }
+    },
+    "9": {
+      "manager": "Phil Lannon",
+      "note": "Left the league after 2016; league ran 11 teams in 2017",
+      "seasons": [
+        "2015",
+        "2016"
+      ],
+      "wins": 12,
+      "losses": 14,
+      "ties": 0,
+      "points_for": 2186.0,
+      "points_against": 2179.0,
+      "finishes": [
+        {
+          "season": "2015",
+          "final_standing": 7,
+          "team_name": "motwns lions"
+        },
+        {
+          "season": "2016",
+          "final_standing": 12,
+          "team_name": "motwns lions"
+        }
+      ],
+      "playoff_appearances": 1,
+      "championships": 0,
+      "last_place_finishes": 1,
+      "championship_seasons": [],
+      "last_place_seasons": [
+        "2016"
+      ],
+      "playoff_seasons": [
+        "2015"
+      ],
+      "games": 26,
+      "win_pct": 0.4615,
+      "avg_finish": 9.5,
+      "avg_points_for": 84.08,
+      "avg_points_against": 83.81,
+      "luck_all_time": -1.27,
+      "expected_wins_all_time": 14.77,
+      "actual_wins_all_time_allplay_basis": 13.5,
+      "luck_by_season": {
+        "2015": {
+          "actual_wins": 10.0,
+          "expected_wins": 8.95,
+          "luck": 1.05
+        },
+        "2016": {
+          "actual_wins": 3.5,
+          "expected_wins": 5.82,
+          "luck": -2.32
+        }
+      },
+      "early_round_position_counts": {
+        "WR": 3,
+        "RB": 2,
+        "QB": 1
+      },
+      "best_draft_pick": {
+        "season": "2015",
+        "team_id": "9",
+        "manager": "Phil Lannon",
+        "round_num": 14,
+        "overall_pick": 160,
+        "player_name": "Broncos D/ST",
+        "position": "D/ST",
+        "total_points": 182.0,
+        "points_rank": 29,
+        "value_score": 131
+      },
+      "worst_draft_pick": {
+        "season": "2016",
+        "team_id": "9",
+        "manager": "Phil Lannon",
+        "round_num": 3,
+        "overall_pick": 27,
+        "player_name": "Eddie Lacy",
+        "position": "RB",
+        "total_points": 36.0,
+        "points_rank": 170,
+        "value_score": -143
+      },
+      "avg_draft_value_score": -3.78,
+      "trade_count": 0,
+      "waiver_add_count": 0,
+      "best_waiver_pickup": null
+    },
+    "10": {
+      "manager": "Dustin Gamble",
+      "note": "",
+      "seasons": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "wins": 69,
+      "losses": 70,
+      "ties": 1,
+      "points_for": 15069.280000000002,
+      "points_against": 15108.22,
+      "finishes": [
+        {
+          "season": "2015",
+          "final_standing": 10,
+          "team_name": "Always Murray in Philadelphia"
+        },
+        {
+          "season": "2016",
+          "final_standing": 4,
+          "team_name": "Zeke and Destroy"
+        },
+        {
+          "season": "2017",
+          "final_standing": 7,
+          "team_name": "Inglorious  Staffords"
+        },
+        {
+          "season": "2018",
+          "final_standing": 9,
+          "team_name": "Need More Cobb-Bell"
+        },
+        {
+          "season": "2019",
+          "final_standing": 10,
+          "team_name": "Need More Cobb-Bell"
+        },
+        {
+          "season": "2020",
+          "final_standing": 2,
+          "team_name": "Can you Digg it?"
+        },
+        {
+          "season": "2021",
+          "final_standing": 6,
+          "team_name": "Najee By Nature"
+        },
+        {
+          "season": "2022",
+          "final_standing": 10,
+          "team_name": "Najee By Nature"
+        },
+        {
+          "season": "2023",
+          "final_standing": 8,
+          "team_name": "White Walkers"
+        },
+        {
+          "season": "2024",
+          "final_standing": 1,
+          "team_name": "Slim Nickens"
+        },
+        {
+          "season": "2025",
+          "final_standing": 12,
+          "team_name": "Dishes Nothin"
+        }
+      ],
+      "playoff_appearances": 5,
+      "championships": 1,
+      "last_place_finishes": 1,
+      "championship_seasons": [
+        "2024"
+      ],
+      "last_place_seasons": [
+        "2025"
+      ],
+      "playoff_seasons": [
+        "2016",
+        "2017",
+        "2020",
+        "2021",
+        "2024"
+      ],
+      "games": 140,
+      "win_pct": 0.4964,
+      "avg_finish": 7.18,
+      "avg_points_for": 107.64,
+      "avg_points_against": 107.92,
+      "luck_all_time": -4.3,
+      "expected_wins_all_time": 88.8,
+      "actual_wins_all_time_allplay_basis": 84.5,
+      "luck_by_season": {
+        "2015": {
+          "actual_wins": 6.0,
+          "expected_wins": 7.45,
+          "luck": -1.45
+        },
+        "2016": {
+          "actual_wins": 9.0,
+          "expected_wins": 9.77,
+          "luck": -0.77
+        },
+        "2017": {
+          "actual_wins": 6.5,
+          "expected_wins": 6.0,
+          "luck": 0.5
+        },
+        "2018": {
+          "actual_wins": 8.0,
+          "expected_wins": 5.0,
+          "luck": 3.0
+        },
+        "2019": {
+          "actual_wins": 5.0,
+          "expected_wins": 6.27,
+          "luck": -1.27
+        },
+        "2020": {
+          "actual_wins": 10.0,
+          "expected_wins": 9.0,
+          "luck": 1.0
+        },
+        "2021": {
+          "actual_wins": 9.0,
+          "expected_wins": 8.88,
+          "luck": 0.12
+        },
+        "2022": {
+          "actual_wins": 6.0,
+          "expected_wins": 8.34,
+          "luck": -2.34
+        },
+        "2023": {
+          "actual_wins": 8.0,
+          "expected_wins": 8.26,
+          "luck": -0.26
+        },
+        "2024": {
+          "actual_wins": 13.0,
+          "expected_wins": 11.73,
+          "luck": 1.27
+        },
+        "2025": {
+          "actual_wins": 4.0,
+          "expected_wins": 8.09,
+          "luck": -4.09
+        }
+      },
+      "early_round_position_counts": {
+        "RB": 16,
+        "WR": 15,
+        "QB": 2
+      },
+      "best_draft_pick": {
+        "season": "2023",
+        "team_id": "10",
+        "manager": "Dustin Gamble",
+        "round_num": 14,
+        "overall_pick": 165,
+        "player_name": "Jared Goff",
+        "position": "QB",
+        "total_points": 289.1,
+        "points_rank": 11,
+        "value_score": 154
+      },
+      "worst_draft_pick": {
+        "season": "2018",
+        "team_id": "10",
+        "manager": "Dustin Gamble",
+        "round_num": 1,
+        "overall_pick": 3,
+        "player_name": "Le'Veon Bell",
+        "position": "RB",
+        "total_points": 0.0,
+        "points_rank": 178,
+        "value_score": -175
+      },
+      "avg_draft_value_score": -0.88,
+      "trade_count": 2,
+      "waiver_add_count": 129,
+      "best_waiver_pickup": {
+        "season": "2024",
+        "team_id": "10",
+        "manager": "Dustin Gamble",
+        "player_name": "Baker Mayfield",
+        "position": "QB",
+        "scoring_period_added": 2,
+        "rest_of_season_points": 336.1,
+        "bid_amount": 0.0
+      }
+    },
+    "11": {
+      "manager": "Pj Lannon",
+      "note": "ESPN account/SWID changed starting 2018; same person confirmed by team_id continuity; distinct person from Phil Lannon (team 9)",
+      "seasons": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "wins": 72,
+      "losses": 68,
+      "ties": 0,
+      "points_for": 14690.92,
+      "points_against": 14383.800000000001,
+      "finishes": [
+        {
+          "season": "2015",
+          "final_standing": 9,
+          "team_name": "Ol'Man  Rivers"
+        },
+        {
+          "season": "2016",
+          "final_standing": 6,
+          "team_name": "Mr.Rodgers  Neighborhood"
+        },
+        {
+          "season": "2017",
+          "final_standing": 9,
+          "team_name": "Mr.Rodgers  Neighborhood"
+        },
+        {
+          "season": "2018",
+          "final_standing": 5,
+          "team_name": "NIGS Real Niqqas"
+        },
+        {
+          "season": "2019",
+          "final_standing": 2,
+          "team_name": "NIGS Real Niqqas"
+        },
+        {
+          "season": "2020",
+          "final_standing": 4,
+          "team_name": "NIGS Real Niqqas"
+        },
+        {
+          "season": "2021",
+          "final_standing": 11,
+          "team_name": "NIGS Real Niqqas"
+        },
+        {
+          "season": "2022",
+          "final_standing": 1,
+          "team_name": "WADDDLE ON MY W OOD"
+        },
+        {
+          "season": "2023",
+          "final_standing": 9,
+          "team_name": "AyeB1tchItsPurdyTime"
+        },
+        {
+          "season": "2024",
+          "final_standing": 12,
+          "team_name": "Waddle On My Hock"
+        },
+        {
+          "season": "2025",
+          "final_standing": 6,
+          "team_name": "Waddle Deez Nutz On Yo Face"
+        }
+      ],
+      "playoff_appearances": 6,
+      "championships": 1,
+      "last_place_finishes": 1,
+      "championship_seasons": [
+        "2022"
+      ],
+      "last_place_seasons": [
+        "2024"
+      ],
+      "playoff_seasons": [
+        "2016",
+        "2018",
+        "2019",
+        "2020",
+        "2022",
+        "2025"
+      ],
+      "games": 140,
+      "win_pct": 0.5143,
+      "avg_finish": 6.73,
+      "avg_points_for": 104.94,
+      "avg_points_against": 102.74,
+      "luck_all_time": 8.36,
+      "expected_wins_all_time": 81.14,
+      "actual_wins_all_time_allplay_basis": 89.5,
+      "luck_by_season": {
+        "2015": {
+          "actual_wins": 8.5,
+          "expected_wins": 7.77,
+          "luck": 0.73
+        },
+        "2016": {
+          "actual_wins": 9.0,
+          "expected_wins": 9.32,
+          "luck": -0.32
+        },
+        "2017": {
+          "actual_wins": 6.0,
+          "expected_wins": 3.67,
+          "luck": 2.33
+        },
+        "2018": {
+          "actual_wins": 8.0,
+          "expected_wins": 7.18,
+          "luck": 0.82
+        },
+        "2019": {
+          "actual_wins": 9.0,
+          "expected_wins": 7.09,
+          "luck": 1.91
+        },
+        "2020": {
+          "actual_wins": 7.0,
+          "expected_wins": 6.18,
+          "luck": 0.82
+        },
+        "2021": {
+          "actual_wins": 6.0,
+          "expected_wins": 5.38,
+          "luck": 0.62
+        },
+        "2022": {
+          "actual_wins": 11.0,
+          "expected_wins": 11.55,
+          "luck": -0.55
+        },
+        "2023": {
+          "actual_wins": 8.0,
+          "expected_wins": 9.09,
+          "luck": -1.09
+        },
+        "2024": {
+          "actual_wins": 7.0,
+          "expected_wins": 7.0,
+          "luck": 0.0
+        },
+        "2025": {
+          "actual_wins": 10.0,
+          "expected_wins": 6.91,
+          "luck": 3.09
+        }
+      },
+      "early_round_position_counts": {
+        "RB": 14,
+        "QB": 4,
+        "WR": 13,
+        "TE": 2
+      },
+      "best_draft_pick": {
+        "season": "2016",
+        "team_id": "11",
+        "manager": "Pj Lannon",
+        "round_num": 14,
+        "overall_pick": 165,
+        "player_name": "Dak Prescott",
+        "position": "QB",
+        "total_points": 271.0,
+        "points_rank": 8,
+        "value_score": 157
+      },
+      "worst_draft_pick": {
+        "season": "2024",
+        "team_id": "11",
+        "manager": "Pj Lannon",
+        "round_num": 1,
+        "overall_pick": 1,
+        "player_name": "Christian McCaffrey",
+        "position": "RB",
+        "total_points": 47.8,
+        "points_rank": 159,
+        "value_score": -158
+      },
+      "avg_draft_value_score": 1.6,
+      "trade_count": 1,
+      "waiver_add_count": 166,
+      "best_waiver_pickup": {
+        "season": "2023",
+        "team_id": "11",
+        "manager": "Pj Lannon",
+        "player_name": "Brock Purdy",
+        "position": "QB",
+        "scoring_period_added": 2,
+        "rest_of_season_points": 278.8,
+        "bid_amount": 0.0
+      }
+    },
+    "12": {
+      "manager": "Angelo Hernandez",
+      "note": "ESPN account/SWID changed starting 2019; same person confirmed by team_id continuity",
+      "seasons": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "wins": 64,
+      "losses": 75,
+      "ties": 1,
+      "points_for": 14556.86,
+      "points_against": 14880.56,
+      "finishes": [
+        {
+          "season": "2015",
+          "final_standing": 8,
+          "team_name": "Obi_Juan TheIvory"
+        },
+        {
+          "season": "2016",
+          "final_standing": 10,
+          "team_name": "Valyrian  Steelers"
+        },
+        {
+          "season": "2017",
+          "final_standing": 10,
+          "team_name": "Sammy  Twatkins"
+        },
+        {
+          "season": "2018",
+          "final_standing": 8,
+          "team_name": "Not Guilty  Hernandez"
+        },
+        {
+          "season": "2019",
+          "final_standing": 3,
+          "team_name": "Da Ju Ju  Guice is Loose"
+        },
+        {
+          "season": "2020",
+          "final_standing": 3,
+          "team_name": "Alvin and the Metcalfs"
+        },
+        {
+          "season": "2021",
+          "final_standing": 10,
+          "team_name": "Gus GronkowsBEES"
+        },
+        {
+          "season": "2022",
+          "final_standing": 7,
+          "team_name": "Mixon em' Swiftly"
+        },
+        {
+          "season": "2023",
+          "final_standing": 1,
+          "team_name": "Sun God Squad"
+        },
+        {
+          "season": "2024",
+          "final_standing": 3,
+          "team_name": "CHAMP"
+        },
+        {
+          "season": "2025",
+          "final_standing": 2,
+          "team_name": "Nacua Matata"
+        }
+      ],
+      "playoff_appearances": 7,
+      "championships": 1,
+      "last_place_finishes": 0,
+      "championship_seasons": [
+        "2023"
+      ],
+      "last_place_seasons": [],
+      "playoff_seasons": [
+        "2015",
+        "2018",
+        "2019",
+        "2020",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "games": 140,
+      "win_pct": 0.4607,
+      "avg_finish": 5.91,
+      "avg_points_for": 103.98,
+      "avg_points_against": 106.29,
+      "luck_all_time": -1.05,
+      "expected_wins_all_time": 80.55,
+      "actual_wins_all_time_allplay_basis": 79.5,
+      "luck_by_season": {
+        "2015": {
+          "actual_wins": 11.5,
+          "expected_wins": 9.68,
+          "luck": 1.82
+        },
+        "2016": {
+          "actual_wins": 4.0,
+          "expected_wins": 4.09,
+          "luck": -0.09
+        },
+        "2017": {
+          "actual_wins": 2.0,
+          "expected_wins": 2.56,
+          "luck": -0.56
+        },
+        "2018": {
+          "actual_wins": 5.0,
+          "expected_wins": 6.18,
+          "luck": -1.18
+        },
+        "2019": {
+          "actual_wins": 9.0,
+          "expected_wins": 8.55,
+          "luck": 0.45
+        },
+        "2020": {
+          "actual_wins": 9.0,
+          "expected_wins": 9.09,
+          "luck": -0.09
+        },
+        "2021": {
+          "actual_wins": 5.0,
+          "expected_wins": 6.3,
+          "luck": -1.3
+        },
+        "2022": {
+          "actual_wins": 6.0,
+          "expected_wins": 6.1,
+          "luck": -0.1
+        },
+        "2023": {
+          "actual_wins": 11.0,
+          "expected_wins": 8.27,
+          "luck": 2.73
+        },
+        "2024": {
+          "actual_wins": 9.0,
+          "expected_wins": 10.45,
+          "luck": -1.45
+        },
+        "2025": {
+          "actual_wins": 8.0,
+          "expected_wins": 9.27,
+          "luck": -1.27
+        }
+      },
+      "early_round_position_counts": {
+        "WR": 20,
+        "RB": 12,
+        "QB": 1
+      },
+      "best_draft_pick": {
+        "season": "2016",
+        "team_id": "12",
+        "manager": "Angelo Hernandez",
+        "round_num": 14,
+        "overall_pick": 162,
+        "player_name": "Matt Ryan",
+        "position": "QB",
+        "total_points": 334.0,
+        "points_rank": 2,
+        "value_score": 160
+      },
+      "worst_draft_pick": {
+        "season": "2016",
+        "team_id": "12",
+        "manager": "Angelo Hernandez",
+        "round_num": 2,
+        "overall_pick": 18,
+        "player_name": "Jamaal Charles",
+        "position": "RB",
+        "total_points": 10.0,
+        "points_rank": 185,
+        "value_score": -167
+      },
+      "avg_draft_value_score": -2.77,
+      "trade_count": 4,
+      "waiver_add_count": 233,
+      "best_waiver_pickup": {
+        "season": "2025",
+        "team_id": "12",
+        "manager": "Angelo Hernandez",
+        "player_name": "Caleb Williams",
+        "position": "QB",
+        "scoring_period_added": 3,
+        "rest_of_season_points": 277.0,
+        "bid_amount": 0.0
+      }
+    },
+    "13": {
+      "manager": "Andrew Campbell",
+      "note": "Joined the league in 2018",
+      "seasons": [
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "wins": 56,
+      "losses": 47,
+      "ties": 0,
+      "points_for": 11910.96,
+      "points_against": 11488.360000000002,
+      "finishes": [
+        {
+          "season": "2018",
+          "final_standing": 12,
+          "team_name": "Naked Keg Stand"
+        },
+        {
+          "season": "2019",
+          "final_standing": 1,
+          "team_name": "Naked Keg Stand"
+        },
+        {
+          "season": "2020",
+          "final_standing": 1,
+          "team_name": "Naked Keg Stand"
+        },
+        {
+          "season": "2021",
+          "final_standing": 12,
+          "team_name": "Naked Keg Stand"
+        },
+        {
+          "season": "2022",
+          "final_standing": 6,
+          "team_name": "Naked Keg Stand"
+        },
+        {
+          "season": "2023",
+          "final_standing": 5,
+          "team_name": "Naked Keg Stand"
+        },
+        {
+          "season": "2024",
+          "final_standing": 7,
+          "team_name": "Naked Keg Stand"
+        },
+        {
+          "season": "2025",
+          "final_standing": 7,
+          "team_name": "Naked Keg Stand"
+        }
+      ],
+      "playoff_appearances": 6,
+      "championships": 2,
+      "last_place_finishes": 2,
+      "championship_seasons": [
+        "2019",
+        "2020"
+      ],
+      "last_place_seasons": [
+        "2018",
+        "2021"
+      ],
+      "playoff_seasons": [
+        "2019",
+        "2020",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "games": 103,
+      "win_pct": 0.5437,
+      "avg_finish": 6.38,
+      "avg_points_for": 115.64,
+      "avg_points_against": 111.54,
+      "luck_all_time": -3.47,
+      "expected_wins_all_time": 69.47,
+      "actual_wins_all_time_allplay_basis": 66.0,
+      "luck_by_season": {
+        "2018": {
+          "actual_wins": 3.0,
+          "expected_wins": 3.27,
+          "luck": -0.27
+        },
+        "2019": {
+          "actual_wins": 10.0,
+          "expected_wins": 8.36,
+          "luck": 1.64
+        },
+        "2020": {
+          "actual_wins": 11.0,
+          "expected_wins": 10.64,
+          "luck": 0.36
+        },
+        "2021": {
+          "actual_wins": 7.0,
+          "expected_wins": 7.45,
+          "luck": -0.45
+        },
+        "2022": {
+          "actual_wins": 8.0,
+          "expected_wins": 9.27,
+          "luck": -1.27
+        },
+        "2023": {
+          "actual_wins": 8.0,
+          "expected_wins": 8.66,
+          "luck": -0.66
+        },
+        "2024": {
+          "actual_wins": 8.0,
+          "expected_wins": 9.82,
+          "luck": -1.82
+        },
+        "2025": {
+          "actual_wins": 11.0,
+          "expected_wins": 12.0,
+          "luck": -1.0
+        }
+      },
+      "early_round_position_counts": {
+        "WR": 9,
+        "RB": 10,
+        "TE": 4,
+        "QB": 1
+      },
+      "best_draft_pick": {
+        "season": "2019",
+        "team_id": "13",
+        "manager": "Andrew Campbell",
+        "round_num": 14,
+        "overall_pick": 164,
+        "player_name": "Kirk Cousins",
+        "position": "QB",
+        "total_points": 244.42,
+        "points_rank": 19,
+        "value_score": 145
+      },
+      "worst_draft_pick": {
+        "season": "2021",
+        "team_id": "13",
+        "manager": "Andrew Campbell",
+        "round_num": 2,
+        "overall_pick": 17,
+        "player_name": "Clyde Edwards-Helaire",
+        "position": "RB",
+        "total_points": 117.6,
+        "points_rank": 127,
+        "value_score": -110
+      },
+      "avg_draft_value_score": 3.91,
+      "trade_count": 5,
+      "waiver_add_count": 123,
+      "best_waiver_pickup": {
+        "season": "2022",
+        "team_id": "13",
+        "manager": "Andrew Campbell",
+        "player_name": "Jared Goff",
+        "position": "QB",
+        "scoring_period_added": 4,
+        "rest_of_season_points": 228.9,
+        "bid_amount": 0.0
+      }
+    }
+  },
+  "h2h": {
+    "3": {
+      "1": {
+        "w": 7,
+        "l": 7,
+        "t": 0,
+        "pf": 1510.4,
+        "pa": 1530.8000000000002
+      },
+      "5": {
+        "w": 5,
+        "l": 11,
+        "t": 0,
+        "pf": 1586.1799999999998,
+        "pa": 1821.2000000000003
+      },
+      "6": {
+        "w": 12,
+        "l": 4,
+        "t": 0,
+        "pf": 2026.5399999999997,
+        "pa": 1623.1000000000004
+      },
+      "4": {
+        "w": 9,
+        "l": 9,
+        "t": 0,
+        "pf": 1924.62,
+        "pa": 1828.16
+      },
+      "2": {
+        "w": 8,
+        "l": 10,
+        "t": 0,
+        "pf": 2007.9199999999996,
+        "pa": 2004.08
+      },
+      "11": {
+        "w": 6,
+        "l": 9,
+        "t": 0,
+        "pf": 1538.8000000000002,
+        "pa": 1519.32
+      },
+      "9": {
+        "w": 2,
+        "l": 1,
+        "t": 0,
+        "pf": 277.0,
+        "pa": 243.0
+      },
+      "7": {
+        "w": 10,
+        "l": 6,
+        "t": 0,
+        "pf": 1586.14,
+        "pa": 1536.3799999999999
+      },
+      "8": {
+        "w": 7,
+        "l": 6,
+        "t": 0,
+        "pf": 1438.9799999999998,
+        "pa": 1315.8600000000001
+      },
+      "12": {
+        "w": 9,
+        "l": 7,
+        "t": 0,
+        "pf": 1741.5,
+        "pa": 1756.18
+      },
+      "10": {
+        "w": 10,
+        "l": 6,
+        "t": 1,
+        "pf": 1857.82,
+        "pa": 1742.2399999999998
+      },
+      "13": {
+        "w": 9,
+        "l": 2,
+        "t": 0,
+        "pf": 1325.8799999999999,
+        "pa": 1239.96
+      }
+    },
+    "1": {
+      "3": {
+        "w": 7,
+        "l": 7,
+        "t": 0,
+        "pf": 1530.8000000000002,
+        "pa": 1510.4
+      },
+      "4": {
+        "w": 11,
+        "l": 7,
+        "t": 0,
+        "pf": 2188.6800000000003,
+        "pa": 1822.7399999999998
+      },
+      "5": {
+        "w": 10,
+        "l": 7,
+        "t": 0,
+        "pf": 1955.1999999999998,
+        "pa": 1860.06
+      },
+      "2": {
+        "w": 6,
+        "l": 10,
+        "t": 0,
+        "pf": 1575.7400000000002,
+        "pa": 1553.9
+      },
+      "6": {
+        "w": 8,
+        "l": 4,
+        "t": 0,
+        "pf": 1448.64,
+        "pa": 1223.94
+      },
+      "9": {
+        "w": 3,
+        "l": 1,
+        "t": 0,
+        "pf": 424.0,
+        "pa": 332.0
+      },
+      "7": {
+        "w": 12,
+        "l": 5,
+        "t": 0,
+        "pf": 2016.7199999999998,
+        "pa": 1905.5200000000002
+      },
+      "8": {
+        "w": 10,
+        "l": 5,
+        "t": 0,
+        "pf": 1796.9199999999998,
+        "pa": 1588.94
+      },
+      "12": {
+        "w": 7,
+        "l": 10,
+        "t": 0,
+        "pf": 1867.0000000000002,
+        "pa": 1843.08
+      },
+      "10": {
+        "w": 6,
+        "l": 7,
+        "t": 0,
+        "pf": 1335.72,
+        "pa": 1395.2
+      },
+      "11": {
+        "w": 10,
+        "l": 5,
+        "t": 0,
+        "pf": 1565.0400000000002,
+        "pa": 1534.08
+      },
+      "13": {
+        "w": 11,
+        "l": 3,
+        "t": 0,
+        "pf": 1765.54,
+        "pa": 1414.7
+      }
+    },
+    "6": {
+      "4": {
+        "w": 4,
+        "l": 9,
+        "t": 0,
+        "pf": 1230.42,
+        "pa": 1413.1800000000003
+      },
+      "2": {
+        "w": 10,
+        "l": 5,
+        "t": 0,
+        "pf": 1680.1,
+        "pa": 1552.1000000000001
+      },
+      "3": {
+        "w": 4,
+        "l": 12,
+        "t": 0,
+        "pf": 1623.1000000000004,
+        "pa": 2026.5399999999997
+      },
+      "5": {
+        "w": 8,
+        "l": 9,
+        "t": 0,
+        "pf": 1753.8400000000001,
+        "pa": 1739.18
+      },
+      "1": {
+        "w": 4,
+        "l": 8,
+        "t": 0,
+        "pf": 1223.94,
+        "pa": 1448.64
+      },
+      "7": {
+        "w": 6,
+        "l": 13,
+        "t": 0,
+        "pf": 1888.0,
+        "pa": 1973.0
+      },
+      "8": {
+        "w": 12,
+        "l": 7,
+        "t": 0,
+        "pf": 1938.44,
+        "pa": 1831.5200000000004
+      },
+      "12": {
+        "w": 9,
+        "l": 5,
+        "t": 0,
+        "pf": 1496.08,
+        "pa": 1378.6800000000003
+      },
+      "10": {
+        "w": 12,
+        "l": 7,
+        "t": 0,
+        "pf": 2134.26,
+        "pa": 2012.0399999999997
+      },
+      "11": {
+        "w": 5,
+        "l": 10,
+        "t": 1,
+        "pf": 1547.8,
+        "pa": 1629.88
+      },
+      "9": {
+        "w": 0,
+        "l": 2,
+        "t": 0,
+        "pf": 124.0,
+        "pa": 188.0
+      },
+      "13": {
+        "w": 4,
+        "l": 7,
+        "t": 0,
+        "pf": 1037.86,
+        "pa": 1179.3200000000002
+      }
+    },
+    "4": {
+      "6": {
+        "w": 9,
+        "l": 4,
+        "t": 0,
+        "pf": 1413.1800000000003,
+        "pa": 1230.42
+      },
+      "1": {
+        "w": 7,
+        "l": 11,
+        "t": 0,
+        "pf": 1822.7399999999998,
+        "pa": 2188.6800000000003
+      },
+      "2": {
+        "w": 9,
+        "l": 8,
+        "t": 0,
+        "pf": 1802.1399999999996,
+        "pa": 1811.8399999999997
+      },
+      "3": {
+        "w": 9,
+        "l": 9,
+        "t": 0,
+        "pf": 1828.16,
+        "pa": 1924.62
+      },
+      "5": {
+        "w": 6,
+        "l": 9,
+        "t": 0,
+        "pf": 1460.5400000000002,
+        "pa": 1498.1
+      },
+      "10": {
+        "w": 6,
+        "l": 8,
+        "t": 0,
+        "pf": 1511.62,
+        "pa": 1555.74
+      },
+      "11": {
+        "w": 6,
+        "l": 9,
+        "t": 0,
+        "pf": 1528.7800000000002,
+        "pa": 1604.48
+      },
+      "9": {
+        "w": 2,
+        "l": 1,
+        "t": 0,
+        "pf": 266.0,
+        "pa": 204.0
+      },
+      "7": {
+        "w": 6,
+        "l": 6,
+        "t": 0,
+        "pf": 1262.8400000000001,
+        "pa": 1348.2399999999998
+      },
+      "8": {
+        "w": 13,
+        "l": 4,
+        "t": 0,
+        "pf": 1876.2399999999998,
+        "pa": 1606.04
+      },
+      "12": {
+        "w": 9,
+        "l": 4,
+        "t": 1,
+        "pf": 1547.58,
+        "pa": 1478.18
+      },
+      "13": {
+        "w": 9,
+        "l": 7,
+        "t": 0,
+        "pf": 1885.2000000000003,
+        "pa": 1715.3400000000001
+      }
+    },
+    "2": {
+      "5": {
+        "w": 9,
+        "l": 6,
+        "t": 0,
+        "pf": 1538.34,
+        "pa": 1503.84
+      },
+      "6": {
+        "w": 5,
+        "l": 10,
+        "t": 0,
+        "pf": 1552.1000000000001,
+        "pa": 1680.1
+      },
+      "4": {
+        "w": 8,
+        "l": 9,
+        "t": 0,
+        "pf": 1811.8399999999997,
+        "pa": 1802.1399999999996
+      },
+      "1": {
+        "w": 10,
+        "l": 6,
+        "t": 0,
+        "pf": 1553.9,
+        "pa": 1575.7400000000002
+      },
+      "3": {
+        "w": 10,
+        "l": 8,
+        "t": 0,
+        "pf": 2004.08,
+        "pa": 2007.9199999999996
+      },
+      "8": {
+        "w": 9,
+        "l": 6,
+        "t": 1,
+        "pf": 1662.1400000000006,
+        "pa": 1524.1999999999998
+      },
+      "12": {
+        "w": 6,
+        "l": 11,
+        "t": 0,
+        "pf": 1755.7200000000003,
+        "pa": 1806.18
+      },
+      "10": {
+        "w": 8,
+        "l": 9,
+        "t": 0,
+        "pf": 1839.18,
+        "pa": 1794.6399999999999
+      },
+      "11": {
+        "w": 9,
+        "l": 6,
+        "t": 0,
+        "pf": 1649.9,
+        "pa": 1610.54
+      },
+      "9": {
+        "w": 1,
+        "l": 1,
+        "t": 0,
+        "pf": 147.0,
+        "pa": 139.0
+      },
+      "7": {
+        "w": 7,
+        "l": 8,
+        "t": 0,
+        "pf": 1614.88,
+        "pa": 1659.6200000000001
+      },
+      "13": {
+        "w": 5,
+        "l": 5,
+        "t": 0,
+        "pf": 1137.1599999999999,
+        "pa": 1142.6000000000001
+      }
+    },
+    "5": {
+      "2": {
+        "w": 6,
+        "l": 9,
+        "t": 0,
+        "pf": 1503.84,
+        "pa": 1538.34
+      },
+      "3": {
+        "w": 11,
+        "l": 5,
+        "t": 0,
+        "pf": 1821.2000000000003,
+        "pa": 1586.1799999999998
+      },
+      "1": {
+        "w": 7,
+        "l": 10,
+        "t": 0,
+        "pf": 1860.06,
+        "pa": 1955.1999999999998
+      },
+      "6": {
+        "w": 9,
+        "l": 8,
+        "t": 0,
+        "pf": 1739.18,
+        "pa": 1753.8400000000001
+      },
+      "4": {
+        "w": 9,
+        "l": 6,
+        "t": 0,
+        "pf": 1498.1,
+        "pa": 1460.5400000000002
+      },
+      "12": {
+        "w": 9,
+        "l": 8,
+        "t": 0,
+        "pf": 1806.5599999999997,
+        "pa": 1658.18
+      },
+      "10": {
+        "w": 5,
+        "l": 10,
+        "t": 0,
+        "pf": 1409.48,
+        "pa": 1677.9200000000003
+      },
+      "11": {
+        "w": 5,
+        "l": 11,
+        "t": 0,
+        "pf": 1502.9800000000002,
+        "pa": 1815.9799999999998
+      },
+      "9": {
+        "w": 2,
+        "l": 2,
+        "t": 0,
+        "pf": 427.0,
+        "pa": 383.0
+      },
+      "7": {
+        "w": 10,
+        "l": 7,
+        "t": 0,
+        "pf": 2027.2800000000002,
+        "pa": 1816.2
+      },
+      "8": {
+        "w": 5,
+        "l": 7,
+        "t": 0,
+        "pf": 1197.3799999999997,
+        "pa": 1232.58
+      },
+      "13": {
+        "w": 4,
+        "l": 5,
+        "t": 0,
+        "pf": 1025.38,
+        "pa": 1000.6399999999999
+      }
+    },
+    "11": {
+      "9": {
+        "w": 1,
+        "l": 1,
+        "t": 0,
+        "pf": 158.0,
+        "pa": 197.0
+      },
+      "12": {
+        "w": 7,
+        "l": 10,
+        "t": 0,
+        "pf": 1566.4399999999998,
+        "pa": 1646.9600000000003
+      },
+      "7": {
+        "w": 8,
+        "l": 8,
+        "t": 0,
+        "pf": 1683.9599999999998,
+        "pa": 1529.66
+      },
+      "10": {
+        "w": 11,
+        "l": 4,
+        "t": 0,
+        "pf": 1637.8200000000002,
+        "pa": 1431.28
+      },
+      "8": {
+        "w": 7,
+        "l": 9,
+        "t": 0,
+        "pf": 1673.8000000000002,
+        "pa": 1704.9999999999998
+      },
+      "3": {
+        "w": 9,
+        "l": 6,
+        "t": 0,
+        "pf": 1519.32,
+        "pa": 1538.8000000000002
+      },
+      "4": {
+        "w": 9,
+        "l": 6,
+        "t": 0,
+        "pf": 1604.48,
+        "pa": 1528.7800000000002
+      },
+      "5": {
+        "w": 11,
+        "l": 5,
+        "t": 0,
+        "pf": 1815.9799999999998,
+        "pa": 1502.9800000000002
+      },
+      "2": {
+        "w": 6,
+        "l": 9,
+        "t": 0,
+        "pf": 1610.54,
+        "pa": 1649.9
+      },
+      "6": {
+        "w": 10,
+        "l": 5,
+        "t": 1,
+        "pf": 1629.88,
+        "pa": 1547.8
+      },
+      "1": {
+        "w": 5,
+        "l": 10,
+        "t": 0,
+        "pf": 1534.08,
+        "pa": 1565.0400000000002
+      },
+      "13": {
+        "w": 5,
+        "l": 8,
+        "t": 0,
+        "pf": 1370.3000000000002,
+        "pa": 1603.18
+      }
+    },
+    "9": {
+      "11": {
+        "w": 1,
+        "l": 1,
+        "t": 0,
+        "pf": 197.0,
+        "pa": 158.0
+      },
+      "10": {
+        "w": 1,
+        "l": 1,
+        "t": 0,
+        "pf": 155.0,
+        "pa": 148.0
+      },
+      "12": {
+        "w": 2,
+        "l": 2,
+        "t": 0,
+        "pf": 357.0,
+        "pa": 308.0
+      },
+      "8": {
+        "w": 1,
+        "l": 2,
+        "t": 1,
+        "pf": 303.0,
+        "pa": 287.0
+      },
+      "7": {
+        "w": 0,
+        "l": 2,
+        "t": 0,
+        "pf": 155.0,
+        "pa": 173.0
+      },
+      "1": {
+        "w": 1,
+        "l": 3,
+        "t": 0,
+        "pf": 332.0,
+        "pa": 424.0
+      },
+      "3": {
+        "w": 1,
+        "l": 2,
+        "t": 0,
+        "pf": 243.0,
+        "pa": 277.0
+      },
+      "4": {
+        "w": 1,
+        "l": 2,
+        "t": 0,
+        "pf": 204.0,
+        "pa": 266.0
+      },
+      "5": {
+        "w": 2,
+        "l": 2,
+        "t": 0,
+        "pf": 383.0,
+        "pa": 427.0
+      },
+      "2": {
+        "w": 1,
+        "l": 1,
+        "t": 0,
+        "pf": 139.0,
+        "pa": 147.0
+      },
+      "6": {
+        "w": 2,
+        "l": 0,
+        "t": 0,
+        "pf": 188.0,
+        "pa": 124.0
+      }
+    },
+    "7": {
+      "10": {
+        "w": 8,
+        "l": 11,
+        "t": 0,
+        "pf": 1911.52,
+        "pa": 2064.94
+      },
+      "8": {
+        "w": 9,
+        "l": 7,
+        "t": 0,
+        "pf": 1731.6,
+        "pa": 1618.12
+      },
+      "11": {
+        "w": 8,
+        "l": 8,
+        "t": 0,
+        "pf": 1529.66,
+        "pa": 1683.9599999999998
+      },
+      "12": {
+        "w": 7,
+        "l": 7,
+        "t": 0,
+        "pf": 1361.9199999999998,
+        "pa": 1503.4199999999998
+      },
+      "9": {
+        "w": 2,
+        "l": 0,
+        "t": 0,
+        "pf": 173.0,
+        "pa": 155.0
+      },
+      "6": {
+        "w": 13,
+        "l": 6,
+        "t": 0,
+        "pf": 1973.0,
+        "pa": 1888.0
+      },
+      "1": {
+        "w": 5,
+        "l": 12,
+        "t": 0,
+        "pf": 1905.5200000000002,
+        "pa": 2016.7199999999998
+      },
+      "3": {
+        "w": 6,
+        "l": 10,
+        "t": 0,
+        "pf": 1536.3799999999999,
+        "pa": 1586.14
+      },
+      "4": {
+        "w": 6,
+        "l": 6,
+        "t": 0,
+        "pf": 1348.2399999999998,
+        "pa": 1262.8400000000001
+      },
+      "5": {
+        "w": 7,
+        "l": 10,
+        "t": 0,
+        "pf": 1816.2,
+        "pa": 2027.2800000000002
+      },
+      "2": {
+        "w": 8,
+        "l": 7,
+        "t": 0,
+        "pf": 1659.6200000000001,
+        "pa": 1614.88
+      },
+      "13": {
+        "w": 3,
+        "l": 7,
+        "t": 0,
+        "pf": 1027.62,
+        "pa": 1169.02
+      }
+    },
+    "10": {
+      "7": {
+        "w": 11,
+        "l": 8,
+        "t": 0,
+        "pf": 2064.94,
+        "pa": 1911.52
+      },
+      "9": {
+        "w": 1,
+        "l": 1,
+        "t": 0,
+        "pf": 148.0,
+        "pa": 155.0
+      },
+      "8": {
+        "w": 6,
+        "l": 10,
+        "t": 0,
+        "pf": 1673.1199999999994,
+        "pa": 1677.24
+      },
+      "11": {
+        "w": 4,
+        "l": 11,
+        "t": 0,
+        "pf": 1431.28,
+        "pa": 1637.8200000000002
+      },
+      "12": {
+        "w": 11,
+        "l": 4,
+        "t": 0,
+        "pf": 1788.94,
+        "pa": 1676.24
+      },
+      "4": {
+        "w": 8,
+        "l": 6,
+        "t": 0,
+        "pf": 1555.74,
+        "pa": 1511.62
+      },
+      "5": {
+        "w": 10,
+        "l": 5,
+        "t": 0,
+        "pf": 1677.9200000000003,
+        "pa": 1409.48
+      },
+      "2": {
+        "w": 9,
+        "l": 8,
+        "t": 0,
+        "pf": 1794.6399999999999,
+        "pa": 1839.18
+      },
+      "6": {
+        "w": 7,
+        "l": 12,
+        "t": 0,
+        "pf": 2012.0399999999997,
+        "pa": 2134.26
+      },
+      "1": {
+        "w": 7,
+        "l": 6,
+        "t": 0,
+        "pf": 1395.2,
+        "pa": 1335.72
+      },
+      "3": {
+        "w": 6,
+        "l": 10,
+        "t": 1,
+        "pf": 1742.2399999999998,
+        "pa": 1857.82
+      },
+      "13": {
+        "w": 4,
+        "l": 7,
+        "t": 0,
+        "pf": 1183.24,
+        "pa": 1370.64
+      }
+    },
+    "8": {
+      "12": {
+        "w": 10,
+        "l": 6,
+        "t": 0,
+        "pf": 1563.2,
+        "pa": 1578.5600000000002
+      },
+      "7": {
+        "w": 7,
+        "l": 9,
+        "t": 0,
+        "pf": 1618.12,
+        "pa": 1731.6
+      },
+      "10": {
+        "w": 10,
+        "l": 6,
+        "t": 0,
+        "pf": 1677.24,
+        "pa": 1673.1199999999994
+      },
+      "9": {
+        "w": 2,
+        "l": 1,
+        "t": 1,
+        "pf": 287.0,
+        "pa": 303.0
+      },
+      "11": {
+        "w": 9,
+        "l": 7,
+        "t": 0,
+        "pf": 1704.9999999999998,
+        "pa": 1673.8000000000002
+      },
+      "2": {
+        "w": 6,
+        "l": 9,
+        "t": 1,
+        "pf": 1524.1999999999998,
+        "pa": 1662.1400000000006
+      },
+      "6": {
+        "w": 7,
+        "l": 12,
+        "t": 0,
+        "pf": 1831.5200000000004,
+        "pa": 1938.44
+      },
+      "1": {
+        "w": 5,
+        "l": 10,
+        "t": 0,
+        "pf": 1588.94,
+        "pa": 1796.9199999999998
+      },
+      "3": {
+        "w": 6,
+        "l": 7,
+        "t": 0,
+        "pf": 1315.8600000000001,
+        "pa": 1438.9799999999998
+      },
+      "4": {
+        "w": 4,
+        "l": 13,
+        "t": 0,
+        "pf": 1606.04,
+        "pa": 1876.2399999999998
+      },
+      "5": {
+        "w": 7,
+        "l": 5,
+        "t": 0,
+        "pf": 1232.58,
+        "pa": 1197.3799999999997
+      },
+      "13": {
+        "w": 2,
+        "l": 10,
+        "t": 0,
+        "pf": 1231.1,
+        "pa": 1513.64
+      }
+    },
+    "12": {
+      "8": {
+        "w": 6,
+        "l": 10,
+        "t": 0,
+        "pf": 1578.5600000000002,
+        "pa": 1563.2
+      },
+      "11": {
+        "w": 10,
+        "l": 7,
+        "t": 0,
+        "pf": 1646.9600000000003,
+        "pa": 1566.4399999999998
+      },
+      "9": {
+        "w": 2,
+        "l": 2,
+        "t": 0,
+        "pf": 308.0,
+        "pa": 357.0
+      },
+      "7": {
+        "w": 7,
+        "l": 7,
+        "t": 0,
+        "pf": 1503.4199999999998,
+        "pa": 1361.9199999999998
+      },
+      "10": {
+        "w": 4,
+        "l": 11,
+        "t": 0,
+        "pf": 1676.24,
+        "pa": 1788.94
+      },
+      "5": {
+        "w": 8,
+        "l": 9,
+        "t": 0,
+        "pf": 1658.18,
+        "pa": 1806.5599999999997
+      },
+      "2": {
+        "w": 11,
+        "l": 6,
+        "t": 0,
+        "pf": 1806.18,
+        "pa": 1755.7200000000003
+      },
+      "6": {
+        "w": 5,
+        "l": 9,
+        "t": 0,
+        "pf": 1378.6800000000003,
+        "pa": 1496.08
+      },
+      "1": {
+        "w": 10,
+        "l": 7,
+        "t": 0,
+        "pf": 1843.08,
+        "pa": 1867.0000000000002
+      },
+      "3": {
+        "w": 7,
+        "l": 9,
+        "t": 0,
+        "pf": 1756.18,
+        "pa": 1741.5
+      },
+      "4": {
+        "w": 4,
+        "l": 9,
+        "t": 1,
+        "pf": 1478.18,
+        "pa": 1547.58
+      },
+      "13": {
+        "w": 5,
+        "l": 5,
+        "t": 0,
+        "pf": 1164.58,
+        "pa": 1318.34
+      }
+    },
+    "13": {
+      "10": {
+        "w": 7,
+        "l": 4,
+        "t": 0,
+        "pf": 1370.64,
+        "pa": 1183.24
+      },
+      "8": {
+        "w": 10,
+        "l": 2,
+        "t": 0,
+        "pf": 1513.64,
+        "pa": 1231.1
+      },
+      "4": {
+        "w": 7,
+        "l": 9,
+        "t": 0,
+        "pf": 1715.3400000000001,
+        "pa": 1885.2000000000003
+      },
+      "5": {
+        "w": 5,
+        "l": 4,
+        "t": 0,
+        "pf": 1000.6399999999999,
+        "pa": 1025.38
+      },
+      "6": {
+        "w": 7,
+        "l": 4,
+        "t": 0,
+        "pf": 1179.3200000000002,
+        "pa": 1037.86
+      },
+      "7": {
+        "w": 7,
+        "l": 3,
+        "t": 0,
+        "pf": 1169.02,
+        "pa": 1027.62
+      },
+      "2": {
+        "w": 5,
+        "l": 5,
+        "t": 0,
+        "pf": 1142.6000000000001,
+        "pa": 1137.1599999999999
+      },
+      "11": {
+        "w": 8,
+        "l": 5,
+        "t": 0,
+        "pf": 1603.18,
+        "pa": 1370.3000000000002
+      },
+      "3": {
+        "w": 2,
+        "l": 9,
+        "t": 0,
+        "pf": 1239.96,
+        "pa": 1325.8799999999999
+      },
+      "1": {
+        "w": 3,
+        "l": 11,
+        "t": 0,
+        "pf": 1414.7,
+        "pa": 1765.54
+      },
+      "12": {
+        "w": 5,
+        "l": 5,
+        "t": 0,
+        "pf": 1318.34,
+        "pa": 1164.58
+      }
+    }
+  },
+  "superlatives": {
+    "best_draft_pick_ever": {
+      "season": "2015",
+      "team_id": "6",
+      "manager": "Dakota Bender",
+      "round_num": 16,
+      "overall_pick": 190,
+      "player_name": "Doug Baldwin",
+      "position": "WR",
+      "total_points": 184.0,
+      "points_rank": 28,
+      "value_score": 162
+    },
+    "worst_draft_pick_ever": {
+      "season": "2016",
+      "team_id": "1",
+      "manager": "Derek Booker",
+      "round_num": 1,
+      "overall_pick": 1,
+      "player_name": "Adrian Peterson",
+      "position": "RB",
+      "total_points": 4.0,
+      "points_rank": 190,
+      "value_score": -189
+    },
+    "biggest_lopsided_trade": {
+      "trade_id": "15162aeb-b007-43cc-8ba5-156ce2f64a3b",
+      "season": "2025",
+      "teams": {
+        "Jarett Coy": {
+          "received_players": [
+            "Trey Benson"
+          ],
+          "given_players": [
+            "Quentin Johnston",
+            "George Pickens"
+          ],
+          "rest_of_season_points_received": 10.4,
+          "rest_of_season_points_given": 365.8,
+          "net": -355.4
+        },
+        "Kyle Torpey": {
+          "received_players": [
+            "Quentin Johnston",
+            "George Pickens"
+          ],
+          "given_players": [
+            "Trey Benson"
+          ],
+          "rest_of_season_points_received": 365.8,
+          "rest_of_season_points_given": 10.4,
+          "net": 355.4
+        }
+      },
+      "team_ids": [
+        "5",
+        "8"
+      ],
+      "lopsidedness": 710.8
+    },
+    "best_waiver_pickup_ever": {
+      "season": "2025",
+      "team_id": "1",
+      "manager": "Derek Booker",
+      "player_name": "Trevor Lawrence",
+      "position": "QB",
+      "scoring_period_added": 1,
+      "rest_of_season_points": 338.2,
+      "bid_amount": 0.0
+    },
+    "luckiest_season": {
+      "team_id": "11",
+      "manager": "Pj Lannon",
+      "season": "2025",
+      "actual_wins": 10.0,
+      "expected_wins": 6.91,
+      "luck": 3.09
+    },
+    "unluckiest_season": {
+      "team_id": "10",
+      "manager": "Dustin Gamble",
+      "season": "2025",
+      "actual_wins": 4.0,
+      "expected_wins": 8.09,
+      "luck": -4.09
+    }
+  },
+  "trade_summaries": [
+    {
+      "trade_id": "7782edff-10c7-3897-96b4-41c975646c20",
+      "season": "2018",
+      "teams": {
+        "Angelo Hernandez": {
+          "received_players": [
+            "James Conner"
+          ],
+          "given_players": [
+            "Devonta Freeman"
+          ],
+          "rest_of_season_points_received": 203.8,
+          "rest_of_season_points_given": 5.1,
+          "net": 198.7
+        },
+        "Derek Booker": {
+          "received_players": [
+            "Devonta Freeman"
+          ],
+          "given_players": [
+            "James Conner"
+          ],
+          "rest_of_season_points_received": 5.1,
+          "rest_of_season_points_given": 203.8,
+          "net": -198.7
+        }
+      },
+      "team_ids": [
+        "12",
+        "1"
+      ],
+      "lopsidedness": 397.4
+    },
+    {
+      "trade_id": "ffda1076-cfcd-338b-8501-be84e5c47a75",
+      "season": "2018",
+      "teams": {
+        "Johnny Marcks": {
+          "received_players": [
+            "Mark Ingram II"
+          ],
+          "given_players": [
+            "Davante Adams"
+          ],
+          "rest_of_season_points_received": 132.0,
+          "rest_of_season_points_given": 240.4,
+          "net": -108.4
+        },
+        "Alex Topham": {
+          "received_players": [
+            "Davante Adams"
+          ],
+          "given_players": [
+            "Mark Ingram II"
+          ],
+          "rest_of_season_points_received": 240.4,
+          "rest_of_season_points_given": 132.0,
+          "net": 108.4
+        }
+      },
+      "team_ids": [
+        "4",
+        "3"
+      ],
+      "lopsidedness": 216.8
+    },
+    {
+      "trade_id": "41c9a359-2898-3b19-aa17-d3f22e6893fc",
+      "season": "2018",
+      "teams": {
+        "Angelo Hernandez": {
+          "received_players": [
+            "Joe Mixon",
+            "Emmanuel Sanders"
+          ],
+          "given_players": [
+            "Brandin Cooks",
+            "JuJu Smith-Schuster"
+          ],
+          "rest_of_season_points_received": 291.3,
+          "rest_of_season_points_given": 315.7,
+          "net": -24.4
+        },
+        "Jarett Coy": {
+          "received_players": [
+            "Brandin Cooks",
+            "JuJu Smith-Schuster"
+          ],
+          "given_players": [
+            "Joe Mixon",
+            "Emmanuel Sanders"
+          ],
+          "rest_of_season_points_received": 315.7,
+          "rest_of_season_points_given": 291.3,
+          "net": 24.4
+        }
+      },
+      "team_ids": [
+        "12",
+        "5"
+      ],
+      "lopsidedness": 48.8
+    },
+    {
+      "trade_id": "578c9256-f8bf-3b78-8fe4-fd085bf1c97e",
+      "season": "2018",
+      "teams": {
+        "Alex Topham": {
+          "received_players": [
+            "Keenan Allen"
+          ],
+          "given_players": [
+            "Mike Williams",
+            "John Brown"
+          ],
+          "rest_of_season_points_received": 153.9,
+          "rest_of_season_points_given": 163.4,
+          "net": -9.5
+        },
+        "Andrew Campbell": {
+          "received_players": [
+            "Mike Williams",
+            "John Brown"
+          ],
+          "given_players": [
+            "Keenan Allen"
+          ],
+          "rest_of_season_points_received": 163.4,
+          "rest_of_season_points_given": 153.9,
+          "net": 9.5
+        }
+      },
+      "team_ids": [
+        "3",
+        "13"
+      ],
+      "lopsidedness": 19.0
+    },
+    {
+      "trade_id": "4e073a76-fba9-3310-a5a1-42f425d6301b",
+      "season": "2018",
+      "teams": {
+        "Dakota Bender": {
+          "received_players": [
+            "Tyler Boyd",
+            "Tevin Coleman",
+            "Dion Lewis"
+          ],
+          "given_players": [
+            "Golden Tate",
+            "David Johnson"
+          ],
+          "rest_of_season_points_received": 256.9,
+          "rest_of_season_points_given": 188.3,
+          "net": 68.6
+        },
+        "Derek Booker": {
+          "received_players": [
+            "Golden Tate",
+            "David Johnson"
+          ],
+          "given_players": [
+            "Tyler Boyd",
+            "Tevin Coleman",
+            "Dion Lewis"
+          ],
+          "rest_of_season_points_received": 188.3,
+          "rest_of_season_points_given": 256.9,
+          "net": -68.6
+        }
+      },
+      "team_ids": [
+        "6",
+        "1"
+      ],
+      "lopsidedness": 137.2
+    },
+    {
+      "trade_id": "f4ebb720-a064-3903-8cee-ee074d361fa8",
+      "season": "2018",
+      "teams": {
+        "Dakota Bender": {
+          "received_players": [
+            "Jarvis Landry",
+            "Dalvin Cook"
+          ],
+          "given_players": [
+            "Jimmy Graham",
+            "Phillip Lindsay"
+          ],
+          "rest_of_season_points_received": 202.2,
+          "rest_of_season_points_given": 173.0,
+          "net": 29.2
+        },
+        "Andrew Campbell": {
+          "received_players": [
+            "Jimmy Graham",
+            "Phillip Lindsay"
+          ],
+          "given_players": [
+            "Jarvis Landry",
+            "Dalvin Cook"
+          ],
+          "rest_of_season_points_received": 173.0,
+          "rest_of_season_points_given": 202.2,
+          "net": -29.2
+        }
+      },
+      "team_ids": [
+        "6",
+        "13"
+      ],
+      "lopsidedness": 58.4
+    },
+    {
+      "trade_id": "e1cb58aa-dd82-33ae-bb44-302092e9d2a5",
+      "season": "2018",
+      "teams": {
+        "Dakota Bender": {
+          "received_players": [
+            "Golden Tate"
+          ],
+          "given_players": [
+            "Dion Lewis"
+          ],
+          "rest_of_season_points_received": 50.0,
+          "rest_of_season_points_given": 65.1,
+          "net": -15.1
+        },
+        "Derek Booker": {
+          "received_players": [
+            "Dion Lewis"
+          ],
+          "given_players": [
+            "Golden Tate"
+          ],
+          "rest_of_season_points_received": 65.1,
+          "rest_of_season_points_given": 50.0,
+          "net": 15.1
+        }
+      },
+      "team_ids": [
+        "6",
+        "1"
+      ],
+      "lopsidedness": 30.2
+    },
+    {
+      "trade_id": "5fedc587-8fc2-30f9-9de0-5b82679ba256",
+      "season": "2018",
+      "teams": {
+        "Jarett Coy": {
+          "received_players": [
+            "Cam Newton"
+          ],
+          "given_players": [
+            "Adrian Peterson"
+          ],
+          "rest_of_season_points_received": 92.7,
+          "rest_of_season_points_given": 69.9,
+          "net": 22.8
+        },
+        "Corey Ploss": {
+          "received_players": [
+            "Adrian Peterson"
+          ],
+          "given_players": [
+            "Cam Newton"
+          ],
+          "rest_of_season_points_received": 69.9,
+          "rest_of_season_points_given": 92.7,
+          "net": -22.8
+        }
+      },
+      "team_ids": [
+        "5",
+        "7"
+      ],
+      "lopsidedness": 45.6
+    },
+    {
+      "trade_id": "c96c38d2-f095-33ad-9073-6b7a97583a6c",
+      "season": "2018",
+      "teams": {
+        "Dakota Bender": {
+          "received_players": [
+            "Kyle Rudolph"
+          ],
+          "given_players": [
+            "Devin Funchess"
+          ],
+          "rest_of_season_points_received": 55.5,
+          "rest_of_season_points_given": 15.7,
+          "net": 39.8
+        },
+        "Derek Booker": {
+          "received_players": [
+            "Devin Funchess"
+          ],
+          "given_players": [
+            "Kyle Rudolph"
+          ],
+          "rest_of_season_points_received": 15.7,
+          "rest_of_season_points_given": 55.5,
+          "net": -39.8
+        }
+      },
+      "team_ids": [
+        "6",
+        "1"
+      ],
+      "lopsidedness": 79.6
+    },
+    {
+      "trade_id": "8bdadd1c-738b-3206-b6ee-fea839824320",
+      "season": "2018",
+      "teams": {
+        "Pj Lannon": {
+          "received_players": [
+            "Travis Kelce"
+          ],
+          "given_players": [
+            "Rob Gronkowski",
+            "Demaryius Thomas"
+          ],
+          "rest_of_season_points_received": 99.9,
+          "rest_of_season_points_given": 87.8,
+          "net": 12.1
+        },
+        "Derek Booker": {
+          "received_players": [
+            "Rob Gronkowski",
+            "Demaryius Thomas"
+          ],
+          "given_players": [
+            "Travis Kelce"
+          ],
+          "rest_of_season_points_received": 87.8,
+          "rest_of_season_points_given": 99.9,
+          "net": -12.1
+        }
+      },
+      "team_ids": [
+        "11",
+        "1"
+      ],
+      "lopsidedness": 24.2
+    },
+    {
+      "trade_id": "3da36738-9988-4ed1-9b80-fb8ad91308b5",
+      "season": "2020",
+      "teams": {
+        "Jarett Coy": {
+          "received_players": [
+            "Amari Cooper",
+            "Darren Waller"
+          ],
+          "given_players": [
+            "Clyde Edwards-Helaire",
+            "Dalton Schultz"
+          ],
+          "rest_of_season_points_received": 272.3,
+          "rest_of_season_points_given": 140.8,
+          "net": 131.5
+        },
+        "Johnny Marcks": {
+          "received_players": [
+            "Clyde Edwards-Helaire",
+            "Dalton Schultz"
+          ],
+          "given_players": [
+            "Amari Cooper",
+            "Darren Waller"
+          ],
+          "rest_of_season_points_received": 140.8,
+          "rest_of_season_points_given": 272.3,
+          "net": -131.5
+        }
+      },
+      "team_ids": [
+        "5",
+        "4"
+      ],
+      "lopsidedness": 263.0
+    },
+    {
+      "trade_id": "85d76156-4145-4843-8b50-64596d10841d",
+      "season": "2022",
+      "teams": {
+        "Jarett Coy": {
+          "received_players": [
+            "Gabe Davis",
+            "Cordarrelle Patterson"
+          ],
+          "given_players": [
+            "Christian Kirk",
+            "Dameon Pierce"
+          ],
+          "rest_of_season_points_received": 251.8,
+          "rest_of_season_points_given": 313.9,
+          "net": -62.1
+        },
+        "Tyler Scarlett": {
+          "received_players": [
+            "Christian Kirk",
+            "Dameon Pierce"
+          ],
+          "given_players": [
+            "Gabe Davis",
+            "Cordarrelle Patterson"
+          ],
+          "rest_of_season_points_received": 313.9,
+          "rest_of_season_points_given": 251.8,
+          "net": 62.1
+        }
+      },
+      "team_ids": [
+        "5",
+        "2"
+      ],
+      "lopsidedness": 124.2
+    },
+    {
+      "trade_id": "596efc28-0eb7-45fe-98bb-3e8b02abe83f",
+      "season": "2022",
+      "teams": {
+        "Jarett Coy": {
+          "received_players": [
+            "Nick Chubb"
+          ],
+          "given_players": [
+            "Khalil Herbert",
+            "Dalvin Cook"
+          ],
+          "rest_of_season_points_received": 118.3,
+          "rest_of_season_points_given": 145.0,
+          "net": -26.7
+        },
+        "Alex Topham": {
+          "received_players": [
+            "Khalil Herbert",
+            "Dalvin Cook"
+          ],
+          "given_players": [
+            "Nick Chubb"
+          ],
+          "rest_of_season_points_received": 145.0,
+          "rest_of_season_points_given": 118.3,
+          "net": 26.7
+        }
+      },
+      "team_ids": [
+        "5",
+        "3"
+      ],
+      "lopsidedness": 53.4
+    },
+    {
+      "trade_id": "046a272c-a224-4f4b-9815-76af2ee39b89",
+      "season": "2023",
+      "teams": {
+        "Jarett Coy": {
+          "received_players": [
+            "Calvin Ridley",
+            "Mike Evans"
+          ],
+          "given_players": [
+            "Bijan Robinson"
+          ],
+          "rest_of_season_points_received": 411.4,
+          "rest_of_season_points_given": 194.8,
+          "net": 216.6
+        },
+        "Angelo Hernandez": {
+          "received_players": [
+            "Bijan Robinson"
+          ],
+          "given_players": [
+            "Calvin Ridley",
+            "Mike Evans"
+          ],
+          "rest_of_season_points_received": 194.8,
+          "rest_of_season_points_given": 411.4,
+          "net": -216.6
+        }
+      },
+      "team_ids": [
+        "5",
+        "12"
+      ],
+      "lopsidedness": 433.2
+    },
+    {
+      "trade_id": "744555c0-09f4-4f43-818a-6dcc7a782a12",
+      "season": "2023",
+      "teams": {
+        "Jarett Coy": {
+          "received_players": [
+            "Jayden Reed",
+            "James Cook"
+          ],
+          "given_players": [
+            "CeeDee Lamb"
+          ],
+          "rest_of_season_points_received": 345.7,
+          "rest_of_season_points_given": 341.2,
+          "net": 4.5
+        },
+        "Andrew Campbell": {
+          "received_players": [
+            "CeeDee Lamb"
+          ],
+          "given_players": [
+            "Jayden Reed",
+            "James Cook"
+          ],
+          "rest_of_season_points_received": 341.2,
+          "rest_of_season_points_given": 345.7,
+          "net": -4.5
+        }
+      },
+      "team_ids": [
+        "5",
+        "13"
+      ],
+      "lopsidedness": 9.0
+    },
+    {
+      "trade_id": "b92652ab-23b6-46d1-af57-54be293c738f",
+      "season": "2023",
+      "teams": {
+        "Jarett Coy": {
+          "received_players": [
+            "Kareem Hunt",
+            "Davante Adams",
+            "Royce Freeman"
+          ],
+          "given_players": [
+            "Mike Evans"
+          ],
+          "rest_of_season_points_received": 303.2,
+          "rest_of_season_points_given": 201.9,
+          "net": 101.3
+        },
+        "Derek Booker": {
+          "received_players": [
+            "Mike Evans"
+          ],
+          "given_players": [
+            "Kareem Hunt",
+            "Davante Adams",
+            "Royce Freeman"
+          ],
+          "rest_of_season_points_received": 201.9,
+          "rest_of_season_points_given": 303.2,
+          "net": -101.3
+        }
+      },
+      "team_ids": [
+        "5",
+        "1"
+      ],
+      "lopsidedness": 202.6
+    },
+    {
+      "trade_id": "97c112f3-19cf-4c31-b1b5-a0a137ff170d",
+      "season": "2023",
+      "teams": {
+        "Jarett Coy": {
+          "received_players": [
+            "Evan Engram"
+          ],
+          "given_players": [
+            "Breece Hall"
+          ],
+          "rest_of_season_points_received": 154.7,
+          "rest_of_season_points_given": 211.6,
+          "net": -56.9
+        },
+        "Derek Booker": {
+          "received_players": [
+            "Breece Hall"
+          ],
+          "given_players": [
+            "Evan Engram"
+          ],
+          "rest_of_season_points_received": 211.6,
+          "rest_of_season_points_given": 154.7,
+          "net": 56.9
+        }
+      },
+      "team_ids": [
+        "5",
+        "1"
+      ],
+      "lopsidedness": 113.8
+    },
+    {
+      "trade_id": "f1e32130-a73f-4527-99fa-09af45a876ca",
+      "season": "2024",
+      "teams": {
+        "Johnny Marcks": {
+          "received_players": [
+            "Chris Olave"
+          ],
+          "given_players": [
+            "James Cook"
+          ],
+          "rest_of_season_points_received": 76.7,
+          "rest_of_season_points_given": 266.7,
+          "net": -190.0
+        },
+        "Dustin Gamble": {
+          "received_players": [
+            "James Cook"
+          ],
+          "given_players": [
+            "Chris Olave"
+          ],
+          "rest_of_season_points_received": 266.7,
+          "rest_of_season_points_given": 76.7,
+          "net": 190.0
+        }
+      },
+      "team_ids": [
+        "4",
+        "10"
+      ],
+      "lopsidedness": 380.0
+    },
+    {
+      "trade_id": "4be18897-b25b-44e0-9e93-e987be544779",
+      "season": "2024",
+      "teams": {
+        "Derek Booker": {
+          "received_players": [
+            "Ty Chandler",
+            "Brian Robinson Jr."
+          ],
+          "given_players": [
+            "Curtis Samuel",
+            "Rhamondre Stevenson"
+          ],
+          "rest_of_season_points_received": 188.2,
+          "rest_of_season_points_given": 239.6,
+          "net": -51.4
+        },
+        "Tyler Scarlett": {
+          "received_players": [
+            "Curtis Samuel",
+            "Rhamondre Stevenson"
+          ],
+          "given_players": [
+            "Ty Chandler",
+            "Brian Robinson Jr."
+          ],
+          "rest_of_season_points_received": 239.6,
+          "rest_of_season_points_given": 188.2,
+          "net": 51.4
+        }
+      },
+      "team_ids": [
+        "1",
+        "2"
+      ],
+      "lopsidedness": 102.8
+    },
+    {
+      "trade_id": "a50f6f99-18f2-427c-b5bd-cf22f2069ea5",
+      "season": "2024",
+      "teams": {
+        "Jarett Coy": {
+          "received_players": [
+            "Cooper Kupp",
+            "Chuba Hubbard"
+          ],
+          "given_players": [
+            "Younghoe Koo",
+            "Tyreek Hill"
+          ],
+          "rest_of_season_points_received": 281.1,
+          "rest_of_season_points_given": 200.5,
+          "net": 80.6
+        },
+        "Andrew Campbell": {
+          "received_players": [
+            "Younghoe Koo",
+            "Tyreek Hill"
+          ],
+          "given_players": [
+            "Cooper Kupp",
+            "Chuba Hubbard"
+          ],
+          "rest_of_season_points_received": 200.5,
+          "rest_of_season_points_given": 281.1,
+          "net": -80.6
+        }
+      },
+      "team_ids": [
+        "5",
+        "13"
+      ],
+      "lopsidedness": 161.2
+    },
+    {
+      "trade_id": "a4d70d11-96c0-47ae-86ca-159ffe5d454b",
+      "season": "2024",
+      "teams": {
+        "Jarett Coy": {
+          "received_players": [
+            "Saquon Barkley"
+          ],
+          "given_players": [
+            "Xavier Worthy",
+            "Travis Etienne Jr.",
+            "Tank Bigsby",
+            "Cooper Kupp"
+          ],
+          "rest_of_season_points_received": 223.2,
+          "rest_of_season_points_given": 390.8,
+          "net": -167.6
+        },
+        "Corey Ploss": {
+          "received_players": [
+            "Xavier Worthy",
+            "Travis Etienne Jr.",
+            "Tank Bigsby",
+            "Cooper Kupp"
+          ],
+          "given_players": [
+            "Saquon Barkley"
+          ],
+          "rest_of_season_points_received": 390.8,
+          "rest_of_season_points_given": 223.2,
+          "net": 167.6
+        }
+      },
+      "team_ids": [
+        "5",
+        "7"
+      ],
+      "lopsidedness": 335.2
+    },
+    {
+      "trade_id": "331d45a0-ea5d-4d89-9602-79bf94079a2c",
+      "season": "2024",
+      "teams": {
+        "Jarett Coy": {
+          "received_players": [
+            "Patrick Mahomes",
+            "Nick Chubb",
+            "J.K. Dobbins"
+          ],
+          "given_players": [
+            "Tank Dell",
+            "Saquon Barkley"
+          ],
+          "rest_of_season_points_received": 237.8,
+          "rest_of_season_points_given": 220.6,
+          "net": 17.2
+        },
+        "Dustin Gamble": {
+          "received_players": [
+            "Tank Dell",
+            "Saquon Barkley"
+          ],
+          "given_players": [
+            "Patrick Mahomes",
+            "Nick Chubb",
+            "J.K. Dobbins"
+          ],
+          "rest_of_season_points_received": 220.6,
+          "rest_of_season_points_given": 237.8,
+          "net": -17.2
+        }
+      },
+      "team_ids": [
+        "5",
+        "10"
+      ],
+      "lopsidedness": 34.4
+    },
+    {
+      "trade_id": "230f3699-8618-4db4-a0fe-6226053e13e8",
+      "season": "2025",
+      "teams": {
+        "Angelo Hernandez": {
+          "received_players": [
+            "Jake Ferguson",
+            "Tony Pollard"
+          ],
+          "given_players": [
+            "Brian Thomas Jr."
+          ],
+          "rest_of_season_points_received": 332.7,
+          "rest_of_season_points_given": 120.9,
+          "net": 211.8
+        },
+        "Jarett Coy": {
+          "received_players": [
+            "Brian Thomas Jr."
+          ],
+          "given_players": [
+            "Jake Ferguson",
+            "Tony Pollard"
+          ],
+          "rest_of_season_points_received": 120.9,
+          "rest_of_season_points_given": 332.7,
+          "net": -211.8
+        }
+      },
+      "team_ids": [
+        "12",
+        "5"
+      ],
+      "lopsidedness": 423.6
+    },
+    {
+      "trade_id": "15162aeb-b007-43cc-8ba5-156ce2f64a3b",
+      "season": "2025",
+      "teams": {
+        "Jarett Coy": {
+          "received_players": [
+            "Trey Benson"
+          ],
+          "given_players": [
+            "Quentin Johnston",
+            "George Pickens"
+          ],
+          "rest_of_season_points_received": 10.4,
+          "rest_of_season_points_given": 365.8,
+          "net": -355.4
+        },
+        "Kyle Torpey": {
+          "received_players": [
+            "Quentin Johnston",
+            "George Pickens"
+          ],
+          "given_players": [
+            "Trey Benson"
+          ],
+          "rest_of_season_points_received": 365.8,
+          "rest_of_season_points_given": 10.4,
+          "net": 355.4
+        }
+      },
+      "team_ids": [
+        "5",
+        "8"
+      ],
+      "lopsidedness": 710.8
+    },
+    {
+      "trade_id": "5035df98-720b-4fa5-8e47-1bb3361c5000",
+      "season": "2025",
+      "teams": {
+        "Jarett Coy": {
+          "received_players": [
+            "Michael Carter",
+            "Derrick Henry",
+            "Ja'Marr Chase"
+          ],
+          "given_players": [
+            "Jordan Addison",
+            "Bijan Robinson"
+          ],
+          "rest_of_season_points_received": 528.1,
+          "rest_of_season_points_given": 387.0,
+          "net": 141.1
+        },
+        "Corey Ploss": {
+          "received_players": [
+            "Jordan Addison",
+            "Bijan Robinson"
+          ],
+          "given_players": [
+            "Michael Carter",
+            "Derrick Henry",
+            "Ja'Marr Chase"
+          ],
+          "rest_of_season_points_received": 387.0,
+          "rest_of_season_points_given": 528.1,
+          "net": -141.1
+        }
+      },
+      "team_ids": [
+        "5",
+        "7"
+      ],
+      "lopsidedness": 282.2
+    },
+    {
+      "trade_id": "1f29a606-af42-41fd-a696-6c84ba404ff5",
+      "season": "2025",
+      "teams": {
+        "Jarett Coy": {
+          "received_players": [
+            "Nico Collins",
+            "Travis Etienne Jr."
+          ],
+          "given_players": [
+            "Ja'Marr Chase"
+          ],
+          "rest_of_season_points_received": 199.2,
+          "rest_of_season_points_given": 119.9,
+          "net": 79.3
+        },
+        "Andrew Campbell": {
+          "received_players": [
+            "Ja'Marr Chase"
+          ],
+          "given_players": [
+            "Nico Collins",
+            "Travis Etienne Jr."
+          ],
+          "rest_of_season_points_received": 119.9,
+          "rest_of_season_points_given": 199.2,
+          "net": -79.3
+        }
+      },
+      "team_ids": [
+        "5",
+        "13"
+      ],
+      "lopsidedness": 158.6
+    },
+    {
+      "trade_id": "13561911-c90e-4645-a7e4-4b508dbecf66",
+      "season": "2025",
+      "teams": {
+        "Jarett Coy": {
+          "received_players": [
+            "A.J. Brown"
+          ],
+          "given_players": [
+            "DeVonta Smith",
+            "Omarion Hampton"
+          ],
+          "rest_of_season_points_received": 93.6,
+          "rest_of_season_points_given": 112.1,
+          "net": -18.5
+        },
+        "Dakota Bender": {
+          "received_players": [
+            "DeVonta Smith",
+            "Omarion Hampton"
+          ],
+          "given_players": [
+            "A.J. Brown"
+          ],
+          "rest_of_season_points_received": 112.1,
+          "rest_of_season_points_given": 93.6,
+          "net": 18.5
+        }
+      },
+      "team_ids": [
+        "5",
+        "6"
+      ],
+      "lopsidedness": 37.0
+    }
+  ],
+  "top_waiver_pickups": [
+    {
+      "season": "2025",
+      "team_id": "1",
+      "manager": "Derek Booker",
+      "player_name": "Trevor Lawrence",
+      "position": "QB",
+      "scoring_period_added": 1,
+      "rest_of_season_points": 338.2,
+      "bid_amount": 0.0
+    },
+    {
+      "season": "2024",
+      "team_id": "10",
+      "manager": "Dustin Gamble",
+      "player_name": "Baker Mayfield",
+      "position": "QB",
+      "scoring_period_added": 2,
+      "rest_of_season_points": 336.1,
+      "bid_amount": 0.0
+    },
+    {
+      "season": "2023",
+      "team_id": "8",
+      "manager": "Kyle Torpey",
+      "player_name": "Dak Prescott",
+      "position": "QB",
+      "scoring_period_added": 3,
+      "rest_of_season_points": 316.9,
+      "bid_amount": 0.0
+    },
+    {
+      "season": "2020",
+      "team_id": "4",
+      "manager": "Johnny Marcks",
+      "player_name": "Justin Herbert",
+      "position": "QB",
+      "scoring_period_added": 3,
+      "rest_of_season_points": 310.6,
+      "bid_amount": 0.0
+    },
+    {
+      "season": "2024",
+      "team_id": "1",
+      "manager": "Derek Booker",
+      "player_name": "Jared Goff",
+      "position": "QB",
+      "scoring_period_added": 3,
+      "rest_of_season_points": 304.3,
+      "bid_amount": 0.0
+    },
+    {
+      "season": "2023",
+      "team_id": "1",
+      "manager": "Derek Booker",
+      "player_name": "Jordan Love",
+      "position": "QB",
+      "scoring_period_added": 2,
+      "rest_of_season_points": 296.1,
+      "bid_amount": 0.0
+    },
+    {
+      "season": "2025",
+      "team_id": "1",
+      "manager": "Derek Booker",
+      "player_name": "Caleb Williams",
+      "position": "QB",
+      "scoring_period_added": 2,
+      "rest_of_season_points": 294.0,
+      "bid_amount": 0.0
+    },
+    {
+      "season": "2025",
+      "team_id": "1",
+      "manager": "Derek Booker",
+      "player_name": "Caleb Williams",
+      "position": "QB",
+      "scoring_period_added": 2,
+      "rest_of_season_points": 294.0,
+      "bid_amount": 0.0
+    },
+    {
+      "season": "2019",
+      "team_id": "3",
+      "manager": "Alex Topham",
+      "player_name": "Jameis Winston",
+      "position": "QB",
+      "scoring_period_added": 3,
+      "rest_of_season_points": 285.1,
+      "bid_amount": 0.0
+    },
+    {
+      "season": "2025",
+      "team_id": "3",
+      "manager": "Alex Topham",
+      "player_name": "Dak Prescott",
+      "position": "QB",
+      "scoring_period_added": 3,
+      "rest_of_season_points": 283.8,
+      "bid_amount": 16.0
+    },
+    {
+      "season": "2023",
+      "team_id": "11",
+      "manager": "Pj Lannon",
+      "player_name": "Brock Purdy",
+      "position": "QB",
+      "scoring_period_added": 2,
+      "rest_of_season_points": 278.8,
+      "bid_amount": 0.0
+    },
+    {
+      "season": "2025",
+      "team_id": "11",
+      "manager": "Pj Lannon",
+      "player_name": "Matthew Stafford",
+      "position": "QB",
+      "scoring_period_added": 5,
+      "rest_of_season_points": 278.2,
+      "bid_amount": 0.0
+    },
+    {
+      "season": "2025",
+      "team_id": "12",
+      "manager": "Angelo Hernandez",
+      "player_name": "Caleb Williams",
+      "position": "QB",
+      "scoring_period_added": 3,
+      "rest_of_season_points": 277.0,
+      "bid_amount": 0.0
+    },
+    {
+      "season": "2023",
+      "team_id": "12",
+      "manager": "Angelo Hernandez",
+      "player_name": "Puka Nacua",
+      "position": "WR",
+      "scoring_period_added": 2,
+      "rest_of_season_points": 276.6,
+      "bid_amount": 0.0
+    },
+    {
+      "season": "2023",
+      "team_id": "1",
+      "manager": "Derek Booker",
+      "player_name": "Tua Tagovailoa",
+      "position": "QB",
+      "scoring_period_added": 1,
+      "rest_of_season_points": 270.4,
+      "bid_amount": 0.0
+    },
+    {
+      "season": "2021",
+      "team_id": "1",
+      "manager": "Derek Booker",
+      "player_name": "Joe Burrow",
+      "position": "QB",
+      "scoring_period_added": 4,
+      "rest_of_season_points": 267.7,
+      "bid_amount": 0.0
+    },
+    {
+      "season": "2024",
+      "team_id": "1",
+      "manager": "Derek Booker",
+      "player_name": "Brock Purdy",
+      "position": "QB",
+      "scoring_period_added": 1,
+      "rest_of_season_points": 266.9,
+      "bid_amount": 0.0
+    },
+    {
+      "season": "2024",
+      "team_id": "1",
+      "manager": "Derek Booker",
+      "player_name": "Brock Purdy",
+      "position": "QB",
+      "scoring_period_added": 1,
+      "rest_of_season_points": 266.9,
+      "bid_amount": 0.0
+    },
+    {
+      "season": "2024",
+      "team_id": "1",
+      "manager": "Derek Booker",
+      "player_name": "Brock Purdy",
+      "position": "QB",
+      "scoring_period_added": 1,
+      "rest_of_season_points": 266.9,
+      "bid_amount": 0.0
+    },
+    {
+      "season": "2020",
+      "team_id": "12",
+      "manager": "Angelo Hernandez",
+      "player_name": "Ryan Tannehill",
+      "position": "QB",
+      "scoring_period_added": 6,
+      "rest_of_season_points": 255.5,
+      "bid_amount": 0.0
+    }
+  ],
+  "top_draft_steals": [
+    {
+      "season": "2015",
+      "team_id": "6",
+      "manager": "Dakota Bender",
+      "round_num": 16,
+      "overall_pick": 190,
+      "player_name": "Doug Baldwin",
+      "position": "WR",
+      "total_points": 184.0,
+      "points_rank": 28,
+      "value_score": 162
+    },
+    {
+      "season": "2016",
+      "team_id": "12",
+      "manager": "Angelo Hernandez",
+      "round_num": 14,
+      "overall_pick": 162,
+      "player_name": "Matt Ryan",
+      "position": "QB",
+      "total_points": 334.0,
+      "points_rank": 2,
+      "value_score": 160
+    },
+    {
+      "season": "2015",
+      "team_id": "6",
+      "manager": "Dakota Bender",
+      "round_num": 15,
+      "overall_pick": 171,
+      "player_name": "Tyrod Taylor",
+      "position": "QB",
+      "total_points": 258.0,
+      "points_rank": 12,
+      "value_score": 159
+    },
+    {
+      "season": "2016",
+      "team_id": "11",
+      "manager": "Pj Lannon",
+      "round_num": 14,
+      "overall_pick": 165,
+      "player_name": "Dak Prescott",
+      "position": "QB",
+      "total_points": 271.0,
+      "points_rank": 8,
+      "value_score": 157
+    },
+    {
+      "season": "2022",
+      "team_id": "5",
+      "manager": "Jarett Coy",
+      "round_num": 15,
+      "overall_pick": 173,
+      "player_name": "Justin Fields",
+      "position": "QB",
+      "total_points": 295.98,
+      "points_rank": 16,
+      "value_score": 157
+    },
+    {
+      "season": "2023",
+      "team_id": "10",
+      "manager": "Dustin Gamble",
+      "round_num": 14,
+      "overall_pick": 165,
+      "player_name": "Jared Goff",
+      "position": "QB",
+      "total_points": 289.1,
+      "points_rank": 11,
+      "value_score": 154
+    },
+    {
+      "season": "2019",
+      "team_id": "12",
+      "manager": "Angelo Hernandez",
+      "round_num": 13,
+      "overall_pick": 155,
+      "player_name": "Dak Prescott",
+      "position": "QB",
+      "total_points": 337.78,
+      "points_rank": 3,
+      "value_score": 152
+    },
+    {
+      "season": "2016",
+      "team_id": "10",
+      "manager": "Dustin Gamble",
+      "round_num": 14,
+      "overall_pick": 161,
+      "player_name": "Derek Carr",
+      "position": "QB",
+      "total_points": 257.0,
+      "points_rank": 11,
+      "value_score": 150
+    },
+    {
+      "season": "2021",
+      "team_id": "11",
+      "manager": "Pj Lannon",
+      "round_num": 15,
+      "overall_pick": 170,
+      "player_name": "Kirk Cousins",
+      "position": "QB",
+      "total_points": 300.34,
+      "points_rank": 20,
+      "value_score": 150
+    },
+    {
+      "season": "2016",
+      "team_id": "1",
+      "manager": "Derek Booker",
+      "round_num": 14,
+      "overall_pick": 168,
+      "player_name": "Jameis Winston",
+      "position": "QB",
+      "total_points": 243.0,
+      "points_rank": 19,
+      "value_score": 149
+    },
+    {
+      "season": "2016",
+      "team_id": "1",
+      "manager": "Derek Booker",
+      "round_num": 16,
+      "overall_pick": 192,
+      "player_name": "Vikings D/ST",
+      "position": "D/ST",
+      "total_points": 157.0,
+      "points_rank": 43,
+      "value_score": 149
+    },
+    {
+      "season": "2015",
+      "team_id": "1",
+      "manager": "Derek Booker",
+      "round_num": 14,
+      "overall_pick": 157,
+      "player_name": "Jameis Winston",
+      "position": "QB",
+      "total_points": 261.0,
+      "points_rank": 11,
+      "value_score": 146
+    },
+    {
+      "season": "2015",
+      "team_id": "5",
+      "manager": "Jarett Coy",
+      "round_num": 13,
+      "overall_pick": 150,
+      "player_name": "Carson Palmer",
+      "position": "QB",
+      "total_points": 300.0,
+      "points_rank": 5,
+      "value_score": 145
+    },
+    {
+      "season": "2019",
+      "team_id": "13",
+      "manager": "Andrew Campbell",
+      "round_num": 14,
+      "overall_pick": 164,
+      "player_name": "Kirk Cousins",
+      "position": "QB",
+      "total_points": 244.42,
+      "points_rank": 19,
+      "value_score": 145
+    },
+    {
+      "season": "2016",
+      "team_id": "8",
+      "manager": "Kyle Torpey",
+      "round_num": 14,
+      "overall_pick": 160,
+      "player_name": "Andy Dalton",
+      "position": "QB",
+      "total_points": 250.0,
+      "points_rank": 16,
+      "value_score": 144
+    },
+    {
+      "season": "2015",
+      "team_id": "10",
+      "manager": "Dustin Gamble",
+      "round_num": 14,
+      "overall_pick": 167,
+      "player_name": "Marcus Mariota",
+      "position": "QB",
+      "total_points": 198.0,
+      "points_rank": 24,
+      "value_score": 143
+    },
+    {
+      "season": "2020",
+      "team_id": "3",
+      "manager": "Alex Topham",
+      "round_num": 14,
+      "overall_pick": 157,
+      "player_name": "Ben Roethlisberger",
+      "position": "QB",
+      "total_points": 267.22,
+      "points_rank": 15,
+      "value_score": 142
+    },
+    {
+      "season": "2017",
+      "team_id": "10",
+      "manager": "Dustin Gamble",
+      "round_num": 14,
+      "overall_pick": 146,
+      "player_name": "Carson Wentz",
+      "position": "QB",
+      "total_points": 269.0,
+      "points_rank": 5,
+      "value_score": 141
+    },
+    {
+      "season": "2023",
+      "team_id": "13",
+      "manager": "Andrew Campbell",
+      "round_num": 14,
+      "overall_pick": 164,
+      "player_name": "Nico Collins",
+      "position": "WR",
+      "total_points": 260.4,
+      "points_rank": 24,
+      "value_score": 140
+    },
+    {
+      "season": "2024",
+      "team_id": "7",
+      "manager": "Corey Ploss",
+      "round_num": 14,
+      "overall_pick": 157,
+      "player_name": "Justin Herbert",
+      "position": "QB",
+      "total_points": 285.4,
+      "points_rank": 17,
+      "value_score": 140
+    }
+  ],
+  "top_draft_busts": [
+    {
+      "season": "2016",
+      "team_id": "1",
+      "manager": "Derek Booker",
+      "round_num": 1,
+      "overall_pick": 1,
+      "player_name": "Adrian Peterson",
+      "position": "RB",
+      "total_points": 4.0,
+      "points_rank": 190,
+      "value_score": -189
+    },
+    {
+      "season": "2018",
+      "team_id": "10",
+      "manager": "Dustin Gamble",
+      "round_num": 1,
+      "overall_pick": 3,
+      "player_name": "Le'Veon Bell",
+      "position": "RB",
+      "total_points": 0.0,
+      "points_rank": 178,
+      "value_score": -175
+    },
+    {
+      "season": "2020",
+      "team_id": "4",
+      "manager": "Johnny Marcks",
+      "round_num": 1,
+      "overall_pick": 2,
+      "player_name": "Saquon Barkley",
+      "position": "RB",
+      "total_points": 12.4,
+      "points_rank": 176,
+      "value_score": -174
+    },
+    {
+      "season": "2016",
+      "team_id": "12",
+      "manager": "Angelo Hernandez",
+      "round_num": 2,
+      "overall_pick": 18,
+      "player_name": "Jamaal Charles",
+      "position": "RB",
+      "total_points": 10.0,
+      "points_rank": 185,
+      "value_score": -167
+    },
+    {
+      "season": "2018",
+      "team_id": "12",
+      "manager": "Angelo Hernandez",
+      "round_num": 2,
+      "overall_pick": 14,
+      "player_name": "Devonta Freeman",
+      "position": "RB",
+      "total_points": 11.6,
+      "points_rank": 174,
+      "value_score": -160
+    },
+    {
+      "season": "2024",
+      "team_id": "11",
+      "manager": "Pj Lannon",
+      "round_num": 1,
+      "overall_pick": 1,
+      "player_name": "Christian McCaffrey",
+      "position": "RB",
+      "total_points": 47.8,
+      "points_rank": 159,
+      "value_score": -158
+    },
+    {
+      "season": "2017",
+      "team_id": "6",
+      "manager": "Dakota Bender",
+      "round_num": 1,
+      "overall_pick": 1,
+      "player_name": "David Johnson",
+      "position": "RB",
+      "total_points": 6.0,
+      "points_rank": 158,
+      "value_score": -157
+    },
+    {
+      "season": "2023",
+      "team_id": "6",
+      "manager": "Dakota Bender",
+      "round_num": 1,
+      "overall_pick": 6,
+      "player_name": "Nick Chubb",
+      "position": "RB",
+      "total_points": 23.1,
+      "points_rank": 163,
+      "value_score": -157
+    },
+    {
+      "season": "2018",
+      "team_id": "8",
+      "manager": "Kyle Torpey",
+      "round_num": 2,
+      "overall_pick": 23,
+      "player_name": "Jerick McKinnon",
+      "position": "RB",
+      "total_points": 0.0,
+      "points_rank": 179,
+      "value_score": -156
+    },
+    {
+      "season": "2016",
+      "team_id": "3",
+      "manager": "Alex Topham",
+      "round_num": 3,
+      "overall_pick": 34,
+      "player_name": "Keenan Allen",
+      "position": "WR",
+      "total_points": 6.0,
+      "points_rank": 188,
+      "value_score": -154
+    },
+    {
+      "season": "2020",
+      "team_id": "6",
+      "manager": "Dakota Bender",
+      "round_num": 1,
+      "overall_pick": 7,
+      "player_name": "Michael Thomas",
+      "position": "WR",
+      "total_points": 63.9,
+      "points_rank": 155,
+      "value_score": -148
+    },
+    {
+      "season": "2016",
+      "team_id": "9",
+      "manager": "Phil Lannon",
+      "round_num": 3,
+      "overall_pick": 27,
+      "player_name": "Eddie Lacy",
+      "position": "RB",
+      "total_points": 36.0,
+      "points_rank": 170,
+      "value_score": -143
+    },
+    {
+      "season": "2020",
+      "team_id": "7",
+      "manager": "Corey Ploss",
+      "round_num": 3,
+      "overall_pick": 35,
+      "player_name": "Courtland Sutton",
+      "position": "WR",
+      "total_points": 8.1,
+      "points_rank": 178,
+      "value_score": -143
+    },
+    {
+      "season": "2022",
+      "team_id": "3",
+      "manager": "Alex Topham",
+      "round_num": 3,
+      "overall_pick": 33,
+      "player_name": "Javonte Williams",
+      "position": "RB",
+      "total_points": 42.0,
+      "points_rank": 174,
+      "value_score": -141
+    },
+    {
+      "season": "2015",
+      "team_id": "8",
+      "manager": "Kyle Torpey",
+      "round_num": 2,
+      "overall_pick": 15,
+      "player_name": "Dez Bryant",
+      "position": "WR",
+      "total_points": 54.0,
+      "points_rank": 155,
+      "value_score": -140
+    },
+    {
+      "season": "2024",
+      "team_id": "1",
+      "manager": "Derek Booker",
+      "round_num": 2,
+      "overall_pick": 17,
+      "player_name": "Isiah Pacheco",
+      "position": "RB",
+      "total_points": 56.9,
+      "points_rank": 157,
+      "value_score": -140
+    },
+    {
+      "season": "2019",
+      "team_id": "3",
+      "manager": "Alex Topham",
+      "round_num": 3,
+      "overall_pick": 34,
+      "player_name": "Antonio Brown",
+      "position": "WR",
+      "total_points": 14.1,
+      "points_rank": 173,
+      "value_score": -139
+    },
+    {
+      "season": "2020",
+      "team_id": "2",
+      "manager": "Tyler Scarlett",
+      "round_num": 1,
+      "overall_pick": 1,
+      "player_name": "Christian McCaffrey",
+      "position": "RB",
+      "total_points": 81.9,
+      "points_rank": 139,
+      "value_score": -138
+    },
+    {
+      "season": "2020",
+      "team_id": "4",
+      "manager": "Johnny Marcks",
+      "round_num": 2,
+      "overall_pick": 23,
+      "player_name": "Kenny Golladay",
+      "position": "WR",
+      "total_points": 55.8,
+      "points_rank": 161,
+      "value_score": -138
+    },
+    {
+      "season": "2021",
+      "team_id": "12",
+      "manager": "Angelo Hernandez",
+      "round_num": 2,
+      "overall_pick": 24,
+      "player_name": "Chris Carson",
+      "position": "RB",
+      "total_points": 48.1,
+      "points_rank": 162,
+      "value_score": -138
+    }
+  ],
+  "season_num_teams": {
+    "2015": 12,
+    "2016": 12,
+    "2017": 11,
+    "2018": 12,
+    "2019": 12,
+    "2020": 12,
+    "2021": 12,
+    "2022": 12,
+    "2023": 12,
+    "2024": 12,
+    "2025": 12
+  },
+  "owner_map": {
+    "1": "Derek Booker",
+    "2": "Tyler Scarlett",
+    "3": "Alex Topham",
+    "4": "Johnny Marcks",
+    "5": "Jarett Coy",
+    "6": "Dakota Bender",
+    "7": "Corey Ploss",
+    "8": "Kyle Torpey",
+    "9": "Phil Lannon",
+    "10": "Dustin Gamble",
+    "11": "Pj Lannon",
+    "12": "Angelo Hernandez",
+    "13": "Andrew Campbell"
+  },
+  "current_team_ids": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "10",
+    "11",
+    "12",
+    "13"
+  ]
+}

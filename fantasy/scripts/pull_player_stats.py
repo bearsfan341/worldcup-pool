@@ -40,16 +40,20 @@ def main():
 
     waiver_ids_by_season = {}
     for r in waiver_rows:
-        if r["status"] != "EXECUTED" or not r["players_added"]:
+        if r["status"] != "EXECUTED" or not r.get("players_added_ids"):
             continue
-        # players_added stores names, need player_id -- re-derive from raw ids stored separately
-    # waivers.csv doesn't carry player_id directly (only names); re-pull ids from added items instead
-    # Simpler: just use draft ids for now, waiver ids handled via separate pass below.
+        season = int(r["season"])
+        for pid in r["players_added_ids"].split(";"):
+            pid = pid.strip()
+            if pid and pid != "None":
+                waiver_ids_by_season.setdefault(season, set()).add(int(pid))
+
+    all_seasons = sorted(set(draft_ids_by_season) | set(waiver_ids_by_season))
 
     out_rows = []
-    for year in SEASONS:
-        ids = draft_ids_by_season.get(year, set())
-        if not ids and year not in draft_ids_by_season:
+    for year in all_seasons:
+        ids = draft_ids_by_season.get(year, set()) | waiver_ids_by_season.get(year, set())
+        if not ids:
             continue
         try:
             league = get_league(year)
@@ -58,7 +62,7 @@ def main():
             continue
 
         id_list = sorted(ids)
-        log(f"{year}: fetching stats for {len(id_list)} drafted players")
+        log(f"{year}: fetching stats for {len(id_list)} players (draft + waiver adds)")
         # batch in chunks of 100 to be safe
         for i in range(0, len(id_list), 100):
             chunk = id_list[i : i + 100]
