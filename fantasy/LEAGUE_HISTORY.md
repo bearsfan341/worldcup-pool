@@ -25,6 +25,28 @@ Two people have cycled through the league: **Phil Lannon** played 2015–2016 an
 
 Notable splits: **Johnny Marcks owns the best all-time win percentage and has zero rings** — ten playoff trips, no trophies, the Marv Levy of this league. **Jarett Coy has the most championships (3) of anyone but a below-.500 record and two last-place finishes** — the streakiest résumé in the league by a wide margin.
 
+## League Records
+
+Single-game and streak records pulled from all 1,026 matchups on file, 2015–2025.
+
+**Highest score ever:** Derek Booker, 211.8, week 15 of 2025 — a playoff game against Johnny Marcks, the round before he won the title.
+
+**Lowest score ever:** Johnny Marcks, 28.0, week 2 of 2015 — in a loss to Derek Booker (151.0).
+
+**Biggest blowout:** Derek Booker 211.8, Johnny Marcks 66.88 — week 15 of 2025, a 144.92-point margin. The same game that set the all-time high score also set the all-time blowout record.
+
+**Closest game(s):** Five exact ties are on record, all from 2015–2017. The standout: Angelo Hernandez 66, Johnny Marcks 66 — week 11 of 2015.
+
+**Most points scored in a loss:** Corey Ploss, 164.48, week 5 of 2021 — and still lost, to Johnny Marcks' 186.52.
+
+**Fewest points scored in a win:** Jarett Coy, 54.0, week 14 of 2015 — edged Pj Lannon's 52.0.
+
+**Longest win streak:** Johnny Marcks, 11 straight regular-season games, week 5 of 2023 through week 1 of 2024.
+
+**Longest losing streak:** Alex Topham, 9 straight regular-season games, week 3 through week 11 of 2022.
+
+Johnny Marcks shows up in six of these eight records — the lowest score ever, both ends of the highest-score/biggest-blowout game, the closest game, the win in the highest-scoring heartbreaker anyone's ever lost, and the longest win streak in league history. Derek Booker is next with three appearances (he's on the other side of two of Marcks' entries). Nobody else shows up more than once.
+
 ## Season-by-Season Recaps
 
 **2015** (12 teams) — Champion: **Jarett Coy** (Team Coy) def. Tyler Scarlett 72–47 in the final. Derek Booker led the league in regular-season points (1,387.0) but finished 6th. Dakota Bender finished last.
