@@ -269,6 +269,29 @@ A couple things jump out here. Jarett Coy is a net *loser* overall despite winni
 
 ---
 
+## Waiver Wire Effectiveness Ranking
+
+Unlike trades, ESPN's waiver data is complete and verified — every add, every result. Ranked by **hit rate** (the share of a manager's adds that scored 100+ rest-of-season points, roughly the 90th percentile of all 2,685 evaluable pickups league-wide) and **average value per add**, since raw volume measures activity, not effectiveness. Composite rank averages the two.
+
+| # | Manager | Hit Rate | Avg Value/Add | Total Value Produced | Adds |
+|---|---|---|---|---|---|
+| 1 | Alex Topham | 28.1% | 77.0 | 18,632.1 | 242 |
+| 2 | Dustin Gamble | 24.8% | 72.9 | 9,694.2 | 134 |
+| 3 | Corey Ploss | 24.5% | 71.4 | 11,634.4 | 163 |
+| 4 | Angelo Hernandez | 23.0% | 72.2 | 17,551.5 | 245 |
+| 5 | Kyle Torpey | 23.4% | 70.4 | 7,810.5 | 111 |
+| 6 | Derek Booker | 23.7% | 69.0 | 41,343.0 | 599 |
+| 7 | Andrew Campbell | 22.8% | 70.3 | 9,564.1 | 136 |
+| 8 | Tyler Scarlett | 20.9% | 69.7 | 13,663.6 | 198 |
+| 9 | Dakota Bender | 22.0% | 68.1 | 21,374.1 | 314 |
+| 10 | Pj Lannon | 19.6% | 69.2 | 11,622.6 | 170 |
+| 11 | Johnny Marcks | 21.3% | 62.8 | 10,304.6 | 165 |
+| 12 | Jarett Coy | 18.5% | 66.2 | 14,290.4 | 221 |
+
+**Alex Topham is the clear #1** — best in the league on both quality metrics at once (highest hit rate *and* highest average value), despite only middling volume. **Jarett Coy is dead last**, worst hit rate in the league. Worth flagging: **Derek Booker's total value (41,343) dwarfs everyone else's**, but that's a volume effect — 599 adds at a merely average 69.0/add hit rate. He's active, not efficient; Topham is efficient without needing the volume.
+
+---
+
 ## Rivalries to Watch
 
 **Johnny Marcks vs. Kyle Torpey (13-4 all-time)** — the most lopsided head-to-head record between two currently active managers in the league. There is no version of this matchup where the smart money is on Torpey.
