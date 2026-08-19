@@ -4,6 +4,39 @@ Eleven seasons of data, one league that refuses to let anybody forget anything. 
 
 ---
 
+## 2025 Season Recap
+
+Before looking ahead, a quick look back at the season that just wrapped.
+
+**Derek Booker went out on top.** He beat Angelo Hernandez 146.02–106.18 in the championship, capping a regular season in which he led the league with an all-time-high 1,896.22 points. Two weeks earlier, in the semifinal round, he'd already set the two biggest single-game records in league history in the same afternoon — a 211.8-point outburst against Johnny Marcks that's still the highest score ever recorded, in a 144.92-point margin that's still the biggest blowout ever recorded.
+
+**Angelo Hernandez finished 2nd for the third year running** without ever winning it — 1st in 2023, 3rd in 2024, 2nd in 2025 — the best three-year stretch of anyone who still doesn't have a second ring.
+
+**Dustin Gamble's title defense ended about as badly as possible.** The 2024 champion finished dead last in 2025, and not because his team was actually bad — his season carries the single unluckiest luck score in league history (-4.09, all-play basis).
+
+**Pj Lannon got the opposite treatment.** He climbed to 6th place from the 6th-worst regular-season seed on the back of the luckiest season in league history (+3.09 luck).
+
+**Corey Ploss broke out.** After finishing 12th and 11th the two years before, he jumped to 3rd — helped along by a trade that turned into one of the more lopsided of the season, flipping Saquon Barkley for a four-player package that outproduced him by 167.6 rest-of-season points.
+
+**Final standings:**
+
+| Rank | Manager | Team | Record | PF |
+|---|---|---|---|---|
+| 1 | Derek Booker | Wheaton Warbirds | 8-6-0 | 1,896.22 |
+| 2 | Angelo Hernandez | Nacua Matata | 6-8-0 | 1,572.60 |
+| 3 | Corey Ploss | Cursed | 7-7-0 | 1,510.44 |
+| 4 | Jarett Coy | Vino's Victors | 8-6-0 | 1,653.00 |
+| 5 | Alex Topham | Easy Company | 8-6-0 | 1,585.12 |
+| 6 | Pj Lannon | Waddle Deez Nutz On Yo Face | 9-5-0 | 1,481.30 |
+| 7 | Andrew Campbell | Naked Keg Stand | 10-4-0 | 1,775.24 |
+| 8 | Johnny Marcks | Ward on Mcconkey | 8-6-0 | 1,523.48 |
+| 9 | Kyle Torpey | Bye Week | 5-9-0 | 1,409.54 |
+| 10 | Tyler Scarlett | Bowers Castle | 6-8-0 | 1,517.28 |
+| 11 | Dakota Bender | Make Kamaraca Great Again | 6-8-0 | 1,499.02 |
+| 12 | Dustin Gamble | Dishes Nothin | 3-11-0 | 1,594.62 |
+
+---
+
 ## 2026 Power Rankings
 
 Ranked on recent form (2023–2025 average finish), luck-adjusted context, and career trajectory. Nobody's draft-day performance is in here yet, because nobody's drafted.
@@ -24,7 +57,7 @@ Ranked on recent form (2023–2025 average finish), luck-adjusted context, and c
 
 **8. Dustin Gamble, "The Free Fall"** — The 2024 champion (wire-to-wire, led the league in points that year) who then finished dead last in 2025 with the single unluckiest season in league history (4 actual wins against 8.09 expected — a -4.09 luck score nobody else has come close to). This is the biggest buy-low in the league.
 
-**9. Jarett Coy, "The Wildcard"** — Three championships (2015, 2016, 2021) — tied for most in league history — but a sub-.500 all-time record, two last-place finishes, and a heavy trade habit (17 trades) with mixed-to-brutal results, including the single worst trade in league history (see Superlatives). Bounced back to 4th in 2025; the floor and ceiling are both real.
+**9. Jarett Coy, "The Wildcard"** — Three championships (2015, 2016, 2021) — tied for most in league history — but a sub-.500 all-time record, two last-place finishes, and mixed-to-brutal trade results, including the single worst trade in league history (see Superlatives). Bounced back to 4th in 2025; the floor and ceiling are both real.
 
 **10. Dakota Bender, "The Long Shot"** — Worst all-time average finish in the league (8.55) and the fewest playoff trips (4 of 11). Drafted the best-value pick in league history (Doug Baldwin, round 16, 2015) and still finished with the league's worst average draft value since. Talent evaluation isn't the problem; everything else might be.
 
@@ -93,7 +126,7 @@ Ranked on recent form (2023–2025 average finish), luck-adjusted context, and c
 **Luck:** -2.82 all-time.
 **How a mediocre regular season becomes a ring — twice:** Two of the three championships were not won by a great team. In 2015 he limped into the playoffs as the **5th seed at 7-7**, averaging just 86.4 points a game in the regular season — then scored **134.0 and 107.0** in the first two playoff rounds, nearly 50 points above his own season average, before closing it out 72-47. In 2016 the pattern repeated almost exactly: **7th seed at 6-6**, an 83.5 regular-season scoring average, then **87.0, 78.0, and 93.0** in three straight playoff wins — modest totals that just happened to consistently clear his own bar exactly when it mattered. The 2021 title was a different animal entirely: a legitimately elite **2-seed at 9-5**, averaging 125.6 points a game (2nd-most in the league that year), who then beat Alex Topham and Derek Booker in the two closest playoff games of his career. Two rings from lucky-hot playoff runs, one from being genuinely the second-best team in the league that year — all three still count the same in the standings.
 **Draft tendency:** RB-heavy (19 early picks). Best picks: Justin Fields, round 15 of 2022 (157 value), and Carson Palmer, round 13 of 2015 (145 value). Worst: Jamaal Charles, 2015 (-126 value).
-**Trades/Waivers:** **17 trades.** The record inside those trades is actually winning — **10 won, 7 lost** — but the losses have been more catastrophic than the wins have been rewarding, for a career net of **-79.7 rest-of-season points**. Best pickup: Sam Darnold, week-add in 2024 (250.2 rest-of-season points).
+**Trades/Waivers:** His trade record is actually winning — **10 won, 7 lost** — but the losses have been more catastrophic than the wins have been rewarding, for a career net of **-79.7 rest-of-season points**. Best pickup: Sam Darnold, week-add in 2024 (250.2 rest-of-season points).
 **Infamous:** Party to 4 of the 6 most lopsided trades in league history — and lost 3 of them, including the single worst trade in league history, giving up Quentin Johnston + George Pickens (365.8 combined rest-of-season points) for Trey Benson (10.4 points) in 2025.
 **Head-to-head:** Struggles against Pj Lannon (5-11) and Dustin Gamble (5-10); dominates Alex Topham (11-5).
 **Bold prediction:** Either the 4th championship or another last-place finish. There is no in-between gear.
