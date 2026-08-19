@@ -8,35 +8,35 @@ Eleven seasons of data, one league that refuses to let anybody forget anything. 
 
 Ranked on recent form (2023–2025 average finish), luck-adjusted context, and career trajectory. Nobody's draft-day performance is in here yet, because nobody's drafted.
 
-**1. Angelo Hernandez** — Three straight top-3 finishes (1st in 2023, 3rd in 2024, 2nd in 2025 — 2.00 average) is the single best three-year stretch in the league, and he did it while running *under* his expected win total in 2025 (8 actual wins vs. 9.27 expected). The most consistent manager in the league is somehow still looking for daylight.
+**1. Angelo Hernandez, "The Nearly Man"** — Three straight top-3 finishes (1st in 2023, 3rd in 2024, 2nd in 2025 — 2.00 average) is the single best three-year stretch in the league, and he did it while running *under* his expected win total in 2025 (8 actual wins vs. 9.27 expected). The most consistent manager in the league is somehow still looking for daylight.
 
-**2. Derek Booker** — The reigning champion (2025, 146.02–106.18 over Hernandez in the final, and league-high 1,896.22 points that season). The résumé is volatile — 2nd, 9th, 1st the last three years — but the ceiling is the highest in the league, and he just proved it. A genuine powerhouse entering 2026.
+**2. Derek Booker, "The Powerhouse"** — The reigning champion (2025, 146.02–106.18 over Hernandez in the final, and league-high 1,896.22 points that season). The résumé is volatile — 2nd, 9th, 1st the last three years — but the ceiling is the highest in the league, and he just proved it. A genuine powerhouse entering 2026.
 
-**3. Alex Topham** — Boring in the best way: 6th, 4th, 5th the last three years, positive luck (+2.14 all-time), a championship on the shelf (2018), and a 12-4 all-time record against Dakota Bender. Nothing flashy, nothing to fix.
+**3. Alex Topham, "The Quiet Storm"** — Boring in the best way: 6th, 4th, 5th the last three years, positive luck (+2.14 all-time), a championship on the shelf (2018), and a 12-4 all-time record against Dakota Bender. Nothing flashy, nothing to fix.
 
-**4. Corey Ploss** — Finished 12th and 11th the two years before breaking out to 3rd in 2025. That's either the start of something or a one-year mirage; his luck was only +0.82 in 2025, so the breakout looks mostly earned.
+**4. Corey Ploss, "The Breakout"** — Finished 12th and 11th the two years before breaking out to 3rd in 2025. That's either the start of something or a one-year mirage; his luck was only +0.82 in 2025, so the breakout looks mostly earned.
 
-**5. Johnny Marcks** — Best all-time win percentage in the league (.568) and zero championships in eleven tries — ten playoff berths, no trophies. Positive regression karma (+3.38 luck all-time) says the drought can't last forever. Probably.
+**5. Johnny Marcks, "The Bridesmaid"** — Best all-time win percentage in the league (.568) and zero championships in eleven tries — ten playoff berths, no trophies. Positive regression karma (+3.38 luck all-time) says the drought can't last forever. Probably.
 
-**6. Tyler Scarlett** — 3rd and 2nd the two years before a 10th-place face-plant in 2025. A true coin flip for 2026: is he the guy from 2023–24, or the guy from last year?
+**6. Tyler Scarlett, "The Coin Flip"** — 3rd and 2nd the two years before a 10th-place face-plant in 2025. A true coin flip for 2026: is he the guy from 2023–24, or the guy from last year?
 
-**7. Andrew Campbell** — Won back-to-back titles in his first two seasons (2019–2020) after finishing dead last in his 2018 debut, then settled into steady mediocrity (5th, 7th, 7th). Owns the league's best win percentage over the last three years relative to his negative luck (-3.47 all-time) — due for better bounces.
+**7. Andrew Campbell, "The Flash in the Pan"** — Won back-to-back titles in his first two seasons (2019–2020) after finishing dead last in his 2018 debut, then settled into steady mediocrity (5th, 7th, 7th). Owns the league's best win percentage over the last three years relative to his negative luck (-3.47 all-time) — due for better bounces.
 
-**8. Dustin Gamble** — The 2024 champion (wire-to-wire, led the league in points that year) who then finished dead last in 2025 with the single unluckiest season in league history (4 actual wins against 8.09 expected — a -4.09 luck score nobody else has come close to). This is the biggest buy-low in the league.
+**8. Dustin Gamble, "The Free Fall"** — The 2024 champion (wire-to-wire, led the league in points that year) who then finished dead last in 2025 with the single unluckiest season in league history (4 actual wins against 8.09 expected — a -4.09 luck score nobody else has come close to). This is the biggest buy-low in the league.
 
-**9. Jarett Coy** — Three championships (2015, 2016, 2021) — tied for most in league history — but a sub-.500 all-time record, two last-place finishes, and a heavy trade habit (17 trades) with mixed-to-brutal results, including the single worst trade in league history (see Superlatives). Bounced back to 4th in 2025; the floor and ceiling are both real.
+**9. Jarett Coy, "The Wildcard"** — Three championships (2015, 2016, 2021) — tied for most in league history — but a sub-.500 all-time record, two last-place finishes, and a heavy trade habit (17 trades) with mixed-to-brutal results, including the single worst trade in league history (see Superlatives). Bounced back to 4th in 2025; the floor and ceiling are both real.
 
-**10. Dakota Bender** — Worst all-time average finish in the league (8.55) and the fewest playoff trips (4 of 11). Drafted the best-value pick in league history (Doug Baldwin, round 16, 2015) and still finished with the league's worst average draft value since. Talent evaluation isn't the problem; everything else might be.
+**10. Dakota Bender, "The Long Shot"** — Worst all-time average finish in the league (8.55) and the fewest playoff trips (4 of 11). Drafted the best-value pick in league history (Doug Baldwin, round 16, 2015) and still finished with the league's worst average draft value since. Talent evaluation isn't the problem; everything else might be.
 
-**11. Kyle Torpey** — Renamed the team "Bye Week" for three straight years (2023–2025) after eight seasons as the unchanging "Team Torpey" — and it fits: 10th, 8th, 9th. Owns the league's most one-sided rivalry disadvantages (2-10 vs. Andrew Campbell, 4-13 vs. Johnny Marcks).
+**11. Kyle Torpey, "The Human Bye Week"** — Renamed the team "Bye Week" for three straight years (2023–2025) after eight seasons as the unchanging "Team Torpey" — and it fits: 10th, 8th, 9th. Owns the league's most one-sided rivalry disadvantages (2-10 vs. Andrew Campbell, 4-13 vs. Johnny Marcks).
 
-**12. Pj Lannon** — 2025's 6th-place finish came on the back of the luckiest single season in league history (10 actual wins vs. 6.91 expected, +3.09 luck) from the 6th-worst regular-season seed. Positive regression is not a real thing, but if it were, it's coming for him first.
+**12. Pj Lannon, "The Lucky Charm"** — 2025's 6th-place finish came on the back of the luckiest single season in league history (10 actual wins vs. 6.91 expected, +3.09 luck) from the 6th-worst regular-season seed. Positive regression is not a real thing, but if it were, it's coming for him first.
 
 ---
 
 ## Manager Profiles
 
-### Angelo Hernandez
+### Angelo Hernandez, "The Nearly Man"
 **All-time:** 64-75-1 (.461), 5.91 avg finish, 1 championship (2023), 7/11 playoff appearances, 0 last-place finishes.
 **Season-by-season finish (2015–2025):** 8, 10, 10, 8, 3, 3, 10, 7, 1, 3, 2 — a decade of mid-pack noise before three straight top-3 finishes to close it out.
 **Luck:** -1.05 all-time — a manager who wins in spite of, not because of, puff-up bounces.
@@ -47,7 +47,7 @@ Ranked on recent form (2023–2025 average finish), luck-adjusted context, and c
 **Bold prediction:** Fourth straight top-3 finish. The luck index owes him a title.
 **Roast:** Three straight years of "almost." At some point the league is going to start calling this a personality trait instead of a trend.
 
-### Derek Booker
+### Derek Booker, "The Powerhouse"
 **All-time:** 79-61-0 (.564, 2nd-best), 4.09 avg finish (best in league), 1 championship (2025), 10/11 playoff appearances.
 **Season-by-season finish (2015–2025):** 6, 5, 2, 3, 5, 5, 2, 5, 2, 9, 1 — remarkably steady in the 2-to-6 range for a decade, then a real down year in 2024 immediately followed by the title.
 **Luck:** -0.27 all-time — close to neutral, meaning the results are mostly earned.
@@ -57,7 +57,7 @@ Ranked on recent form (2023–2025 average finish), luck-adjusted context, and c
 **Bold prediction:** A finals rematch with Angelo Hernandez. The waiver wire habit alone should be worth two extra wins — the trade habit should probably be retired.
 **Roast:** Somehow drafted the 1st overall bust of the decade, has lost three-quarters of his trades for a combined -400 points, and still has a better résumé than 10 other people in this league. The waiver wire has been doing a lot of very quiet, very necessary cleanup.
 
-### Alex Topham
+### Alex Topham, "The Quiet Storm"
 **All-time:** 77-62-1 (.554, 3rd-best), 5.73 avg finish, 1 championship (2018), 1 last-place finish (2022), 9/11 playoff appearances.
 **Season-by-season finish (2015–2025):** 5, 3, 6, 1, 11, 7, 3, 12, 6, 4, 5 — two brutal outlier seasons (2019, 2022) bracketing a lot of quietly solid ones.
 **Luck:** +2.14 all-time.
@@ -67,7 +67,7 @@ Ranked on recent form (2023–2025 average finish), luck-adjusted context, and c
 **Bold prediction:** Quietly makes the final again. Nobody will see it coming because nobody ever sees Alex Topham coming.
 **Roast:** The living embodiment of "if it ain't broke." Nine playoff trips in eleven years and the fan base still couldn't pick him out of a lineup.
 
-### Johnny Marcks
+### Johnny Marcks, "The Bridesmaid"
 **All-time:** 79-60-1 (.568, best win% in league), 5.27 avg finish, **0 championships**, 10/11 playoff appearances, 0 last-place finishes.
 **Season-by-season finish (2015–2025):** 3, 2, 4, 7, 6, 8, 8, 2, 4, 6, 8 — never worse than 8th, never better than 2nd. The most literal definition of a bridesmaid this league has.
 **Luck:** +3.38 all-time — one of the luckiest careers in the league by the numbers, and still ring-less.
@@ -77,7 +77,7 @@ Ranked on recent form (2023–2025 average finish), luck-adjusted context, and c
 **Bold prediction:** This is the year. Positive career luck has to convert eventually, and a .568 win percentage with no trophies is unsustainable variance, not a pattern.
 **Roast:** The Buffalo Bills of this league — except the Bills have actually been to a Super Bowl. Ten playoff berths, an 0-3 trade record worth almost -430 points, and a permanently empty trophy case.
 
-### Tyler Scarlett
+### Tyler Scarlett, "The Coin Flip"
 **All-time:** 69-70-1 (.496), 5.91 avg finish, 1 championship (2017), 0 last-place finishes, 7/11 playoff appearances.
 **Season-by-season finish (2015–2025):** 2, 8, 1, 4, 7, 10, 7, 11, 3, 2, 10 — genuinely bimodal: five finishes in the top 4, six outside the top 7, almost nothing in between.
 **Luck:** +0.47 all-time — close to neutral.
@@ -87,7 +87,7 @@ Ranked on recent form (2023–2025 average finish), luck-adjusted context, and c
 **Bold prediction:** The 2025 face-plant (10th, after 3rd and 2nd the two years before) was the outlier, not the new normal — back to the top half in 2026.
 **Roast:** Won a championship in 2017 with a defense as his best-ever draft pick and hasn't topped that value score since. The scouting report used to say "boom-or-bust." Lately it's just saying "bust."
 
-### Jarett Coy
+### Jarett Coy, "The Wildcard"
 **All-time:** 64-76-0 (.457), 6.00 avg finish, **3 championships (2015, 2016, 2021 — most in league)**, 2 last-place finishes (2017, 2020), 6/11 playoff appearances.
 **Season-by-season finish (2015–2025):** 1, 1, 11, 2, 9, 12, 1, 4, 11, 10, 4 — three titles and three finishes of 9th or worse, sometimes in back-to-back years. No manager's season-to-season variance looks like this one.
 **Luck:** -2.82 all-time.
@@ -99,7 +99,7 @@ Ranked on recent form (2023–2025 average finish), luck-adjusted context, and c
 **Bold prediction:** Either the 4th championship or another last-place finish. There is no in-between gear.
 **Roast:** Three rings — two of them backed into as a middling regular-season team who got hot for exactly three weeks each time — and somehow still the guy who traded away a 365-point season for a 10-point season. The trade button should require a cooling-off period; the playoff seeding committee should just accept he's going to do this forever.
 
-### Dakota Bender
+### Dakota Bender, "The Long Shot"
 **All-time:** 61-79-0 (.436, worst win% in league), **8.55 avg finish (worst in league)**, 0 championships, 2 last-place finishes (2015, 2019), 4/11 playoff appearances (fewest in league).
 **Season-by-season finish (2015–2025):** 12, 9, 8, 11, 12, 11, 5, 3, 7, 5, 11 — six finishes of 9th or worse in eleven years, with a genuine mid-career high point (2022–2023) that didn't stick.
 **Luck:** -1.48 all-time.
@@ -109,7 +109,7 @@ Ranked on recent form (2023–2025 average finish), luck-adjusted context, and c
 **Bold prediction:** A round-16 miracle and a winning trade record can't save a whole roster. Missing the playoffs for a 6th time in the last 7 years is the likeliest outcome.
 **Roast:** Proof that one great draft and a plus trade record buy you exactly one line in a magazine article and nothing else. The floor is still the floor.
 
-### Corey Ploss
+### Corey Ploss, "The Breakout"
 **All-time:** 68-72-0 (.486), 7.45 avg finish, 0 championships, 1 last-place finish (2023), 6/11 playoff appearances.
 **Season-by-season finish (2015–2025):** 4, 7, 5, 10, 8, 9, 4, 9, 12, 11, 3 — three straight seasons of 9th or worse (2021–2023) immediately followed by a 3rd-place finish. A real inflection point, or a one-year blip.
 **Luck:** -1.30 all-time.
@@ -119,7 +119,7 @@ Ranked on recent form (2023–2025 average finish), luck-adjusted context, and c
 **Bold prediction:** Backs up the 2025 breakout with another top-5 finish. He's owed one after 12th- and 11th-place finishes the two years prior.
 **Roast:** Went from City Wok (12th) to Big Sausage Pizza (11th) to Cursed (3rd) — the team names got worse while the actual team got better. Never change, Corey.
 
-### Kyle Torpey
+### Kyle Torpey, "The Human Bye Week"
 **All-time:** 61-77-1 (.442), 7.73 avg finish, 0 championships, 0 last-place finishes, 5/11 playoff appearances.
 **Season-by-season finish (2015–2025):** 11, 11, 3, 6, 4, 6, 9, 8, 10, 8, 9 — a promising 2017–2020 stretch that's fully reversed into a permanent mid-9-to-11 floor.
 **Luck:** +1.61 all-time.
@@ -129,7 +129,7 @@ Ranked on recent form (2023–2025 average finish), luck-adjusted context, and c
 **Bold prediction:** The team formerly known as "Team Torpey," currently known as "Bye Week," continues to live up to the new name. Another finish outside the top 8.
 **Roast:** Renamed his own team "Bye Week" in 2023 and has finished 10th, 8th, and 9th since. Made exactly one trade in 11 years and it happened to be the best heist in league history — proof he's not incapable, just profoundly uninterested.
 
-### Dustin Gamble
+### Dustin Gamble, "The Free Fall"
 **All-time:** 69-70-1 (.496), 7.18 avg finish, 1 championship (2024), 1 last-place finish (2025), 5/11 playoff appearances.
 **Season-by-season finish (2015–2025):** 10, 4, 7, 9, 10, 2, 6, 10, 8, 1, 12 — the title-to-cellar collapse (1st to 12th in one offseason) is tied for the steepest year-over-year fall in league history, matched only by Andrew Campbell's own 1st-to-12th crash from 2020 to 2021.
 **Luck:** -4.30 all-time (worst career luck in the league) — including the single unluckiest season anyone has ever had: **2025, 4 actual wins vs. 8.09 expected wins.**
@@ -139,7 +139,7 @@ Ranked on recent form (2023–2025 average finish), luck-adjusted context, and c
 **Bold prediction:** The title-to-cellar collapse was a fluke of variance, not decline — back to the playoffs in 2026.
 **Roast:** Won the whole thing in 2024 leading the league in points, then somehow ran the worst luck season in eleven years of data and finished dead last. The fantasy gods have a sense of humor and it is not a kind one.
 
-### Pj Lannon
+### Pj Lannon, "The Lucky Charm"
 **All-time:** 72-68-0 (.514), 6.73 avg finish, 1 championship (2022), 1 last-place finish (2024), 6/11 playoff appearances.
 **Season-by-season finish (2015–2025):** 9, 6, 9, 5, 2, 4, 11, 1, 9, 12, 6 — a title in 2022 sandwiched by a last-place finish two years later, with no real middle ground.
 **Luck:** +8.36 all-time (by far the luckiest career in the league — more than double the next-highest mark, Johnny Marcks at +3.38).
@@ -150,7 +150,7 @@ Ranked on recent form (2023–2025 average finish), luck-adjusted context, and c
 **Bold prediction:** Regression hits hard. A finish outside the top 8 is more likely than a repeat of 2025's win total.
 **Roast:** The all-time luck leaderboard isn't close, and it's not particularly close for second place either. 2026 is when the bill comes due.
 
-### Andrew Campbell
+### Andrew Campbell, "The Flash in the Pan"
 **All-time:** 56-47-0 (.544, 4th-best win%), 6.38 avg finish, 2 championships (2019, 2020 — back-to-back), 2 last-place finishes (2018, 2021), 6/8 playoff appearances. Joined the league in 2018.
 **Season-by-season finish (2018–2025):** 12, 1, 1, 12, 6, 5, 7, 7 — the most extreme "all or nothing" start of any manager's career, followed by five years of settled mediocrity.
 **Luck:** -3.47 all-time.
