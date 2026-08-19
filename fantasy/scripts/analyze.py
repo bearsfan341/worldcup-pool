@@ -423,14 +423,28 @@ def main():
                 "bid_amount": to_float(r["bid_amount"]),
             })
 
+    HIT_THRESHOLD = 100.0  # rest-of-season points; ~90th percentile of all evaluable pickups
+
     for tid, p in profiles.items():
         p["waiver_add_count"] = waiver_counts.get(tid, 0)
         mine = [w for w in waiver_pickups if w["team_id"] == tid]
         if mine:
-            best = max(mine, key=lambda r: r["rest_of_season_points"])
-            p["best_waiver_pickup"] = best
+            ranked = sorted(mine, key=lambda r: -r["rest_of_season_points"])
+            p["best_waiver_pickup"] = ranked[0]
+            p["top_waiver_pickups"] = ranked[:3]
+            p["waiver_evaluable_count"] = len(mine)
+            p["waiver_hit_count"] = sum(1 for r in mine if r["rest_of_season_points"] >= HIT_THRESHOLD)
+            p["waiver_hit_rate"] = round(p["waiver_hit_count"] / len(mine), 3)
+            p["waiver_total_value"] = round(sum(r["rest_of_season_points"] for r in mine), 1)
+            p["waiver_avg_value"] = round(p["waiver_total_value"] / len(mine), 1)
         else:
             p["best_waiver_pickup"] = None
+            p["top_waiver_pickups"] = []
+            p["waiver_evaluable_count"] = 0
+            p["waiver_hit_count"] = 0
+            p["waiver_hit_rate"] = None
+            p["waiver_total_value"] = 0.0
+            p["waiver_avg_value"] = None
 
     # ---------- League-wide superlatives ----------
     all_pickups_sorted = sorted(waiver_pickups, key=lambda r: -r["rest_of_season_points"])
