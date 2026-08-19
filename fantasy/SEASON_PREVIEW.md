@@ -10,7 +10,7 @@ Ranked on recent form (2023–2025 average finish), luck-adjusted context, and c
 
 **1. Angelo Hernandez** — Three straight top-3 finishes (1st in 2023, 3rd in 2024, 2nd in 2025 — 2.00 average) is the single best three-year stretch in the league, and he did it while running *under* his expected win total in 2025 (8 actual wins vs. 9.27 expected). The most consistent manager in the league is somehow still looking for daylight.
 
-**2. Derek Booker** — The reigning champion (2025, 146.02–106.18 over Hernandez in the final, and league-high 1,896.22 points that season). The résumé is volatile — 2nd, 9th, 1st the last three years — but the ceiling is the highest in the league, and he just proved it.
+**2. Derek Booker** — The reigning champion (2025, 146.02–106.18 over Hernandez in the final, and league-high 1,896.22 points that season). The résumé is volatile — 2nd, 9th, 1st the last three years — but the ceiling is the highest in the league, and he just proved it. A genuine powerhouse entering 2026.
 
 **3. Alex Topham** — Boring in the best way: 6th, 4th, 5th the last three years, positive luck (+2.14 all-time), a championship on the shelf (2018), and a 12-4 all-time record against Dakota Bender. Nothing flashy, nothing to fix.
 
@@ -24,7 +24,7 @@ Ranked on recent form (2023–2025 average finish), luck-adjusted context, and c
 
 **8. Dustin Gamble** — The 2024 champion (wire-to-wire, led the league in points that year) who then finished dead last in 2025 with the single unluckiest season in league history (4 actual wins against 8.09 expected — a -4.09 luck score nobody else has come close to). This is the biggest buy-low in the league.
 
-**9. Jarett Coy** — Three championships (2015, 2016, 2021) — tied for most in league history — but a sub-.500 all-time record, two last-place finishes, and the most trade activity of anyone in the league (17 trades) with mixed-to-brutal results, including the single worst trade in league history (see Superlatives). Bounced back to 4th in 2025; the floor and ceiling are both real.
+**9. Jarett Coy** — Three championships (2015, 2016, 2021) — tied for most in league history — but a sub-.500 all-time record, two last-place finishes, and a heavy trade habit (17 trades) with mixed-to-brutal results, including the single worst trade in league history (see Superlatives). Bounced back to 4th in 2025; the floor and ceiling are both real.
 
 **10. Dakota Bender** — Worst all-time average finish in the league (8.55) and the fewest playoff trips (4 of 11). Drafted the best-value pick in league history (Doug Baldwin, round 16, 2015) and still finished with the league's worst average draft value since. Talent evaluation isn't the problem; everything else might be.
 
@@ -52,7 +52,7 @@ Ranked on recent form (2023–2025 average finish), luck-adjusted context, and c
 **Season-by-season finish (2015–2025):** 6, 5, 2, 3, 5, 5, 2, 5, 2, 9, 1 — remarkably steady in the 2-to-6 range for a decade, then a real down year in 2024 immediately followed by the title.
 **Luck:** -0.27 all-time — close to neutral, meaning the results are mostly earned.
 **Draft tendency:** Heavy RB investor early (15 of his early-round picks) but owns the single worst draft pick in league history: Adrian Peterson, 1st overall in 2016, for 4 total points — and his very next-worst pick is also recent, Isiah Pacheco in round 2 of 2024 (-140 value). He also owns the league's single best waiver pickup ever — Trevor Lawrence, added in week 1 of 2025 for 338.2 rest-of-season points.
-**Trades/Waivers:** **8 trades — 2nd-most in the league, but a losing hand: 2 won, 6 lost, for a league-worst -399.9 net rest-of-season points.** The waiver wire is doing the heavy lifting here, not the trade block — a league-leading 599 waiver moves.
+**Trades/Waivers:** **8 trades — a losing hand: 2 won, 6 lost, for a league-worst -399.9 net rest-of-season points.** The waiver wire is doing the heavy lifting here, not the trade block — a league-leading 599 waiver moves.
 **Head-to-head:** Best against Andrew Campbell (11-3); worst against Tyler Scarlett (6-10).
 **Bold prediction:** A finals rematch with Angelo Hernandez. The waiver wire habit alone should be worth two extra wins — the trade habit should probably be retired.
 **Roast:** Somehow drafted the 1st overall bust of the decade, has lost three-quarters of his trades for a combined -400 points, and still has a better résumé than 10 other people in this league. The waiver wire has been doing a lot of very quiet, very necessary cleanup.
@@ -93,7 +93,7 @@ Ranked on recent form (2023–2025 average finish), luck-adjusted context, and c
 **Luck:** -2.82 all-time.
 **How a mediocre regular season becomes a ring — twice:** Two of the three championships were not won by a great team. In 2015 he limped into the playoffs as the **5th seed at 7-7**, averaging just 86.4 points a game in the regular season — then scored **134.0 and 107.0** in the first two playoff rounds, nearly 50 points above his own season average, before closing it out 72-47. In 2016 the pattern repeated almost exactly: **7th seed at 6-6**, an 83.5 regular-season scoring average, then **87.0, 78.0, and 93.0** in three straight playoff wins — modest totals that just happened to consistently clear his own bar exactly when it mattered. The 2021 title was a different animal entirely: a legitimately elite **2-seed at 9-5**, averaging 125.6 points a game (2nd-most in the league that year), who then beat Alex Topham and Derek Booker in the two closest playoff games of his career. Two rings from lucky-hot playoff runs, one from being genuinely the second-best team in the league that year — all three still count the same in the standings.
 **Draft tendency:** RB-heavy (19 early picks). Best picks: Justin Fields, round 15 of 2022 (157 value), and Carson Palmer, round 13 of 2015 (145 value). Worst: Jamaal Charles, 2015 (-126 value).
-**Trades/Waivers:** **17 trades — the most of anyone in the league by a wide margin (next closest is Derek Booker at 8; Andrew Campbell and Dakota Bender are tied for third at 5).** The record inside those trades is actually winning — **10 won, 7 lost** — but the losses have been more catastrophic than the wins have been rewarding, for a career net of **-79.7 rest-of-season points**. Best pickup: Sam Darnold, week-add in 2024 (250.2 rest-of-season points).
+**Trades/Waivers:** **17 trades.** The record inside those trades is actually winning — **10 won, 7 lost** — but the losses have been more catastrophic than the wins have been rewarding, for a career net of **-79.7 rest-of-season points**. Best pickup: Sam Darnold, week-add in 2024 (250.2 rest-of-season points).
 **Infamous:** Party to 4 of the 6 most lopsided trades in league history — and lost 3 of them, including the single worst trade in league history, giving up Quentin Johnston + George Pickens (365.8 combined rest-of-season points) for Trey Benson (10.4 points) in 2025.
 **Head-to-head:** Struggles against Pj Lannon (5-11) and Dustin Gamble (5-10); dominates Alex Topham (11-5).
 **Bold prediction:** Either the 4th championship or another last-place finish. There is no in-between gear.
@@ -124,7 +124,7 @@ Ranked on recent form (2023–2025 average finish), luck-adjusted context, and c
 **Season-by-season finish (2015–2025):** 11, 11, 3, 6, 4, 6, 9, 8, 10, 8, 9 — a promising 2017–2020 stretch that's fully reversed into a permanent mid-9-to-11 floor.
 **Luck:** +1.61 all-time.
 **Draft tendency:** RB-heavy (19 early picks). Best picks: Andy Dalton, round 14 of 2016 (144 value), and Trevor Lawrence, round 13 of 2022 (135 value). Worst: Jerick McKinnon, round 2 of 2018 (-156 value).
-**Trades/Waivers:** Only 1 trade in 11 years — the most passive trader in the league — but it's the single best trade in league history for anyone, netting +355.4 rest-of-season points off Jarett Coy in 2025. 111 waiver moves, the fewest in the league. Best pickup: Dak Prescott, 2023 (316.9 rest-of-season points, 3rd-best waiver pickup in league history).
+**Trades/Waivers:** Only 1 trade in 11 years — but it's the single best trade in league history for anyone, netting +355.4 rest-of-season points off Jarett Coy in 2025. 111 waiver moves, the fewest in the league. Best pickup: Dak Prescott, 2023 (316.9 rest-of-season points, 3rd-best waiver pickup in league history).
 **Head-to-head:** The league's whipping boy — 4-13 vs. Johnny Marcks, 2-10 vs. Andrew Campbell.
 **Bold prediction:** The team formerly known as "Team Torpey," currently known as "Bye Week," continues to live up to the new name. Another finish outside the top 8.
 **Roast:** Renamed his own team "Bye Week" in 2023 and has finished 10th, 8th, and 9th since. Made exactly one trade in 11 years and it happened to be the best heist in league history — proof he's not incapable, just profoundly uninterested.
@@ -144,7 +144,7 @@ Ranked on recent form (2023–2025 average finish), luck-adjusted context, and c
 **Season-by-season finish (2015–2025):** 9, 6, 9, 5, 2, 4, 11, 1, 9, 12, 6 — a title in 2022 sandwiched by a last-place finish two years later, with no real middle ground.
 **Luck:** +8.36 all-time (by far the luckiest career in the league — more than double the next-highest mark, Johnny Marcks at +3.38).
 **Draft tendency:** Mixed WR/RB/QB. Best picks: Dak Prescott, round 14 of 2016 (157 value), and Kirk Cousins, round 15 of 2021 (150 value). Worst: Christian McCaffrey, 1st overall in 2024 (-158 value).
-**Trades/Waivers:** Only 1 trade in 11 years (tied with Kyle Torpey for most passive), a modest win (net +12.1 rest-of-season points). 170 waiver moves. Best pickup: Brock Purdy, 2023 (278.8 rest-of-season points).
+**Trades/Waivers:** Only 1 trade in 11 years, a modest win (net +12.1 rest-of-season points). 170 waiver moves. Best pickup: Brock Purdy, 2023 (278.8 rest-of-season points).
 **Head-to-head:** Best against Dustin Gamble (11-4); worst against Derek Booker (5-10).
 **Infamous:** 2025's 6th-place finish, powered by the single luckiest season in league history (+3.09 luck, 10 wins from a 6th-place regular-season seed).
 **Bold prediction:** Regression hits hard. A finish outside the top 8 is more likely than a repeat of 2025's win total.
@@ -220,7 +220,7 @@ Every current manager's full trade ledger, ranked by career net rest-of-season p
 | Derek Booker | 8 | 2 | 6 | -399.9 |
 | Johnny Marcks | 3 | 0 | 3 | -429.9 |
 
-Three things jump out here. First, volume and results are unrelated: Jarett Coy makes ten times as many trades as most of the league and is a net *loser* overall despite winning more trades than he loses — one catastrophic swing outweighs six modest wins. Second, Derek Booker and Johnny Marcks — two of the three best all-time win percentages in the league — are also the two worst traders in league history by total value; whatever's driving their success, it isn't the trade block. Third, Kyle Torpey's perfect 1-for-1 trade record, built on doing almost nothing, outperforms everyone who actually works the phones.
+A couple things jump out here. Jarett Coy is a net *loser* overall despite winning more trades than he loses — one catastrophic swing outweighs six modest wins. Derek Booker and Johnny Marcks — two of the three best all-time win percentages in the league — are also the two worst traders in league history by total value; whatever's driving their success, it isn't the trade block. And Kyle Torpey's perfect 1-for-1 trade record outperforms everyone else on this list.
 
 ---
 
