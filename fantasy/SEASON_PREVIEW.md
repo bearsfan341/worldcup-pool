@@ -57,7 +57,7 @@ Ranked on recent form (2023–2025 average finish), luck-adjusted context, and c
 
 **8. Dustin Gamble, "The Free Fall"** — The 2024 champion (wire-to-wire, led the league in points that year) who then finished dead last in 2025 with the single unluckiest season in league history (4 actual wins against 8.09 expected — a -4.09 luck score nobody else has come close to). This is the biggest buy-low in the league.
 
-**9. Jarett Coy, "The Wildcard"** — Three championships (2015, 2016, 2021) — tied for most in league history — but a sub-.500 all-time record, two last-place finishes, and mixed-to-brutal trade results, including the single worst trade in league history (see Superlatives). Bounced back to 4th in 2025; the floor and ceiling are both real.
+**9. Jarett Coy, "The Wildcard"** — Three championships (2015, 2016, 2021) — tied for most in league history — but a sub-.500 all-time record and two last-place finishes. Bounced back to 4th in 2025; the floor and ceiling are both real.
 
 **10. Dakota Bender, "The Long Shot"** — Worst all-time average finish in the league (8.55) and the fewest playoff trips (4 of 11). Drafted the best-value pick in league history (Doug Baldwin, round 16, 2015) and still finished with the league's worst average draft value since. Talent evaluation isn't the problem; everything else might be.
 
@@ -209,29 +209,6 @@ Ranked on recent form (2023–2025 average finish), luck-adjusted context, and c
 **Biggest Trade Robbery:** Kyle Torpey over Jarett Coy, 2025 — Torpey sent Trey Benson (10.4 rest-of-season points) to get Quentin Johnston and George Pickens (365.8 combined rest-of-season points) — a net swing of 710.8 points, the most lopsided trade in league history. Runner-up: Jarett Coy's +216.6 win over Angelo Hernandez in 2023 (Calvin Ridley + Mike Evans for Bijan Robinson), proving Coy is capable of being on both ends of a robbery in the same career.
 
 **Best Waiver Pickup:** Derek Booker, Trevor Lawrence, added week 1 of 2025 — 338.2 rest-of-season points from a free-agent QB add. Runner-up: Dustin Gamble's Baker Mayfield pickup in week 2 of 2024 (336.1 points), the same season he won the title.
-
----
-
-## All-Time Trade Rankings
-
-27 trades on record since ESPN's transaction log starts in 2018. Ranked by "swing" — the gap in rest-of-season fantasy points between what each side gave up and what they got back. A trade with a small swing was a fair, competitive deal; a trade with a big swing was a heist.
-
-### Top 10 Most Lopsided Trades
-
-| # | Season | Winner | Got | Loser | Gave Up | Swing |
-|---|---|---|---|---|---|---|
-| 1 | 2025 | Kyle Torpey | Quentin Johnston + George Pickens (365.8 pts) | Jarett Coy | Trey Benson (10.4 pts) | 710.8 |
-| 2 | 2023 | Jarett Coy | Calvin Ridley + Mike Evans (411.4 pts) | Angelo Hernandez | Bijan Robinson (194.8 pts) | 433.2 |
-| 3 | 2025 | Angelo Hernandez | Jake Ferguson + Tony Pollard (332.7 pts) | Jarett Coy | Brian Thomas Jr. (120.9 pts) | 423.6 |
-| 4 | 2018 | Angelo Hernandez | James Conner (203.8 pts) | Derek Booker | Devonta Freeman (5.1 pts) | 397.4 |
-| 5 | 2024 | Dustin Gamble | James Cook (266.7 pts) | Johnny Marcks | Chris Olave (76.7 pts) | 380.0 |
-| 6 | 2024 | Corey Ploss | Xavier Worthy + Travis Etienne + Tank Bigsby + Cooper Kupp (390.8 pts) | Jarett Coy | Saquon Barkley (223.2 pts) | 335.2 |
-| 7 | 2025 | Jarett Coy | Michael Carter + Derrick Henry + Ja'Marr Chase (528.1 pts) | Corey Ploss | Jordan Addison + Bijan Robinson (387.0 pts) | 282.2 |
-| 8 | 2020 | Jarett Coy | Amari Cooper + Darren Waller (272.3 pts) | Johnny Marcks | Clyde Edwards-Helaire + Dalton Schultz (140.8 pts) | 263.0 |
-| 9 | 2018 | Alex Topham | Davante Adams (240.4 pts) | Johnny Marcks | Mark Ingram II (132.0 pts) | 216.8 |
-| 10 | 2023 | Jarett Coy | Kareem Hunt + Davante Adams + Royce Freeman (303.2 pts) | Derek Booker | Mike Evans (201.9 pts) | 202.6 |
-
-Jarett Coy is a party to 7 of these top 10 — 4 as the winner, 3 as the loser. Angelo Hernandez and Johnny Marcks each show up 3 times; nobody else appears more than twice.
 
 ---
 
