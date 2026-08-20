@@ -7,8 +7,15 @@
 <meta name="theme-color" content="#14161b" media="(prefers-color-scheme: dark)">
 <meta name="description" content="Wolves of Fantasy — 2026 season preview and all-time history for the ESPN fantasy football league.">
 <title>Wolves of Fantasy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
 <style>
   :root {
+    --font-display: "Barlow Condensed", "Oswald", "Arial Narrow", -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: "Barlow", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-mono: ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono", Menlo, Consolas, monospace;
+
     --bg: #eef0f1;
     --surface: #ffffff;
     --surface-2: #e4e7e8;
@@ -76,8 +83,8 @@
     margin: 0;
     background: var(--bg);
     color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-size: 16px;
+    font-family: var(--font-body);
+    font-size: 17px;
     line-height: 1.55;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
@@ -89,30 +96,31 @@
     padding: 0 20px;
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 700px) {
     .wrap { padding: 0 16px; }
   }
 
   h1, h2, h3, h4 {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-    font-weight: 800;
+    font-family: var(--font-display);
+    font-weight: 700;
     text-wrap: balance;
     margin: 0;
-    letter-spacing: -0.01em;
+    letter-spacing: 0.005em;
   }
 
   .eyebrow {
-    font-size: 12px;
+    font-family: var(--font-display);
+    font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.11em;
+    letter-spacing: 0.14em;
     color: var(--accent);
     display: block;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
   }
 
   .mono {
-    font-family: ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono", Menlo, Consolas, monospace;
+    font-family: var(--font-mono);
     font-variant-numeric: tabular-nums;
   }
 
@@ -161,10 +169,11 @@
     -webkit-overflow-scrolling: touch;
   }
   .topnav-brand {
-    font-weight: 800;
-    font-size: 13px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 15px;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.1em;
     white-space: nowrap;
     flex: none;
   }
@@ -193,18 +202,16 @@
     padding: 52px 0 30px;
     text-align: center;
   }
-  @media (max-width: 420px) {
-    .topnav-inner { padding: 0 16px; }
-    .hero { padding: 32px 0 24px; }
-  }
   .hero .eyebrow { text-align: center; }
   .hero h1 {
-    font-size: clamp(34px, 8vw, 58px);
+    font-size: clamp(46px, 13vw, 76px);
+    font-weight: 800;
+    line-height: 0.94;
     text-transform: uppercase;
-    letter-spacing: -0.01em;
+    letter-spacing: 0.01em;
   }
   .hero .tagline {
-    max-width: 62ch;
+    max-width: 58ch;
     margin: 18px auto 0;
     color: var(--text-soft);
     font-size: 16px;
@@ -244,17 +251,22 @@
   .chiprow .chip:hover { border-color: var(--accent); color: var(--text); }
   .chiprow .chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
 
-  section { padding: 8px 0 0; }
+  section {
+    padding: 8px 0 0;
+    scroll-margin-top: 62px; /* clears the sticky nav when jumping to an anchor */
+  }
   section h2 {
-    font-size: clamp(24px, 5vw, 32px);
+    font-size: clamp(30px, 7vw, 42px);
+    line-height: 1.06;
     text-transform: uppercase;
   }
   .section-head { margin-bottom: 26px; }
   .subhead {
-    font-size: 15px;
-    font-weight: 800;
+    font-family: var(--font-display);
+    font-size: 17px;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.09em;
     color: var(--accent);
     margin: 0 0 4px;
   }
@@ -262,7 +274,7 @@
     color: var(--text-soft);
     max-width: 65ch;
     margin-top: 10px;
-    font-size: 15px;
+    font-size: 15.5px;
   }
 
   /* ---------- power rankings ---------- */
@@ -469,7 +481,7 @@
   }
   .riv-note { color: var(--text-soft); font-size: 13.5px; flex-basis: 100%; }
 
-  /* ---------- history table ---------- */
+  /* ---------- data tables ---------- */
   .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
   table.standings {
     width: 100%;
@@ -484,18 +496,107 @@
     white-space: nowrap;
   }
   table.standings th {
-    font-size: 10.5px;
+    font-family: var(--font-display);
+    font-size: 12px;
     text-transform: uppercase;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.08em;
     color: var(--text-faint);
     font-weight: 700;
   }
   table.standings td.num, table.standings th.num {
-    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-family: var(--font-mono);
     font-variant-numeric: tabular-nums;
   }
   table.standings tbody tr:hover { background: var(--surface-2); }
-  table.standings td.mgr { font-weight: 700; }
+  table.standings td.mgr { font-weight: 600; }
+
+  /*
+    Below 700px a 6-to-12-column table cannot be read without pinch-zooming,
+    so each row re-flows into a labelled card: rank as an eyebrow, the subject
+    as a heading, and the remaining stats as a two-column label/value grid.
+    Nothing is hidden — the same data is simply stacked.
+  */
+  @media (max-width: 700px) {
+    .table-scroll { overflow-x: visible; }
+    table.standings { min-width: 0; display: block; font-size: 14px; }
+    table.standings thead {
+      position: absolute;
+      width: 1px; height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
+    table.standings tbody { display: block; }
+    table.standings tr {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 14px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      padding: 12px 14px 10px;
+      margin-bottom: 8px;
+    }
+    table.standings tbody tr:hover { background: var(--surface); }
+    /*
+      order decouples the mobile card layout from column order, so the
+      desktop <thead> stays in its natural reading sequence.
+    */
+    table.standings td {
+      order: 3;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+      border-bottom: none;
+      padding: 3px 0;
+      white-space: normal;
+      min-width: 0;
+    }
+    table.standings td::before {
+      content: attr(data-label);
+      font-family: var(--font-display);
+      font-size: 12.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--text-faint);
+      flex: none;
+    }
+    table.standings td[data-cell="rank"] {
+      order: 1;
+      grid-column: 1 / -1;
+      display: block;
+      padding: 0;
+      font-family: var(--font-display);
+      font-size: 12.5px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    table.standings td[data-cell="rank"]::before { content: attr(data-label) "\00a0"; color: var(--accent); }
+    table.standings td[data-cell="title"] {
+      order: 2;
+      grid-column: 1 / -1;
+      display: block;
+      padding: 0 0 8px;
+      margin-bottom: 8px;
+      border-bottom: 1px solid var(--line);
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+    table.standings td[data-cell="title"]::before { content: none; }
+    table.standings td[data-cell="wide"] {
+      order: 4;
+      grid-column: 1 / -1;
+      display: block;
+      padding: 4px 0 0;
+    }
+    table.standings td[data-cell="wide"]::before { display: block; margin-bottom: 1px; }
+  }
 
   /* ---------- season timeline ---------- */
   .timeline { margin-top: 32px; }
@@ -516,6 +617,94 @@
   .tl-champ { font-weight: 700; font-size: 14.5px; margin-bottom: 4px; }
   .tl-note { color: var(--text-soft); font-size: 13.5px; }
 
+  /* ---------- weekly recap ---------- */
+  .week-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 4px 4px 0;
+    padding: 18px 20px 20px;
+  }
+  .week-badge {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.11em;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .week-title {
+    font-size: clamp(24px, 6vw, 32px);
+    text-transform: uppercase;
+    line-height: 1.06;
+    margin-top: 3px;
+  }
+  .week-date { font-size: 13px; color: var(--text-faint); margin-top: 5px; }
+  .week-para { margin: 12px 0 0; color: var(--text-soft); font-size: 15.5px; }
+  .week-para strong { color: var(--text); }
+  .week-empty {
+    border: 1px dashed var(--line-strong);
+    border-radius: 4px;
+    padding: 28px 22px;
+    text-align: center;
+    color: var(--text-soft);
+  }
+  .week-empty .we-head {
+    font-family: var(--font-display);
+    font-size: 21px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+
+  .game-list { display: flex; flex-direction: column; gap: 6px; margin-top: 14px; }
+  .game {
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 9px 12px;
+  }
+  .game-side {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    padding: 2px 0;
+    color: var(--text-soft);
+  }
+  .game-side .gt { min-width: 0; overflow-wrap: anywhere; }
+  .game-side .gs { flex: none; font-variant-numeric: tabular-nums; }
+  .game-side.win { color: var(--text); font-weight: 600; }
+  .game-side.win .gs { color: var(--good); font-weight: 700; }
+
+  .week-archive { margin-top: 22px; }
+  details.week-old {
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    background: var(--surface);
+    margin-top: 8px;
+  }
+  details.week-old summary {
+    padding: 13px 16px;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    min-height: 48px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  details.week-old summary::-webkit-details-marker { display: none; }
+  details.week-old summary:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+  details.week-old .wo-when { font-family: var(--font-body); font-weight: 400; letter-spacing: 0; text-transform: none; color: var(--text-faint); font-size: 13px; }
+  details.week-old .week-body { padding: 0 16px 18px; border-top: 1px solid var(--line); padding-top: 12px; }
+
   footer {
     margin-top: 60px;
     padding: 28px 0 60px;
@@ -525,6 +714,23 @@
     line-height: 1.7;
   }
   footer strong { color: var(--text-soft); }
+
+  /* ---------- mobile density ---------- */
+  @media (max-width: 700px) {
+    .stub-divider { margin: 34px 0; }
+    .hero { padding: 28px 0 20px; }
+    .hero .tagline { font-size: 15.5px; }
+    .section-head { margin-bottom: 20px; }
+    .week-card { padding: 16px 16px 18px; }
+    details.mgr-card summary { padding: 14px 16px; }
+    .mgr-body { padding: 14px 16px 18px; }
+    .hof-card { padding: 14px 16px; }
+    footer { margin-top: 40px; padding: 22px 0 48px; }
+  }
+  @media (max-width: 560px) {
+    .topnav-brand { display: none; }
+    .topnav-inner { gap: 0; padding: 0 10px; }
+  }
 </style>
 </head>
 <body>
@@ -533,10 +739,11 @@
   <div class="topnav-inner">
     <span class="topnav-brand">Wolves of Fantasy</span>
     <nav class="topnav-links">
-      <a href="#recap-2025">2025 Recap</a>
+      <a href="#week">This Week</a>
       <a href="#rankings">Rankings</a>
       <a href="#managers">Managers</a>
-      <a href="#hof">Hall of Fame</a>
+      <a href="#recap-2025">2025</a>
+      <a href="#hof">Records</a>
       <a href="#trades">Trades</a>
       <a href="#waiver-rank">Waivers</a>
       <a href="#history">History</a>
@@ -547,31 +754,23 @@
 <div class="wrap">
 
   <header class="hero">
-    <span class="eyebrow">2026 Season Preview</span>
+    <span class="eyebrow" id="hero-eyebrow">2026 Season Preview</span>
     <h1>Wolves of Fantasy</h1>
-    <p class="tagline">Eleven seasons of data, one league that refuses to let anybody forget anything. Every number here comes straight off ESPN for league 684189 (2015&ndash;2025) &mdash; nothing is invented. The 2026 draft hasn't happened yet, so this preview ranks managers on the only thing we actually have: eleven years of receipts.</p>
-    <p class="meta">League ID <strong>684189</strong> &nbsp;&middot;&nbsp; <strong>11</strong> complete seasons &nbsp;&middot;&nbsp; updated <strong>Aug 12, 2026</strong></p>
+    <p class="tagline">Eleven seasons of data, one league that refuses to let anybody forget anything. Every number here comes straight off ESPN for league 684189 (2015&ndash;2025) &mdash; nothing is invented.</p>
+    <p class="meta" id="hero-meta"></p>
     <nav class="chiprow" aria-label="Jump to a manager" id="jumpchips"></nav>
   </header>
 
   <div class="stub-divider" role="presentation"></div>
 
-  <section id="recap-2025">
+  <section id="week">
     <div class="section-head">
-      <span class="eyebrow">Looking Back</span>
-      <h2>2025 Season Recap</h2>
-      <p class="section-sub">Before looking ahead, a quick look back at the season that just wrapped.</p>
+      <span class="eyebrow">The Latest</span>
+      <h2 id="week-heading">This Week</h2>
+      <p class="section-sub" id="week-sub">Weekly recaps land here through the season &mdash; newest on top, everything before it in the archive.</p>
     </div>
-    <div id="recap-2025-body"></div>
-    <h3 class="subhead" style="margin-top:32px;">Final Standings</h3>
-    <div class="table-scroll">
-      <table class="standings" id="recap-2025-table">
-        <thead>
-          <tr><th class="num">Rank</th><th>Manager</th><th>Team</th><th class="num">Record</th><th class="num">PF</th></tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-    </div>
+    <div id="week-latest"></div>
+    <div class="week-archive" id="week-archive"></div>
   </section>
 
   <div class="stub-divider" role="presentation"></div>
@@ -594,6 +793,26 @@
       <p class="section-sub">Tap a card for the full record, draft tendencies, trade/waiver activity, a bold prediction, and the roast they earned.</p>
     </div>
     <div class="mgr-grid" id="mgr-grid"></div>
+  </section>
+
+  <div class="stub-divider" role="presentation"></div>
+
+  <section id="recap-2025">
+    <div class="section-head">
+      <span class="eyebrow">Last Season</span>
+      <h2>2025 Season Recap</h2>
+      <p class="section-sub">How the season that just wrapped actually played out.</p>
+    </div>
+    <div id="recap-2025-body"></div>
+    <h3 class="subhead" style="margin-top:32px;">Final Standings</h3>
+    <div class="table-scroll">
+      <table class="standings" id="recap-2025-table">
+        <thead>
+          <tr><th class="num">Rank</th><th>Manager</th><th>Team</th><th class="num">Record</th><th class="num">PF</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
   </section>
 
   <div class="stub-divider" role="presentation"></div>
@@ -966,8 +1185,59 @@
     [12, "Jarett Coy", "18.5%", "66.2", "14,290.4", 221]
   ];
 
+  /* ============================================================
+     WEEKLY RECAPS — the only block you edit during the season.
+
+     Add the newest week to the TOP of this array. Everything else
+     (the hero date stamp, the "Week N" heading, the archive list)
+     is derived from it automatically.
+
+     {
+       season: 2026,
+       week:   1,
+       date:   "Sep 15, 2026",          // shown under the headline
+       headline: "Booker picks up where he left off",
+       paras: [                          // lead-in is bolded automatically
+         ["Derek Booker looked the part.", "He hung 148.2 on Kyle Torpey…"],
+         ["Dustin Gamble is still cursed.", "Another 4-point loss…"]
+       ],
+       games: [                          // winner first; omit for no scoreboard
+         ["Derek Booker", 148.2, "Kyle Torpey", 96.4],
+         ["Angelo Hernandez", 131.0, "Corey Ploss", 128.8]
+       ]
+     }
+     ============================================================ */
+  var WEEKS = [];
+
   function slug(name) { return name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, ""); }
   function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;"); }
+  function escAttr(s) { return esc(s).replace(/"/g, "&quot;"); }
+
+  /*
+    Renders a <table class="standings"> body. Each column declares a label,
+    which is echoed into data-label so the mobile card layout can show it
+    next to the value once the table stops being a table.
+      cell: "rank"  -> accent eyebrow at the top of the mobile card
+      cell: "title" -> the card's heading
+      cell: "wide"  -> full-width row, label above value (for long text)
+  */
+  function renderTable(sel, cols, rows) {
+    var tb = document.querySelector(sel + " tbody");
+    if (!tb) return;
+    var html = "";
+    rows.forEach(function (r) {
+      html += "<tr>";
+      cols.forEach(function (c, i) {
+        html += "<td" +
+          (c.cls ? ' class="' + c.cls + '"' : "") +
+          ' data-label="' + escAttr(c.label) + '"' +
+          (c.cell ? ' data-cell="' + c.cell + '"' : "") +
+          ">" + (c.get ? c.get(r) : esc(r[i])) + "</td>";
+      });
+      html += "</tr>";
+    });
+    tb.innerHTML = html;
+  }
 
   function sparkline(values) {
     var w = 56, h = 22, pad = 3;
@@ -1118,35 +1388,31 @@
   document.getElementById("riv-list").innerHTML = rivHtml;
 
   // ---- standings table ----
-  var tbody = document.querySelector("#standings-table tbody");
-  var rowsHtml = "";
-  STANDINGS.forEach(function (s) {
-    rowsHtml += '<tr>' +
-      '<td class="num">' + s[0] + '</td>' +
-      '<td class="mgr">' + esc(s[1]) + '</td>' +
-      '<td class="num">' + s[2] + '</td><td class="num">' + s[3] + '</td><td class="num">' + s[4] + '</td>' +
-      '<td class="num">' + s[5] + '</td><td class="num">' + s[6] + '</td>' +
-      '<td class="num">' + s[7] + '</td><td class="num">' + s[8] + '</td>' +
-      '<td class="num">' + s[9] + '</td><td class="num">' + s[10] + '</td><td class="num">' + s[11] + '</td>' +
-    '</tr>';
-  });
-  tbody.innerHTML = rowsHtml;
+  renderTable("#standings-table", [
+    { label: "Rank", cls: "num", cell: "rank" },
+    { label: "Manager", cls: "mgr", cell: "title" },
+    { label: "W", cls: "num" },
+    { label: "L", cls: "num" },
+    { label: "T", cls: "num" },
+    { label: "Win%", cls: "num" },
+    { label: "Avg Finish", cls: "num" },
+    { label: "PF", cls: "num" },
+    { label: "PA", cls: "num" },
+    { label: "Titles", cls: "num" },
+    { label: "Last", cls: "num" },
+    { label: "Playoffs", cls: "num" }
+  ], STANDINGS);
 
   // ---- trade tables ----
-  var tradesTbody = document.querySelector("#trades-table tbody");
-  var tradesRows = "";
-  TRADE_TOP10.forEach(function (t) {
-    tradesRows += '<tr>' +
-      '<td class="num">' + t[0] + '</td>' +
-      '<td class="num">' + esc(t[1]) + '</td>' +
-      '<td class="mgr">' + esc(t[2]) + '</td>' +
-      '<td>' + esc(t[3]) + '</td>' +
-      '<td class="mgr">' + esc(t[4]) + '</td>' +
-      '<td>' + esc(t[5]) + '</td>' +
-      '<td class="num">' + esc(t[6]) + '</td>' +
-    '</tr>';
-  });
-  tradesTbody.innerHTML = tradesRows;
+  renderTable("#trades-table", [
+    { label: "Rank", cls: "num", cell: "rank" },
+    { label: "Season", cls: "num" },
+    { label: "Winner", cls: "mgr", cell: "title" },
+    { label: "Got", cell: "wide" },
+    { label: "Loser", cls: "mgr", cell: "wide" },
+    { label: "Gave Up", cell: "wide" },
+    { label: "Swing", cls: "num" }
+  ], TRADE_TOP10);
 
   var coyTop10 = TRADE_TOP10.filter(function (t) { return t[2] === "Jarett Coy" || t[4] === "Jarett Coy"; });
   var coyWins = coyTop10.filter(function (t) { return t[2] === "Jarett Coy"; }).length;
@@ -1155,19 +1421,14 @@
     "Jarett Coy is a party to " + coyTop10.length + " of these top 10 — " + coyWins + " as the winner, " + coyLosses + " as the loser. Angelo Hernandez and Johnny Marcks each show up 3 times; nobody else appears more than twice.";
 
   // ---- waiver effectiveness ranking ----
-  var waiverRankTbody = document.querySelector("#waiver-rank-table tbody");
-  var waiverRankRows = "";
-  WAIVER_RANK.forEach(function (w) {
-    waiverRankRows += '<tr>' +
-      '<td class="num">' + w[0] + '</td>' +
-      '<td class="mgr">' + esc(w[1]) + '</td>' +
-      '<td class="num">' + esc(w[2]) + '</td>' +
-      '<td class="num">' + esc(w[3]) + '</td>' +
-      '<td class="num">' + esc(w[4]) + '</td>' +
-      '<td class="num">' + w[5] + '</td>' +
-    '</tr>';
-  });
-  waiverRankTbody.innerHTML = waiverRankRows;
+  renderTable("#waiver-rank-table", [
+    { label: "Rank", cls: "num", cell: "rank" },
+    { label: "Manager", cls: "mgr", cell: "title" },
+    { label: "Hit Rate", cls: "num" },
+    { label: "Avg Value/Add", cls: "num" },
+    { label: "Total Value", cls: "num" },
+    { label: "Adds", cls: "num" }
+  ], WAIVER_RANK);
 
   // ---- 2025 season recap ----
   var recapHtml = "";
@@ -1176,18 +1437,79 @@
   });
   document.getElementById("recap-2025-body").innerHTML = recapHtml;
 
-  var recapTbody = document.querySelector("#recap-2025-table tbody");
-  var recapRows = "";
-  RECAP_2025_STANDINGS.forEach(function (r) {
-    recapRows += '<tr>' +
-      '<td class="num">' + r[0] + '</td>' +
-      '<td class="mgr">' + esc(r[1]) + '</td>' +
-      '<td>' + esc(r[2]) + '</td>' +
-      '<td class="num mono">' + esc(r[3]) + '</td>' +
-      '<td class="num">' + esc(r[4]) + '</td>' +
-    '</tr>';
-  });
-  recapTbody.innerHTML = recapRows;
+  renderTable("#recap-2025-table", [
+    { label: "Rank", cls: "num", cell: "rank" },
+    { label: "Manager", cls: "mgr", cell: "title" },
+    { label: "Team", cell: "wide" },
+    { label: "Record", cls: "num mono" },
+    { label: "PF", cls: "num" }
+  ], RECAP_2025_STANDINGS);
+
+  // ---- weekly recaps ----
+  function gameHtml(g) {
+    return '<div class="game">' +
+      '<div class="game-side win"><span class="gt">' + esc(g[0]) + '</span><span class="gs mono">' + esc(g[1]) + '</span></div>' +
+      '<div class="game-side"><span class="gt">' + esc(g[2]) + '</span><span class="gs mono">' + esc(g[3]) + '</span></div>' +
+    '</div>';
+  }
+
+  function weekBodyHtml(w) {
+    var h = "";
+    (w.paras || []).forEach(function (p) {
+      h += '<p class="week-para"><strong>' + p[0] + '</strong> ' + p[1] + '</p>';
+    });
+    if (w.games && w.games.length) {
+      h += '<div class="game-list">' + w.games.map(gameHtml).join("") + '</div>';
+    }
+    return h;
+  }
+
+  var latestEl = document.getElementById("week-latest");
+  var archiveEl = document.getElementById("week-archive");
+
+  if (!WEEKS.length) {
+    latestEl.innerHTML =
+      '<div class="week-empty">' +
+        '<div class="we-head">Season hasn’t kicked off yet</div>' +
+        '<div>The 2026 draft hasn’t happened. Once games start, each week’s recap lands here — ' +
+        'scores, what actually happened, and who has some explaining to do.</div>' +
+      '</div>';
+    document.getElementById("week-heading").textContent = "This Week";
+  } else {
+    var latest = WEEKS[0];
+    document.getElementById("week-heading").textContent = "Week " + latest.week + " Recap";
+    document.getElementById("week-sub").textContent =
+      "The " + latest.season + " season, week by week. Newest on top; everything before it is in the archive below.";
+    latestEl.innerHTML =
+      '<article class="week-card">' +
+        '<div class="week-badge">' + latest.season + " · Week " + latest.week + '</div>' +
+        '<h3 class="week-title">' + esc(latest.headline) + '</h3>' +
+        (latest.date ? '<div class="week-date">' + esc(latest.date) + '</div>' : "") +
+        weekBodyHtml(latest) +
+      '</article>';
+
+    var older = WEEKS.slice(1);
+    if (older.length) {
+      archiveEl.innerHTML =
+        '<h3 class="subhead">Earlier Weeks</h3>' +
+        older.map(function (w) {
+          return '<details class="week-old">' +
+            '<summary>' +
+              '<span>Week ' + w.week + " — " + esc(w.headline) + '</span>' +
+              (w.date ? '<span class="wo-when">' + esc(w.date) + '</span>' : "") +
+            '</summary>' +
+            '<div class="week-body">' + weekBodyHtml(w) + '</div>' +
+          '</details>';
+        }).join("");
+    }
+  }
+
+  // ---- hero stamp, derived from the newest content on the page ----
+  document.getElementById("hero-eyebrow").textContent =
+    WEEKS.length ? WEEKS[0].season + " Season · Week " + WEEKS[0].week : "2026 Season Preview";
+  document.getElementById("hero-meta").innerHTML =
+    'League ID <strong>684189</strong> &nbsp;&middot;&nbsp; <strong>11</strong> complete seasons' +
+    (WEEKS.length && WEEKS[0].date ? ' &nbsp;&middot;&nbsp; updated <strong>' + esc(WEEKS[0].date) + '</strong>' : "");
 
   // ---- timeline ----
   var tlHtml = "";
