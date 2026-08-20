@@ -1,0 +1,1186 @@
+<title>Wolves of Fantasy</title>
+<style>
+  :root {
+    --bg: #eef0f1;
+    --surface: #ffffff;
+    --surface-2: #e4e7e8;
+    --text: #191b1f;
+    --text-soft: #565c66;
+    --text-faint: #838993;
+    --accent: #a3690f;
+    --accent-strong: #8a5808;
+    --accent-ink: #221703;
+    --rust: #a23a2c;
+    --rust-ink: #ffffff;
+    --good: #2f6a45;
+    --line: rgba(25, 27, 31, 0.13);
+    --line-strong: rgba(25, 27, 31, 0.28);
+    --shadow: 0 1px 0 rgba(25, 27, 31, 0.06);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14161b;
+      --surface: #1c1f26;
+      --surface-2: #262a33;
+      --text: #eef0f1;
+      --text-soft: #a7adb8;
+      --text-faint: #6c7280;
+      --accent: #e3a53d;
+      --accent-strong: #f0b552;
+      --accent-ink: #241a06;
+      --rust: #e2664f;
+      --rust-ink: #221008;
+      --good: #5fae7c;
+      --line: rgba(238, 240, 241, 0.14);
+      --line-strong: rgba(238, 240, 241, 0.28);
+      --shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #14161b;
+    --surface: #1c1f26;
+    --surface-2: #262a33;
+    --text: #eef0f1;
+    --text-soft: #a7adb8;
+    --text-faint: #6c7280;
+    --accent: #e3a53d;
+    --accent-strong: #f0b552;
+    --accent-ink: #241a06;
+    --rust: #e2664f;
+    --rust-ink: #221008;
+    --good: #5fae7c;
+    --line: rgba(238, 240, 241, 0.14);
+    --line-strong: rgba(238, 240, 241, 0.28);
+    --shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { animation: none !important; transition: none !important; }
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 800;
+    text-wrap: balance;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+
+  .eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.11em;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .mono {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono", Menlo, Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  a { color: inherit; }
+
+  /* ---------- ticket-stub divider ---------- */
+  .stub-divider {
+    position: relative;
+    height: 1px;
+    background: var(--line);
+    margin: 56px 0;
+  }
+  .stub-divider::before,
+  .stub-divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    transform: translateY(-50%);
+  }
+  .stub-divider::before { left: -20px; }
+  .stub-divider::after { right: -20px; }
+
+  /* ---------- nav ---------- */
+  .topnav {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .topnav-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    height: 52px;
+    overflow-x: auto;
+  }
+  .topnav-brand {
+    font-weight: 800;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+    flex: none;
+  }
+  .topnav-links {
+    display: flex;
+    gap: 4px;
+    flex: none;
+  }
+  .topnav-links a {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-soft);
+    padding: 8px 10px;
+    white-space: nowrap;
+    border-radius: 3px;
+  }
+  .topnav-links a:hover { color: var(--text); background: var(--surface-2); }
+  .topnav-links a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  /* ---------- hero ---------- */
+  .hero {
+    padding: 52px 0 30px;
+    text-align: center;
+  }
+  .hero .eyebrow { text-align: center; }
+  .hero h1 {
+    font-size: clamp(34px, 8vw, 58px);
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+  }
+  .hero .tagline {
+    max-width: 62ch;
+    margin: 18px auto 0;
+    color: var(--text-soft);
+    font-size: 16px;
+  }
+  .hero .meta {
+    margin-top: 18px;
+    font-size: 12px;
+    color: var(--text-faint);
+    letter-spacing: 0.04em;
+  }
+  .hero .meta strong { color: var(--text-soft); }
+
+  /* ---------- quick jump chips ---------- */
+  .chiprow {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 8px;
+    padding: 4px 0 8px;
+    margin-top: 22px;
+    -ms-overflow-style: none;
+    scrollbar-width: thin;
+  }
+  .chiprow .chip {
+    flex: none;
+    font-size: 12.5px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text-soft);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    padding: 7px 12px;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+  .chiprow .chip:hover { border-color: var(--accent); color: var(--text); }
+  .chiprow .chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+  section { padding: 8px 0 0; }
+  section h2 {
+    font-size: clamp(24px, 5vw, 32px);
+    text-transform: uppercase;
+  }
+  .section-head { margin-bottom: 26px; }
+  .subhead {
+    font-size: 15px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    margin: 0 0 4px;
+  }
+  .section-sub {
+    color: var(--text-soft);
+    max-width: 65ch;
+    margin-top: 10px;
+    font-size: 15px;
+  }
+
+  /* ---------- power rankings ---------- */
+  .rank-row {
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    gap: 16px;
+    padding: 18px 0;
+    border-top: 1px solid var(--line);
+    align-items: start;
+  }
+  .rank-row:last-child { border-bottom: 1px solid var(--line); }
+  .rank-num {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    font-weight: 800;
+    font-size: 26px;
+    color: var(--accent);
+    line-height: 1.1;
+    font-variant-numeric: tabular-nums;
+  }
+  .rank-body .rank-name-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .rank-name {
+    font-weight: 800;
+    font-size: 18px;
+  }
+  .nickname {
+    font-weight: 700;
+    font-style: italic;
+    color: var(--accent);
+    font-size: 0.82em;
+  }
+  .rank-form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .rank-form svg { display: block; }
+  .rank-form .form-label {
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-faint);
+  }
+  .rank-reason {
+    color: var(--text-soft);
+    font-size: 14.5px;
+    margin-top: 6px;
+  }
+  .rank-reason em { color: var(--text); font-style: normal; font-weight: 600; }
+
+  /* ---------- manager cards ---------- */
+  .mgr-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  @media (max-width: 640px) {
+    .mgr-grid { grid-template-columns: 1fr; }
+  }
+
+  details.mgr-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    scroll-margin-top: 68px;
+  }
+  details.mgr-card[open] { border-color: var(--line-strong); }
+  details.mgr-card summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 16px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  details.mgr-card summary::-webkit-details-marker { display: none; }
+  details.mgr-card summary:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+
+  .mgr-summary-left { min-width: 0; }
+  .mgr-badge {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+  }
+  .mgr-name { font-weight: 800; font-size: 16.5px; margin-top: 2px; }
+  .mgr-stat-line {
+    font-size: 12.5px;
+    color: var(--text-soft);
+    margin-top: 4px;
+  }
+  .mgr-chevron {
+    flex: none;
+    width: 22px;
+    height: 22px;
+    color: var(--text-faint);
+    transition: transform 0.15s ease;
+  }
+  details.mgr-card[open] .mgr-chevron { transform: rotate(180deg); }
+
+  .mgr-body {
+    padding: 0 18px 20px;
+    border-top: 1px solid var(--line);
+    padding-top: 16px;
+  }
+  .mgr-field { margin-bottom: 12px; font-size: 14px; }
+  .mgr-field:last-child { margin-bottom: 0; }
+  .mgr-field .fk {
+    font-size: 10.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-faint);
+    display: block;
+    margin-bottom: 3px;
+  }
+  .mgr-field.pred { color: var(--text); }
+  .mgr-field.roast {
+    background: color-mix(in srgb, var(--rust) 10%, transparent);
+    border-left: 3px solid var(--rust);
+    padding: 10px 12px;
+    border-radius: 0 3px 3px 0;
+  }
+  .mgr-field.roast .fk { color: var(--rust); }
+  .mgr-field.champ-deep-dive {
+    background: color-mix(in srgb, var(--good) 10%, transparent);
+    border-left: 3px solid var(--good);
+    padding: 10px 12px;
+    border-radius: 0 3px 3px 0;
+  }
+  .mgr-field.champ-deep-dive .fk { color: var(--good); }
+  .history-spark { display: inline-block; vertical-align: middle; margin-right: 8px; }
+
+  .stat-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+    padding: 12px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 14px;
+    font-size: 13px;
+  }
+  .stat-chips .sc-label { color: var(--text-faint); }
+  .stat-chips .sc-val { font-weight: 700; }
+  .sc-val.pos, td.pos { color: var(--good); font-weight: 700; }
+  .sc-val.neg, td.neg { color: var(--rust); font-weight: 700; }
+
+  /* ---------- hall of fame ---------- */
+  .hof-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .hof-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 3px 3px 0;
+    padding: 16px 18px;
+  }
+  .hof-card.rust { border-left-color: var(--rust); }
+  .hof-card.good { border-left-color: var(--good); }
+  .hof-title {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-faint);
+    margin-bottom: 6px;
+  }
+  .hof-headline {
+    font-weight: 800;
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+  .hof-body { color: var(--text-soft); font-size: 14px; }
+
+  /* ---------- rivalries ---------- */
+  .riv-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px 0;
+    border-top: 1px solid var(--line);
+    flex-wrap: wrap;
+  }
+  .riv-row:last-child { border-bottom: 1px solid var(--line); }
+  .riv-names { font-weight: 700; font-size: 15px; flex: 1 1 220px; }
+  .riv-record {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-weight: 800;
+    color: var(--accent);
+    flex: none;
+    font-size: 15px;
+  }
+  .riv-note { color: var(--text-soft); font-size: 13.5px; flex-basis: 100%; }
+
+  /* ---------- history table ---------- */
+  .table-scroll { overflow-x: auto; }
+  table.standings {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+    min-width: 640px;
+  }
+  table.standings th, table.standings td {
+    text-align: left;
+    padding: 9px 10px;
+    border-bottom: 1px solid var(--line);
+    white-space: nowrap;
+  }
+  table.standings th {
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-faint);
+    font-weight: 700;
+  }
+  table.standings td.num, table.standings th.num {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+  table.standings tbody tr:hover { background: var(--surface-2); }
+  table.standings td.mgr { font-weight: 700; }
+
+  /* ---------- season timeline ---------- */
+  .timeline { margin-top: 32px; }
+  .tl-row {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 16px;
+    padding: 16px 0;
+    border-top: 1px solid var(--line);
+  }
+  .tl-row:last-child { border-bottom: 1px solid var(--line); }
+  .tl-year {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-weight: 800;
+    font-size: 16px;
+    color: var(--accent);
+  }
+  .tl-champ { font-weight: 700; font-size: 14.5px; margin-bottom: 4px; }
+  .tl-note { color: var(--text-soft); font-size: 13.5px; }
+
+  footer {
+    margin-top: 60px;
+    padding: 28px 0 60px;
+    border-top: 1px solid var(--line);
+    color: var(--text-faint);
+    font-size: 12.5px;
+    line-height: 1.7;
+  }
+  footer strong { color: var(--text-soft); }
+</style>
+
+<div class="topnav">
+  <div class="topnav-inner">
+    <span class="topnav-brand">Wolves of Fantasy</span>
+    <nav class="topnav-links">
+      <a href="#recap-2025">2025 Recap</a>
+      <a href="#rankings">Rankings</a>
+      <a href="#managers">Managers</a>
+      <a href="#hof">Hall of Fame</a>
+      <a href="#trades">Trades</a>
+      <a href="#waiver-rank">Waivers</a>
+      <a href="#history">History</a>
+    </nav>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <header class="hero">
+    <span class="eyebrow">2026 Season Preview</span>
+    <h1>Wolves of Fantasy</h1>
+    <p class="tagline">Eleven seasons of data, one league that refuses to let anybody forget anything. Every number here comes straight off ESPN for league 684189 (2015&ndash;2025) &mdash; nothing is invented. The 2026 draft hasn't happened yet, so this preview ranks managers on the only thing we actually have: eleven years of receipts.</p>
+    <p class="meta">League ID <strong>684189</strong> &nbsp;&middot;&nbsp; <strong>11</strong> complete seasons &nbsp;&middot;&nbsp; updated <strong>Aug 12, 2026</strong></p>
+    <nav class="chiprow" aria-label="Jump to a manager" id="jumpchips"></nav>
+  </header>
+
+  <div class="stub-divider" role="presentation"></div>
+
+  <section id="recap-2025">
+    <div class="section-head">
+      <span class="eyebrow">Looking Back</span>
+      <h2>2025 Season Recap</h2>
+      <p class="section-sub">Before looking ahead, a quick look back at the season that just wrapped.</p>
+    </div>
+    <div id="recap-2025-body"></div>
+    <h3 class="subhead" style="margin-top:32px;">Final Standings</h3>
+    <div class="table-scroll">
+      <table class="standings" id="recap-2025-table">
+        <thead>
+          <tr><th class="num">Rank</th><th>Manager</th><th>Team</th><th class="num">Record</th><th class="num">PF</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="stub-divider" role="presentation"></div>
+
+  <section id="rankings">
+    <div class="section-head">
+      <span class="eyebrow">The Field</span>
+      <h2>2026 Power Rankings</h2>
+      <p class="section-sub">Ranked on recent form (2023&ndash;2025 average finish), luck-adjusted context, and career trajectory. The sparkline is each manager's last three finishes &mdash; up is better.</p>
+    </div>
+    <div id="rankings-list"></div>
+  </section>
+
+  <div class="stub-divider" role="presentation"></div>
+
+  <section id="managers">
+    <div class="section-head">
+      <span class="eyebrow">The Roster</span>
+      <h2>Manager Profiles</h2>
+      <p class="section-sub">Tap a card for the full record, draft tendencies, trade/waiver activity, a bold prediction, and the roast they earned.</p>
+    </div>
+    <div class="mgr-grid" id="mgr-grid"></div>
+  </section>
+
+  <div class="stub-divider" role="presentation"></div>
+
+  <section id="hof">
+    <div class="section-head">
+      <span class="eyebrow">All-Time</span>
+      <h2>League Superlatives</h2>
+      <p class="section-sub">The best, worst, and most improbable moments from eleven years of drafts, trades, and waivers.</p>
+    </div>
+    <div class="hof-grid" id="hof-grid"></div>
+  </section>
+
+  <div class="stub-divider" role="presentation"></div>
+
+  <section id="trades">
+    <div class="section-head">
+      <span class="eyebrow">Show Me The Receipts</span>
+      <h2>All-Time Trade Rankings</h2>
+      <p class="section-sub">27 trades on record since ESPN's transaction log starts in 2018. Ranked by "swing" &mdash; the gap in rest-of-season fantasy points between what each side gave up and what they got back. A trade with a small swing was a fair, competitive deal; a trade with a big swing was a heist.</p>
+    </div>
+    <h3 class="subhead">Top 10 Most Lopsided Trades</h3>
+    <div class="table-scroll">
+      <table class="standings" id="trades-table">
+        <thead>
+          <tr><th class="num">#</th><th>Season</th><th>Winner</th><th>Got</th><th>Loser</th><th>Gave Up</th><th class="num">Swing</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <p class="section-sub" id="trades-note" style="margin-top:10px;"></p>
+  </section>
+
+  <div class="stub-divider" role="presentation"></div>
+
+  <section id="waiver-rank">
+    <div class="section-head">
+      <span class="eyebrow">Actual Signal</span>
+      <h2>Waiver Wire Effectiveness Ranking</h2>
+      <p class="section-sub">Unlike trades, ESPN's waiver data is complete and verified &mdash; every add, every result. Ranked by <strong>hit rate</strong> (the share of a manager's adds that scored 100+ rest-of-season points, roughly the 90th percentile of all 2,685 evaluable pickups league-wide) and <strong>average value per add</strong>, since raw volume measures activity, not effectiveness. Composite rank averages the two.</p>
+    </div>
+    <div class="table-scroll">
+      <table class="standings" id="waiver-rank-table">
+        <thead>
+          <tr><th class="num">#</th><th>Manager</th><th class="num">Hit Rate</th><th class="num">Avg Value/Add</th><th class="num">Total Value Produced</th><th class="num">Adds</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <p class="section-sub" style="margin-top:14px;"><strong>Alex Topham is the clear #1</strong> &mdash; best in the league on both quality metrics at once (highest hit rate <em>and</em> highest average value), despite only middling volume. <strong>Jarett Coy is dead last</strong>, worst hit rate in the league. Worth flagging: <strong>Derek Booker's total value (41,343) dwarfs everyone else's</strong>, but that's a volume effect &mdash; 599 adds at a merely average 69.0/add hit rate. He's active, not efficient; Topham is efficient without needing the volume.</p>
+  </section>
+
+  <div class="stub-divider" role="presentation"></div>
+
+  <section id="rivalries-section">
+    <div class="section-head">
+      <span class="eyebrow">Circle These</span>
+      <h2>Rivalries to Watch</h2>
+    </div>
+    <div id="riv-list"></div>
+  </section>
+
+  <div class="stub-divider" role="presentation"></div>
+
+  <section id="history">
+    <div class="section-head">
+      <span class="eyebrow">The Record Book</span>
+      <h2>All-Time History</h2>
+      <p class="section-sub">Regular-season W-L-T, 2015&ndash;2025. Team names change every year; managers don't &mdash; every row is tied to the person, not the team name.</p>
+    </div>
+    <div class="table-scroll">
+      <table class="standings" id="standings-table">
+        <thead>
+          <tr>
+            <th>Rank</th><th>Manager</th>
+            <th class="num">W</th><th class="num">L</th><th class="num">T</th><th class="num">Win%</th>
+            <th class="num">Avg&nbsp;Fin.</th><th class="num">PF</th><th class="num">PA</th>
+            <th class="num">Titles</th><th class="num">Last</th><th class="num">Playoffs</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <p class="section-sub" style="margin-top:14px;">Andrew Campbell has played 8 seasons, not 11 &mdash; his rate stats hold up fine, his counting stats don't. Johnny Marcks owns the best all-time win percentage and has zero rings. Jarett Coy has the most championships (3) of anyone but a below-.500 record and two last-place finishes &mdash; the streakiest résumé in the league.</p>
+
+    <h3 class="subhead" style="margin-top:36px;">League Records</h3>
+    <p class="section-sub">Single-game and streak records pulled from all 1,026 matchups on file, 2015&ndash;2025.</p>
+    <div class="hof-grid" id="records-grid" style="margin-top:18px;"></div>
+    <p class="section-sub" id="records-note" style="margin-top:14px;"></p>
+
+    <div class="timeline" id="timeline"></div>
+
+    <div class="section-head" style="margin-top:44px;">
+      <span class="eyebrow">The Fine Print</span>
+      <h2 style="font-size:20px;">Data Notes &amp; Gaps</h2>
+    </div>
+    <p class="section-sub">Draft results, standings, and full weekly matchup/playoff data are complete for all 11 seasons. <strong style="color:var(--text)">ESPN's transaction log (trades, waivers, free-agent adds) is only available from 2018 onward</strong> &mdash; 2015&ndash;2017 have no trade/waiver data; that's a hard ESPN platform limit, not a gap in this pull. 2017 ran with 11 teams after Phil Lannon left the league (Andrew Campbell didn't join until 2018). The 2026 season exists on ESPN but has no draft and empty rosters as of this pull &mdash; the draft hasn't happened yet.</p>
+  </section>
+
+  <footer>
+    <strong>Source:</strong> ESPN Fantasy Football API, league 684189. Pulled and analyzed 2026-08-12. Luck index uses an all-play method (expected wins from weekly score rank vs. actual head-to-head result). Draft/trade/waiver value uses each player's rest-of-season fantasy points from the pick, trade, or add date forward.
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  var MANAGERS = {"Derek Booker": {"record": "79-61-0", "win_pct": 0.5643, "avg_finish": 4.09, "champs": 1, "champ_seasons": ["2025"], "last": 0, "last_seasons": [], "playoffs": 10, "seasons_played": 11, "luck": -0.27, "waivers": 599, "recent": [2, 9, 1], "history": [6, 5, 2, 3, 5, 5, 2, 5, 2, 9, 1], "history_range": ["2015", "2025"], "best_rival": {"opponent": "Andrew Campbell", "w": 11, "l": 3, "t": 0, "margin": 8}, "worst_rival": {"opponent": "Tyler Scarlett", "w": 6, "l": 10, "t": 0, "margin": -4}, "pf": 15770.5, "pa": 14755.0}, "Tyler Scarlett": {"record": "69-70-1", "win_pct": 0.4964, "avg_finish": 5.91, "champs": 1, "champ_seasons": ["2017"], "last": 0, "last_seasons": [], "playoffs": 7, "seasons_played": 11, "luck": 0.47, "waivers": 198, "recent": [3, 2, 10], "history": [2, 8, 1, 4, 7, 10, 7, 11, 3, 2, 10], "history_range": ["2015", "2025"], "best_rival": {"opponent": "Derek Booker", "w": 10, "l": 6, "t": 0, "margin": 4}, "worst_rival": {"opponent": "Dakota Bender", "w": 5, "l": 10, "t": 0, "margin": -5}, "pf": 14791.6, "pa": 14782.6}, "Alex Topham": {"record": "77-62-1", "win_pct": 0.5536, "avg_finish": 5.73, "champs": 1, "champ_seasons": ["2018"], "last": 1, "last_seasons": ["2022"], "playoffs": 9, "seasons_played": 11, "luck": 2.14, "waivers": 242, "recent": [6, 4, 5], "history": [5, 3, 6, 1, 11, 7, 3, 12, 6, 4, 5], "history_range": ["2015", "2025"], "best_rival": {"opponent": "Dakota Bender", "w": 12, "l": 4, "t": 0, "margin": 8}, "worst_rival": {"opponent": "Jarett Coy", "w": 5, "l": 11, "t": 0, "margin": -6}, "pf": 15223.2, "pa": 14691.4}, "Johnny Marcks": {"record": "79-60-1", "win_pct": 0.5679, "avg_finish": 5.27, "champs": 0, "champ_seasons": [], "last": 0, "last_seasons": [], "playoffs": 10, "seasons_played": 11, "luck": 3.38, "waivers": 165, "recent": [4, 6, 8], "history": [3, 2, 4, 7, 6, 8, 8, 2, 4, 6, 8], "history_range": ["2015", "2025"], "best_rival": {"opponent": "Kyle Torpey", "w": 13, "l": 4, "t": 0, "margin": 9}, "worst_rival": {"opponent": "Derek Booker", "w": 7, "l": 11, "t": 0, "margin": -4}, "pf": 14986.8, "pa": 14628.8}, "Jarett Coy": {"record": "64-76-0", "win_pct": 0.4571, "avg_finish": 6.0, "champs": 3, "champ_seasons": ["2015", "2016", "2021"], "last": 2, "last_seasons": ["2017", "2020"], "playoffs": 6, "seasons_played": 11, "luck": -2.82, "waivers": 221, "recent": [11, 10, 4], "history": [1, 1, 11, 2, 9, 12, 1, 4, 11, 10, 4], "history_range": ["2015", "2025"], "best_rival": {"opponent": "Alex Topham", "w": 11, "l": 5, "t": 0, "margin": 6}, "worst_rival": {"opponent": "Pj Lannon", "w": 5, "l": 11, "t": 0, "margin": -6}, "pf": 14556.9, "pa": 14800.3}, "Dakota Bender": {"record": "61-79-0", "win_pct": 0.4357, "avg_finish": 8.55, "champs": 0, "champ_seasons": [], "last": 2, "last_seasons": ["2015", "2019"], "playoffs": 4, "seasons_played": 11, "luck": -1.48, "waivers": 314, "recent": [7, 5, 11], "history": [12, 9, 8, 11, 12, 11, 5, 3, 7, 5, 11], "history_range": ["2015", "2025"], "best_rival": {"opponent": "Tyler Scarlett", "w": 10, "l": 5, "t": 0, "margin": 5}, "worst_rival": {"opponent": "Alex Topham", "w": 4, "l": 12, "t": 0, "margin": -8}, "pf": 14385.1, "pa": 14977.9}, "Corey Ploss": {"record": "68-72-0", "win_pct": 0.4857, "avg_finish": 7.45, "champs": 0, "champ_seasons": [], "last": 1, "last_seasons": ["2023"], "playoffs": 6, "seasons_played": 11, "luck": -1.3, "waivers": 163, "recent": [12, 11, 3], "history": [4, 7, 5, 10, 8, 9, 4, 9, 12, 11, 3], "history_range": ["2015", "2025"], "best_rival": {"opponent": "Dakota Bender", "w": 13, "l": 6, "t": 0, "margin": 7}, "worst_rival": {"opponent": "Derek Booker", "w": 5, "l": 12, "t": 0, "margin": -7}, "pf": 14718.4, "pa": 15111.1}, "Kyle Torpey": {"record": "61-77-1", "win_pct": 0.4424, "avg_finish": 7.73, "champs": 0, "champ_seasons": [], "last": 0, "last_seasons": [], "playoffs": 5, "seasons_played": 11, "luck": 1.61, "waivers": 111, "recent": [10, 8, 9], "history": [11, 11, 3, 6, 4, 6, 9, 8, 10, 8, 9], "history_range": ["2015", "2025"], "best_rival": {"opponent": "Angelo Hernandez", "w": 10, "l": 6, "t": 0, "margin": 4}, "worst_rival": {"opponent": "Johnny Marcks", "w": 4, "l": 13, "t": 0, "margin": -9}, "pf": 13960.8, "pa": 15020.4}, "Dustin Gamble": {"record": "69-70-1", "win_pct": 0.4964, "avg_finish": 7.18, "champs": 1, "champ_seasons": ["2024"], "last": 1, "last_seasons": ["2025"], "playoffs": 5, "seasons_played": 11, "luck": -4.3, "waivers": 134, "recent": [8, 1, 12], "history": [10, 4, 7, 9, 10, 2, 6, 10, 8, 1, 12], "history_range": ["2015", "2025"], "best_rival": {"opponent": "Angelo Hernandez", "w": 11, "l": 4, "t": 0, "margin": 7}, "worst_rival": {"opponent": "Pj Lannon", "w": 4, "l": 11, "t": 0, "margin": -7}, "pf": 15069.3, "pa": 15108.2}, "Pj Lannon": {"record": "72-68-0", "win_pct": 0.5143, "avg_finish": 6.73, "champs": 1, "champ_seasons": ["2022"], "last": 1, "last_seasons": ["2024"], "playoffs": 6, "seasons_played": 11, "luck": 8.36, "waivers": 170, "recent": [9, 12, 6], "history": [9, 6, 9, 5, 2, 4, 11, 1, 9, 12, 6], "history_range": ["2015", "2025"], "best_rival": {"opponent": "Dustin Gamble", "w": 11, "l": 4, "t": 0, "margin": 7}, "worst_rival": {"opponent": "Derek Booker", "w": 5, "l": 10, "t": 0, "margin": -5}, "pf": 14690.9, "pa": 14383.8}, "Angelo Hernandez": {"record": "64-75-1", "win_pct": 0.4607, "avg_finish": 5.91, "champs": 1, "champ_seasons": ["2023"], "last": 0, "last_seasons": [], "playoffs": 7, "seasons_played": 11, "luck": -1.05, "waivers": 245, "recent": [1, 3, 2], "history": [8, 10, 10, 8, 3, 3, 10, 7, 1, 3, 2], "history_range": ["2015", "2025"], "best_rival": {"opponent": "Tyler Scarlett", "w": 11, "l": 6, "t": 0, "margin": 5}, "worst_rival": {"opponent": "Dustin Gamble", "w": 4, "l": 11, "t": 0, "margin": -7}, "pf": 14556.9, "pa": 14880.6}, "Andrew Campbell": {"record": "56-47-0", "win_pct": 0.5437, "avg_finish": 6.38, "champs": 2, "champ_seasons": ["2019", "2020"], "last": 2, "last_seasons": ["2018", "2021"], "playoffs": 6, "seasons_played": 8, "luck": -3.47, "waivers": 136, "recent": [5, 7, 7], "history": [12, 1, 1, 12, 6, 5, 7, 7], "history_range": ["2018", "2025"], "best_rival": {"opponent": "Kyle Torpey", "w": 10, "l": 2, "t": 0, "margin": 8}, "worst_rival": {"opponent": "Derek Booker", "w": 3, "l": 11, "t": 0, "margin": -8}, "pf": 11911.0, "pa": 11488.4}};
+
+  var RANK_ORDER = [
+    ["Angelo Hernandez", "Three straight top-3 finishes (1st in 2023, 3rd in 2024, 2nd in 2025 &mdash; 2.00 average) is the single best three-year stretch in the league, and he did it while running <em>under</em> his expected win total in 2025 (8 actual wins vs. 9.27 expected). The most consistent manager in the league is somehow still looking for daylight."],
+    ["Derek Booker", "The reigning champion (2025, 146.02&ndash;106.18 over Hernandez in the final, league-high 1,896.22 points that season). The résumé is volatile &mdash; 2nd, 9th, 1st the last three years &mdash; but the ceiling is the highest in the league, and he just proved it. A genuine powerhouse entering 2026."],
+    ["Alex Topham", "Boring in the best way: 6th, 4th, 5th the last three years, positive luck (+2.14 all-time), a championship on the shelf (2018), and a 12-4 all-time record against Dakota Bender. Nothing flashy, nothing to fix."],
+    ["Corey Ploss", "Finished 12th and 11th the two years before breaking out to 3rd in 2025. That's either the start of something or a one-year mirage; his luck was only +0.82 in 2025, so the breakout looks mostly earned."],
+    ["Johnny Marcks", "Best all-time win percentage in the league (.568) and zero championships in eleven tries &mdash; ten playoff berths, no trophies. Positive regression karma (+3.38 luck all-time) says the drought can't last forever. Probably."],
+    ["Tyler Scarlett", "3rd and 2nd the two years before a 10th-place face-plant in 2025. A true coin flip for 2026: is he the guy from 2023&ndash;24, or the guy from last year?"],
+    ["Andrew Campbell", "Won back-to-back titles in his first two seasons (2019&ndash;2020) after finishing dead last in his 2018 debut, then settled into steady mediocrity (5th, 7th, 7th). Negative career luck (-3.47) says he's due for better bounces."],
+    ["Dustin Gamble", "The 2024 champion (wire-to-wire, led the league in points) who then finished dead last in 2025 with the single unluckiest season in league history (4 actual wins against 8.09 expected). This is the biggest buy-low in the league."],
+    ["Jarett Coy", "Three championships (2015, 2016, 2021) &mdash; tied for most in league history &mdash; but a sub-.500 record, two last-place finishes, and mixed-to-brutal trade results. Bounced back to 4th in 2025; the floor and ceiling are both real."],
+    ["Dakota Bender", "Worst all-time average finish in the league (8.55) and the fewest playoff trips (4 of 11). Drafted the best-value pick in league history and still owns the league's worst average draft value since. Talent evaluation isn't the problem; everything else might be."],
+    ["Kyle Torpey", "Renamed the team “Bye Week” for three straight years (2023&ndash;2025) after eight seasons as the unchanging “Team Torpey” &mdash; and it fits: 10th, 8th, 9th. Owns the league's most one-sided rivalry disadvantages."],
+    ["Pj Lannon", "2025's 6th-place finish came on the back of the luckiest single season in league history (10 actual wins vs. 6.91 expected, +3.09 luck) from the 6th-worst regular-season seed. Positive regression is coming for him first."]
+  ];
+
+  var MGR_DETAIL = {
+  "Angelo Hernandez": {
+    "nickname": "The Nearly Man",
+    "season_seq": "8, 10, 10, 8, 3, 3, 10, 7, 1, 3, 2 \u2014 a decade of mid-pack noise before three straight top-3 finishes to close it out.",
+    "champ_deep_dive": "",
+    "draft": "The most position-obsessed drafter in the league \u2014 20 of his early-round (rounds 1-3) picks across 11 years have been wide receivers, easily the heaviest WR lean in the league. Best picks: Matt Ryan, round 14 of 2016 (334 points, 2nd-best value in league history), and Dak Prescott, round 13 of 2019 (152 value, 7th-best ever). Worst: Jamaal Charles in round 2 of 2016 (10 points) \u2014 the second time in two years the league got burned by an aging Jamaal Charles; Jarett Coy took him 6th overall in 2015 and got the same result. Second-worst: Devonta Freeman, round 2 of 2018 (-160 value) \u2014 meaning two of his four worst-ever value picks were both early-round running backs from Atlanta's backfield.",
+    "waiver_wire": "245 adds with a 23.0% hit rate (pickups scoring 100+ rest-of-season points) and 72.2 points of average value per add. Top three: Caleb Williams, week 3 of 2025 (277.0 pts), Puka Nacua, week 2 of 2023 (276.6 pts), and Ryan Tannehill, week 6 of 2020 (255.5 pts) \u2014 three different positions of strength, three different seasons.",
+    "h2h": "Best against Tyler Scarlett (11-6); worst against Dustin Gamble (4-11).",
+    "infamous": "The league's original playoff choke \u2014 1-seed after the 2015 regular season, finished 8th.",
+    "pred": "Fourth straight top-3 finish. The luck index owes him a title.",
+    "roast": "Three straight years of \"almost.\" At some point the league is going to start calling this a personality trait instead of a trend."
+  },
+  "Derek Booker": {
+    "nickname": "The Powerhouse",
+    "season_seq": "6, 5, 2, 3, 5, 5, 2, 5, 2, 9, 1 \u2014 remarkably steady in the 2-to-6 range for a decade, then a real down year in 2024 immediately followed by the title.",
+    "champ_deep_dive": "",
+    "draft": "Heavy RB investor early (15 of his early-round picks) but owns the single worst draft pick in league history: Adrian Peterson, 1st overall in 2016, for 4 total points \u2014 and his very next-worst pick is also recent, Isiah Pacheco in round 2 of 2024 (-140 value). He also owns the league's single best waiver pickup ever \u2014 Trevor Lawrence, added in week 1 of 2025 for 338.2 rest-of-season points.",
+    "waiver_wire": "A league-leading 599 adds, a 23.7% hit rate, and a combined 41,343 rest-of-season points produced across those adds, more than double anyone else's total. Top three: Trevor Lawrence, week 1 of 2025 (338.2 pts), Jared Goff, week 3 of 2024 (304.3 pts), and Jordan Love, week 2 of 2023 (296.1 pts) \u2014 three straight years, three different late-round quarterback saves.",
+    "h2h": "Best against Andrew Campbell (11-3); worst against Tyler Scarlett (6-10).",
+    "infamous": "",
+    "pred": "A finals rematch with Angelo Hernandez. The waiver wire habit alone should be worth two extra wins.",
+    "roast": "Somehow drafted the 1st overall bust of the decade and still has a better r\u00e9sum\u00e9 than 10 other people in this league. The waiver wire has been doing a lot of very quiet, very necessary cleanup."
+  },
+  "Alex Topham": {
+    "nickname": "The Quiet Storm",
+    "season_seq": "5, 3, 6, 1, 11, 7, 3, 12, 6, 4, 5 \u2014 two brutal outlier seasons (2019, 2022) bracketing a lot of quietly solid ones.",
+    "champ_deep_dive": "",
+    "draft": "RB-heavy (19 early picks). Best picks: Ben Roethlisberger, round 15 of 2020 (142 value), and Patrick Mahomes, round 12 of 2018 (132 value) \u2014 two of his three best-value picks ever are late-round quarterbacks. Worst: Keenan Allen, round 2 of 2016 (-154 value).",
+    "waiver_wire": "<strong>242 adds, the best hit rate in the league (28.1% score 100+ rest-of-season points) and the best average value per add (77.0 points) \u2014 the most efficient waiver manager in the league, not just the most active.</strong> Top three: Jameis Winston, week 3 of 2019 (285.1 pts), Dak Prescott, week 3 of 2025 (283.8 pts), and Bucky Irving, week 2 of 2024 (234.8 pts).",
+    "h2h": "12-4 all-time against Dakota Bender \u2014 the most lopsided rivalry involving a currently top-5 manager. Worst against Jarett Coy (5-11).",
+    "infamous": "",
+    "pred": "Quietly makes the final again. Nobody will see it coming because nobody ever sees Alex Topham coming.",
+    "roast": "The living embodiment of \"if it ain't broke.\" Nine playoff trips in eleven years and the fan base still couldn't pick him out of a lineup."
+  },
+  "Johnny Marcks": {
+    "nickname": "The Bridesmaid",
+    "season_seq": "3, 2, 4, 7, 6, 8, 8, 2, 4, 6, 8 \u2014 never worse than 8th, never better than 2nd. The most literal definition of a bridesmaid this league has.",
+    "champ_deep_dive": "",
+    "draft": "WR-heavy (17 early picks, the 2nd-most extreme lean in the league behind Angelo Hernandez). Worst picks: Saquon Barkley, 2nd overall in 2020 (-174 value, 3rd-worst in league history), and Kenny Golladay, round 2 of that same 2020 draft (-138 value) \u2014 meaning his top two picks that year combined for two of his worst-ever value scores. Best: Jared Goff, round 12 of 2024 (136 value).",
+    "waiver_wire": "165 adds, a 21.3% hit rate, but the league's lowest average value per add (62.8 points) \u2014 he finds contributors less often than most, and they contribute less when he does. Top three: Justin Herbert, week 3 of 2020 (310.6 pts), James Robinson, week 1 of 2020 (216.4 pts), and C.J. Stroud, week 5 of 2023 (201.4 pts).",
+    "h2h": "Best against Kyle Torpey (13-4), the most lopsided rivalry between two active managers; worst against Derek Booker (7-11).",
+    "infamous": "",
+    "pred": "This is the year. Positive career luck has to convert eventually, and a .568 win percentage with no trophies is unsustainable variance, not a pattern.",
+    "roast": "The Buffalo Bills of this league \u2014 except the Bills have actually been to a Super Bowl. Ten playoff berths and a permanently empty trophy case."
+  },
+  "Tyler Scarlett": {
+    "nickname": "The Coin Flip",
+    "season_seq": "2, 8, 1, 4, 7, 10, 7, 11, 3, 2, 10 \u2014 genuinely bimodal: five finishes in the top 4, six outside the top 7, almost nothing in between.",
+    "champ_deep_dive": "",
+    "draft": "Balanced RB/WR (13 and 12 early picks). Best picks: Eagles D/ST, round 2 of 2017 (128 value) \u2014 a defense that outscored half the draft class that year \u2014 and Cam Newton, round 13 of 2020 (126 value). Worst: Christian McCaffrey, 2020 (-138 value).",
+    "waiver_wire": "198 adds, a 20.9% hit rate, 69.7 points of average value per add. Top three: Jared Goff, week 3 of 2025 (252.2 pts), Tom Brady, week 1 of 2019 (238.0 pts), and Ben Roethlisberger, week 5 of 2020 (207.7 pts).",
+    "h2h": "Best against Derek Booker (10-6); worst against Dakota Bender (5-10).",
+    "infamous": "",
+    "pred": "The 2025 face-plant (10th, after 3rd and 2nd the two years before) was the outlier, not the new normal \u2014 back to the top half in 2026.",
+    "roast": "Won a championship in 2017 with a defense as his best-ever draft pick and hasn't topped that value score since. The scouting report used to say \"boom-or-bust.\" Lately it's just saying \"bust.\""
+  },
+  "Jarett Coy": {
+    "nickname": "The Wildcard",
+    "season_seq": "1, 1, 11, 2, 9, 12, 1, 4, 11, 10, 4 \u2014 three titles and three finishes of 9th or worse, sometimes in back-to-back years. No manager's season-to-season variance looks like this one.",
+    "champ_deep_dive": "Two of the three championships were not won by a great team. In 2015 he limped into the playoffs as the <strong>5th seed at 7-7</strong>, averaging just 86.4 points a game in the regular season \u2014 then scored <strong>134.0 and 107.0</strong> in the first two playoff rounds, nearly 50 points above his own season average, before closing it out 72-47. In 2016 the pattern repeated almost exactly: <strong>7th seed at 6-6</strong>, an 83.5 regular-season scoring average, then <strong>87.0, 78.0, and 93.0</strong> in three straight playoff wins \u2014 modest totals that just happened to consistently clear his own bar exactly when it mattered. The 2021 title was a different animal entirely: a legitimately elite <strong>2-seed at 9-5</strong>, averaging 125.6 points a game (2nd-most in the league that year), who then beat Alex Topham and Derek Booker in the two closest playoff games of his career. Two rings from lucky-hot playoff runs, one from being genuinely the second-best team in the league that year \u2014 all three still count the same in the standings.",
+    "draft": "RB-heavy (19 early picks). Best picks: Justin Fields, round 15 of 2022 (157 value), and Carson Palmer, round 13 of 2015 (145 value). Worst: Jamaal Charles, 2015 (-126 value).",
+    "waiver_wire": "221 adds, but the league's lowest hit rate (18.5% score 100+ rest-of-season points). Top three: Sam Darnold, week 4 of 2024 (250.2 pts), Sam Darnold again, week 8 of 2024 (209.2 pts) \u2014 dropped and re-added the same player in the same season \u2014 and George Kittle, week 2 of 2018 (200.0 pts).",
+    "h2h": "Struggles against Pj Lannon (5-11) and Dustin Gamble (5-10); dominates Alex Topham (11-5).",
+    "infamous": "",
+    "pred": "Either the 4th championship or another last-place finish. There is no in-between gear.",
+    "roast": "Three rings \u2014 two of them backed into as a middling regular-season team who got hot for exactly three weeks each time. The playoff seeding committee should just accept he's going to do this forever."
+  },
+  "Dakota Bender": {
+    "nickname": "The Long Shot",
+    "season_seq": "12, 9, 8, 11, 12, 11, 5, 3, 7, 5, 11 \u2014 six finishes of 9th or worse in eleven years, with a genuine mid-career high point (2022\u20132023) that didn't stick.",
+    "champ_deep_dive": "",
+    "draft": "RB-heavy (18 early picks). Owns the <strong>best draft pick in league history</strong> \u2014 Doug Baldwin, round 16 of 2015, for 184 points (value score of 162) \u2014 and the very next pick he made that same draft, Tyrod Taylor in round 15, is the league's 3rd-best value ever (159). Two great picks in one draft, and still the league's worst average draft value score since (-4.63). Worst: tied at -157 between David Johnson (round 2, 2017) and Nick Chubb (1st overall, 2023) \u2014 a #1 pick and a 2nd-round pick both busting to the exact same degree, eight years apart.",
+    "waiver_wire": "314 adds (2nd-most in the league), but a middling 22.0% hit rate \u2014 volume without much extra to show for it. Top three: Chase Brown, week 4 of 2024 (237.7 pts), Hunter Renfrow, week 3 of 2021 (235.4 pts), and Jameis Winston, week 5 of 2019 (230.3 pts).",
+    "h2h": "Best against Tyler Scarlett (10-5); worst against Alex Topham (4-12).",
+    "infamous": "",
+    "pred": "A round-16 miracle can't save a whole roster on its own. Missing the playoffs for a 6th time in the last 7 years is the likeliest outcome.",
+    "roast": "Proof that one great draft buys you exactly one line in a magazine article and nothing else. The floor is still the floor."
+  },
+  "Corey Ploss": {
+    "nickname": "The Breakout",
+    "season_seq": "4, 7, 5, 10, 8, 9, 4, 9, 12, 11, 3 \u2014 three straight seasons of 9th or worse (2021\u20132023) immediately followed by a 3rd-place finish. A real inflection point, or a one-year blip.",
+    "champ_deep_dive": "",
+    "draft": "Mixed RB/WR (14 and 15 early picks respectively). Best picks: Justin Herbert, round 14 of 2024 (140 value), and Kirk Cousins, round 13 of 2022 (130 value). Worst: Courtland Sutton, round 2 of 2020 (-143 value).",
+    "waiver_wire": "163 adds, a 24.5% hit rate (3rd-best in the league). Top three: Jared Goff, week 4 of 2018 (249.2 pts), Jordan Love, week 5 of 2023 (233.8 pts), and Jerry Jeudy, week 3 of 2024 (217.1 pts).",
+    "h2h": "Best against Dakota Bender (13-6); worst against Derek Booker (5-12).",
+    "infamous": "",
+    "pred": "Backs up the 2025 breakout with another top-5 finish. He's owed one after 12th- and 11th-place finishes the two years prior.",
+    "roast": "Went from City Wok (12th) to Big Sausage Pizza (11th) to Cursed (3rd) \u2014 the team names got worse while the actual team got better. Never change, Corey."
+  },
+  "Kyle Torpey": {
+    "nickname": "The Human Bye Week",
+    "season_seq": "11, 11, 3, 6, 4, 6, 9, 8, 10, 8, 9 \u2014 a promising 2017\u20132020 stretch that's fully reversed into a permanent mid-9-to-11 floor.",
+    "champ_deep_dive": "",
+    "draft": "RB-heavy (19 early picks). Best picks: Andy Dalton, round 14 of 2016 (144 value), and Trevor Lawrence, round 13 of 2022 (135 value). Worst: Jerick McKinnon, round 2 of 2018 (-156 value).",
+    "waiver_wire": "111 adds, the fewest in the league, with a 23.4% hit rate. Top three: Dak Prescott, week 3 of 2023 (316.9 pts, 3rd-best waiver pickup in league history), Kyren Williams, week 2 of 2023 (237.6 pts), and Jordan Love, week 7 of 2023 (228.8 pts) \u2014 all three of his best hits came in the same season.",
+    "h2h": "The league's whipping boy \u2014 4-13 vs. Johnny Marcks, 2-10 vs. Andrew Campbell.",
+    "infamous": "",
+    "pred": "The team formerly known as \"Team Torpey,\" currently known as \"Bye Week,\" continues to live up to the new name. Another finish outside the top 8.",
+    "roast": "Renamed his own team \"Bye Week\" in 2023 and has finished 10th, 8th, and 9th since. The name fits."
+  },
+  "Dustin Gamble": {
+    "nickname": "The Free Fall",
+    "season_seq": "10, 4, 7, 9, 10, 2, 6, 10, 8, 1, 12 \u2014 the title-to-cellar collapse (1st to 12th in one offseason) is tied for the steepest year-over-year fall in league history, matched only by Andrew Campbell's own 1st-to-12th crash from 2020 to 2021.",
+    "champ_deep_dive": "",
+    "draft": "Balanced RB/WR (16 and 15 early picks). Best pick: Jared Goff, round 14 of 2023 (154 value). Worst: Le'Veon Bell, 3rd overall in 2018 (-175 value, 2nd-worst in league history).",
+    "waiver_wire": "134 adds, a 24.8% hit rate (2nd-best in the league). Top three: Baker Mayfield, week 2 of 2024 (336.1 pts, 2nd-best waiver pickup ever) \u2014 the same year he won it all \u2014 Caleb Williams, week 8 of 2025 (211.5 pts), and Rico Dowdle, week 4 of 2025 (199.0 pts).",
+    "h2h": "Best against Angelo Hernandez (11-4); worst against Pj Lannon (4-11).",
+    "infamous": "",
+    "pred": "The title-to-cellar collapse was a fluke of variance, not decline \u2014 back to the playoffs in 2026.",
+    "roast": "Won the whole thing in 2024 leading the league in points, then somehow ran the worst luck season in eleven years of data and finished dead last. The fantasy gods have a sense of humor and it is not a kind one."
+  },
+  "Pj Lannon": {
+    "nickname": "The Lucky Charm",
+    "season_seq": "9, 6, 9, 5, 2, 4, 11, 1, 9, 12, 6 \u2014 a title in 2022 sandwiched by a last-place finish two years later, with no real middle ground.",
+    "champ_deep_dive": "",
+    "draft": "Mixed WR/RB/QB. Best picks: Dak Prescott, round 14 of 2016 (157 value), and Kirk Cousins, round 15 of 2021 (150 value). Worst: Christian McCaffrey, 1st overall in 2024 (-158 value).",
+    "waiver_wire": "170 adds, but the 2nd-lowest hit rate in the league (19.6%). Top three: Brock Purdy, week 2 of 2023 (278.8 pts), Matthew Stafford, week 5 of 2025 (278.2 pts), and Josh Allen, week 3 of 2019 (250.4 pts) \u2014 three genuine home runs, surrounded by a lot of misses.",
+    "h2h": "Best against Dustin Gamble (11-4); worst against Derek Booker (5-10).",
+    "infamous": "2025's 6th-place finish, powered by the single luckiest season in league history (+3.09 luck, 10 wins from a 6th-place regular-season seed).",
+    "pred": "Regression hits hard. A finish outside the top 8 is more likely than a repeat of 2025's win total.",
+    "roast": "The all-time luck leaderboard isn't close, and it's not particularly close for second place either. 2026 is when the bill comes due."
+  },
+  "Andrew Campbell": {
+    "nickname": "The Flash in the Pan",
+    "season_seq": "12, 1, 1, 12, 6, 5, 7, 7 \u2014 the most extreme \"all or nothing\" start of any manager's career, followed by five years of settled mediocrity.",
+    "champ_deep_dive": "",
+    "draft": "Mixed WR/RB. Best picks: Kirk Cousins, round 12 of 2019 (145 value), and Nico Collins, round 14 of 2023 (140 value). Worst: Clyde Edwards-Helaire, round 3 of 2021 (-110 value).",
+    "waiver_wire": "136 adds, a 22.8% hit rate. Top three: Jared Goff, week 4 of 2022 (228.9 pts), Bo Nix, week 8 of 2024 (213.9 pts), and Josh Allen, week 6 of 2019 (205.9 pts).",
+    "h2h": "Best against Kyle Torpey (10-2); worst against Derek Booker (3-11).",
+    "infamous": "",
+    "pred": "The steady 5th/7th/7th run breaks \u2014 either a return to the top with a third title, or a third last-place finish. His luck is due to turn either way.",
+    "roast": "Finished dead last in his rookie season, then won the next two titles, then hasn't finished better than 5th since. The 2019\u20132020 peak increasingly looks like a fluke nobody's told him about."
+  }
+};
+
+  var HOF = [
+    { cls: "", title: "Best Draft Pick", head: "Dakota Bender — Doug Baldwin, Round 16 (2015)", body: "190th overall, 184 total points, finishing as the 28th-best scorer in the league that year. Value score of 162 — the best of any pick pulled from 11 years of drafts." },
+    { cls: "rust", title: "Worst Draft Pick (Biggest Bust)", head: "Derek Booker — Adrian Peterson, 1st Overall (2016)", body: "4 total points from a #1 overall pick, finishing as the 190th-ranked scorer that season. As bad as a draft slot can go wrong." },
+    { cls: "good", title: "Luckiest Season", head: "Pj Lannon — 2025", body: "10 actual wins against just 6.91 expected wins (all-play basis) — a +3.09 luck score, the largest single-season gap in league history." },
+    { cls: "rust", title: "Unluckiest Season", head: "Dustin Gamble — 2025", body: "4 actual wins against 8.09 expected wins, a -4.09 luck score — the same season after he'd won the previous year's title with the league's best regular-season scoring output." },
+    { cls: "rust", title: "Biggest Choke", head: "Angelo Hernandez — 2015", body: "Finished the regular season as the #1 seed, lost his playoff opener 115–103 as a heavy favorite, then dropped every consolation-ladder game on the way to an 8th-place finish. No one else has fallen further from a #1 seed." },
+    { cls: "rust", title: "Biggest Trade Robbery", head: "Kyle Torpey over Jarett Coy — 2025", body: "Torpey sent Trey Benson (10.4 rest-of-season pts) to get Quentin Johnston and George Pickens (365.8 combined) — a net swing of 710.8 points, the most lopsided trade in league history. Runner-up: Jarett Coy's +216.6 win over Angelo Hernandez in 2023, proving Coy can be on both ends of a robbery." },
+    { cls: "good", title: "Best Waiver Pickup", head: "Derek Booker — Trevor Lawrence, Week 1 (2025)", body: "338.2 rest-of-season points from a free-agent QB add. Runner-up: Dustin Gamble's Baker Mayfield pickup in week 2 of 2024 (336.1 points), the same season he won the title." }
+  ];
+
+  var RECORDS = [
+    { cls: "good", title: "Highest Score Ever", head: "Derek Booker — 211.8, Week 15 of 2025", body: "A playoff game against Johnny Marcks, the round before he won the title." },
+    { cls: "rust", title: "Lowest Score Ever", head: "Johnny Marcks — 28.0, Week 2 of 2015", body: "In a loss to Derek Booker (151.0)." },
+    { cls: "rust", title: "Biggest Blowout", head: "Derek Booker 211.8, Johnny Marcks 66.88 — Week 15 of 2025", body: "A 144.92-point margin. The same game that set the all-time high score also set the all-time blowout record." },
+    { cls: "", title: "Closest Game(s)", head: "Angelo Hernandez 66, Johnny Marcks 66 — Week 11 of 2015", body: "Five exact ties are on record, all from 2015–2017; this is the standout." },
+    { cls: "rust", title: "Most Points Scored In a Loss", head: "Corey Ploss — 164.48, Week 5 of 2021", body: "And still lost, to Johnny Marcks' 186.52." },
+    { cls: "good", title: "Fewest Points Scored In a Win", head: "Jarett Coy — 54.0, Week 14 of 2015", body: "Edged Pj Lannon's 52.0." },
+    { cls: "good", title: "Longest Win Streak", head: "Johnny Marcks — 11 Straight Games", body: "Week 5 of 2023 through week 1 of 2024, regular season." },
+    { cls: "rust", title: "Longest Losing Streak", head: "Alex Topham — 9 Straight Games", body: "Week 3 through week 11 of 2022, regular season." }
+  ];
+
+  var RIVALRIES = [
+    { names: "Johnny Marcks vs. Kyle Torpey", record: "13-4", note: "The most lopsided head-to-head record between two currently active managers. There is no version of this matchup where the smart money is on Torpey." },
+    { names: "Derek Booker vs. Andrew Campbell", record: "11-3", note: "The reigning champion's most dominant individual rivalry. Campbell hasn't figured out an answer yet." },
+    { names: "Derek Booker vs. Corey Ploss", record: "12-5", note: "Booker's second stranglehold on a top-tier manager. Two of the league's best, one clearly ahead." },
+    { names: "Alex Topham vs. Dakota Bender", record: "12-4", note: "Topham's steadiness has a direct victim — Bender already owns the league's worst average finish without this making it easier." },
+    { names: "Jarett Coy vs. Pj Lannon", record: "5-11", note: "The league's most decorated champion (3 rings) has never solved its luckiest manager." },
+    { names: "Dakota Bender vs. Corey Ploss", record: "6-13", note: "Two bottom-of-the-standings managers, and Ploss has dominated anyway. If his 2025 breakout is real, this gap only widens." },
+    { names: "Derek Booker vs. Johnny Marcks", record: "11-7", note: "Two of the three best all-time win percentages in the league, one ring between them across 22 combined seasons." }
+  ];
+
+  var RECAP_2025_PARAS = [
+    ["Derek Booker went out on top.", "He beat Angelo Hernandez 146.02&ndash;106.18 in the championship, capping a regular season in which he led the league with an all-time-high 1,896.22 points. Two weeks earlier, in the semifinal round, he'd already set the two biggest single-game records in league history in the same afternoon &mdash; a 211.8-point outburst against Johnny Marcks that's still the highest score ever recorded, in a 144.92-point margin that's still the biggest blowout ever recorded."],
+    ["Angelo Hernandez finished 2nd for the third year running", "without ever winning it &mdash; 1st in 2023, 3rd in 2024, 2nd in 2025 &mdash; the best three-year stretch of anyone who still doesn't have a second ring."],
+    ["Dustin Gamble's title defense ended about as badly as possible.", "The 2024 champion finished dead last in 2025, and not because his team was actually bad &mdash; his season carries the single unluckiest luck score in league history (-4.09, all-play basis)."],
+    ["Pj Lannon got the opposite treatment.", "He climbed to 6th place from the 6th-worst regular-season seed on the back of the luckiest season in league history (+3.09 luck)."],
+    ["Corey Ploss broke out.", "After finishing 12th and 11th the two years before, he jumped to 3rd &mdash; helped along by a trade that turned into one of the more lopsided of the season, flipping Saquon Barkley for a four-player package that outproduced him by 167.6 rest-of-season points."]
+  ];
+
+  var RECAP_2025_STANDINGS = [
+    [1, "Derek Booker", "Wheaton Warbirds", "8-6-0", "1,896.22"],
+    [2, "Angelo Hernandez", "Nacua Matata", "6-8-0", "1,572.60"],
+    [3, "Corey Ploss", "Cursed", "7-7-0", "1,510.44"],
+    [4, "Jarett Coy", "Vino's Victors", "8-6-0", "1,653.00"],
+    [5, "Alex Topham", "Easy Company", "8-6-0", "1,585.12"],
+    [6, "Pj Lannon", "Waddle Deez Nutz On Yo Face", "9-5-0", "1,481.30"],
+    [7, "Andrew Campbell", "Naked Keg Stand", "10-4-0", "1,775.24"],
+    [8, "Johnny Marcks", "Ward on Mcconkey", "8-6-0", "1,523.48"],
+    [9, "Kyle Torpey", "Bye Week", "5-9-0", "1,409.54"],
+    [10, "Tyler Scarlett", "Bowers Castle", "6-8-0", "1,517.28"],
+    [11, "Dakota Bender", "Make Kamaraca Great Again", "6-8-0", "1,499.02"],
+    [12, "Dustin Gamble", "Dishes Nothin", "3-11-0", "1,594.62"]
+  ];
+
+  var TIMELINE = [
+    ["2015", "Jarett Coy (Team Coy)", "def. Tyler Scarlett 72–47. Derek Booker led the league in points (1,387.0) but finished 6th. Dakota Bender finished last."],
+    ["2016", "Jarett Coy (BACK 2 BACK FFL WORLD CHAMP)", "def. Johnny Marcks 93–72, back-to-back titles. Phil Lannon finished last in his final season before leaving the league."],
+    ["2017", "Tyler Scarlett (Saving Ryan's Privates)", "edged Derek Booker 119–117. League ran 11 teams after Phil Lannon's departure. Jarett Coy — the reigning champ — finished dead last."],
+    ["2018", "Alex Topham (Pjs Japanese PeePee Pats)", "topped Jarett Coy 150.38–133.1. Andrew Campbell joined the league and finished last as a rookie. First season with transaction-log data."],
+    ["2019", "Andrew Campbell (Naked Keg Stand)", "def. Pj Lannon 128.26–114.38 — worst-to-first from his 2018 debut. Dakota Bender finished last."],
+    ["2020", "Andrew Campbell (Naked Keg Stand)", "repeats, routing Dustin Gamble 165.36–102.14. Gamble led the league in points but lost the final. Jarett Coy finished last."],
+    ["2021", "Jarett Coy (Ships' Out For The Coys)", "outlasted Derek Booker 116.52–116.06 — the closest final in league history. Andrew Campbell finished last."],
+    ["2022", "Pj Lannon (WADDDLE ON MY W OOD)", "def. Johnny Marcks 128.62–122.46, also leading the league in points — a rare wire-to-wire year. Alex Topham finished last."],
+    ["2023", "Angelo Hernandez (Sun God Squad)", "survived a 150.04–149.58 nail-biter over Derek Booker. Corey Ploss finished last."],
+    ["2024", "Dustin Gamble (Slim Nickens)", "blew out Tyler Scarlett 136.06–91.12, leading the league in points — a genuine wire-to-wire title. Pj Lannon finished last."],
+    ["2025", "Derek Booker (Wheaton Warbirds)", "beat Angelo Hernandez 146.02–106.18, leading the league in points at an all-time-high 1,896.22. Defending champ Dustin Gamble finished last."]
+  ];
+
+  var STANDINGS = [
+    [1, "Johnny Marcks", 79, 60, 1, ".568", "5.27", "14,986.8", "14,628.8", 0, 0, "10/11"],
+    [2, "Derek Booker", 79, 61, 0, ".564", "4.09", "15,770.5", "14,755.0", 1, 0, "10/11"],
+    [3, "Alex Topham", 77, 62, 1, ".554", "5.73", "15,223.2", "14,691.4", 1, 1, "9/11"],
+    [4, "Andrew Campbell*", 56, 47, 0, ".544", "6.38", "11,911.0", "11,488.4", 2, 2, "6/8"],
+    [5, "Pj Lannon", 72, 68, 0, ".514", "6.73", "14,690.9", "14,383.8", 1, 1, "6/11"],
+    [6, "Tyler Scarlett", 69, 70, 1, ".496", "5.91", "14,791.6", "14,782.6", 1, 0, "7/11"],
+    [6, "Dustin Gamble", 69, 70, 1, ".496", "7.18", "15,069.3", "15,108.2", 1, 1, "5/11"],
+    [8, "Corey Ploss", 68, 72, 0, ".486", "7.45", "14,718.4", "15,111.1", 0, 1, "6/11"],
+    [9, "Angelo Hernandez", 64, 75, 1, ".461", "5.91", "14,556.9", "14,880.6", 1, 0, "7/11"],
+    [10, "Jarett Coy", 64, 76, 0, ".457", "6.00", "14,556.9", "14,800.3", 3, 2, "6/11"],
+    [11, "Kyle Torpey", 61, 77, 1, ".442", "7.73", "13,960.8", "15,020.4", 0, 0, "5/11"],
+    [12, "Dakota Bender", 61, 79, 0, ".436", "8.55", "14,385.1", "14,977.9", 0, 2, "4/11"]
+  ];
+
+  var TRADE_TOP10 = [
+    [1, "2025", "Kyle Torpey", "Quentin Johnston + George Pickens (365.8 pts)", "Jarett Coy", "Trey Benson (10.4 pts)", "710.8"],
+    [2, "2023", "Jarett Coy", "Calvin Ridley + Mike Evans (411.4 pts)", "Angelo Hernandez", "Bijan Robinson (194.8 pts)", "433.2"],
+    [3, "2025", "Angelo Hernandez", "Jake Ferguson + Tony Pollard (332.7 pts)", "Jarett Coy", "Brian Thomas Jr. (120.9 pts)", "423.6"],
+    [4, "2018", "Angelo Hernandez", "James Conner (203.8 pts)", "Derek Booker", "Devonta Freeman (5.1 pts)", "397.4"],
+    [5, "2024", "Dustin Gamble", "James Cook (266.7 pts)", "Johnny Marcks", "Chris Olave (76.7 pts)", "380.0"],
+    [6, "2024", "Corey Ploss", "Xavier Worthy + Travis Etienne + Tank Bigsby + Cooper Kupp (390.8 pts)", "Jarett Coy", "Saquon Barkley (223.2 pts)", "335.2"],
+    [7, "2025", "Jarett Coy", "Michael Carter + Derrick Henry + Ja'Marr Chase (528.1 pts)", "Corey Ploss", "Jordan Addison + Bijan Robinson (387.0 pts)", "282.2"],
+    [8, "2020", "Jarett Coy", "Amari Cooper + Darren Waller (272.3 pts)", "Johnny Marcks", "Clyde Edwards-Helaire + Dalton Schultz (140.8 pts)", "263.0"],
+    [9, "2018", "Alex Topham", "Davante Adams (240.4 pts)", "Johnny Marcks", "Mark Ingram II (132.0 pts)", "216.8"],
+    [10, "2023", "Jarett Coy", "Kareem Hunt + Davante Adams + Royce Freeman (303.2 pts)", "Derek Booker", "Mike Evans (201.9 pts)", "202.6"]
+  ];
+
+  var WAIVER_RANK = [
+    [1, "Alex Topham", "28.1%", "77.0", "18,632.1", 242],
+    [2, "Dustin Gamble", "24.8%", "72.9", "9,694.2", 134],
+    [3, "Corey Ploss", "24.5%", "71.4", "11,634.4", 163],
+    [4, "Angelo Hernandez", "23.0%", "72.2", "17,551.5", 245],
+    [5, "Kyle Torpey", "23.4%", "70.4", "7,810.5", 111],
+    [6, "Derek Booker", "23.7%", "69.0", "41,343.0", 599],
+    [7, "Andrew Campbell", "22.8%", "70.3", "9,564.1", 136],
+    [8, "Tyler Scarlett", "20.9%", "69.7", "13,663.6", 198],
+    [9, "Dakota Bender", "22.0%", "68.1", "21,374.1", 314],
+    [10, "Pj Lannon", "19.6%", "69.2", "11,622.6", 170],
+    [11, "Johnny Marcks", "21.3%", "62.8", "10,304.6", 165],
+    [12, "Jarett Coy", "18.5%", "66.2", "14,290.4", 221]
+  ];
+
+  function slug(name) { return name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, ""); }
+  function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;"); }
+
+  function sparkline(values) {
+    var w = 56, h = 22, pad = 3;
+    var vals = values.map(function (v) { return v == null ? null : v; });
+    var present = vals.filter(function (v) { return v != null; });
+    if (!present.length) return "";
+    var min = Math.min.apply(null, present), max = Math.max.apply(null, present);
+    if (min === max) { min -= 1; max += 1; }
+    var n = vals.length;
+    var pts = [];
+    for (var i = 0; i < n; i++) {
+      if (vals[i] == null) continue;
+      var x = pad + (i / (n - 1)) * (w - pad * 2);
+      var yNorm = (vals[i] - min) / (max - min); // 0 = best(low finish), 1 = worst
+      var y = pad + yNorm * (h - pad * 2); // low finish -> small y -> near top
+      pts.push([x, y]);
+    }
+    var path = pts.map(function (p) { return p[0].toFixed(1) + "," + p[1].toFixed(1); }).join(" ");
+    var circles = pts.map(function (p, idx) {
+      var isLast = idx === pts.length - 1;
+      return '<circle cx="' + p[0].toFixed(1) + '" cy="' + p[1].toFixed(1) + '" r="' + (isLast ? 2.6 : 1.8) + '" fill="' + (isLast ? "var(--accent)" : "var(--text-faint)") + '"/>';
+    }).join("");
+    return '<svg width="' + w + '" height="' + h + '" viewBox="0 0 ' + w + ' ' + h + '" aria-hidden="true">' +
+      '<polyline points="' + path + '" fill="none" stroke="var(--text-faint)" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>' +
+      circles + '</svg>';
+  }
+
+  // ---- quick jump chips ----
+  var chipHtml = "";
+  RANK_ORDER.forEach(function (r) {
+    chipHtml += '<a class="chip" href="#mgr-' + slug(r[0]) + '" data-target="mgr-' + slug(r[0]) + '">' + esc(r[0].split(" ")[0]) + " " + esc(r[0].split(" ").slice(-1)[0][0]) + ".</a>";
+  });
+  document.getElementById("jumpchips").innerHTML = chipHtml;
+
+  // ---- rankings list ----
+  var rankHtml = "";
+  RANK_ORDER.forEach(function (r, idx) {
+    var name = r[0], reason = r[1];
+    var m = MANAGERS[name];
+    var d = MGR_DETAIL[name];
+    var nickHtml = d && d.nickname ? ' <span class="nickname">&ldquo;' + esc(d.nickname) + '&rdquo;</span>' : '';
+    rankHtml += '<div class="rank-row">' +
+      '<div class="rank-num">' + (idx + 1) + '</div>' +
+      '<div class="rank-body">' +
+        '<div class="rank-name-row">' +
+          '<span class="rank-name">' + esc(name) + nickHtml + '</span>' +
+          '<span class="rank-form">' + sparkline(m.recent) + '<span class="form-label">’23–’25</span></span>' +
+        '</div>' +
+        '<p class="rank-reason">' + reason + '</p>' +
+      '</div>' +
+    '</div>';
+  });
+  document.getElementById("rankings-list").innerHTML = rankHtml;
+
+  // ---- manager cards ----
+  var mgrHtml = "";
+  RANK_ORDER.forEach(function (r, idx) {
+    var name = r[0];
+    var m = MANAGERS[name];
+    var d = MGR_DETAIL[name];
+    var id = "mgr-" + slug(name);
+    var luckCls = m.luck > 0 ? "pos" : (m.luck < 0 ? "neg" : "");
+    var luckStr = (m.luck > 0 ? "+" : "") + m.luck.toFixed(2);
+    var champStr = m.champs + (m.champ_seasons.length ? " (" + m.champ_seasons.join(", ") + ")" : "");
+    var lastStr = m.last + (m.last_seasons.length ? " (" + m.last_seasons.join(", ") + ")" : "");
+
+    mgrHtml += '<details class="mgr-card" id="' + id + '">' +
+      '<summary>' +
+        '<div class="mgr-summary-left">' +
+          '<span class="mgr-badge">Power Rank #' + (idx + 1) + '</span>' +
+          '<div class="mgr-name">' + esc(name) + (d.nickname ? ' <span class="nickname">&ldquo;' + esc(d.nickname) + '&rdquo;</span>' : '') + '</div>' +
+          '<div class="mgr-stat-line mono">' + m.record + ' &middot; avg finish ' + m.avg_finish.toFixed(2) + '</div>' +
+        '</div>' +
+        '<svg class="mgr-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+      '</summary>' +
+      '<div class="mgr-body">' +
+        '<div class="stat-chips">' +
+          '<span><span class="sc-label">Win%&nbsp;</span><span class="sc-val mono">' + m.win_pct.toFixed(3) + '</span></span>' +
+          '<span><span class="sc-label">Titles&nbsp;</span><span class="sc-val">' + champStr + '</span></span>' +
+          '<span><span class="sc-label">Last&nbsp;</span><span class="sc-val">' + lastStr + '</span></span>' +
+          '<span><span class="sc-label">Playoffs&nbsp;</span><span class="sc-val mono">' + m.playoffs + '/' + m.seasons_played + '</span></span>' +
+          '<span><span class="sc-label">Luck&nbsp;</span><span class="sc-val mono ' + luckCls + '">' + luckStr + '</span></span>' +
+        '</div>' +
+        '<div class="mgr-field"><span class="fk">' + esc(m.history_range[0]) + '–' + esc(m.history_range[1]) + ' Finish History</span>' +
+          '<span class="history-spark">' + sparkline(m.history) + '</span>' +
+          '<span style="color:var(--text-soft)">' + d.season_seq + '</span>' +
+        '</div>' +
+        (d.champ_deep_dive ? '<div class="mgr-field champ-deep-dive"><span class="fk">How He Actually Wins It</span>' + d.champ_deep_dive + '</div>' : '') +
+        '<div class="mgr-field"><span class="fk">Draft Tendency</span>' + d.draft + '</div>' +
+        '<div class="mgr-field"><span class="fk">Waiver Wire</span>' + d.waiver_wire + '</div>' +
+        '<div class="mgr-field"><span class="fk">Head-to-Head</span>' + d.h2h + '</div>' +
+        (d.infamous ? '<div class="mgr-field"><span class="fk">On the Record</span>' + d.infamous + '</div>' : '') +
+        '<div class="mgr-field pred"><span class="fk">Bold Prediction</span>' + d.pred + '</div>' +
+        '<div class="mgr-field roast"><span class="fk">Roast</span>' + d.roast + '</div>' +
+      '</div>' +
+    '</details>';
+  });
+  document.getElementById("mgr-grid").innerHTML = mgrHtml;
+
+  // ---- hall of fame ----
+  var hofHtml = "";
+  HOF.forEach(function (h) {
+    hofHtml += '<div class="hof-card ' + h.cls + '">' +
+      '<div class="hof-title">' + esc(h.title) + '</div>' +
+      '<div class="hof-headline">' + h.head + '</div>' +
+      '<div class="hof-body">' + h.body + '</div>' +
+    '</div>';
+  });
+  document.getElementById("hof-grid").innerHTML = hofHtml;
+
+  // ---- league records ----
+  var recordsHtml = "";
+  RECORDS.forEach(function (r) {
+    recordsHtml += '<div class="hof-card ' + r.cls + '">' +
+      '<div class="hof-title">' + esc(r.title) + '</div>' +
+      '<div class="hof-headline">' + r.head + '</div>' +
+      '<div class="hof-body">' + r.body + '</div>' +
+    '</div>';
+  });
+  document.getElementById("records-grid").innerHTML = recordsHtml;
+
+  var recordCounts = {};
+  RECORDS.forEach(function (r) {
+    // extract manager names mentioned in this record (best-effort: match against MANAGERS keys)
+    // check head + body combined so mentions inside the narrative text still count
+    var combined = r.head + " " + r.body;
+    Object.keys(MANAGERS).forEach(function (name) {
+      if (combined.indexOf(name) !== -1) {
+        recordCounts[name] = (recordCounts[name] || 0) + 1;
+      }
+    });
+  });
+  var sortedCounts = Object.keys(recordCounts).map(function (n) { return [n, recordCounts[n]]; }).sort(function (a, b) { return b[1] - a[1]; });
+  var top = sortedCounts[0], second = sortedCounts[1];
+  document.getElementById("records-note").textContent =
+    top[0] + " shows up in " + top[1] + " of these " + RECORDS.length + " records — the lowest score ever, both ends of the highest-score/biggest-blowout game, the closest game, the win in the highest-scoring heartbreaker anyone's ever lost, and the longest win streak in league history. " +
+    second[0] + " is next with " + second[1] + " appearances. Nobody else shows up more than once.";
+
+  // ---- rivalries ----
+  var rivHtml = "";
+  RIVALRIES.forEach(function (r) {
+    rivHtml += '<div class="riv-row">' +
+      '<span class="riv-names">' + r.names + '</span>' +
+      '<span class="riv-record mono">' + r.record + '</span>' +
+      '<span class="riv-note">' + r.note + '</span>' +
+    '</div>';
+  });
+  document.getElementById("riv-list").innerHTML = rivHtml;
+
+  // ---- standings table ----
+  var tbody = document.querySelector("#standings-table tbody");
+  var rowsHtml = "";
+  STANDINGS.forEach(function (s) {
+    rowsHtml += '<tr>' +
+      '<td class="num">' + s[0] + '</td>' +
+      '<td class="mgr">' + esc(s[1]) + '</td>' +
+      '<td class="num">' + s[2] + '</td><td class="num">' + s[3] + '</td><td class="num">' + s[4] + '</td>' +
+      '<td class="num">' + s[5] + '</td><td class="num">' + s[6] + '</td>' +
+      '<td class="num">' + s[7] + '</td><td class="num">' + s[8] + '</td>' +
+      '<td class="num">' + s[9] + '</td><td class="num">' + s[10] + '</td><td class="num">' + s[11] + '</td>' +
+    '</tr>';
+  });
+  tbody.innerHTML = rowsHtml;
+
+  // ---- trade tables ----
+  var tradesTbody = document.querySelector("#trades-table tbody");
+  var tradesRows = "";
+  TRADE_TOP10.forEach(function (t) {
+    tradesRows += '<tr>' +
+      '<td class="num">' + t[0] + '</td>' +
+      '<td class="num">' + esc(t[1]) + '</td>' +
+      '<td class="mgr">' + esc(t[2]) + '</td>' +
+      '<td>' + esc(t[3]) + '</td>' +
+      '<td class="mgr">' + esc(t[4]) + '</td>' +
+      '<td>' + esc(t[5]) + '</td>' +
+      '<td class="num">' + esc(t[6]) + '</td>' +
+    '</tr>';
+  });
+  tradesTbody.innerHTML = tradesRows;
+
+  var coyTop10 = TRADE_TOP10.filter(function (t) { return t[2] === "Jarett Coy" || t[4] === "Jarett Coy"; });
+  var coyWins = coyTop10.filter(function (t) { return t[2] === "Jarett Coy"; }).length;
+  var coyLosses = coyTop10.length - coyWins;
+  document.getElementById("trades-note").textContent =
+    "Jarett Coy is a party to " + coyTop10.length + " of these top 10 — " + coyWins + " as the winner, " + coyLosses + " as the loser. Angelo Hernandez and Johnny Marcks each show up 3 times; nobody else appears more than twice.";
+
+  // ---- waiver effectiveness ranking ----
+  var waiverRankTbody = document.querySelector("#waiver-rank-table tbody");
+  var waiverRankRows = "";
+  WAIVER_RANK.forEach(function (w) {
+    waiverRankRows += '<tr>' +
+      '<td class="num">' + w[0] + '</td>' +
+      '<td class="mgr">' + esc(w[1]) + '</td>' +
+      '<td class="num">' + esc(w[2]) + '</td>' +
+      '<td class="num">' + esc(w[3]) + '</td>' +
+      '<td class="num">' + esc(w[4]) + '</td>' +
+      '<td class="num">' + w[5] + '</td>' +
+    '</tr>';
+  });
+  waiverRankTbody.innerHTML = waiverRankRows;
+
+  // ---- 2025 season recap ----
+  var recapHtml = "";
+  RECAP_2025_PARAS.forEach(function (p) {
+    recapHtml += '<p class="section-sub" style="color:var(--text);margin-top:12px;"><strong>' + p[0] + '</strong> ' + p[1] + '</p>';
+  });
+  document.getElementById("recap-2025-body").innerHTML = recapHtml;
+
+  var recapTbody = document.querySelector("#recap-2025-table tbody");
+  var recapRows = "";
+  RECAP_2025_STANDINGS.forEach(function (r) {
+    recapRows += '<tr>' +
+      '<td class="num">' + r[0] + '</td>' +
+      '<td class="mgr">' + esc(r[1]) + '</td>' +
+      '<td>' + esc(r[2]) + '</td>' +
+      '<td class="num mono">' + esc(r[3]) + '</td>' +
+      '<td class="num">' + esc(r[4]) + '</td>' +
+    '</tr>';
+  });
+  recapTbody.innerHTML = recapRows;
+
+  // ---- timeline ----
+  var tlHtml = "";
+  TIMELINE.forEach(function (t) {
+    tlHtml += '<div class="tl-row">' +
+      '<div class="tl-year">' + t[0] + '</div>' +
+      '<div><div class="tl-champ">Champion: ' + t[1] + '</div><div class="tl-note">' + t[2] + '</div></div>' +
+    '</div>';
+  });
+  document.getElementById("timeline").innerHTML = tlHtml;
+
+  // ---- chip click: open + scroll target card ----
+  document.getElementById("jumpchips").addEventListener("click", function (e) {
+    var a = e.target.closest("a[data-target]");
+    if (!a) return;
+    var target = document.getElementById(a.getAttribute("data-target"));
+    if (target && "open" in target) target.open = true;
+  });
+})();
+</script>
