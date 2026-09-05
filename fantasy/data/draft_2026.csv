@@ -1,0 +1,169 @@
+overall,round,pick,team_id,manager,team_name,player,player_id,keeper
+1,1,1,5,Jarett Coy,Vino's Victors,Jahmyr Gibbs,4429795,False
+2,1,2,11,Pj Lannon,Waddle Deez Nutz On Yo Face,Ja'Marr Chase,4362628,False
+3,1,3,10,Dustin Gamble,Dishes Nothin,Bijan Robinson,4430807,False
+4,1,4,3,Alex Topham,Derek's Di1do's,Puka Nacua,4426515,False
+5,1,5,7,Corey Ploss,What that smell like?!!,Christian McCaffrey,3117251,False
+6,1,6,1,Derek Booker,MK Candle,James Cook III,4379399,False
+7,1,7,12,Angelo Hernandez,Nacua Matata,Amon-Ra St. Brown,4374302,False
+8,1,8,6,Dakota Bender,DaGoata 🐐,Jonathan Taylor,4242335,False
+9,1,9,2,Tyler Scarlett,Bowers Castle ,Jaxon Smith-Njigba,4430878,False
+10,1,10,13,Andrew Campbell,Naked Keg Stand,CeeDee Lamb,4241389,False
+11,1,11,8,Kyle Torpey,Bye Week,Chase Brown,4362238,False
+12,1,12,4,Johnny Marcks,Ward on Mcconkey,Justin Jefferson,4262921,False
+13,2,1,4,Johnny Marcks,Ward on Mcconkey,De'Von Achane,4429160,False
+14,2,2,8,Kyle Torpey,Bye Week,Derrick Henry,3043078,False
+15,2,3,13,Andrew Campbell,Naked Keg Stand,Omarion Hampton,4685382,False
+16,2,4,2,Tyler Scarlett,Bowers Castle ,Ashton Jeanty,4890973,False
+17,2,5,6,Dakota Bender,DaGoata 🐐,Saquon Barkley,3929630,False
+18,2,6,12,Angelo Hernandez,Nacua Matata,Kenneth Walker III,4567048,False
+19,2,7,1,Derek Booker,MK Candle,Javonte Williams,4361579,False
+20,2,8,7,Corey Ploss,What that smell like?!!,Trey McBride,4361307,False
+21,2,9,3,Alex Topham,Derek's Di1do's,A.J. Brown,4047646,False
+22,2,10,10,Dustin Gamble,Dishes Nothin,Jeremiyah Love,4870808,False
+23,2,11,11,Pj Lannon,Waddle Deez Nutz On Yo Face,Drake London,4426502,False
+24,2,12,5,Jarett Coy,Vino's Victors,Brock Bowers,4432665,False
+25,3,1,5,Jarett Coy,Vino's Victors,Kyren Williams,4430737,False
+26,3,2,11,Pj Lannon,Waddle Deez Nutz On Yo Face,Breece Hall,4427366,False
+27,3,3,10,Dustin Gamble,Dishes Nothin,Nico Collins,4258173,False
+28,3,4,3,Alex Topham,Derek's Di1do's,Travis Etienne Jr.,4239996,False
+29,3,5,7,Corey Ploss,What that smell like?!!,Rashee Rice,4428331,False
+30,3,6,1,Derek Booker,MK Candle,Chris Olave,4361370,False
+31,3,7,12,Angelo Hernandez,Nacua Matata,Josh Allen,3918298,False
+32,3,8,6,Dakota Bender,DaGoata 🐐,George Pickens,4426354,False
+33,3,9,2,Tyler Scarlett,Bowers Castle ,Malik Nabers,4595348,False
+34,3,10,13,Andrew Campbell,Naked Keg Stand,DeVonta Smith,4241478,False
+35,3,11,8,Kyle Torpey,Bye Week,Emeka Egbuka,4567750,False
+36,3,12,4,Johnny Marcks,Ward on Mcconkey,Ladd McConkey,4612826,False
+37,4,1,4,Johnny Marcks,Ward on Mcconkey,Colston Loveland,4723086,False
+38,4,2,8,Kyle Torpey,Bye Week,Garrett Wilson,4569618,False
+39,4,3,13,Andrew Campbell,Naked Keg Stand,Cam Skattebo,4696981,False
+40,4,4,2,Tyler Scarlett,Bowers Castle ,Zay Flowers,4429615,False
+41,4,5,6,Dakota Bender,DaGoata 🐐,Tetairoa McMillan,4685472,False
+42,4,6,12,Angelo Hernandez,Nacua Matata,Jaylen Waddle,4372016,False
+43,4,7,1,Derek Booker,MK Candle,Terry McLaurin,3121422,False
+44,4,8,7,Corey Ploss,What that smell like?!!,Tee Higgins,4239993,False
+45,4,9,3,Alex Topham,Derek's Di1do's,Bhayshul Tuten,4882093,False
+46,4,10,10,Dustin Gamble,Dishes Nothin,Lamar Jackson,3916387,False
+47,4,11,11,Pj Lannon,Waddle Deez Nutz On Yo Face,Davante Adams,16800,False
+48,4,12,5,Jarett Coy,Vino's Victors,D'Andre Swift,4259545,False
+49,5,1,5,Jarett Coy,Vino's Victors,Jadarian Price,4685512,False
+50,5,2,11,Pj Lannon,Waddle Deez Nutz On Yo Face,Quinshon Judkins,4685702,False
+51,5,3,10,Dustin Gamble,Dishes Nothin,Bucky Irving,4596448,False
+52,5,4,3,Alex Topham,Derek's Di1do's,Tyler Warren,4431459,False
+53,5,5,7,Corey Ploss,What that smell like?!!,DJ Moore,3915416,False
+54,5,6,1,Derek Booker,MK Candle,Jayden Daniels,4426348,False
+55,5,7,12,Angelo Hernandez,Nacua Matata,David Montgomery,4035538,False
+56,5,8,6,Dakota Bender,DaGoata 🐐,Luther Burden III,4685278,False
+57,5,9,2,Tyler Scarlett,Bowers Castle ,TreVeyon Henderson,4432710,False
+58,5,10,13,Andrew Campbell,Naked Keg Stand,Kyle Pitts Sr.,4360248,False
+59,5,11,8,Kyle Torpey,Bye Week,Carnell Tate,4871023,False
+60,5,12,4,Johnny Marcks,Ward on Mcconkey,Jameson Williams,4426388,False
+61,6,1,4,Johnny Marcks,Ward on Mcconkey,Justin Herbert,4038941,False
+62,6,2,8,Kyle Torpey,Bye Week,Sam LaPorta,4430027,False
+63,6,3,13,Andrew Campbell,Naked Keg Stand,Drake Maye,4431452,False
+64,6,4,2,Tyler Scarlett,Bowers Castle ,Tony Pollard,3916148,False
+65,6,5,6,Dakota Bender,DaGoata 🐐,Jalen Hurts,4040715,False
+66,6,6,12,Angelo Hernandez,Nacua Matata,Christian Watson,4248528,False
+67,6,7,1,Derek Booker,MK Candle,George Kittle,3040151,False
+68,6,8,7,Corey Ploss,What that smell like?!!,Rhamondre Stevenson,4569173,False
+69,6,9,3,Alex Topham,Derek's Di1do's,Parker Washington,4432620,False
+70,6,10,10,Dustin Gamble,Dishes Nothin,Rome Odunze,4431299,False
+71,6,11,11,Pj Lannon,Waddle Deez Nutz On Yo Face,Joe Burrow,3915511,False
+72,6,12,5,Jarett Coy,Vino's Victors,Mike Evans,16737,False
+73,7,1,5,Jarett Coy,Vino's Victors,Marvin Harrison Jr.,4432708,False
+74,7,2,11,Pj Lannon,Waddle Deez Nutz On Yo Face,Harold Fannin Jr.,5083076,False
+75,7,3,10,Dustin Gamble,Dishes Nothin,Courtland Sutton,3128429,False
+76,7,4,3,Alex Topham,Derek's Di1do's,Jonathon Brooks,4678008,False
+77,7,5,7,Corey Ploss,What that smell like?!!,MarShawn Lloyd,4429023,False
+78,7,6,1,Derek Booker,MK Candle,Jaylen Warren,4569987,False
+79,7,7,12,Angelo Hernandez,Nacua Matata,Kenny Gainwell,4371733,False
+80,7,8,6,Dakota Bender,DaGoata 🐐,Josh Jacobs,4047365,False
+81,7,9,2,Tyler Scarlett,Bowers Castle ,Michael Wilson,4360761,False
+82,7,10,13,Andrew Campbell,Naked Keg Stand,Chuba Hubbard,4241416,False
+83,7,11,8,Kyle Torpey,Bye Week,DK Metcalf,4047650,False
+84,7,12,4,Johnny Marcks,Ward on Mcconkey,Kyle Monangai,4608686,False
+85,8,1,4,Johnny Marcks,Ward on Mcconkey,Alec Pierce,4360078,False
+86,8,2,8,Kyle Torpey,Bye Week,Aaron Jones Sr.,3042519,False
+87,8,3,13,Andrew Campbell,Naked Keg Stand,Stefon Diggs,2976212,False
+88,8,4,2,Tyler Scarlett,Bowers Castle ,RJ Harvey,4568490,False
+89,8,5,6,Dakota Bender,DaGoata 🐐,Michael Pittman Jr.,4035687,False
+90,8,6,12,Angelo Hernandez,Nacua Matata,Tucker Kraft,4572680,False
+91,8,7,1,Derek Booker,MK Candle,Rico Dowdle,4038815,False
+92,8,8,7,Corey Ploss,What that smell like?!!,Patrick Mahomes,3139477,False
+93,8,9,3,Alex Topham,Derek's Di1do's,Chris Godwin Jr.,3116165,False
+94,8,10,10,Dustin Gamble,Dishes Nothin,J.K. Dobbins,4241985,False
+95,8,11,11,Pj Lannon,Waddle Deez Nutz On Yo Face,Matthew Golden,4701936,False
+96,8,12,5,Jarett Coy,Vino's Victors,Trevor Lawrence,4360310,False
+97,9,1,5,Jarett Coy,Vino's Victors,Quentin Johnston,4429025,False
+98,9,2,11,Pj Lannon,Waddle Deez Nutz On Yo Face,Brandon Aubrey,3953687,False
+99,9,3,10,Dustin Gamble,Dishes Nothin,Brian Thomas Jr.,4432773,False
+100,9,4,3,Alex Topham,Derek's Di1do's,Rachaad White,4697815,False
+101,9,5,7,Corey Ploss,What that smell like?!!,Blake Corum,4429096,False
+102,9,6,1,Derek Booker,MK Candle,Travis Kelce,15847,False
+103,9,7,12,Angelo Hernandez,Nacua Matata,Makai Lemon,4870795,False
+104,9,8,6,Dakota Bender,DaGoata 🐐,Dallas Goedert,3121023,False
+105,9,9,2,Tyler Scarlett,Bowers Castle ,Jake Ferguson,4242355,False
+106,9,10,13,Andrew Campbell,Naked Keg Stand,Texans D/ST,-16034,False
+107,9,11,8,Kyle Torpey,Bye Week,Matthew Stafford,12483,False
+108,9,12,4,Johnny Marcks,Ward on Mcconkey,Romeo Doubs,4361432,False
+109,10,1,4,Johnny Marcks,Ward on Mcconkey,Jordan Mason,4360569,False
+110,10,2,8,Kyle Torpey,Bye Week,Alvin Kamara,3054850,False
+111,10,3,13,Andrew Campbell,Naked Keg Stand,Wan'Dale Robinson,4569587,False
+112,10,4,2,Tyler Scarlett,Bowers Castle ,Dak Prescott,2577417,False
+113,10,5,6,Dakota Bender,DaGoata 🐐,De'Zhaun Stribling,4710714,False
+114,10,6,12,Angelo Hernandez,Nacua Matata,Jayden Reed,4362249,False
+115,10,7,1,Derek Booker,MK Candle,Josh Downs,4688813,False
+116,10,8,7,Corey Ploss,What that smell like?!!,Tyjae Spears,4428557,False
+117,10,9,3,Alex Topham,Derek's Di1do's,Jordan Addison,4429205,False
+118,10,10,10,Dustin Gamble,Dishes Nothin,Xavier Worthy,4683062,False
+119,10,11,11,Pj Lannon,Waddle Deez Nutz On Yo Face,Jacory Croskey-Merritt,4575131,False
+120,10,12,5,Jarett Coy,Vino's Victors,Jordyn Tyson,4880281,False
+121,11,1,5,Jarett Coy,Vino's Victors,Mike Washington Jr.,4686658,False
+122,11,2,11,Pj Lannon,Waddle Deez Nutz On Yo Face,Rams D/ST,-16014,False
+123,11,3,10,Dustin Gamble,Dishes Nothin,Jalen Coker,4695883,False
+124,11,4,3,Alex Topham,Derek's Di1do's,Brock Purdy,4361741,False
+125,11,5,7,Corey Ploss,What that smell like?!!,Jakobi Meyers,3916433,False
+126,11,6,1,Derek Booker,MK Candle,Jaxson Dart,4689114,False
+127,11,7,12,Angelo Hernandez,Nacua Matata,Khalil Shakir,4373678,False
+128,11,8,6,Dakota Bender,DaGoata 🐐,Isaiah Likely,4361050,False
+129,11,9,2,Tyler Scarlett,Bowers Castle ,Dalton Kincaid,4385690,False
+130,11,10,13,Andrew Campbell,Naked Keg Stand,Mark Andrews,3116365,False
+131,11,11,8,Kyle Torpey,Bye Week,Hunter Henry,3046439,False
+132,11,12,4,Johnny Marcks,Ward on Mcconkey,Woody Marks,4429059,False
+133,12,1,4,Johnny Marcks,Ward on Mcconkey,Isiah Pacheco,4361529,False
+134,12,2,8,Kyle Torpey,Bye Week,Keenan Allen,15818,False
+135,12,3,13,Andrew Campbell,Naked Keg Stand,Bo Nix,4426338,False
+136,12,4,2,Tyler Scarlett,Bowers Castle ,Broncos D/ST,-16007,False
+137,12,5,6,Dakota Bender,DaGoata 🐐,Zach Charbonnet,4426385,False
+138,12,6,12,Angelo Hernandez,Nacua Matata,Rashid Shaheed,4032473,False
+139,12,7,1,Derek Booker,MK Candle,Tyler Allgeier,4373626,False
+140,12,8,7,Corey Ploss,What that smell like?!!,Seahawks D/ST,-16026,False
+141,12,9,3,Alex Topham,Derek's Di1do's,Deebo Samuel Sr.,3126486,False
+142,12,10,10,Dustin Gamble,Dishes Nothin,T.J. Hockenson,4036133,False
+143,12,11,11,Pj Lannon,Waddle Deez Nutz On Yo Face,Kyler Murray,3917315,False
+144,12,12,5,Jarett Coy,Vino's Victors,Caleb Williams,4431611,False
+145,13,1,5,Jarett Coy,Vino's Victors,Cameron Dicker,4362081,False
+146,13,2,11,Pj Lannon,Waddle Deez Nutz On Yo Face,Tre Tucker,4428718,False
+147,13,3,10,Dustin Gamble,Dishes Nothin,Steelers D/ST,-16023,False
+148,13,4,3,Alex Topham,Derek's Di1do's,Ravens D/ST,-16033,False
+149,13,5,7,Corey Ploss,What that smell like?!!,Harrison Mevis,4574716,False
+150,13,6,1,Derek Booker,MK Candle,Harrison Butker,3055899,False
+151,13,7,12,Angelo Hernandez,Nacua Matata,Eagles D/ST,-16021,False
+152,13,8,6,Dakota Bender,DaGoata 🐐,Jason Myers,2473037,False
+153,13,9,2,Tyler Scarlett,Bowers Castle ,Cam Little,4686361,False
+154,13,10,13,Andrew Campbell,Naked Keg Stand,Ka'imi Fairbairn,2971573,False
+155,13,11,8,Kyle Torpey,Bye Week,Patriots D/ST,-16017,False
+156,13,12,4,Johnny Marcks,Ward on Mcconkey,Jake Bates,4689936,False
+157,14,1,4,Johnny Marcks,Ward on Mcconkey,Chargers D/ST,-16024,False
+158,14,2,8,Kyle Torpey,Bye Week,Eddy Pineiro,4034949,False
+159,14,3,13,Andrew Campbell,Naked Keg Stand,Jonah Coleman,4702555,False
+160,14,4,2,Tyler Scarlett,Bowers Castle ,KC Concepcion,4870653,False
+161,14,5,6,Dakota Bender,DaGoata 🐐,Lions D/ST,-16008,False
+162,14,6,12,Angelo Hernandez,Nacua Matata,Evan McPherson,4360234,False
+163,14,7,1,Derek Booker,MK Candle,Jaguars D/ST,-16030,False
+164,14,8,7,Corey Ploss,What that smell like?!!,Jalen McMillan,4430834,False
+165,14,9,3,Alex Topham,Derek's Di1do's,Tyler Loop,4697745,False
+166,14,10,10,Dustin Gamble,Dishes Nothin,Cairo Santos,17427,False
+167,14,11,11,Pj Lannon,Waddle Deez Nutz On Yo Face,Justice Hill,4038441,False
+168,14,12,5,Jarett Coy,Vino's Victors,Chiefs D/ST,-16012,False
