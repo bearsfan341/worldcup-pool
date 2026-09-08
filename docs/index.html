@@ -705,6 +705,37 @@
   details.week-old .wo-when { font-family: var(--font-body); font-weight: 400; letter-spacing: 0; text-transform: none; color: var(--text-faint); font-size: 13px; }
   details.week-old .week-body { padding: 0 16px 18px; border-top: 1px solid var(--line); padding-top: 12px; }
 
+
+  /* ---------- post-draft ---------- */
+  .finding {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 4px 4px 0;
+    padding: 16px 18px;
+  }
+  .finding h4 {
+    font-family: var(--font-display);
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    margin-bottom: 6px;
+  }
+  .finding p { margin: 0 0 10px; color: var(--text-soft); font-size: 15px; }
+  .prem-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 12px; }
+  @media (max-width: 560px) { .prem-grid { grid-template-columns: repeat(2, 1fr); } }
+  .prem { background: var(--bg); border: 1px solid var(--line); border-radius: 4px; padding: 10px 12px; text-align: center; }
+  .prem .pk { font-family: var(--font-display); font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-faint); }
+  .prem .pv { font-family: var(--font-mono); font-size: 20px; font-weight: 700; margin-top: 2px; }
+  .prem .pv.hot { color: var(--rust); }
+  .prem .pv.cold { color: var(--good); }
+  .board-round { margin-top: 14px; }
+  .board-round h5 { font-family: var(--font-display); font-size: 15px; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); margin: 0 0 4px; }
+  .board-pick { display: flex; gap: 10px; align-items: baseline; padding: 4px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+  .board-pick .bp-n { font-family: var(--font-mono); color: var(--text-faint); flex: none; width: 34px; }
+  .board-pick .bp-p { font-weight: 600; }
+  .board-pick .bp-m { color: var(--text-soft); margin-left: auto; text-align: right; font-size: 13px; }
+
   footer {
     margin-top: 60px;
     padding: 28px 0 60px;
@@ -740,6 +771,7 @@
     <span class="topnav-brand">Wolves of Fantasy</span>
     <nav class="topnav-links">
       <a href="#recap-2025">2025 Recap</a>
+      <a href="#draft">Draft</a>
       <a href="#week">This Week</a>
       <a href="#rankings">Rankings</a>
       <a href="#managers">Managers</a>
@@ -778,6 +810,59 @@
         <tbody></tbody>
       </table>
     </div>
+  </section>
+
+  <div class="stub-divider" role="presentation"></div>
+
+  <section id="draft">
+    <div class="section-head">
+      <span class="eyebrow">Post-Draft</span>
+      <h2>2026 Draft Analysis</h2>
+      <p class="section-sub" id="draft-sub"></p>
+    </div>
+
+    <div class="finding" id="draft-premium"></div>
+
+    <h3 class="subhead" style="margin-top:34px;">Post-Draft Power Rankings</h3>
+    <p class="section-sub">Composite of roster strength (trade-adjusted), bust exposure, draft performance against ECR, recent form and career record.</p>
+    <div class="table-scroll">
+      <table class="standings" id="draft-power-table">
+        <thead>
+          <tr><th class="num">#</th><th>Manager</th><th class="num">Starters</th><th class="num">Trade Upside</th><th class="num">Bust Share</th><th class="num">Draft vs ECR</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <h3 class="subhead" style="margin-top:34px;">Ten Best Picks</h3>
+    <p class="section-sub">Value is the gap between where a player was taken and his FantasyPros ECR, normalised to this league's own pace.</p>
+    <div class="table-scroll">
+      <table class="standings" id="draft-best-table">
+        <thead>
+          <tr><th class="num">Pick</th><th>Player</th><th>Manager</th><th class="num">ECR</th><th class="num">Value</th><th class="num">Proj</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <h3 class="subhead" style="margin-top:34px;">Ten Worst Picks</h3>
+    <div class="table-scroll">
+      <table class="standings" id="draft-worst-table">
+        <thead>
+          <tr><th class="num">Pick</th><th>Player</th><th>Manager</th><th class="num">ECR</th><th class="num">Value</th><th class="num">Proj</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <h3 class="subhead" style="margin-top:34px;">Team by Team</h3>
+    <p class="section-sub">Tap a team for its roster shape, biggest hole and best and worst pick.</p>
+    <div class="mgr-grid" id="draft-teams"></div>
+
+    <details class="week-old" id="draft-board" style="margin-top:26px;">
+      <summary><span>Full Draft Board &mdash; all 168 picks</span><span class="wo-when">round by round</span></summary>
+      <div class="week-body"><div id="draft-board-body"></div></div>
+    </details>
   </section>
 
   <div class="stub-divider" role="presentation"></div>
@@ -1460,6 +1545,116 @@
   document.getElementById("hero-meta").innerHTML =
     'League ID <strong>684189</strong> &nbsp;&middot;&nbsp; <strong>11</strong> complete seasons' +
     (WEEKS.length && WEEKS[0].date ? ' &nbsp;&middot;&nbsp; updated <strong>' + esc(WEEKS[0].date) + '</strong>' : "");
+
+  // ---- post-draft analysis ----
+  /* DRAFT_DATA_START */
+  var DRAFT = {"picks":168,"positional_premium":{"RB":{"n":51,"mean":-12.1,"median":-10},"WR":{"n":60,"mean":0.8,"median":4.0},"TE":{"n":17,"mean":3.4,"median":2},"QB":{"n":16,"mean":9.1,"median":14.0}},"board":[{"overall":1,"round":1,"manager":"Jarett Coy","player":"Jahmyr Gibbs","pos":"RB","ecr":2,"proj":369.1,"val":1.5},{"overall":2,"round":1,"manager":"Pj Lannon","player":"Ja'Marr Chase","pos":"WR","ecr":1,"proj":336.9,"val":3.5},{"overall":3,"round":1,"manager":"Dustin Gamble","player":"Bijan Robinson","pos":"RB","ecr":3,"proj":352.4,"val":2.5},{"overall":4,"round":1,"manager":"Alex Topham","player":"Puka Nacua","pos":"WR","ecr":4,"proj":353.6,"val":2.5},{"overall":5,"round":1,"manager":"Corey Ploss","player":"Christian McCaffrey","pos":"RB","ecr":5,"proj":341.5,"val":2.5},{"overall":6,"round":1,"manager":"Derek Booker","player":"James Cook III","pos":"RB","ecr":19,"proj":280.0,"val":-10.5},{"overall":7,"round":1,"manager":"Angelo Hernandez","player":"Amon-Ra St. Brown","pos":"WR","ecr":7,"proj":324.0,"val":2.5},{"overall":8,"round":1,"manager":"Dakota Bender","player":"Jonathan Taylor","pos":"RB","ecr":12,"proj":315.9,"val":-1.5},{"overall":9,"round":1,"manager":"Tyler Scarlett","player":"Jaxon Smith-Njigba","pos":"WR","ecr":6,"proj":326.7,"val":5.5},{"overall":10,"round":1,"manager":"Andrew Campbell","player":"CeeDee Lamb","pos":"WR","ecr":8,"proj":293.6,"val":4.5},{"overall":11,"round":1,"manager":"Kyle Torpey","player":"Chase Brown","pos":"RB","ecr":17,"proj":271.6,"val":-3.5},{"overall":12,"round":1,"manager":"Johnny Marcks","player":"Justin Jefferson","pos":"WR","ecr":9,"proj":293.9,"val":5.5},{"overall":13,"round":2,"manager":"Johnny Marcks","player":"De'Von Achane","pos":"RB","ecr":24,"proj":293.2,"val":-8.5},{"overall":14,"round":2,"manager":"Kyle Torpey","player":"Derrick Henry","pos":"RB","ecr":33,"proj":277.8,"val":-16.5},{"overall":15,"round":2,"manager":"Andrew Campbell","player":"Omarion Hampton","pos":"RB","ecr":27,"proj":261.7,"val":-9.5},{"overall":16,"round":2,"manager":"Tyler Scarlett","player":"Ashton Jeanty","pos":"RB","ecr":16,"proj":278.9,"val":2.5},{"overall":17,"round":2,"manager":"Dakota Bender","player":"Saquon Barkley","pos":"RB","ecr":30,"proj":273.3,"val":-10.5},{"overall":18,"round":2,"manager":"Angelo Hernandez","player":"Kenneth Walker III","pos":"RB","ecr":32,"proj":273.1,"val":-11.5},{"overall":19,"round":2,"manager":"Derek Booker","player":"Javonte Williams","pos":"RB","ecr":42,"proj":259.5,"val":-20.5},{"overall":20,"round":2,"manager":"Corey Ploss","player":"Trey McBride","pos":"TE","ecr":18,"proj":241.6,"val":4.5},{"overall":21,"round":2,"manager":"Alex Topham","player":"A.J. Brown","pos":"WR","ecr":14,"proj":249.4,"val":9.5},{"overall":22,"round":2,"manager":"Dustin Gamble","player":"Jeremiyah Love","pos":"RB","ecr":36,"proj":276.5,"val":-11.5},{"overall":23,"round":2,"manager":"Pj Lannon","player":"Drake London","pos":"WR","ecr":13,"proj":269.5,"val":12.5},{"overall":24,"round":2,"manager":"Jarett Coy","player":"Brock Bowers","pos":"TE","ecr":10,"proj":240.9,"val":16.5},{"overall":25,"round":3,"manager":"Jarett Coy","player":"Kyren Williams","pos":"RB","ecr":41,"proj":232.0,"val":-13.5},{"overall":26,"round":3,"manager":"Pj Lannon","player":"Breece Hall","pos":"RB","ecr":35,"proj":274.1,"val":-6.5},{"overall":27,"round":3,"manager":"Dustin Gamble","player":"Nico Collins","pos":"WR","ecr":15,"proj":248.2,"val":14.5},{"overall":28,"round":3,"manager":"Alex Topham","player":"Travis Etienne Jr.","pos":"RB","ecr":45,"proj":246.4,"val":-14.5},{"overall":29,"round":3,"manager":"Corey Ploss","player":"Rashee Rice","pos":"WR","ecr":22,"proj":259.3,"val":9.5},{"overall":30,"round":3,"manager":"Derek Booker","player":"Chris Olave","pos":"WR","ecr":20,"proj":249.6,"val":12.5},{"overall":31,"round":3,"manager":"Angelo Hernandez","player":"Josh Allen","pos":"QB","ecr":11,"proj":370.0,"val":22.5},{"overall":32,"round":3,"manager":"Dakota Bender","player":"George Pickens","pos":"WR","ecr":21,"proj":239.2,"val":13.5},{"overall":33,"round":3,"manager":"Tyler Scarlett","player":"Malik Nabers","pos":"WR","ecr":25,"proj":243.9,"val":10.5},{"overall":34,"round":3,"manager":"Andrew Campbell","player":"DeVonta Smith","pos":"WR","ecr":23,"proj":239.1,"val":13.5},{"overall":35,"round":3,"manager":"Kyle Torpey","player":"Emeka Egbuka","pos":"WR","ecr":43,"proj":228.8,"val":-5.5},{"overall":36,"round":3,"manager":"Johnny Marcks","player":"Ladd McConkey","pos":"WR","ecr":38,"proj":221.0,"val":0.5},{"overall":37,"round":4,"manager":"Johnny Marcks","player":"Colston Loveland","pos":"TE","ecr":40,"proj":206.6,"val":-0.5},{"overall":38,"round":4,"manager":"Kyle Torpey","player":"Garrett Wilson","pos":"WR","ecr":26,"proj":250.1,"val":14.5},{"overall":39,"round":4,"manager":"Andrew Campbell","player":"Cam Skattebo","pos":"RB","ecr":47,"proj":227.4,"val":-5.5},{"overall":40,"round":4,"manager":"Tyler Scarlett","player":"Zay Flowers","pos":"WR","ecr":28,"proj":238.5,"val":14.5},{"overall":41,"round":4,"manager":"Dakota Bender","player":"Tetairoa McMillan","pos":"WR","ecr":29,"proj":235.9,"val":14.5},{"overall":42,"round":4,"manager":"Angelo Hernandez","player":"Jaylen Waddle","pos":"WR","ecr":37,"proj":213.0,"val":7.5},{"overall":43,"round":4,"manager":"Derek Booker","player":"Terry McLaurin","pos":"WR","ecr":46,"proj":218.0,"val":-0.5},{"overall":44,"round":4,"manager":"Corey Ploss","player":"Tee Higgins","pos":"WR","ecr":39,"proj":218.9,"val":7.5},{"overall":45,"round":4,"manager":"Alex Topham","player":"Bhayshul Tuten","pos":"RB","ecr":67,"proj":206.0,"val":-19.5},{"overall":46,"round":4,"manager":"Dustin Gamble","player":"Lamar Jackson","pos":"QB","ecr":31,"proj":322.5,"val":17.5},{"overall":47,"round":4,"manager":"Pj Lannon","player":"Davante Adams","pos":"WR","ecr":50,"proj":232.2,"val":-0.5},{"overall":48,"round":4,"manager":"Jarett Coy","player":"D'Andre Swift","pos":"RB","ecr":57,"proj":209.9,"val":-6.5},{"overall":49,"round":5,"manager":"Jarett Coy","player":"Jadarian Price","pos":"RB","ecr":69,"proj":194.1,"val":-17.5},{"overall":50,"round":5,"manager":"Pj Lannon","player":"Quinshon Judkins","pos":"RB","ecr":61,"proj":226.8,"val":-8.5},{"overall":51,"round":5,"manager":"Dustin Gamble","player":"Bucky Irving","pos":"RB","ecr":58,"proj":206.9,"val":-4.5},{"overall":52,"round":5,"manager":"Alex Topham","player":"Tyler Warren","pos":"TE","ecr":56,"proj":210.5,"val":-1.5},{"overall":53,"round":5,"manager":"Corey Ploss","player":"DJ Moore","pos":"WR","ecr":51,"proj":209.6,"val":4.5},{"overall":54,"round":5,"manager":"Derek Booker","player":"Jayden Daniels","pos":"QB","ecr":60,"proj":317.0,"val":-3.5},{"overall":55,"round":5,"manager":"Angelo Hernandez","player":"David Montgomery","pos":"RB","ecr":59,"proj":199.7,"val":-1.5},{"overall":56,"round":5,"manager":"Dakota Bender","player":"Luther Burden III","pos":"WR","ecr":48,"proj":206.5,"val":10.5},{"overall":57,"round":5,"manager":"Tyler Scarlett","player":"TreVeyon Henderson","pos":"RB","ecr":65,"proj":187.5,"val":-5.5},{"overall":58,"round":5,"manager":"Andrew Campbell","player":"Kyle Pitts Sr.","pos":"TE","ecr":66,"proj":185.0,"val":-5.5},{"overall":59,"round":5,"manager":"Kyle Torpey","player":"Carnell Tate","pos":"WR","ecr":71,"proj":202.2,"val":-9.5},{"overall":60,"round":5,"manager":"Johnny Marcks","player":"Jameson Williams","pos":"WR","ecr":53,"proj":208.3,"val":9.5},{"overall":61,"round":6,"manager":"Johnny Marcks","player":"Justin Herbert","pos":"QB","ecr":82,"proj":283.6,"val":-18.5},{"overall":62,"round":6,"manager":"Kyle Torpey","player":"Sam LaPorta","pos":"TE","ecr":68,"proj":188.7,"val":-3.5},{"overall":63,"round":6,"manager":"Andrew Campbell","player":"Drake Maye","pos":"QB","ecr":34,"proj":319.8,"val":31.5},{"overall":64,"round":6,"manager":"Tyler Scarlett","player":"Tony Pollard","pos":"RB","ecr":79,"proj":185.5,"val":-12.5},{"overall":65,"round":6,"manager":"Dakota Bender","player":"Jalen Hurts","pos":"QB","ecr":74,"proj":319.8,"val":-6.5},{"overall":66,"round":6,"manager":"Angelo Hernandez","player":"Christian Watson","pos":"WR","ecr":55,"proj":188.5,"val":13.5},{"overall":67,"round":6,"manager":"Derek Booker","player":"George Kittle","pos":"TE","ecr":78,"proj":193.3,"val":-8.5},{"overall":68,"round":6,"manager":"Corey Ploss","player":"Rhamondre Stevenson","pos":"RB","ecr":72,"proj":206.7,"val":-1.5},{"overall":69,"round":6,"manager":"Alex Topham","player":"Parker Washington","pos":"WR","ecr":63,"proj":187.2,"val":8.5},{"overall":70,"round":6,"manager":"Dustin Gamble","player":"Rome Odunze","pos":"WR","ecr":54,"proj":213.2,"val":18.5},{"overall":71,"round":6,"manager":"Pj Lannon","player":"Joe Burrow","pos":"QB","ecr":49,"proj":304.3,"val":24.5},{"overall":72,"round":6,"manager":"Jarett Coy","player":"Mike Evans","pos":"WR","ecr":52,"proj":180.0,"val":22.5},{"overall":73,"round":7,"manager":"Jarett Coy","player":"Marvin Harrison Jr.","pos":"WR","ecr":73,"proj":193.6,"val":2.5},{"overall":74,"round":7,"manager":"Pj Lannon","player":"Harold Fannin Jr.","pos":"TE","ecr":62,"proj":188.9,"val":14.5},{"overall":75,"round":7,"manager":"Dustin Gamble","player":"Courtland Sutton","pos":"WR","ecr":89,"proj":204.1,"val":-11.5},{"overall":76,"round":7,"manager":"Alex Topham","player":"Jonathon Brooks","pos":"RB","ecr":90,"proj":179.6,"val":-11.5},{"overall":77,"round":7,"manager":"Corey Ploss","player":"MarShawn Lloyd","pos":"RB","ecr":179,"proj":134.4,"val":-99.5},{"overall":78,"round":7,"manager":"Derek Booker","player":"Jaylen Warren","pos":"RB","ecr":70,"proj":194.0,"val":10.5},{"overall":79,"round":7,"manager":"Angelo Hernandez","player":"Kenny Gainwell","pos":"RB","ecr":98,"proj":177.7,"val":-16.5},{"overall":80,"round":7,"manager":"Dakota Bender","player":"Josh Jacobs","pos":"RB","ecr":44,"proj":164.0,"val":38.5},{"overall":81,"round":7,"manager":"Tyler Scarlett","player":"Michael Wilson","pos":"WR","ecr":96,"proj":176.4,"val":-12.5},{"overall":82,"round":7,"manager":"Andrew Campbell","player":"Chuba Hubbard","pos":"RB","ecr":92,"proj":180.0,"val":-7.5},{"overall":83,"round":7,"manager":"Kyle Torpey","player":"DK Metcalf","pos":"WR","ecr":83,"proj":195.8,"val":2.5},{"overall":84,"round":7,"manager":"Johnny Marcks","player":"Kyle Monangai","pos":"RB","ecr":111,"proj":174.7,"val":-24.5},{"overall":85,"round":8,"manager":"Johnny Marcks","player":"Alec Pierce","pos":"WR","ecr":101,"proj":185.3,"val":-13.5},{"overall":86,"round":8,"manager":"Kyle Torpey","player":"Aaron Jones Sr.","pos":"RB","ecr":115,"proj":178.2,"val":-26.5},{"overall":87,"round":8,"manager":"Andrew Campbell","player":"Stefon Diggs","pos":"WR","ecr":103,"proj":172.9,"val":-13.5},{"overall":88,"round":8,"manager":"Tyler Scarlett","player":"RJ Harvey","pos":"RB","ecr":87,"proj":149.4,"val":3.5},{"overall":89,"round":8,"manager":"Dakota Bender","player":"Michael Pittman Jr.","pos":"WR","ecr":86,"proj":197.2,"val":5.5},{"overall":90,"round":8,"manager":"Angelo Hernandez","player":"Tucker Kraft","pos":"TE","ecr":64,"proj":172.0,"val":28.5},{"overall":91,"round":8,"manager":"Derek Booker","player":"Rico Dowdle","pos":"RB","ecr":80,"proj":188.3,"val":13.5},{"overall":92,"round":8,"manager":"Corey Ploss","player":"Patrick Mahomes","pos":"QB","ecr":109,"proj":291.0,"val":-14.5},{"overall":93,"round":8,"manager":"Alex Topham","player":"Chris Godwin Jr.","pos":"WR","ecr":81,"proj":157.2,"val":14.5},{"overall":94,"round":8,"manager":"Dustin Gamble","player":"J.K. Dobbins","pos":"RB","ecr":99,"proj":174.8,"val":-2.5},{"overall":95,"round":8,"manager":"Pj Lannon","player":"Matthew Golden","pos":"WR","ecr":127,"proj":188.6,"val":-29.5},{"overall":96,"round":8,"manager":"Jarett Coy","player":"Trevor Lawrence","pos":"QB","ecr":84,"proj":289.6,"val":14.5},{"overall":97,"round":9,"manager":"Jarett Coy","player":"Quentin Johnston","pos":"WR","ecr":100,"proj":165.4,"val":-0.5},{"overall":98,"round":9,"manager":"Pj Lannon","player":"Brandon Aubrey","pos":"K","ecr":151,"proj":171.5,"val":-50.5},{"overall":99,"round":9,"manager":"Dustin Gamble","player":"Brian Thomas Jr.","pos":"WR","ecr":77,"proj":176.7,"val":24.5},{"overall":100,"round":9,"manager":"Alex Topham","player":"Rachaad White","pos":"RB","ecr":108,"proj":164.1,"val":-5.5},{"overall":101,"round":9,"manager":"Corey Ploss","player":"Blake Corum","pos":"RB","ecr":110,"proj":159.3,"val":-6.5},{"overall":102,"round":9,"manager":"Derek Booker","player":"Travis Kelce","pos":"TE","ecr":75,"proj":177.2,"val":29.5},{"overall":103,"round":9,"manager":"Angelo Hernandez","player":"Makai Lemon","pos":"WR","ecr":106,"proj":155.2,"val":-0.5},{"overall":104,"round":9,"manager":"Dakota Bender","player":"Dallas Goedert","pos":"TE","ecr":117,"proj":176.9,"val":-10.5},{"overall":105,"round":9,"manager":"Tyler Scarlett","player":"Jake Ferguson","pos":"TE","ecr":85,"proj":166.6,"val":22.5},{"overall":106,"round":9,"manager":"Andrew Campbell","player":"Texans D/ST","pos":"D/ST","ecr":126,"proj":129.1,"val":-17.5},{"overall":107,"round":9,"manager":"Kyle Torpey","player":"Matthew Stafford","pos":"QB","ecr":128,"proj":292.8,"val":-18.5},{"overall":108,"round":9,"manager":"Johnny Marcks","player":"Romeo Doubs","pos":"WR","ecr":131,"proj":150.4,"val":-20.5},{"overall":109,"round":10,"manager":"Johnny Marcks","player":"Jordan Mason","pos":"RB","ecr":120,"proj":152.3,"val":-8.5},{"overall":110,"round":10,"manager":"Kyle Torpey","player":"Alvin Kamara","pos":"RB","ecr":146,"proj":113.3,"val":-33.5},{"overall":111,"round":10,"manager":"Andrew Campbell","player":"Wan'Dale Robinson","pos":"WR","ecr":94,"proj":174.8,"val":19.5},{"overall":112,"round":10,"manager":"Tyler Scarlett","player":"Dak Prescott","pos":"QB","ecr":93,"proj":286.1,"val":21.5},{"overall":113,"round":10,"manager":"Dakota Bender","player":"De'Zhaun Stribling","pos":"WR","ecr":144,"proj":160.1,"val":-28.5},{"overall":114,"round":10,"manager":"Angelo Hernandez","player":"Jayden Reed","pos":"WR","ecr":104,"proj":173.4,"val":12.5},{"overall":115,"round":10,"manager":"Derek Booker","player":"Josh Downs","pos":"WR","ecr":95,"proj":157.6,"val":22.5},{"overall":116,"round":10,"manager":"Corey Ploss","player":"Tyjae Spears","pos":"RB","ecr":129,"proj":154.3,"val":-10.5},{"overall":117,"round":10,"manager":"Alex Topham","player":"Jordan Addison","pos":"WR","ecr":105,"proj":170.7,"val":14.5},{"overall":118,"round":10,"manager":"Dustin Gamble","player":"Xavier Worthy","pos":"WR","ecr":118,"proj":172.9,"val":2.5},{"overall":119,"round":10,"manager":"Pj Lannon","player":"Jacory Croskey-Merritt","pos":"RB","ecr":116,"proj":158.8,"val":5.5},{"overall":120,"round":10,"manager":"Jarett Coy","player":"Jordyn Tyson","pos":"WR","ecr":119,"proj":99.8,"val":3.5},{"overall":121,"round":11,"manager":"Jarett Coy","player":"Mike Washington Jr.","pos":"RB","ecr":186,"proj":67.1,"val":-62.5},{"overall":122,"round":11,"manager":"Pj Lannon","player":"Rams D/ST","pos":"D/ST","ecr":139,"proj":124.4,"val":-14.5},{"overall":123,"round":11,"manager":"Dustin Gamble","player":"Jalen Coker","pos":"WR","ecr":114,"proj":146.9,"val":11.5},{"overall":124,"round":11,"manager":"Alex Topham","player":"Brock Purdy","pos":"QB","ecr":97,"proj":291.6,"val":29.5},{"overall":125,"round":11,"manager":"Corey Ploss","player":"Jakobi Meyers","pos":"WR","ecr":102,"proj":181.9,"val":25.5},{"overall":126,"round":11,"manager":"Derek Booker","player":"Jaxson Dart","pos":"QB","ecr":107,"proj":299.5,"val":21.5},{"overall":127,"round":11,"manager":"Angelo Hernandez","player":"Khalil Shakir","pos":"WR","ecr":112,"proj":171.2,"val":17.5},{"overall":128,"round":11,"manager":"Dakota Bender","player":"Isaiah Likely","pos":"TE","ecr":91,"proj":155.1,"val":39.5},{"overall":129,"round":11,"manager":"Tyler Scarlett","player":"Dalton Kincaid","pos":"TE","ecr":88,"proj":155.4,"val":43.5},{"overall":130,"round":11,"manager":"Andrew Campbell","player":"Mark Andrews","pos":"TE","ecr":123,"proj":169.1,"val":9.5},{"overall":131,"round":11,"manager":"Kyle Torpey","player":"Hunter Henry","pos":"TE","ecr":149,"proj":150.1,"val":-15.5},{"overall":132,"round":11,"manager":"Johnny Marcks","player":"Woody Marks","pos":"RB","ecr":124,"proj":131.8,"val":10.5},{"overall":133,"round":12,"manager":"Johnny Marcks","player":"Isiah Pacheco","pos":"RB","ecr":170,"proj":71.0,"val":-34.5},{"overall":134,"round":12,"manager":"Kyle Torpey","player":"Keenan Allen","pos":"WR","ecr":215,"proj":124.1,"val":-78.5},{"overall":135,"round":12,"manager":"Andrew Campbell","player":"Bo Nix","pos":"QB","ecr":122,"proj":295.7,"val":15.5},{"overall":136,"round":12,"manager":"Tyler Scarlett","player":"Broncos D/ST","pos":"D/ST","ecr":137,"proj":130.8,"val":1.5},{"overall":137,"round":12,"manager":"Dakota Bender","player":"Zach Charbonnet","pos":"RB","ecr":142,"proj":134.0,"val":-2.5},{"overall":138,"round":12,"manager":"Angelo Hernandez","player":"Rashid Shaheed","pos":"WR","ecr":171,"proj":144.4,"val":-30.5},{"overall":139,"round":12,"manager":"Derek Booker","player":"Tyler Allgeier","pos":"RB","ecr":121,"proj":92.6,"val":20.5},{"overall":140,"round":12,"manager":"Corey Ploss","player":"Seahawks D/ST","pos":"D/ST","ecr":138,"proj":122.3,"val":4.5},{"overall":141,"round":12,"manager":"Alex Topham","player":"Deebo Samuel Sr.","pos":"WR","ecr":135,"proj":149.5,"val":8.5},{"overall":142,"round":12,"manager":"Dustin Gamble","player":"T.J. Hockenson","pos":"TE","ecr":207,"proj":158.4,"val":-62.5},{"overall":143,"round":12,"manager":"Pj Lannon","player":"Kyler Murray","pos":"QB","ecr":168,"proj":283.1,"val":-22.5},{"overall":144,"round":12,"manager":"Jarett Coy","player":"Caleb Williams","pos":"QB","ecr":76,"proj":281.0,"val":70.5},{"overall":145,"round":13,"manager":"Jarett Coy","player":"Cameron Dicker","pos":"K","ecr":152,"proj":161.9,"val":-4.5},{"overall":146,"round":13,"manager":"Pj Lannon","player":"Tre Tucker","pos":"WR","ecr":181,"proj":137.9,"val":-32.5},{"overall":147,"round":13,"manager":"Dustin Gamble","player":"Steelers D/ST","pos":"D/ST","ecr":141,"proj":124.5,"val":8.5},{"overall":148,"round":13,"manager":"Alex Topham","player":"Ravens D/ST","pos":"D/ST","ecr":164,"proj":118.5,"val":-13.5},{"overall":149,"round":13,"manager":"Corey Ploss","player":"Harrison Mevis","pos":"K","ecr":167,"proj":159.4,"val":-15.5},{"overall":150,"round":13,"manager":"Derek Booker","player":"Harrison Butker","pos":"K","ecr":310,"proj":148.8,"val":-157.5},{"overall":151,"round":13,"manager":"Angelo Hernandez","player":"Eagles D/ST","pos":"D/ST","ecr":140,"proj":107.1,"val":13.5},{"overall":152,"round":13,"manager":"Dakota Bender","player":"Jason Myers","pos":"K","ecr":157,"proj":158.5,"val":-2.5},{"overall":153,"round":13,"manager":"Tyler Scarlett","player":"Cam Little","pos":"K","ecr":156,"proj":146.9,"val":-0.5},{"overall":154,"round":13,"manager":"Andrew Campbell","player":"Ka'imi Fairbairn","pos":"K","ecr":153,"proj":157.8,"val":3.5},{"overall":155,"round":13,"manager":"Kyle Torpey","player":"Patriots D/ST","pos":"D/ST","ecr":148,"proj":100.5,"val":9.5},{"overall":156,"round":13,"manager":"Johnny Marcks","player":"Jake Bates","pos":"K","ecr":161,"proj":145.9,"val":-2.5},{"overall":157,"round":14,"manager":"Johnny Marcks","player":"Chargers D/ST","pos":"D/ST","ecr":163,"proj":94.5,"val":-3.5},{"overall":158,"round":14,"manager":"Kyle Torpey","player":"Eddy Pineiro","pos":"K","ecr":159,"proj":155.1,"val":1.5},{"overall":159,"round":14,"manager":"Andrew Campbell","player":"Jonah Coleman","pos":"RB","ecr":147,"proj":74.4,"val":14.5},{"overall":160,"round":14,"manager":"Tyler Scarlett","player":"KC Concepcion","pos":"WR","ecr":113,"proj":156.0,"val":49.5},{"overall":161,"round":14,"manager":"Dakota Bender","player":"Lions D/ST","pos":"D/ST","ecr":424,"proj":108.0,"val":-260.5},{"overall":162,"round":14,"manager":"Angelo Hernandez","player":"Evan McPherson","pos":"K","ecr":162,"proj":141.8,"val":2.5},{"overall":163,"round":14,"manager":"Derek Booker","player":"Jaguars D/ST","pos":"D/ST","ecr":155,"proj":77.0,"val":10.5},{"overall":164,"round":14,"manager":"Corey Ploss","player":"Jalen McMillan","pos":"WR","ecr":185,"proj":132.7,"val":-18.5},{"overall":165,"round":14,"manager":"Alex Topham","player":"Tyler Loop","pos":"K","ecr":158,"proj":145.9,"val":9.5},{"overall":166,"round":14,"manager":"Dustin Gamble","player":"Cairo Santos","pos":"K","ecr":160,"proj":144.1,"val":8.5},{"overall":167,"round":14,"manager":"Pj Lannon","player":"Justice Hill","pos":"RB","ecr":210,"proj":120.1,"val":-40.5},{"overall":168,"round":14,"manager":"Jarett Coy","player":"Chiefs D/ST","pos":"D/ST","ecr":166,"proj":100.4,"val":4.5}],"teams":[{"manager":"Angelo Hernandez","power_rank":1,"starters_proj":1989.2,"trade_gain":27.4,"bust_share":0.0,"draft_value":3.7,"rb_starters":472.8,"wr_starters":537.0,"rb_surplus":177.7,"biggest_hole":{"slot":"RB2","player":"David Montgomery","gap":27.4},"bust_players":[],"best_pick":"Tucker Kraft","worst_pick":"Rashid Shaheed","pos_counts":{"WR":7,"RB":3,"QB":1,"TE":1,"D/ST":1,"K":1}},{"manager":"Dustin Gamble","power_rank":2,"starters_proj":2046.7,"trade_gain":30.4,"bust_share":15.6,"draft_value":-0.1,"rb_starters":628.9,"wr_starters":461.4,"rb_surplus":174.8,"biggest_hole":{"slot":"TE1","player":"T.J. Hockenson","gap":30.4},"bust_players":["Jeremiyah Love"],"best_pick":"Brian Thomas Jr.","worst_pick":"T.J. Hockenson","pos_counts":{"RB":4,"WR":6,"QB":1,"TE":1,"D/ST":1,"K":1}},{"manager":"Dakota Bender","power_rank":3,"starters_proj":2034.0,"trade_gain":37.3,"bust_share":0.0,"draft_value":5.2,"rb_starters":589.2,"wr_starters":475.1,"rb_surplus":298.0,"biggest_hole":{"slot":"WR1","player":"George Pickens","gap":37.3},"bust_players":[],"best_pick":"Isaiah Likely","worst_pick":"De'Zhaun Stribling","pos_counts":{"RB":4,"WR":5,"QB":1,"TE":2,"K":1,"D/ST":1}},{"manager":"Tyler Scarlett","power_rank":4,"starters_proj":2005.9,"trade_gain":39.6,"bust_share":41.1,"draft_value":11.9,"rb_starters":466.4,"wr_starters":570.6,"rb_surplus":334.9,"biggest_hole":{"slot":"RB2","player":"TreVeyon Henderson","gap":39.6},"bust_players":["Ashton Jeanty","Malik Nabers","TreVeyon Henderson"],"best_pick":"KC Concepcion","worst_pick":"Tony Pollard","pos_counts":{"WR":5,"RB":4,"TE":2,"QB":1,"D/ST":1,"K":1}},{"manager":"Derek Booker","power_rank":5,"starters_proj":1937.2,"trade_gain":26.9,"bust_share":0.0,"draft_value":7.2,"rb_starters":539.5,"wr_starters":467.6,"rb_surplus":188.3,"biggest_hole":{"slot":"WR1","player":"Chris Olave","gap":26.9},"bust_players":[],"best_pick":"Travis Kelce","worst_pick":"Javonte Williams","pos_counts":{"RB":5,"WR":3,"QB":2,"TE":2,"K":1,"D/ST":1}},{"manager":"Alex Topham","power_rank":6,"starters_proj":2009.1,"trade_gain":33.0,"bust_share":20.3,"draft_value":2.9,"rb_starters":452.4,"wr_starters":603.0,"rb_surplus":343.7,"biggest_hole":{"slot":"RB1","player":"Travis Etienne Jr.","gap":33.0},"bust_players":["Puka Nacua"],"best_pick":"Brock Purdy","worst_pick":"Bhayshul Tuten","pos_counts":{"WR":6,"RB":4,"TE":1,"QB":1,"D/ST":1,"K":1}},{"manager":"Jarett Coy","power_rank":7,"starters_proj":1977.4,"trade_gain":82.9,"bust_share":14.0,"draft_value":2.6,"rb_starters":601.1,"wr_starters":373.6,"rb_surplus":194.1,"biggest_hole":{"slot":"WR1","player":"Marvin Harrison Jr.","gap":82.9},"bust_players":["Brock Bowers"],"best_pick":"Caleb Williams","worst_pick":"Mike Washington Jr.","pos_counts":{"RB":5,"TE":1,"WR":4,"QB":2,"K":1,"D/ST":1}},{"manager":"Pj Lannon","power_rank":8,"starters_proj":2128.6,"trade_gain":5.3,"bust_share":31.3,"draft_value":-6.7,"rb_starters":500.9,"wr_starters":606.4,"rb_surplus":278.9,"biggest_hole":{"slot":"RB1","player":"Breece Hall","gap":5.3},"bust_players":["Drake London","Joe Burrow"],"best_pick":"Joe Burrow","worst_pick":"Justice Hill","pos_counts":{"WR":5,"RB":4,"QB":2,"TE":1,"K":1,"D/ST":1}},{"manager":"Andrew Campbell","power_rank":9,"starters_proj":1993.5,"trade_gain":0.0,"bust_share":18.7,"draft_value":5.6,"rb_starters":489.1,"wr_starters":532.7,"rb_surplus":0,"biggest_hole":{"slot":"RB3","player":"Chuba Hubbard","gap":20.4},"bust_players":["Drake Maye"],"best_pick":"Drake Maye","worst_pick":"Stefon Diggs","pos_counts":{"WR":4,"RB":4,"TE":2,"QB":2,"D/ST":1,"K":1}},{"manager":"Corey Ploss","power_rank":10,"starters_proj":2050.3,"trade_gain":20.4,"bust_share":45.8,"draft_value":-8.1,"rb_starters":548.2,"wr_starters":478.2,"rb_surplus":448.0,"biggest_hole":{"slot":"RB2","player":"Rhamondre Stevenson","gap":20.4},"bust_players":["Christian McCaffrey","DJ Moore","Rashee Rice"],"best_pick":"Jakobi Meyers","worst_pick":"MarShawn Lloyd","pos_counts":{"RB":5,"TE":1,"WR":5,"QB":1,"D/ST":1,"K":1}},{"manager":"Johnny Marcks","power_rank":11,"starters_proj":1921.7,"trade_gain":52.4,"bust_share":42.9,"draft_value":-8.6,"rb_starters":467.9,"wr_starters":514.9,"rb_surplus":284.1,"biggest_hole":{"slot":"RB2","player":"Kyle Monangai","gap":52.4},"bust_players":["Colston Loveland","De'Von Achane","Ladd McConkey"],"best_pick":"Woody Marks","worst_pick":"Isiah Pacheco","pos_counts":{"WR":5,"RB":5,"TE":1,"QB":1,"K":1,"D/ST":1}},{"manager":"Kyle Torpey","power_rank":12,"starters_proj":1967.6,"trade_gain":26.4,"bust_share":17.1,"draft_value":-16.2,"rb_starters":549.4,"wr_starters":478.9,"rb_surplus":178.2,"biggest_hole":{"slot":"WR1","player":"Garrett Wilson","gap":26.4},"bust_players":["Matthew Stafford"],"best_pick":"Garrett Wilson","worst_pick":"Keenan Allen","pos_counts":{"RB":4,"WR":5,"TE":2,"QB":1,"D/ST":1,"K":1}}]};
+  /* DRAFT_DATA_END */
+
+  if (DRAFT) {
+    var pos = function (v) { return v > 0 ? "pos" : (v < 0 ? "neg" : ""); };
+    var sgn = function (v, d) { return (v > 0 ? "+" : "") + v.toFixed(d === undefined ? 1 : d); };
+
+    document.getElementById("draft-sub").innerHTML =
+      DRAFT.picks + " picks graded against FantasyPros pre-draft Expert Consensus Rankings. " +
+      "Projections are ESPN's full-season numbers. Roster figures use as-drafted rosters, so this stays a " +
+      "snapshot of draft night rather than shifting with waivers.";
+
+    var pr = DRAFT.positional_premium;
+    var cells = ["RB", "WR", "TE", "QB"].map(function (k) {
+      var v = pr[k].mean;
+      return '<div class="prem"><div class="pk">' + k + '</div>' +
+             '<div class="pv ' + (v < -5 ? "hot" : (v > 5 ? "cold" : "")) + '">' + sgn(v) + '</div></div>';
+    }).join("");
+    document.getElementById("draft-premium").innerHTML =
+      '<h4>Running backs are the currency here</h4>' +
+      '<p>Average gap between where a position was drafted and its expert consensus rank. ' +
+      'Negative means the league reaches; positive means it waits.</p>' +
+      '<div class="prem-grid">' + cells + '</div>' +
+      '<p style="margin-top:12px;margin-bottom:0;">RBs go <strong>' + Math.abs(pr.RB.mean).toFixed(1) +
+      ' picks earlier</strong> than consensus while receivers go at par. That makes running back depth the ' +
+      'league\'s most liquid trade asset &mdash; and a genuine market inefficiency to exploit in both directions.</p>';
+
+    renderTable("#draft-power-table", [
+      { label: "Rank", cls: "num", cell: "rank", get: function (t) { return t.power_rank; } },
+      { label: "Manager", cls: "mgr", cell: "title", get: function (t) { return esc(t.manager); } },
+      { label: "Starters", cls: "num", get: function (t) { return t.starters_proj.toFixed(0); } },
+      { label: "Trade Upside", cls: "num", get: function (t) {
+          return t.trade_gain ? '<span class="pos">+' + t.trade_gain.toFixed(0) + "</span>" : "&mdash;"; } },
+      { label: "Bust Share", cls: "num", get: function (t) {
+          return '<span class="' + (t.bust_share >= 35 ? "neg" : "") + '">' + t.bust_share.toFixed(1) + "%</span>"; } },
+      { label: "Draft vs ECR", cls: "num", get: function (t) {
+          return '<span class="' + pos(t.draft_value) + '">' + sgn(t.draft_value) + "</span>"; } }
+    ], DRAFT.teams);
+
+    var pickCols = [
+      { label: "Pick", cls: "num", cell: "rank", get: function (p) { return p.overall; } },
+      { label: "Player", cls: "mgr", cell: "title", get: function (p) { return esc(p.player) + ' <span class="sc-label">' + p.pos + "</span>"; } },
+      { label: "Manager", get: function (p) { return esc(p.manager); } },
+      { label: "ECR", cls: "num", get: function (p) { return p.ecr ? "#" + p.ecr : "&mdash;"; } },
+      { label: "Value", cls: "num", get: function (p) {
+          return '<span class="' + pos(p.val) + '">' + sgn(p.val) + "</span>"; } },
+      { label: "Proj", cls: "num", get: function (p) { return p.proj.toFixed(0); } }
+    ];
+    var graded = DRAFT.board.filter(function (p) { return p.val !== null; });
+    var bySort = graded.slice().sort(function (a, b) { return b.val - a.val; });
+    renderTable("#draft-best-table", pickCols, bySort.slice(0, 10));
+    renderTable("#draft-worst-table", pickCols, bySort.slice(-10).reverse());
+
+    document.getElementById("draft-teams").innerHTML = DRAFT.teams.map(function (t) {
+      var mine = DRAFT.board.filter(function (p) { return p.manager === t.manager; });
+      var shape = ["QB", "RB", "WR", "TE", "K", "D/ST"].map(function (k) {
+        return k + " " + (t.pos_counts[k] || 0);
+      }).join(" &middot; ");
+      var pick = function (name) {
+        var p = mine.filter(function (x) { return x.player === name; })[0];
+        return p ? esc(p.player) + " (pick " + p.overall + ", " + sgn(p.val) + ")" : esc(name);
+      };
+      return '<details class="mgr-card"><summary>' +
+        '<div class="mgr-summary-left">' +
+          '<span class="mgr-badge">Post-Draft #' + t.power_rank + "</span>" +
+          '<div class="mgr-name">' + esc(t.manager) + "</div>" +
+          '<div class="mgr-stat-line mono">' + t.starters_proj.toFixed(0) + " proj &middot; " +
+            t.bust_share.toFixed(0) + "% bust share</div>" +
+        "</div>" +
+        '<svg class="mgr-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+        "</summary><div class=\"mgr-body\">" +
+          '<div class="stat-chips">' +
+            '<span><span class="sc-label">RB1+2&nbsp;</span><span class="sc-val mono">' + t.rb_starters.toFixed(0) + "</span></span>" +
+            '<span><span class="sc-label">WR1+2&nbsp;</span><span class="sc-val mono">' + t.wr_starters.toFixed(0) + "</span></span>" +
+            '<span><span class="sc-label">Draft&nbsp;</span><span class="sc-val mono ' + pos(t.draft_value) + '">' + sgn(t.draft_value) + "</span></span>" +
+          "</div>" +
+          '<div class="mgr-field"><span class="fk">Roster Shape</span>' + shape + "</div>" +
+          '<div class="mgr-field"><span class="fk">Best Pick</span>' + pick(t.best_pick) + "</div>" +
+          '<div class="mgr-field"><span class="fk">Worst Pick</span>' + pick(t.worst_pick) + "</div>" +
+          '<div class="mgr-field"><span class="fk">Biggest Hole</span>' +
+            t.biggest_hole.slot + " &mdash; " + esc(t.biggest_hole.player) +
+            ", " + t.biggest_hole.gap.toFixed(0) + " below league median</div>" +
+          (t.bust_players.length
+            ? '<div class="mgr-field"><span class="fk">Expert Bust Flags</span>' + t.bust_players.map(esc).join(", ") + "</div>"
+            : "") +
+          (t.rb_surplus > 0
+            ? '<div class="mgr-field"><span class="fk">Tradeable RB Surplus</span>' + t.rb_surplus.toFixed(0) +
+              " projected points beyond the startable three</div>"
+            : "") +
+        "</div></details>";
+    }).join("");
+
+    var rounds = {};
+    DRAFT.board.forEach(function (p) { (rounds[p.round] = rounds[p.round] || []).push(p); });
+    document.getElementById("draft-board-body").innerHTML = Object.keys(rounds)
+      .sort(function (a, b) { return a - b; })
+      .map(function (r) {
+        return '<div class="board-round"><h5>Round ' + r + "</h5>" +
+          rounds[r].map(function (p) {
+            return '<div class="board-pick">' +
+              '<span class="bp-n">' + p.overall + "</span>" +
+              '<span class="bp-p">' + esc(p.player) + '</span>' +
+              '<span class="sc-label">' + p.pos + "</span>" +
+              '<span class="bp-m">' + esc(p.manager) + "</span></div>";
+          }).join("") + "</div>";
+      }).join("");
+  }
 
   // ---- timeline ----
   var tlHtml = "";

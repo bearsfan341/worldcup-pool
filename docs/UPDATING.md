@@ -80,3 +80,24 @@ python3 fantasy/scripts/make_artifact_copy.py
 
 Then publish the generated file. If you have stopped using the artifact, this
 step can be skipped entirely — the GitHub Pages site is self-sufficient.
+
+## Regenerating the post-draft analysis
+
+Three steps, in order:
+
+```
+python3 fantasy/scripts/parse_ecr.py <cheatsheet.pdf>   # only when ECR changes
+python3 fantasy/scripts/pull_draft_2026.py              # ESPN draft, rosters, ADP, projections
+python3 fantasy/scripts/analyze_draft.py                # -> data/draft_analysis.json
+python3 fantasy/scripts/build_draft_section.py          # injects it into docs/index.html
+```
+
+`parse_ecr.py` caches the FantasyPros board to `data/ecr_2026.json` so the PDF
+is parsed once, not on every run. `player_match.py` handles the name mismatches
+between ESPN and FantasyPros (Jr./II suffixes, PDF ligatures, and defense
+naming — "Chiefs D/ST" vs "Kansas City Chiefs").
+
+Roster metrics deliberately use **as-drafted** rosters, so the section stays a
+snapshot of draft night instead of drifting as waiver moves happen. A player
+drafted and later dropped still resolves via the league-wide projection cache
+in `data/espn_players_2026.json`.
