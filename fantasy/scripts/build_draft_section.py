@@ -11,19 +11,25 @@ import sys
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REPO = os.path.dirname(BASE)
 SRC = os.path.join(BASE, "data", "draft_analysis.json")
+COPY = os.path.join(BASE, "data", "draft_copy.json")
 PAGE = os.path.join(REPO, "docs", "index.html")
 START, END = "/* DRAFT_DATA_START */", "/* DRAFT_DATA_END */"
 
 # Fields the page actually reads; everything else stays out of the payload.
 PICK_KEYS = ("overall", "round", "manager", "player", "pos", "ecr", "proj", "val")
-TEAM_KEYS = ("manager", "power_rank", "starters_proj", "trade_gain", "bust_share",
-             "draft_value", "rb_starters", "wr_starters", "rb_surplus",
+TEAM_KEYS = ("manager", "power_rank", "grade", "power_score", "z", "disagreement",
+             "starters_proj", "trade_gain", "bust_share", "draft_value",
+             "ecr_strength", "rb_starters", "wr_starters", "rb_surplus",
              "biggest_hole", "bust_players", "best_pick", "worst_pick", "pos_counts")
 
 
 def main():
     a = json.load(open(SRC))
+    copy = json.load(open(COPY))
     payload = {
+        "copy": {k: v for k, v in copy.items() if not k.startswith("_")},
+        "weights": a["weights"],
+        "season_started": a["season_started"],
         "picks": a["picks"],
         "positional_premium": a["positional_premium"],
         "board": [{k: p.get(k) for k in PICK_KEYS} for p in a["board"]],

@@ -90,8 +90,24 @@ def lineup(players):
     return out
 
 
+def live_points():
+    """Actual points scored so far, if the season has started."""
+    try:
+        sys.path.insert(0, BASE)
+        from config import LEAGUE_ID, SWID, ESPN_S2
+        from espn_api.football import League
+        lg = League(league_id=LEAGUE_ID, year=2026, espn_s2=ESPN_S2, swid=SWID)
+        owners = {int(r["team_id"]): r["canonical_manager"]
+                  for r in csv.DictReader(open(os.path.join(DATA, "owner_map.csv")))}
+        return {owners[t.team_id]: round(t.points_for, 1) for t in lg.teams}
+    except Exception as e:
+        print(f"  (live points unavailable: {e})", file=sys.stderr)
+        return {}
+
+
 def main():
     picks, rosters, _ = load()
+    points_for = live_points()
     skill = [p for p in picks if p["pos"] not in ("K", "D/ST") and p["ecr"]]
     pace = statistics.mean(p["overall"] - p["ecr"] for p in skill)
     for p in picks:
@@ -134,8 +150,18 @@ def main():
         sk = [x for x in pl if x["pos"] not in ("K", "D/ST") and x["val"] is not None]
         rb = sorted([x["proj"] for x in start if x["pos"] == "RB"], reverse=True)
         wr = sorted([x["proj"] for x in start if x["pos"] == "WR"], reverse=True)
+        st_names = {x["player"] for x in start}
+        num = den = 0
+        for x in pl:
+            if not x["ecr"] or x["pos"] in ("K", "D/ST"):
+                continue
+            w = 2 if x["player"] in st_names else 1   # starters count double
+            num += w * x["ecr"]
+            den += w
         teams[m] = {
             "manager": m,
+            "ecr_strength": round(num / den, 1),
+            "points_for": points_for.get(m, 0.0),
             "starters_proj": round(base, 1),
             "trade_gain": gain,
             "adjusted_proj": round(base + gain, 1),
@@ -152,25 +178,51 @@ def main():
             "pos_counts": dict(collections.Counter(x["pos"] for x in pl)),
         }
 
-    def rank(key, hi):
-        order = sorted(teams, key=lambda m: -teams[m][key] if hi else teams[m][key])
-        return {m: i + 1 for i, m in enumerate(order)}
+    def z(vals):
+        mu, sd = statistics.mean(vals), (statistics.pstdev(vals) or 1.0)
+        return lambda v: (v - mu) / sd
 
-    r_ros = rank("adjusted_proj", True)
-    r_bust = rank("bust_share", False)
-    r_draft = rank("draft_value", True)
-    r_rec = {m: i + 1 for i, m in enumerate(sorted(RECENT, key=RECENT.get))}
-    r_car = {m: i + 1 for i, m in enumerate(sorted(CAREER, key=CAREER.get))}
+    # Draft value and ECR roster strength correlate at r=+0.96 -- they are the
+    # same expert signal measured twice, so they are merged into one view rather
+    # than each drawing its own weight. That view is then set against ESPN's
+    # projections, which are near-uncorrelated with it (r=-0.04). Two independent
+    # opinions, equal weight; a team the two disagree about lands mid-pack, which
+    # is the honest treatment of genuine disagreement.
+    z_draft = z([t["draft_value"] for t in teams.values()])
+    z_ecr = z([-t["ecr_strength"] for t in teams.values()])
+    z_proj = z([t["adjusted_proj"] for t in teams.values()])
+    played = any(t["points_for"] for t in teams.values())
+    z_pts = z([t["points_for"] for t in teams.values()]) if played else None
+
+    W = ({"expert": 0.40, "model": 0.40, "points": 0.20} if played
+         else {"expert": 0.50, "model": 0.50, "points": 0.0})
+
     for m, t in teams.items():
-        t["ranks"] = {"roster": r_ros[m], "bust": r_bust[m], "draft": r_draft[m],
-                      "recent": r_rec[m], "career": r_car[m]}
-        t["composite"] = round(r_ros[m] * .40 + r_bust[m] * .15 + r_draft[m] * .15
-                               + r_rec[m] * .20 + r_car[m] * .10, 2)
-    order = sorted(teams, key=lambda m: teams[m]["composite"])
+        expert = (z_draft(t["draft_value"]) + z_ecr(-t["ecr_strength"])) / 2
+        model = z_proj(t["adjusted_proj"])
+        t["z"] = {"draft": round(z_draft(t["draft_value"]), 2),
+                  "ecr": round(z_ecr(-t["ecr_strength"]), 2),
+                  "expert": round(expert, 2), "model": round(model, 2),
+                  "points": round(z_pts(t["points_for"]), 2) if played else None}
+        t["disagreement"] = round(abs(expert - model), 2)
+        t["power_score"] = round(
+            W["expert"] * expert + W["model"] * model
+            + (W["points"] * t["z"]["points"] if played else 0.0), 3)
+
+    def grade(zz):
+        for cut, g in ((1.3, "A"), (0.8, "A-"), (0.4, "B+"), (0.0, "B"),
+                       (-0.4, "B-"), (-0.8, "C+"), (-1.3, "C"), (-99, "D")):
+            if zz >= cut:
+                return g
+    for t in teams.values():
+        t["grade"] = grade(t["z"]["draft"])
+
+    order = sorted(teams, key=lambda m: -teams[m]["power_score"])
     for i, m in enumerate(order, 1):
         teams[m]["power_rank"] = i
 
-    ranked = sorted((p for p in picks if p["val"] is not None), key=lambda z: z["val"])
+    ranked = sorted((p for p in picks if p["val"] is not None
+                     and p["pos"] not in ("K", "D/ST")), key=lambda z: z["val"])
     out = {
         "season": 2026, "league_id": 684189, "teams": TEAMS, "picks": len(picks),
         "league_pace_vs_ecr": round(pace, 1),
@@ -180,6 +232,9 @@ def main():
                   for p in picks],
         "best_picks": [p["player"] for p in ranked[::-1][:10]],
         "worst_picks": [p["player"] for p in ranked[:10]],
+        "weights": W,
+        "component_note": "expert = mean(z draft value, z ECR strength); model = z trade-adjusted projection",
+        "season_started": played,
         "teams": [teams[m] for m in order],
     }
     path = os.path.join(DATA, "draft_analysis.json")
@@ -189,11 +244,12 @@ def main():
     print(f"  league drafts {-pace:.1f} picks ahead of ECR")
     print("  positional premium (pick - ECR): " +
           ", ".join(f'{k} {v["mean"]:+.1f}' for k, v in premium.items()))
-    print(f'\n  {"#":>2} {"manager":<19}{"adjProj":>9}{"bust%":>7}{"draft":>7}')
+    print("  weights: " + ", ".join(f"{k} {v:.2f}" for k, v in W.items()))
+    print(f'\n  {"#":>2} {"manager":<19}{"gr":>4}{"expert":>8}{"model":>7}{"score":>8}{"gap":>7}')
     for m in order:
         t = teams[m]
-        print(f'  {t["power_rank"]:>2} {m:<19}{t["adjusted_proj"]:>9.0f}'
-              f'{t["bust_share"]:>6.1f}%{t["draft_value"]:>7.1f}')
+        print(f'  {t["power_rank"]:>2} {m:<19}{t["grade"]:>4}{t["z"]["expert"]:>+8.2f}'
+              f'{t["z"]["model"]:>+7.2f}{t["power_score"]:>+8.2f}{t["disagreement"]:>7.2f}')
     return 0
 
 
