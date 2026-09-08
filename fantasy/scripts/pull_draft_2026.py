@@ -18,6 +18,8 @@ from config import LEAGUE_ID, SWID, ESPN_S2  # noqa: E402
 from espn_api.football import League  # noqa: E402
 
 SEASON = 2026
+# ESPN position ids -> labels, so a drafted-then-dropped player still resolves
+POS = {1: "QB", 2: "RB", 3: "WR", 4: "TE", 5: "K", 16: "D/ST"}
 ADP_URL = ("https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/"
            f"{SEASON}/segments/0/leagues/{LEAGUE_ID}")
 
@@ -62,7 +64,8 @@ def pull_players():
                 proj = round(s.get("appliedTotal") or 0, 1)
                 break
         out[p["fullName"]] = {"adp": round(adp, 1) if adp and adp > 0 else None,
-                              "proj": proj}
+                              "proj": proj,
+                              "pos": POS.get(p.get("defaultPositionId"))}
     path = os.path.join(DATA, "espn_players_2026.json")
     with open(path, "w") as f:
         json.dump(out, f, indent=1, sort_keys=True)

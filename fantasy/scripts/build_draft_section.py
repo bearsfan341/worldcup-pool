@@ -18,12 +18,9 @@ START, END = "/* DRAFT_DATA_START */", "/* DRAFT_DATA_END */"
 WSTART, WEND = "/* WEEK_DATA_START */", "/* WEEK_DATA_END */"
 
 # Fields the page actually reads; everything else stays out of the payload.
-PICK_KEYS = ("overall", "round", "manager", "player", "pos", "ecr", "proj", "val")
-TEAM_KEYS = ("manager", "power_rank", "grade", "power_score", "z", "disagreement",
-             "starters_proj", "trade_gain", "bust_share", "draft_value",
-             "ecr_strength", "rb_starters", "wr_starters", "rb_surplus",
-             "biggest_hole", "bust_players", "flagged", "best_pick", "worst_pick",
-             "pos_counts")
+PICK_KEYS = ("overall", "round", "manager", "player", "pos", "adp", "proj", "val")
+TEAM_KEYS = ("manager", "power_rank", "grade", "starters_proj", "draft_value",
+             "rb_starters", "wr_starters", "flagged", "best_pick", "worst_pick")
 
 
 def main():
@@ -31,10 +28,9 @@ def main():
     copy = json.load(open(COPY))
     payload = {
         "copy": {k: v for k, v in copy.items() if not k.startswith("_")},
-        "weights": a["weights"],
         "season_started": a["season_started"],
+        "source": a["source"],
         "picks": a["picks"],
-        "positional_premium": a["positional_premium"],
         "board": [{k: p.get(k) for k in PICK_KEYS} for p in a["board"]],
         "teams": [{k: t.get(k) for k in TEAM_KEYS} for t in a["teams"]],
     }

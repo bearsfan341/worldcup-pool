@@ -92,10 +92,16 @@ python3 fantasy/scripts/analyze_draft.py                # -> data/draft_analysis
 python3 fantasy/scripts/build_draft_section.py          # injects it into docs/index.html
 ```
 
-`parse_ecr.py` caches the FantasyPros board to `data/ecr_2026.json` so the PDF
-is parsed once, not on every run. `player_match.py` handles the name mismatches
-between ESPN and FantasyPros (Jr./II suffixes, PDF ligatures, and defense
-naming — "Chiefs D/ST" vs "Kansas City Chiefs").
+Scoring is entirely ESPN: ADP for pick value, season projections for team
+grades. `parse_ecr.py` and `data/ecr_2026.json` are kept for reference but are
+no longer part of the pipeline. `player_match.py` still handles name mismatches
+(Jr./II suffixes, defense naming — "Chiefs D/ST" vs "Kansas City Chiefs").
+
+Pick value is normalised **per position**: quarterbacks slide in a one-QB
+league, so a league-wide baseline filled all ten "best picks" with QBs. Team
+grades are curved off projected starting points rather than ADP value — beating
+the market and building a high-scoring roster correlate at only r=+0.12, and
+grading on ADP produced an A- team ranked 11th.
 
 Roster metrics deliberately use **as-drafted** rosters, so the section stays a
 snapshot of draft night instead of drifting as waiver moves happen. A player
