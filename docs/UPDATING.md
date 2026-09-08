@@ -83,7 +83,7 @@ step can be skipped entirely — the GitHub Pages site is self-sufficient.
 
 ## Regenerating the post-draft analysis
 
-Three steps, in order:
+Four steps, in order:
 
 ```
 python3 fantasy/scripts/parse_ecr.py <cheatsheet.pdf>   # only when ECR changes
