@@ -1,29 +1,8 @@
 {
   "_note": "Hand-written text. All numbers come from draft_analysis.json; nothing here is computed.",
-  "intro": "Every pick graded against ESPN's average draft position, normalised per position so that quarterbacks sliding in a one-QB league don't crowd out the list. Team grades are curved off projected starting points — the roster a manager actually built — so a grade and a ranking never disagree. Kickers and defenses are left out of pick grading, since everyone has to draft one.",
-  "news": {
-    "headline": "News that has already moved the board",
-    "items": [
-      { "player": "Josh Jacobs", "manager": "Dakota Bender", "severity": "out",
-        "text": "On the NFL's Commissioner's Exempt List after a battery charge — barred from playing and practising, with a six-game baseline suspension possible. ESPN still projects him at 164 points, so any number here involving Bender is optimistic until that updates." },
-      { "player": "MarShawn Lloyd", "manager": "Corey Ploss", "severity": "up",
-        "text": "Expected to lead the Green Bay backfield while Jacobs is unavailable. He was a reach on draft night and is now a starting running back." },
-      { "player": "Zach Charbonnet", "manager": "Dakota Bender", "severity": "out",
-        "text": "Unavailable for the opening four games — a second Bender running back off the board before week one." },
-      { "player": "Jordyn Tyson", "manager": "Jarett Coy", "severity": "out",
-        "text": "On injured reserve after being taken 37 picks ahead of his ADP." },
-      { "player": "Isiah Pacheco", "manager": "Johnny Marcks", "severity": "out",
-        "text": "On injured reserve." },
-      { "player": "Ashton Jeanty", "manager": "Tyler Scarlett", "severity": "watch",
-        "text": "Ankle sprain in practice. Not thought to be serious, but a real week-one question on a first-round pick." },
-      { "player": "Malik Nabers", "manager": "Tyler Scarlett", "severity": "watch",
-        "text": "Still working back from a torn ACL, with conflicting reports on his week-one availability." },
-      { "player": "Puka Nacua", "manager": "Alex Topham", "severity": "up",
-        "text": "Psoas soreness appears to be behind him after a full week of practice." }
-    ]
-  },
+  "intro": "Every pick graded against ESPN's average draft position, normalised per position so that quarterbacks sliding in a one-QB league don't crowd out the list. Team grades are curved off projected starting points \u2014 the roster a manager actually built \u2014 so a grade and a ranking never disagree. Kickers and defenses are left out of pick grading, since everyone has to draft one.",
   "picks": {
-    "Caleb Williams": "The largest gap between pick and ADP in the draft — 44 picks. He is also Coy's second quarterback, so the value is real and unusable.",
+    "Caleb Williams": "The largest gap between pick and ADP in the draft \u2014 44 picks. He is also Coy's second quarterback, so the value is real and unusable.",
     "Jaxson Dart": "Round 11 for a quarterback going 30 picks earlier on average. A sensible late flier; Booker's roster needed the upside somewhere.",
     "Dak Prescott": "A starting quarterback in round 10, 26 picks past his ADP. One of the few picks that both saved capital and filled a slot.",
     "KC Concepcion": "The 160th pick returning value on a receiver going 23 picks earlier. Nothing to lose that late.",
@@ -32,14 +11,14 @@
     "Jonathan Taylor": "Went eighth overall against a 6.2 ADP. Bender took the best available player and moved on.",
     "Bo Nix": "Round 12 for a quarterback drafted 30 picks earlier elsewhere. Campbell's second QB, so it costs a bench spot rather than a lineup slot.",
     "Bijan Robinson": "Third overall for the consensus second-best player. Correct, if not especially interesting.",
-    "De'Von Achane": "Taken right at ADP and still one of the better values on the board — a top-15 back for a pick that cost nothing extra.",
+    "De'Von Achane": "Taken right at ADP and still one of the better values on the board \u2014 a top-15 back for a pick that cost nothing extra.",
     "Justin Herbert": "The biggest reach of the draft at 39 picks early, on a quarterback who projects mid-pack among the sixteen taken. Two managers got comparable production 50 picks later.",
     "Alvin Kamara": "Thirty-eight picks early for a fourth running back projecting 113 points. Torpey can start two.",
     "Jordyn Tyson": "Thirty-seven picks early on a rookie now on injured reserve.",
     "Patrick Mahomes": "Thirty-two picks early. Quarterbacks were the one position sliding in this draft, and Ploss paid up anyway.",
     "Romeo Doubs": "Twenty-nine picks early for a fifth receiver.",
     "Quentin Johnston": "Twenty-seven picks early. The third of Coy's late-round receivers that the market had substantially lower.",
-    "Mike Washington Jr.": "Twenty-six picks early for a back projecting 67 points — roughly five points a week from a roster spot.",
+    "Mike Washington Jr.": "Twenty-six picks early for a back projecting 67 points \u2014 roughly five points a week from a roster spot.",
     "Kyle Monangai": "Twenty-six picks early, and he is Marcks' starting RB2, which is the larger problem.",
     "RJ Harvey": "Twenty-five picks early for a fourth running back.",
     "Trevor Lawrence": "Twenty-two picks early. Coy took two quarterbacks inside 50 picks of each other and starts one."
@@ -47,22 +26,54 @@
   "teams": {
     "Pj Lannon": "The highest projected lineup in the league by 79 points, built on Ja'Marr Chase, Drake London and Breece Hall with Joe Burrow at a round-6 discount. Four starters share a week-11 bye, which is the one scheduled problem on an otherwise clean roster. His career luck index is the highest on record, so some of this is likely to even out.",
     "Corey Ploss": "Second-highest projected lineup and the best tight end in the league in Trey McBride. The roster leans hard on Christian McCaffrey at 30, and three of his starters carry expert bust flags. The Jacobs suspension also turned his worst pick into Green Bay's lead back, which is a genuine piece of luck.",
-    "Dustin Gamble": "Bijan Robinson and Jeremiyah Love form the best backfield in the league, and Lamar Jackson in round 4 was strong value. The tight end spot is the weak link after reaching for T.J. Hockenson in round 12. Coming off the unluckiest season in league history — four wins against eight expected — so last year's record understates him.",
+    "Dustin Gamble": "Bijan Robinson and Jeremiyah Love form the best backfield in the league, and Lamar Jackson in round 4 was strong value. The tight end spot is the weak link after reaching for T.J. Hockenson in round 12. Coming off the unluckiest season in league history \u2014 four wins against eight expected \u2014 so last year's record understates him.",
     "Dakota Bender": "Jonathan Taylor and Saquon Barkley at picks 8 and 17 were both clear value, and this is comfortably the best draft of his career. The problem is what has happened since: Josh Jacobs is on the exempt list and Zach Charbonnet is out four games, so the running back depth behind the top two has thinned considerably.",
     "Alex Topham": "Puka Nacua and A.J. Brown anchor the second-best receiving corps in the league, and Brock Purdy at pick 124 meant spending nothing early on quarterback. The running back room is the weakest of the twelve, so Travis Etienne and Bhayshul Tuten need to hold up.",
     "Tyler Scarlett": "Jaxon Smith-Njigba, Malik Nabers and Zay Flowers is a strong receiving group, and Dak Prescott in round 10 was good value. The risk is concentrated: Ashton Jeanty and Nabers both carry week-one questions, and the tight end spot is thin.",
-    "Andrew Campbell": "The best draft in the league by ADP value at +5.2 per pick, which has not translated into a high projection — a reminder that beating the market and scoring points are different things. CeeDee Lamb and Drake Maye are both good; the running back room is where this falls short.",
+    "Andrew Campbell": "The best draft in the league by ADP value at +5.2 per pick, which has not translated into a high projection \u2014 a reminder that beating the market and scoring points are different things. CeeDee Lamb and Drake Maye are both good; the running back room is where this falls short.",
     "Angelo Hernandez": "Josh Allen projects 48 points clear of the next quarterback, the single largest positional edge anyone bought. The concern is structural: three running backs on a roster that starts two plus a flex, with the league's most receiver-heavy build behind them. Three straight top-three finishes says the approach works for him.",
-    "Jarett Coy": "Jahmyr Gibbs and Brock Bowers are two of the better players in the league at their positions. The receiving corps is the weakest of the twelve by 88 points, and the late rounds went badly — Tyson is on IR, Washington Jr. projects 67, and Johnston was a 27-pick reach. Fixable through trade, but it needs fixing.",
-    "Kyle Torpey": "Derrick Henry and Chase Brown make a legitimately good backfield, and Garrett Wilson was solid value. The middle rounds were the issue — Kamara 38 picks early as a fourth back, and DK Metcalf, his best receiver by projection, sitting behind two others.",
+    "Jarett Coy": "Jahmyr Gibbs and Brock Bowers are two of the better players in the league at their positions. The receiving corps is the weakest of the twelve by 88 points, and the late rounds went badly \u2014 Tyson is on IR, Washington Jr. projects 67, and Johnston was a 27-pick reach. Fixable through trade, but it needs fixing.",
+    "Kyle Torpey": "Derrick Henry and Chase Brown make a legitimately good backfield, and Garrett Wilson was solid value. The middle rounds were the issue \u2014 Kamara 38 picks early as a fourth back, and DK Metcalf, his best receiver by projection, sitting behind two others.",
     "Derek Booker": "The defending champion drafted well against ADP but ended up with the eleventh-best projected lineup. James Cook and Javonte Williams are a fine pair; the receiving corps and a bottom-of-the-league defense are what hold the projection down. His career average finish is still the best in league history, which counts for something.",
     "Johnny Marcks": "Justin Jefferson and De'Von Achane are an excellent top two, and then it drops off sharply. Justin Herbert at pick 61 was the largest reach of the draft, Kyle Monangai starts at RB2 after a 26-pick reach, and Pacheco is on IR. Best all-time win percentage in the league, so the draft grade may not matter much."
   },
   "tiers": [
-    { "name": "The Contenders", "ranks": [1, 2, 3], "blurb": "The three highest projected lineups, each with one obvious soft spot — a bye-week cluster, an ageing first-rounder, a thin tight end." },
-    { "name": "In The Mix", "ranks": [4, 5, 6], "blurb": "Within 45 projected points of second place. Any of these makes a run if the top of the roster stays healthy." },
-    { "name": "Fine, With Caveats", "ranks": [7, 8, 9], "blurb": "Real strengths at one or two positions and a hole somewhere obvious. Eight of twelve make the playoffs, so all three should get there." },
-    { "name": "Work To Do", "ranks": [10, 11, 12], "blurb": "The three lowest projected lineups — which includes the defending champion and the best regular-season manager in league history, so treat it as a starting position rather than a verdict." }
+    {
+      "name": "The Contenders",
+      "ranks": [
+        1,
+        2,
+        3
+      ],
+      "blurb": "The three highest projected lineups, each with one obvious soft spot \u2014 a bye-week cluster, an ageing first-rounder, a thin tight end."
+    },
+    {
+      "name": "In The Mix",
+      "ranks": [
+        4,
+        5,
+        6
+      ],
+      "blurb": "Within 45 projected points of second place. Any of these makes a run if the top of the roster stays healthy."
+    },
+    {
+      "name": "Fine, With Caveats",
+      "ranks": [
+        7,
+        8,
+        9
+      ],
+      "blurb": "Real strengths at one or two positions and a hole somewhere obvious. Eight of twelve make the playoffs, so all three should get there."
+    },
+    {
+      "name": "Work To Do",
+      "ranks": [
+        10,
+        11,
+        12
+      ],
+      "blurb": "The three lowest projected lineups \u2014 which includes the defending champion and the best regular-season manager in league history, so treat it as a starting position rather than a verdict."
+    }
   ],
   "playoffs_pending": "No games have been played. Every team is 0-0, eight of twelve make the playoffs, and strength of schedule spans 44 points across fourteen weeks. Elimination scenarios will mean something around week 5."
 }
