@@ -20,7 +20,6 @@ from player_match import build_index, match  # noqa: E402
 
 TEAMS, STARTERS = 12, (("QB", 1), ("RB", 2), ("WR", 2), ("TE", 1), ("K", 1), ("D/ST", 1))
 FLEX = ("RB", "WR", "TE")
-TRADE_FRICTION, RB_PREMIUM = 0.85, 1.15
 
 # Players FantasyPros' expert panel flagged as likely to underperform their cost.
 BUSTS = {"Christian McCaffrey", "Puka Nacua", "De'Von Achane", "Ashton Jeanty",
@@ -135,8 +134,6 @@ def main():
         used = {x["player"] for x in start}
         base = sum(x["proj"] for x in start)
         core = [x for x in start if x["pos"] in ("QB", "RB", "WR", "TE")]
-        surplus = sum(x["proj"] for x in pl
-                      if x["pos"] == "RB" and x["player"] not in used and x["proj"] > 120)
         c, gaps = collections.Counter(), []
         for x in start:
             c[x["pos"]] += 1
@@ -145,8 +142,9 @@ def main():
                 gaps.append((med[k] - x["proj"], k, x["player"]))
         gaps.sort(reverse=True)
         hole = gaps[0] if gaps else (0, "", "")
-        gain = round(min(surplus * RB_PREMIUM * TRADE_FRICTION, max(0.0, hole[0])), 1) if surplus else 0.0
         bust_pts = sum(x["proj"] for x in core if x["player"] in BUSTS)
+        flagged = [x["player"] for x in pl if x["injury"] in
+                   ("OUT", "INJURY_RESERVE", "SUSPENSION", "DAY_TO_DAY")]
         sk = [x for x in pl if x["pos"] not in ("K", "D/ST") and x["val"] is not None]
         rb = sorted([x["proj"] for x in start if x["pos"] == "RB"], reverse=True)
         wr = sorted([x["proj"] for x in start if x["pos"] == "WR"], reverse=True)
@@ -163,15 +161,13 @@ def main():
             "ecr_strength": round(num / den, 1),
             "points_for": points_for.get(m, 0.0),
             "starters_proj": round(base, 1),
-            "trade_gain": gain,
-            "adjusted_proj": round(base + gain, 1),
             "rb_starters": round(sum(rb[:2]), 1),
             "wr_starters": round(sum(wr[:2]), 1),
             "skill_starters": round(sum(x["proj"] for x in start if x["pos"] in FLEX), 1),
-            "rb_surplus": round(surplus, 1),
             "biggest_hole": {"slot": hole[1], "player": hole[2], "gap": round(hole[0], 1)},
             "bust_share": round(100 * bust_pts / sum(x["proj"] for x in core), 1),
             "bust_players": sorted(x["player"] for x in core if x["player"] in BUSTS),
+            "flagged": flagged,
             "draft_value": round(statistics.mean(x["val"] for x in sk), 1),
             "best_pick": max(sk, key=lambda z: z["val"])["player"],
             "worst_pick": min(sk, key=lambda z: z["val"])["player"],
@@ -190,7 +186,7 @@ def main():
     # is the honest treatment of genuine disagreement.
     z_draft = z([t["draft_value"] for t in teams.values()])
     z_ecr = z([-t["ecr_strength"] for t in teams.values()])
-    z_proj = z([t["adjusted_proj"] for t in teams.values()])
+    z_proj = z([t["starters_proj"] for t in teams.values()])
     played = any(t["points_for"] for t in teams.values())
     z_pts = z([t["points_for"] for t in teams.values()]) if played else None
 
@@ -199,7 +195,7 @@ def main():
 
     for m, t in teams.items():
         expert = (z_draft(t["draft_value"]) + z_ecr(-t["ecr_strength"])) / 2
-        model = z_proj(t["adjusted_proj"])
+        model = z_proj(t["starters_proj"])
         t["z"] = {"draft": round(z_draft(t["draft_value"]), 2),
                   "ecr": round(z_ecr(-t["ecr_strength"]), 2),
                   "expert": round(expert, 2), "model": round(model, 2),

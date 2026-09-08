@@ -3,102 +3,13 @@
  "league_id": 684189,
  "teams": [
   {
-   "manager": "Tyler Scarlett",
-   "ecr_strength": 57.8,
-   "points_for": 0.0,
-   "starters_proj": 2005.9,
-   "trade_gain": 39.6,
-   "adjusted_proj": 2045.5,
-   "rb_starters": 466.4,
-   "wr_starters": 570.6,
-   "skill_starters": 1442.1,
-   "rb_surplus": 334.9,
-   "biggest_hole": {
-    "slot": "RB2",
-    "player": "TreVeyon Henderson",
-    "gap": 39.6
-   },
-   "bust_share": 41.1,
-   "bust_players": [
-    "Ashton Jeanty",
-    "Malik Nabers",
-    "TreVeyon Henderson"
-   ],
-   "draft_value": 11.9,
-   "best_pick": "KC Concepcion",
-   "worst_pick": "Tony Pollard",
-   "pos_counts": {
-    "WR": 5,
-    "RB": 4,
-    "TE": 2,
-    "QB": 1,
-    "D/ST": 1,
-    "K": 1
-   },
-   "z": {
-    "draft": 1.53,
-    "ecr": 1.31,
-    "expert": 1.42,
-    "model": 0.18,
-    "points": null
-   },
-   "disagreement": 1.24,
-   "power_score": 0.801,
-   "grade": "A",
-   "power_rank": 1
-  },
-  {
-   "manager": "Dakota Bender",
-   "ecr_strength": 61.5,
-   "points_for": 0.0,
-   "starters_proj": 2034.0,
-   "trade_gain": 37.3,
-   "adjusted_proj": 2071.3,
-   "rb_starters": 589.2,
-   "wr_starters": 475.1,
-   "skill_starters": 1447.7,
-   "rb_surplus": 298.0,
-   "biggest_hole": {
-    "slot": "WR1",
-    "player": "George Pickens",
-    "gap": 37.3
-   },
-   "bust_share": 0.0,
-   "bust_players": [],
-   "draft_value": 5.2,
-   "best_pick": "Isaiah Likely",
-   "worst_pick": "De'Zhaun Stribling",
-   "pos_counts": {
-    "RB": 4,
-    "WR": 5,
-    "QB": 1,
-    "TE": 2,
-    "K": 1,
-    "D/ST": 1
-   },
-   "z": {
-    "draft": 0.67,
-    "ecr": 0.68,
-    "expert": 0.68,
-    "model": 0.72,
-    "points": null
-   },
-   "disagreement": 0.04,
-   "power_score": 0.699,
-   "grade": "B+",
-   "power_rank": 2
-  },
-  {
    "manager": "Pj Lannon",
    "ecr_strength": 70.7,
    "points_for": 0.0,
    "starters_proj": 2128.6,
-   "trade_gain": 5.3,
-   "adjusted_proj": 2133.9,
    "rb_starters": 500.9,
    "wr_starters": 606.4,
    "skill_starters": 1528.4,
-   "rb_surplus": 278.9,
    "biggest_hole": {
     "slot": "RB1",
     "player": "Breece Hall",
@@ -109,6 +20,7 @@
     "Drake London",
     "Joe Burrow"
    ],
+   "flagged": [],
    "draft_value": -6.7,
    "best_pick": "Joe Burrow",
    "worst_pick": "Justice Hill",
@@ -124,25 +36,312 @@
     "draft": -0.85,
     "ecr": -0.87,
     "expert": -0.86,
-    "model": 2.03,
+    "model": 2.32,
     "points": null
    },
-   "disagreement": 2.89,
-   "power_score": 0.583,
+   "disagreement": 3.18,
+   "power_score": 0.728,
    "grade": "C",
+   "power_rank": 1
+  },
+  {
+   "manager": "Tyler Scarlett",
+   "ecr_strength": 57.8,
+   "points_for": 0.0,
+   "starters_proj": 2005.9,
+   "rb_starters": 466.4,
+   "wr_starters": 570.6,
+   "skill_starters": 1442.1,
+   "biggest_hole": {
+    "slot": "RB2",
+    "player": "TreVeyon Henderson",
+    "gap": 39.6
+   },
+   "bust_share": 41.1,
+   "bust_players": [
+    "Ashton Jeanty",
+    "Malik Nabers",
+    "TreVeyon Henderson"
+   ],
+   "flagged": [],
+   "draft_value": 11.9,
+   "best_pick": "KC Concepcion",
+   "worst_pick": "Tony Pollard",
+   "pos_counts": {
+    "WR": 5,
+    "RB": 4,
+    "TE": 2,
+    "QB": 1,
+    "D/ST": 1,
+    "K": 1
+   },
+   "z": {
+    "draft": 1.53,
+    "ecr": 1.31,
+    "expert": 1.42,
+    "model": 0.02,
+    "points": null
+   },
+   "disagreement": 1.41,
+   "power_score": 0.719,
+   "grade": "A",
+   "power_rank": 2
+  },
+  {
+   "manager": "Dakota Bender",
+   "ecr_strength": 61.5,
+   "points_for": 0.0,
+   "starters_proj": 2034.0,
+   "rb_starters": 589.2,
+   "wr_starters": 475.1,
+   "skill_starters": 1447.7,
+   "biggest_hole": {
+    "slot": "WR1",
+    "player": "George Pickens",
+    "gap": 37.3
+   },
+   "bust_share": 0.0,
+   "bust_players": [],
+   "flagged": [
+    "Josh Jacobs",
+    "Zach Charbonnet"
+   ],
+   "draft_value": 5.2,
+   "best_pick": "Isaiah Likely",
+   "worst_pick": "De'Zhaun Stribling",
+   "pos_counts": {
+    "RB": 4,
+    "WR": 5,
+    "QB": 1,
+    "TE": 2,
+    "K": 1,
+    "D/ST": 1
+   },
+   "z": {
+    "draft": 0.67,
+    "ecr": 0.68,
+    "expert": 0.68,
+    "model": 0.54,
+    "points": null
+   },
+   "disagreement": 0.14,
+   "power_score": 0.611,
+   "grade": "B+",
    "power_rank": 3
+  },
+  {
+   "manager": "Dustin Gamble",
+   "ecr_strength": 68.7,
+   "points_for": 0.0,
+   "starters_proj": 2046.7,
+   "rb_starters": 628.9,
+   "wr_starters": 461.4,
+   "skill_starters": 1455.6,
+   "biggest_hole": {
+    "slot": "TE1",
+    "player": "T.J. Hockenson",
+    "gap": 30.4
+   },
+   "bust_share": 15.6,
+   "bust_players": [
+    "Jeremiyah Love"
+   ],
+   "flagged": [],
+   "draft_value": -0.1,
+   "best_pick": "Brian Thomas Jr.",
+   "worst_pick": "T.J. Hockenson",
+   "pos_counts": {
+    "RB": 4,
+    "WR": 6,
+    "QB": 1,
+    "TE": 1,
+    "D/ST": 1,
+    "K": 1
+   },
+   "z": {
+    "draft": -0.01,
+    "ecr": -0.53,
+    "expert": -0.27,
+    "model": 0.78,
+    "points": null
+   },
+   "disagreement": 1.05,
+   "power_score": 0.255,
+   "grade": "B-",
+   "power_rank": 4
+  },
+  {
+   "manager": "Angelo Hernandez",
+   "ecr_strength": 59.0,
+   "points_for": 0.0,
+   "starters_proj": 1989.2,
+   "rb_starters": 472.8,
+   "wr_starters": 537.0,
+   "skill_starters": 1370.3,
+   "biggest_hole": {
+    "slot": "RB2",
+    "player": "David Montgomery",
+    "gap": 27.4
+   },
+   "bust_share": 0.0,
+   "bust_players": [],
+   "flagged": [],
+   "draft_value": 3.7,
+   "best_pick": "Tucker Kraft",
+   "worst_pick": "Rashid Shaheed",
+   "pos_counts": {
+    "WR": 7,
+    "RB": 3,
+    "QB": 1,
+    "TE": 1,
+    "D/ST": 1,
+    "K": 1
+   },
+   "z": {
+    "draft": 0.48,
+    "ecr": 1.11,
+    "expert": 0.79,
+    "model": -0.3,
+    "points": null
+   },
+   "disagreement": 1.09,
+   "power_score": 0.248,
+   "grade": "B+",
+   "power_rank": 5
+  },
+  {
+   "manager": "Alex Topham",
+   "ecr_strength": 63.7,
+   "points_for": 0.0,
+   "starters_proj": 2009.1,
+   "rb_starters": 452.4,
+   "wr_starters": 603.0,
+   "skill_starters": 1453.1,
+   "biggest_hole": {
+    "slot": "RB1",
+    "player": "Travis Etienne Jr.",
+    "gap": 33.0
+   },
+   "bust_share": 20.3,
+   "bust_players": [
+    "Puka Nacua"
+   ],
+   "flagged": [],
+   "draft_value": 2.9,
+   "best_pick": "Brock Purdy",
+   "worst_pick": "Bhayshul Tuten",
+   "pos_counts": {
+    "WR": 6,
+    "RB": 4,
+    "TE": 1,
+    "QB": 1,
+    "D/ST": 1,
+    "K": 1
+   },
+   "z": {
+    "draft": 0.38,
+    "ecr": 0.31,
+    "expert": 0.35,
+    "model": 0.08,
+    "points": null
+   },
+   "disagreement": 0.27,
+   "power_score": 0.21,
+   "grade": "B",
+   "power_rank": 6
+  },
+  {
+   "manager": "Andrew Campbell",
+   "ecr_strength": 62.3,
+   "points_for": 0.0,
+   "starters_proj": 1993.5,
+   "rb_starters": 489.1,
+   "wr_starters": 532.7,
+   "skill_starters": 1386.8,
+   "biggest_hole": {
+    "slot": "RB3",
+    "player": "Chuba Hubbard",
+    "gap": 20.4
+   },
+   "bust_share": 18.7,
+   "bust_players": [
+    "Drake Maye"
+   ],
+   "flagged": [],
+   "draft_value": 5.6,
+   "best_pick": "Drake Maye",
+   "worst_pick": "Stefon Diggs",
+   "pos_counts": {
+    "WR": 4,
+    "RB": 4,
+    "TE": 2,
+    "QB": 2,
+    "D/ST": 1,
+    "K": 1
+   },
+   "z": {
+    "draft": 0.73,
+    "ecr": 0.55,
+    "expert": 0.64,
+    "model": -0.22,
+    "points": null
+   },
+   "disagreement": 0.86,
+   "power_score": 0.21,
+   "grade": "B+",
+   "power_rank": 7
+  },
+  {
+   "manager": "Corey Ploss",
+   "ecr_strength": 70.4,
+   "points_for": 0.0,
+   "starters_proj": 2050.3,
+   "rb_starters": 548.2,
+   "wr_starters": 478.2,
+   "skill_starters": 1477.6,
+   "biggest_hole": {
+    "slot": "RB2",
+    "player": "Rhamondre Stevenson",
+    "gap": 20.4
+   },
+   "bust_share": 45.8,
+   "bust_players": [
+    "Christian McCaffrey",
+    "DJ Moore",
+    "Rashee Rice"
+   ],
+   "flagged": [],
+   "draft_value": -8.1,
+   "best_pick": "Jakobi Meyers",
+   "worst_pick": "MarShawn Lloyd",
+   "pos_counts": {
+    "RB": 5,
+    "TE": 1,
+    "WR": 5,
+    "QB": 1,
+    "D/ST": 1,
+    "K": 1
+   },
+   "z": {
+    "draft": -1.03,
+    "ecr": -0.82,
+    "expert": -0.93,
+    "model": 0.85,
+    "points": null
+   },
+   "disagreement": 1.78,
+   "power_score": -0.04,
+   "grade": "C",
+   "power_rank": 8
   },
   {
    "manager": "Jarett Coy",
    "ecr_strength": 62.5,
    "points_for": 0.0,
    "starters_proj": 1977.4,
-   "trade_gain": 82.9,
-   "adjusted_proj": 2060.3,
    "rb_starters": 601.1,
    "wr_starters": 373.6,
    "skill_starters": 1425.5,
-   "rb_surplus": 194.1,
    "biggest_hole": {
     "slot": "WR1",
     "player": "Marvin Harrison Jr.",
@@ -151,6 +350,9 @@
    "bust_share": 14.0,
    "bust_players": [
     "Brock Bowers"
+   ],
+   "flagged": [
+    "Jordyn Tyson"
    ],
    "draft_value": 2.6,
    "best_pick": "Caleb Williams",
@@ -167,227 +369,12 @@
     "draft": 0.34,
     "ecr": 0.52,
     "expert": 0.43,
-    "model": 0.49,
+    "model": -0.52,
     "points": null
    },
-   "disagreement": 0.06,
-   "power_score": 0.458,
+   "disagreement": 0.95,
+   "power_score": -0.046,
    "grade": "B",
-   "power_rank": 4
-  },
-  {
-   "manager": "Dustin Gamble",
-   "ecr_strength": 68.7,
-   "points_for": 0.0,
-   "starters_proj": 2046.7,
-   "trade_gain": 30.4,
-   "adjusted_proj": 2077.1,
-   "rb_starters": 628.9,
-   "wr_starters": 461.4,
-   "skill_starters": 1455.6,
-   "rb_surplus": 174.8,
-   "biggest_hole": {
-    "slot": "TE1",
-    "player": "T.J. Hockenson",
-    "gap": 30.4
-   },
-   "bust_share": 15.6,
-   "bust_players": [
-    "Jeremiyah Love"
-   ],
-   "draft_value": -0.1,
-   "best_pick": "Brian Thomas Jr.",
-   "worst_pick": "T.J. Hockenson",
-   "pos_counts": {
-    "RB": 4,
-    "WR": 6,
-    "QB": 1,
-    "TE": 1,
-    "D/ST": 1,
-    "K": 1
-   },
-   "z": {
-    "draft": -0.01,
-    "ecr": -0.53,
-    "expert": -0.27,
-    "model": 0.84,
-    "points": null
-   },
-   "disagreement": 1.11,
-   "power_score": 0.285,
-   "grade": "B-",
-   "power_rank": 5
-  },
-  {
-   "manager": "Alex Topham",
-   "ecr_strength": 63.7,
-   "points_for": 0.0,
-   "starters_proj": 2009.1,
-   "trade_gain": 33.0,
-   "adjusted_proj": 2042.1,
-   "rb_starters": 452.4,
-   "wr_starters": 603.0,
-   "skill_starters": 1453.1,
-   "rb_surplus": 343.7,
-   "biggest_hole": {
-    "slot": "RB1",
-    "player": "Travis Etienne Jr.",
-    "gap": 33.0
-   },
-   "bust_share": 20.3,
-   "bust_players": [
-    "Puka Nacua"
-   ],
-   "draft_value": 2.9,
-   "best_pick": "Brock Purdy",
-   "worst_pick": "Bhayshul Tuten",
-   "pos_counts": {
-    "WR": 6,
-    "RB": 4,
-    "TE": 1,
-    "QB": 1,
-    "D/ST": 1,
-    "K": 1
-   },
-   "z": {
-    "draft": 0.38,
-    "ecr": 0.31,
-    "expert": 0.35,
-    "model": 0.11,
-    "points": null
-   },
-   "disagreement": 0.24,
-   "power_score": 0.227,
-   "grade": "B",
-   "power_rank": 6
-  },
-  {
-   "manager": "Angelo Hernandez",
-   "ecr_strength": 59.0,
-   "points_for": 0.0,
-   "starters_proj": 1989.2,
-   "trade_gain": 27.4,
-   "adjusted_proj": 2016.6,
-   "rb_starters": 472.8,
-   "wr_starters": 537.0,
-   "skill_starters": 1370.3,
-   "rb_surplus": 177.7,
-   "biggest_hole": {
-    "slot": "RB2",
-    "player": "David Montgomery",
-    "gap": 27.4
-   },
-   "bust_share": 0.0,
-   "bust_players": [],
-   "draft_value": 3.7,
-   "best_pick": "Tucker Kraft",
-   "worst_pick": "Rashid Shaheed",
-   "pos_counts": {
-    "WR": 7,
-    "RB": 3,
-    "QB": 1,
-    "TE": 1,
-    "D/ST": 1,
-    "K": 1
-   },
-   "z": {
-    "draft": 0.48,
-    "ecr": 1.11,
-    "expert": 0.79,
-    "model": -0.43,
-    "points": null
-   },
-   "disagreement": 1.22,
-   "power_score": 0.185,
-   "grade": "B+",
-   "power_rank": 7
-  },
-  {
-   "manager": "Corey Ploss",
-   "ecr_strength": 70.4,
-   "points_for": 0.0,
-   "starters_proj": 2050.3,
-   "trade_gain": 20.4,
-   "adjusted_proj": 2070.7,
-   "rb_starters": 548.2,
-   "wr_starters": 478.2,
-   "skill_starters": 1477.6,
-   "rb_surplus": 448.0,
-   "biggest_hole": {
-    "slot": "RB2",
-    "player": "Rhamondre Stevenson",
-    "gap": 20.4
-   },
-   "bust_share": 45.8,
-   "bust_players": [
-    "Christian McCaffrey",
-    "DJ Moore",
-    "Rashee Rice"
-   ],
-   "draft_value": -8.1,
-   "best_pick": "Jakobi Meyers",
-   "worst_pick": "MarShawn Lloyd",
-   "pos_counts": {
-    "RB": 5,
-    "TE": 1,
-    "WR": 5,
-    "QB": 1,
-    "D/ST": 1,
-    "K": 1
-   },
-   "z": {
-    "draft": -1.03,
-    "ecr": -0.82,
-    "expert": -0.93,
-    "model": 0.71,
-    "points": null
-   },
-   "disagreement": 1.64,
-   "power_score": -0.111,
-   "grade": "C",
-   "power_rank": 8
-  },
-  {
-   "manager": "Andrew Campbell",
-   "ecr_strength": 62.3,
-   "points_for": 0.0,
-   "starters_proj": 1993.5,
-   "trade_gain": 0.0,
-   "adjusted_proj": 1993.5,
-   "rb_starters": 489.1,
-   "wr_starters": 532.7,
-   "skill_starters": 1386.8,
-   "rb_surplus": 0,
-   "biggest_hole": {
-    "slot": "RB3",
-    "player": "Chuba Hubbard",
-    "gap": 20.4
-   },
-   "bust_share": 18.7,
-   "bust_players": [
-    "Drake Maye"
-   ],
-   "draft_value": 5.6,
-   "best_pick": "Drake Maye",
-   "worst_pick": "Stefon Diggs",
-   "pos_counts": {
-    "WR": 4,
-    "RB": 4,
-    "TE": 2,
-    "QB": 2,
-    "D/ST": 1,
-    "K": 1
-   },
-   "z": {
-    "draft": 0.73,
-    "ecr": 0.55,
-    "expert": 0.64,
-    "model": -0.91,
-    "points": null
-   },
-   "disagreement": 1.55,
-   "power_score": -0.136,
-   "grade": "B+",
    "power_rank": 9
   },
   {
@@ -395,12 +382,9 @@
    "ecr_strength": 60.4,
    "points_for": 0.0,
    "starters_proj": 1937.2,
-   "trade_gain": 26.9,
-   "adjusted_proj": 1964.1,
    "rb_starters": 539.5,
    "wr_starters": 467.6,
    "skill_starters": 1394.4,
-   "rb_surplus": 188.3,
    "biggest_hole": {
     "slot": "WR1",
     "player": "Chris Olave",
@@ -408,6 +392,7 @@
    },
    "bust_share": 0.0,
    "bust_players": [],
+   "flagged": [],
    "draft_value": 7.2,
    "best_pick": "Travis Kelce",
    "worst_pick": "Javonte Williams",
@@ -423,11 +408,11 @@
     "draft": 0.93,
     "ecr": 0.87,
     "expert": 0.9,
-    "model": -1.52,
+    "model": -1.28,
     "points": null
    },
-   "disagreement": 2.43,
-   "power_score": -0.312,
+   "disagreement": 2.18,
+   "power_score": -0.187,
    "grade": "A-",
    "power_rank": 10
   },
@@ -436,12 +421,9 @@
    "ecr_strength": 71.6,
    "points_for": 0.0,
    "starters_proj": 1921.7,
-   "trade_gain": 52.4,
-   "adjusted_proj": 1974.1,
    "rb_starters": 467.9,
    "wr_starters": 514.9,
    "skill_starters": 1397.7,
-   "rb_surplus": 284.1,
    "biggest_hole": {
     "slot": "RB2",
     "player": "Kyle Monangai",
@@ -452,6 +434,9 @@
     "Colston Loveland",
     "De'Von Achane",
     "Ladd McConkey"
+   ],
+   "flagged": [
+    "Isiah Pacheco"
    ],
    "draft_value": -8.6,
    "best_pick": "Woody Marks",
@@ -468,11 +453,11 @@
     "draft": -1.1,
     "ecr": -1.03,
     "expert": -1.06,
-    "model": -1.32,
+    "model": -1.57,
     "points": null
    },
-   "disagreement": 0.25,
-   "power_score": -1.189,
+   "disagreement": 0.5,
+   "power_score": -1.314,
    "grade": "C",
    "power_rank": 11
   },
@@ -481,12 +466,9 @@
    "ecr_strength": 77.9,
    "points_for": 0.0,
    "starters_proj": 1967.6,
-   "trade_gain": 26.4,
-   "adjusted_proj": 1994.0,
    "rb_starters": 549.4,
    "wr_starters": 478.9,
    "skill_starters": 1419.2,
-   "rb_surplus": 178.2,
    "biggest_hole": {
     "slot": "WR1",
     "player": "Garrett Wilson",
@@ -496,6 +478,7 @@
    "bust_players": [
     "Matthew Stafford"
    ],
+   "flagged": [],
    "draft_value": -16.2,
    "best_pick": "Garrett Wilson",
    "worst_pick": "Keenan Allen",
@@ -511,11 +494,11 @@
     "draft": -2.07,
     "ecr": -2.09,
     "expert": -2.08,
-    "model": -0.9,
+    "model": -0.7,
     "points": null
    },
-   "disagreement": 1.18,
-   "power_score": -1.491,
+   "disagreement": 1.38,
+   "power_score": -1.394,
    "grade": "D",
    "power_rank": 12
   }

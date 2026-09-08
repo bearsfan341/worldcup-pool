@@ -101,3 +101,18 @@ Roster metrics deliberately use **as-drafted** rosters, so the section stays a
 snapshot of draft night instead of drifting as waiver moves happen. A player
 drafted and later dropped still resolves via the league-wide projection cache
 in `data/espn_players_2026.json`.
+
+## Weekly game preview
+
+```
+python3 fantasy/scripts/pull_week.py [week]     # -> data/week_preview.json
+python3 fantasy/scripts/build_draft_section.py  # injects draft + week data
+```
+
+The "This Week" section shows the upcoming preview while `WEEKS` is empty and
+switches to recaps once you add entries. Preview projections are ESPN's own
+weekly starter projections, not a model of ours.
+
+**Caution on string replacement:** `build_draft_section.py` overwrites the
+`DRAFT_DATA` / `WEEK_DATA` blocks, so any hand edit anchored on `var DRAFT =
+null;` will silently no-op after a build has run. Assert your match count.

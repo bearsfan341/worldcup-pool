@@ -1,60 +1,60 @@
 team_id,manager,player,player_id,position,pro_team,proj,proj_avg,injury,owned
 1,Derek Booker,James Cook III,4379399,RB,BUF,280.0,16.47,ACTIVE,99.9
 1,Derek Booker,Javonte Williams,4361579,RB,DAL,259.5,15.26,ACTIVE,99.0
-1,Derek Booker,Chris Olave,4361370,WR,NO,249.6,14.68,ACTIVE,99.3
+1,Derek Booker,Chris Olave,4361370,WR,NO,249.6,14.68,ACTIVE,99.4
 1,Derek Booker,Terry McLaurin,3121422,WR,WSH,218.0,12.83,ACTIVE,96.0
 1,Derek Booker,Jayden Daniels,4426348,QB,WSH,317.0,18.65,ACTIVE,99.0
-1,Derek Booker,George Kittle,3040151,TE,SF,193.3,11.37,QUESTIONABLE,94.2
+1,Derek Booker,George Kittle,3040151,TE,SF,193.3,11.37,QUESTIONABLE,94.3
 1,Derek Booker,Jaylen Warren,4569987,RB,PIT,194.0,11.41,ACTIVE,90.5
 1,Derek Booker,Rico Dowdle,4038815,RB,PIT,188.3,11.08,ACTIVE,88.9
 1,Derek Booker,Travis Kelce,15847,TE,KC,177.2,10.42,ACTIVE,91.0
-1,Derek Booker,Josh Downs,4688813,WR,IND,157.6,9.27,QUESTIONABLE,71.0
+1,Derek Booker,Josh Downs,4688813,WR,IND,157.6,9.27,QUESTIONABLE,70.9
 1,Derek Booker,Jaxson Dart,4689114,QB,NYG,299.5,17.62,ACTIVE,94.2
 1,Derek Booker,Tyler Allgeier,4373626,RB,ARI,92.6,5.45,ACTIVE,35.9
-1,Derek Booker,Jaguars D/ST,-16030,D/ST,JAX,77.0,4.53,NORMAL,54.6
+1,Derek Booker,Jaguars D/ST,-16030,D/ST,JAX,77.0,4.53,NORMAL,54.2
 1,Derek Booker,Kaelon Black,4696044,RB,SF,60.3,3.55,ACTIVE,12.4
 2,Tyler Scarlett,Jaxon Smith-Njigba,4430878,WR,SEA,326.7,19.22,ACTIVE,99.9
 2,Tyler Scarlett,Ashton Jeanty,4890973,RB,LV,278.9,16.41,QUESTIONABLE,99.7
 2,Tyler Scarlett,Malik Nabers,4595348,WR,NYG,243.9,14.35,QUESTIONABLE,99.1
 2,Tyler Scarlett,Zay Flowers,4429615,WR,BAL,238.5,14.03,QUESTIONABLE,98.6
 2,Tyler Scarlett,TreVeyon Henderson,4432710,RB,NE,187.5,11.03,QUESTIONABLE,92.4
-2,Tyler Scarlett,Tony Pollard,3916148,RB,TEN,185.5,10.91,ACTIVE,89.8
+2,Tyler Scarlett,Tony Pollard,3916148,RB,TEN,185.5,10.91,ACTIVE,89.9
 2,Tyler Scarlett,Michael Wilson,4360761,WR,ARI,176.4,10.37,ACTIVE,86.2
 2,Tyler Scarlett,RJ Harvey,4568490,RB,DEN,149.4,8.79,ACTIVE,76.3
-2,Tyler Scarlett,Jake Ferguson,4242355,TE,DAL,166.6,9.8,ACTIVE,86.0
+2,Tyler Scarlett,Jake Ferguson,4242355,TE,DAL,166.6,9.8,ACTIVE,85.9
 2,Tyler Scarlett,Dak Prescott,2577417,QB,DAL,286.1,16.83,ACTIVE,93.9
 2,Tyler Scarlett,Dalton Kincaid,4385690,TE,BUF,155.4,9.14,ACTIVE,75.4
 2,Tyler Scarlett,Broncos D/ST,-16007,D/ST,DEN,130.8,7.69,NORMAL,98.7
 2,Tyler Scarlett,Cam Little,4686361,K,JAX,146.9,8.64,ACTIVE,88.6
-2,Tyler Scarlett,KC Concepcion,4870653,WR,CLE,156.0,9.18,ACTIVE,65.0
+2,Tyler Scarlett,KC Concepcion,4870653,WR,CLE,156.0,9.18,ACTIVE,64.9
 3,Alex Topham,Puka Nacua,4426515,WR,LAR,353.6,20.8,QUESTIONABLE,99.9
 3,Alex Topham,A.J. Brown,4047646,WR,NE,249.4,14.67,ACTIVE,99.7
-3,Alex Topham,Travis Etienne Jr.,4239996,RB,NO,246.4,14.49,ACTIVE,98.2
+3,Alex Topham,Travis Etienne Jr.,4239996,RB,NO,246.4,14.49,ACTIVE,98.3
 3,Alex Topham,Bhayshul Tuten,4882093,RB,JAX,206.0,12.12,QUESTIONABLE,93.7
 3,Alex Topham,Tyler Warren,4431459,TE,IND,210.5,12.38,QUESTIONABLE,99.1
 3,Alex Topham,Parker Washington,4432620,WR,JAX,187.2,11.01,ACTIVE,89.0
 3,Alex Topham,Jonathon Brooks,4678008,RB,CAR,179.6,10.57,QUESTIONABLE,84.3
 3,Alex Topham,Chris Godwin Jr.,3116165,WR,TB,157.2,9.25,ACTIVE,76.5
 3,Alex Topham,Rachaad White,4697815,RB,WSH,164.1,9.65,QUESTIONABLE,74.6
-3,Alex Topham,Jordan Addison,4429205,WR,MIN,170.7,10.04,ACTIVE,80.4
+3,Alex Topham,Jordan Addison,4429205,WR,MIN,170.7,10.04,ACTIVE,80.3
 3,Alex Topham,Brock Purdy,4361741,QB,SF,291.6,17.15,ACTIVE,85.2
-3,Alex Topham,Deebo Samuel Sr.,3126486,WR,SF,149.5,8.79,ACTIVE,68.7
+3,Alex Topham,Deebo Samuel Sr.,3126486,WR,SF,149.5,8.79,ACTIVE,68.5
 3,Alex Topham,Ravens D/ST,-16033,D/ST,BAL,118.5,6.97,NORMAL,90.6
 3,Alex Topham,Tyler Loop,4697745,K,BAL,145.9,8.58,ACTIVE,52.3
 4,Johnny Marcks,Justin Jefferson,4262921,WR,MIN,293.9,17.29,ACTIVE,99.9
 4,Johnny Marcks,De'Von Achane,4429160,RB,MIA,293.2,17.25,ACTIVE,99.9
-4,Johnny Marcks,Ladd McConkey,4612826,WR,LAC,221.0,13.0,ACTIVE,97.7
+4,Johnny Marcks,Ladd McConkey,4612826,WR,LAC,221.0,13.0,ACTIVE,97.8
 4,Johnny Marcks,Colston Loveland,4723086,TE,CHI,206.6,12.15,ACTIVE,99.6
 4,Johnny Marcks,Jameson Williams,4426388,WR,DET,208.3,12.25,ACTIVE,95.5
 4,Johnny Marcks,Justin Herbert,4038941,QB,LAC,283.6,16.68,ACTIVE,92.2
-4,Johnny Marcks,Kyle Monangai,4608686,RB,CHI,174.7,10.28,QUESTIONABLE,78.7
+4,Johnny Marcks,Kyle Monangai,4608686,RB,CHI,174.7,10.28,QUESTIONABLE,78.6
 4,Johnny Marcks,Alec Pierce,4360078,WR,IND,185.3,10.9,ACTIVE,86.2
-4,Johnny Marcks,Romeo Doubs,4361432,WR,NE,150.4,8.85,ACTIVE,61.8
+4,Johnny Marcks,Romeo Doubs,4361432,WR,NE,150.4,8.85,ACTIVE,61.7
 4,Johnny Marcks,Jordan Mason,4360569,RB,MIN,152.3,8.96,ACTIVE,68.1
-4,Johnny Marcks,Woody Marks,4429059,RB,HOU,131.8,7.75,ACTIVE,59.7
-4,Johnny Marcks,Isiah Pacheco,4361529,RB,DET,71.0,5.91,INJURY_RESERVE,36.8
+4,Johnny Marcks,Woody Marks,4429059,RB,HOU,131.8,7.75,ACTIVE,59.6
+4,Johnny Marcks,Isiah Pacheco,4361529,RB,DET,71.0,5.91,INJURY_RESERVE,36.6
 4,Johnny Marcks,Jake Bates,4689936,K,DET,145.9,8.58,ACTIVE,72.3
-4,Johnny Marcks,Chargers D/ST,-16024,D/ST,LAC,94.5,5.56,NORMAL,54.4
+4,Johnny Marcks,Chargers D/ST,-16024,D/ST,LAC,94.5,5.56,NORMAL,54.2
 5,Jarett Coy,Jahmyr Gibbs,4429795,RB,DET,369.1,21.71,ACTIVE,99.9
 5,Jarett Coy,Brock Bowers,4432665,TE,LV,240.9,14.17,ACTIVE,99.9
 5,Jarett Coy,Kyren Williams,4430737,RB,LAR,232.0,13.65,ACTIVE,98.8
@@ -62,26 +62,26 @@ team_id,manager,player,player_id,position,pro_team,proj,proj_avg,injury,owned
 5,Jarett Coy,Jadarian Price,4685512,RB,SEA,194.1,11.42,ACTIVE,93.9
 5,Jarett Coy,Mike Evans,16737,WR,SF,180.0,10.59,QUESTIONABLE,90.8
 5,Jarett Coy,Marvin Harrison Jr.,4432708,WR,ARI,193.6,11.39,ACTIVE,92.1
-5,Jarett Coy,Trevor Lawrence,4360310,QB,JAX,289.6,17.03,ACTIVE,88.6
-5,Jarett Coy,Quentin Johnston,4429025,WR,LAC,165.4,9.73,ACTIVE,74.9
-5,Jarett Coy,Jordyn Tyson,4880281,WR,NO,99.8,9.98,INJURY_RESERVE,37.5
-5,Jarett Coy,Mike Washington Jr.,4686658,RB,LV,67.1,3.95,ACTIVE,39.8
-5,Jarett Coy,Caleb Williams,4431611,QB,CHI,281.0,16.53,ACTIVE,91.5
+5,Jarett Coy,Trevor Lawrence,4360310,QB,JAX,289.6,17.03,ACTIVE,88.5
+5,Jarett Coy,Quentin Johnston,4429025,WR,LAC,165.4,9.73,ACTIVE,74.8
+5,Jarett Coy,Jordyn Tyson,4880281,WR,NO,99.8,9.98,INJURY_RESERVE,37.3
+5,Jarett Coy,Mike Washington Jr.,4686658,RB,LV,67.1,3.95,ACTIVE,39.7
+5,Jarett Coy,Caleb Williams,4431611,QB,CHI,281.0,16.53,ACTIVE,91.6
 5,Jarett Coy,Cameron Dicker,4362081,K,LAC,161.9,9.52,QUESTIONABLE,98.7
-5,Jarett Coy,Chiefs D/ST,-16012,D/ST,KC,100.4,5.91,NORMAL,37.8
-5,Jarett Coy,Dontayvion Wicks,4428850,WR,PHI,108.7,6.39,ACTIVE,10.1
+5,Jarett Coy,Chiefs D/ST,-16012,D/ST,KC,100.4,5.91,NORMAL,37.9
+5,Jarett Coy,Dontayvion Wicks,4428850,WR,PHI,108.7,6.39,ACTIVE,10.0
 6,Dakota Bender,Jonathan Taylor,4242335,RB,IND,315.9,18.58,ACTIVE,99.9
 6,Dakota Bender,Saquon Barkley,3929630,RB,PHI,273.3,16.08,ACTIVE,99.9
 6,Dakota Bender,George Pickens,4426354,WR,DAL,239.2,14.07,ACTIVE,99.7
 6,Dakota Bender,Tetairoa McMillan,4685472,WR,CAR,235.9,13.88,ACTIVE,98.7
 6,Dakota Bender,Luther Burden III,4685278,WR,CHI,206.5,12.15,QUESTIONABLE,92.8
 6,Dakota Bender,Jalen Hurts,4040715,QB,PHI,319.8,18.81,ACTIVE,98.4
-6,Dakota Bender,Josh Jacobs,4047365,RB,GB,164.0,14.91,DAY_TO_DAY,91.6
+6,Dakota Bender,Josh Jacobs,4047365,RB,GB,164.0,14.91,DAY_TO_DAY,91.5
 6,Dakota Bender,Michael Pittman Jr.,4035687,WR,PIT,197.2,11.6,QUESTIONABLE,90.2
 6,Dakota Bender,Dallas Goedert,3121023,TE,PHI,176.9,10.41,ACTIVE,90.2
 6,Dakota Bender,De'Zhaun Stribling,4710714,WR,SF,160.1,9.42,QUESTIONABLE,64.4
 6,Dakota Bender,Isaiah Likely,4361050,TE,NYG,155.1,9.12,ACTIVE,81.3
-6,Dakota Bender,Zach Charbonnet,4426385,RB,SEA,134.0,12.18,OUT,54.9
+6,Dakota Bender,Zach Charbonnet,4426385,RB,SEA,134.0,12.18,OUT,54.8
 6,Dakota Bender,Jason Myers,2473037,K,SEA,158.5,9.32,ACTIVE,98.4
 6,Dakota Bender,Lions D/ST,-16008,D/ST,DET,108.0,6.35,NORMAL,71.4
 7,Corey Ploss,Christian McCaffrey,3117251,RB,SF,341.5,20.09,QUESTIONABLE,99.9
@@ -90,14 +90,14 @@ team_id,manager,player,player_id,position,pro_team,proj,proj_avg,injury,owned
 7,Corey Ploss,Tee Higgins,4239993,WR,CIN,218.9,12.88,QUESTIONABLE,97.2
 7,Corey Ploss,DJ Moore,3915416,WR,BUF,209.6,12.33,ACTIVE,95.7
 7,Corey Ploss,Rhamondre Stevenson,4569173,RB,NE,206.7,12.16,ACTIVE,91.2
-7,Corey Ploss,MarShawn Lloyd,4429023,RB,GB,134.4,7.91,ACTIVE,79.9
+7,Corey Ploss,MarShawn Lloyd,4429023,RB,GB,134.4,7.91,ACTIVE,80.0
 7,Corey Ploss,Patrick Mahomes,3139477,QB,KC,291.0,17.12,QUESTIONABLE,86.5
-7,Corey Ploss,Blake Corum,4429096,RB,LAR,159.3,9.37,ACTIVE,77.5
+7,Corey Ploss,Blake Corum,4429096,RB,LAR,159.3,9.37,ACTIVE,77.4
 7,Corey Ploss,Tyjae Spears,4428557,RB,TEN,154.3,9.08,ACTIVE,55.3
 7,Corey Ploss,Jakobi Meyers,3916433,WR,JAX,181.9,10.7,QUESTIONABLE,80.3
 7,Corey Ploss,Seahawks D/ST,-16026,D/ST,SEA,122.3,7.19,NORMAL,98.1
-7,Corey Ploss,Harrison Mevis,4574716,K,LAR,159.4,9.38,ACTIVE,93.1
-7,Corey Ploss,Jalen McMillan,4430834,WR,TB,132.7,7.81,QUESTIONABLE,32.3
+7,Corey Ploss,Harrison Mevis,4574716,K,LAR,159.4,9.38,ACTIVE,93.2
+7,Corey Ploss,Jalen McMillan,4430834,WR,TB,132.7,7.81,QUESTIONABLE,32.4
 8,Kyle Torpey,Chase Brown,4362238,RB,CIN,271.6,15.98,ACTIVE,99.6
 8,Kyle Torpey,Derrick Henry,3043078,RB,BAL,277.8,16.34,ACTIVE,99.8
 8,Kyle Torpey,Emeka Egbuka,4567750,WR,TB,228.8,13.46,QUESTIONABLE,98.1
@@ -106,9 +106,9 @@ team_id,manager,player,player_id,position,pro_team,proj,proj_avg,injury,owned
 8,Kyle Torpey,Sam LaPorta,4430027,TE,DET,188.7,11.1,QUESTIONABLE,95.7
 8,Kyle Torpey,DK Metcalf,4047650,WR,PIT,195.8,11.52,QUESTIONABLE,91.9
 8,Kyle Torpey,Aaron Jones Sr.,3042519,RB,MIN,178.2,10.48,ACTIVE,81.7
-8,Kyle Torpey,Matthew Stafford,12483,QB,LAR,292.8,17.23,ACTIVE,92.7
+8,Kyle Torpey,Matthew Stafford,12483,QB,LAR,292.8,17.23,ACTIVE,92.6
 8,Kyle Torpey,Alvin Kamara,3054850,RB,NO,113.3,7.55,QUESTIONABLE,38.8
-8,Kyle Torpey,Hunter Henry,3046439,TE,NE,150.1,8.83,ACTIVE,56.0
+8,Kyle Torpey,Hunter Henry,3046439,TE,NE,150.1,8.83,ACTIVE,55.9
 8,Kyle Torpey,Keenan Allen,15818,WR,IND,124.1,7.3,ACTIVE,29.4
 8,Kyle Torpey,Patriots D/ST,-16017,D/ST,NE,100.5,5.91,NORMAL,69.4
 8,Kyle Torpey,Eddy Pineiro,4034949,K,SF,155.1,9.13,ACTIVE,85.2
@@ -121,9 +121,9 @@ team_id,manager,player,player_id,position,pro_team,proj,proj_avg,injury,owned
 10,Dustin Gamble,Courtland Sutton,3128429,WR,DEN,204.1,12.01,ACTIVE,92.4
 10,Dustin Gamble,J.K. Dobbins,4241985,RB,DEN,174.8,10.28,ACTIVE,84.2
 10,Dustin Gamble,Brian Thomas Jr.,4432773,WR,JAX,176.7,10.39,ACTIVE,84.3
-10,Dustin Gamble,Xavier Worthy,4683062,WR,KC,172.9,10.17,ACTIVE,76.2
+10,Dustin Gamble,Xavier Worthy,4683062,WR,KC,172.9,10.17,ACTIVE,76.1
 10,Dustin Gamble,Jalen Coker,4695883,WR,CAR,146.9,8.64,ACTIVE,50.5
-10,Dustin Gamble,T.J. Hockenson,4036133,TE,MIN,158.4,9.32,ACTIVE,60.9
+10,Dustin Gamble,T.J. Hockenson,4036133,TE,MIN,158.4,9.32,ACTIVE,60.7
 10,Dustin Gamble,Steelers D/ST,-16023,D/ST,PIT,124.5,7.33,NORMAL,96.5
 10,Dustin Gamble,Cairo Santos,17427,K,CHI,144.1,8.48,ACTIVE,34.2
 11,Pj Lannon,Ja'Marr Chase,4362628,WR,CIN,336.9,19.82,QUESTIONABLE,99.9
@@ -132,26 +132,26 @@ team_id,manager,player,player_id,position,pro_team,proj,proj_avg,injury,owned
 11,Pj Lannon,Davante Adams,16800,WR,LAR,232.2,13.66,ACTIVE,98.7
 11,Pj Lannon,Quinshon Judkins,4685702,RB,CLE,226.8,13.34,ACTIVE,97.0
 11,Pj Lannon,Joe Burrow,3915511,QB,CIN,304.3,17.9,ACTIVE,98.1
-11,Pj Lannon,Harold Fannin Jr.,5083076,TE,CLE,188.9,11.11,ACTIVE,95.4
-11,Pj Lannon,Matthew Golden,4701936,WR,GB,188.6,11.09,ACTIVE,84.9
+11,Pj Lannon,Harold Fannin Jr.,5083076,TE,CLE,188.9,11.11,ACTIVE,95.5
+11,Pj Lannon,Matthew Golden,4701936,WR,GB,188.6,11.09,ACTIVE,84.8
 11,Pj Lannon,Brandon Aubrey,3953687,K,DAL,171.5,10.09,ACTIVE,99.8
-11,Pj Lannon,Jacory Croskey-Merritt,4575131,RB,WSH,158.8,9.34,QUESTIONABLE,71.6
-11,Pj Lannon,Rams D/ST,-16014,D/ST,LAR,124.4,7.32,NORMAL,97.5
-11,Pj Lannon,Kyler Murray,3917315,QB,MIN,283.1,16.65,ACTIVE,67.5
-11,Pj Lannon,Tre Tucker,4428718,WR,LV,137.9,8.11,ACTIVE,26.3
+11,Pj Lannon,Jacory Croskey-Merritt,4575131,RB,WSH,158.8,9.34,QUESTIONABLE,71.5
+11,Pj Lannon,Rams D/ST,-16014,D/ST,LAR,124.4,7.32,NORMAL,97.6
+11,Pj Lannon,Kyler Murray,3917315,QB,MIN,283.1,16.65,ACTIVE,67.6
+11,Pj Lannon,Tre Tucker,4428718,WR,LV,137.9,8.11,ACTIVE,26.2
 11,Pj Lannon,Justice Hill,4038441,RB,BAL,120.1,7.06,ACTIVE,18.2
 12,Angelo Hernandez,Amon-Ra St. Brown,4374302,WR,DET,324.0,19.06,ACTIVE,99.9
 12,Angelo Hernandez,Kenneth Walker III,4567048,RB,KC,273.1,16.06,ACTIVE,99.6
 12,Angelo Hernandez,Josh Allen,3918298,QB,BUF,370.0,21.77,ACTIVE,99.9
 12,Angelo Hernandez,Jaylen Waddle,4372016,WR,DEN,213.0,12.53,ACTIVE,96.9
 12,Angelo Hernandez,David Montgomery,4035538,RB,HOU,199.7,11.75,ACTIVE,94.8
-12,Angelo Hernandez,Christian Watson,4248528,WR,GB,188.5,11.09,ACTIVE,89.6
+12,Angelo Hernandez,Christian Watson,4248528,WR,GB,188.5,11.09,ACTIVE,89.7
 12,Angelo Hernandez,Kenny Gainwell,4371733,RB,TB,177.7,10.45,ACTIVE,86.0
 12,Angelo Hernandez,Tucker Kraft,4572680,TE,GB,172.0,10.12,QUESTIONABLE,90.9
-12,Angelo Hernandez,Makai Lemon,4870795,WR,PHI,155.2,9.13,ACTIVE,74.2
-12,Angelo Hernandez,Jayden Reed,4362249,WR,GB,173.4,10.2,ACTIVE,71.6
+12,Angelo Hernandez,Makai Lemon,4870795,WR,PHI,155.2,9.13,ACTIVE,74.1
+12,Angelo Hernandez,Jayden Reed,4362249,WR,GB,173.4,10.2,ACTIVE,71.5
 12,Angelo Hernandez,Khalil Shakir,4373678,WR,BUF,171.2,10.07,QUESTIONABLE,70.5
-12,Angelo Hernandez,Rashid Shaheed,4032473,WR,SEA,144.4,8.5,ACTIVE,44.1
+12,Angelo Hernandez,Rashid Shaheed,4032473,WR,SEA,144.4,8.5,ACTIVE,44.0
 12,Angelo Hernandez,Eagles D/ST,-16021,D/ST,PHI,107.1,6.3,NORMAL,88.7
 12,Angelo Hernandez,Evan McPherson,4360234,K,CIN,141.8,8.34,ACTIVE,20.8
 13,Andrew Campbell,CeeDee Lamb,4241389,WR,DAL,293.6,17.27,ACTIVE,99.9
@@ -161,10 +161,10 @@ team_id,manager,player,player_id,position,pro_team,proj,proj_avg,injury,owned
 13,Andrew Campbell,Kyle Pitts Sr.,4360248,TE,ATL,185.0,10.88,ACTIVE,96.7
 13,Andrew Campbell,Drake Maye,4431452,QB,NE,319.8,18.81,ACTIVE,99.4
 13,Andrew Campbell,Chuba Hubbard,4241416,RB,CAR,180.0,10.59,QUESTIONABLE,84.7
-13,Andrew Campbell,Stefon Diggs,2976212,WR,WSH,172.9,10.17,ACTIVE,83.2
+13,Andrew Campbell,Stefon Diggs,2976212,WR,WSH,172.9,10.17,ACTIVE,83.3
 13,Andrew Campbell,Texans D/ST,-16034,D/ST,HOU,129.1,7.59,NORMAL,99.0
 13,Andrew Campbell,Wan'Dale Robinson,4569587,WR,TEN,174.8,10.29,QUESTIONABLE,82.3
-13,Andrew Campbell,Mark Andrews,3116365,TE,BAL,169.1,9.94,ACTIVE,81.6
-13,Andrew Campbell,Bo Nix,4426338,QB,DEN,295.7,17.4,ACTIVE,88.8
+13,Andrew Campbell,Mark Andrews,3116365,TE,BAL,169.1,9.94,ACTIVE,81.5
+13,Andrew Campbell,Bo Nix,4426338,QB,DEN,295.7,17.4,ACTIVE,88.7
 13,Andrew Campbell,Ka'imi Fairbairn,2971573,K,HOU,157.8,9.28,ACTIVE,95.5
-13,Andrew Campbell,Jonah Coleman,4702555,RB,DEN,74.4,4.38,ACTIVE,28.1
+13,Andrew Campbell,Jonah Coleman,4702555,RB,DEN,74.4,4.38,ACTIVE,28.2

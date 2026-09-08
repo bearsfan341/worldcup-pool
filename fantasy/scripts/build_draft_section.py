@@ -12,15 +12,18 @@ BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REPO = os.path.dirname(BASE)
 SRC = os.path.join(BASE, "data", "draft_analysis.json")
 COPY = os.path.join(BASE, "data", "draft_copy.json")
+WEEK = os.path.join(BASE, "data", "week_preview.json")
 PAGE = os.path.join(REPO, "docs", "index.html")
 START, END = "/* DRAFT_DATA_START */", "/* DRAFT_DATA_END */"
+WSTART, WEND = "/* WEEK_DATA_START */", "/* WEEK_DATA_END */"
 
 # Fields the page actually reads; everything else stays out of the payload.
 PICK_KEYS = ("overall", "round", "manager", "player", "pos", "ecr", "proj", "val")
 TEAM_KEYS = ("manager", "power_rank", "grade", "power_score", "z", "disagreement",
              "starters_proj", "trade_gain", "bust_share", "draft_value",
              "ecr_strength", "rb_starters", "wr_starters", "rb_surplus",
-             "biggest_hole", "bust_players", "best_pick", "worst_pick", "pos_counts")
+             "biggest_hole", "bust_players", "flagged", "best_pick", "worst_pick",
+             "pos_counts")
 
 
 def main():
@@ -43,6 +46,13 @@ def main():
         return 1
     new = f"{START}\n  var DRAFT = {blob};\n  {END}"
     html = re.sub(re.escape(START) + r".*?" + re.escape(END), lambda _: new, html, flags=re.S)
+
+    if os.path.exists(WEEK):
+        wk = json.load(open(WEEK))
+        wblob = json.dumps(wk, separators=(",", ":"))
+        wnew = f"{WSTART}\n  var WEEK_PREVIEW = {wblob};\n  {WEND}"
+        html = re.sub(re.escape(WSTART) + r".*?" + re.escape(WEND), lambda _: wnew, html, flags=re.S)
+        print(f"  week {wk['week']} preview: {len(wk['games'])} games, {len(wblob):,} bytes")
     open(PAGE, "w").write(html)
     print(f"injected {len(blob):,} bytes of draft data into docs/index.html")
     print(f"  {payload['picks']} picks, {len(payload['teams'])} teams")

@@ -1,0 +1,421 @@
+{
+ "week": 1,
+ "season": 2026,
+ "note": "Projections are ESPN's own weekly starter projections.",
+ "games": [
+  {
+   "away": {
+    "manager": "Tyler Scarlett",
+    "team_name": "Bowers Castle",
+    "projected": 117.7,
+    "top": [
+     {
+      "player": "Jaxon Smith-Njigba",
+      "pos": "WR",
+      "proj": 18.9,
+      "injury": "ACTIVE"
+     },
+     {
+      "player": "Ashton Jeanty",
+      "pos": "RB",
+      "proj": 18.1,
+      "injury": "QUESTIONABLE"
+     },
+     {
+      "player": "Dak Prescott",
+      "pos": "QB",
+      "proj": 16.7,
+      "injury": "ACTIVE"
+     },
+     {
+      "player": "Zay Flowers",
+      "pos": "WR",
+      "proj": 14.2,
+      "injury": "QUESTIONABLE"
+     }
+    ],
+    "risk": []
+   },
+   "home": {
+    "manager": "Jarett Coy",
+    "team_name": "Jahmyrican Pie",
+    "projected": 118.8,
+    "top": [
+     {
+      "player": "Jahmyr Gibbs",
+      "pos": "RB",
+      "proj": 22.5,
+      "injury": "ACTIVE"
+     },
+     {
+      "player": "Trevor Lawrence",
+      "pos": "QB",
+      "proj": 17.0,
+      "injury": "ACTIVE"
+     },
+     {
+      "player": "Brock Bowers",
+      "pos": "TE",
+      "proj": 15.6,
+      "injury": "ACTIVE"
+     },
+     {
+      "player": "Kyren Williams",
+      "pos": "RB",
+      "proj": 13.7,
+      "injury": "ACTIVE"
+     }
+    ],
+    "risk": []
+   },
+   "margin": 1.1,
+   "favorite": "Jarett Coy",
+   "underdog": "Tyler Scarlett"
+  },
+  {
+   "away": {
+    "manager": "Alex Topham",
+    "team_name": "Puk on my D",
+    "projected": 116.9,
+    "top": [
+     {
+      "player": "Puka Nacua",
+      "pos": "WR",
+      "proj": 21.1,
+      "injury": "QUESTIONABLE"
+     },
+     {
+      "player": "Brock Purdy",
+      "pos": "QB",
+      "proj": 15.5,
+      "injury": "ACTIVE"
+     },
+     {
+      "player": "Travis Etienne Jr.",
+      "pos": "RB",
+      "proj": 15.0,
+      "injury": "ACTIVE"
+     },
+     {
+      "player": "A.J. Brown",
+      "pos": "WR",
+      "proj": 14.2,
+      "injury": "ACTIVE"
+     }
+    ],
+    "risk": []
+   },
+   "home": {
+    "manager": "Johnny Marcks",
+    "team_name": "Ward on Mcconkey",
+    "projected": 118.7,
+    "top": [
+     {
+      "player": "Justin Herbert",
+      "pos": "QB",
+      "proj": 19.0,
+      "injury": "ACTIVE"
+     },
+     {
+      "player": "De'Von Achane",
+      "pos": "RB",
+      "proj": 18.2,
+      "injury": "ACTIVE"
+     },
+     {
+      "player": "Justin Jefferson",
+      "pos": "WR",
+      "proj": 17.1,
+      "injury": "ACTIVE"
+     },
+     {
+      "player": "Ladd McConkey",
+      "pos": "WR",
+      "proj": 13.8,
+      "injury": "ACTIVE"
+     }
+    ],
+    "risk": []
+   },
+   "margin": 1.8,
+   "favorite": "Johnny Marcks",
+   "underdog": "Alex Topham"
+  },
+  {
+   "away": {
+    "manager": "Andrew Campbell",
+    "team_name": "Naked Keg Stand",
+    "projected": 115.3,
+    "top": [
+     {
+      "player": "Omarion Hampton",
+      "pos": "RB",
+      "proj": 17.6,
+      "injury": "ACTIVE"
+     },
+     {
+      "player": "CeeDee Lamb",
+      "pos": "WR",
+      "proj": 17.2,
+      "injury": "ACTIVE"
+     },
+     {
+      "player": "Drake Maye",
+      "pos": "QB",
+      "proj": 16.3,
+      "injury": "ACTIVE"
+     },
+     {
+      "player": "DeVonta Smith",
+      "pos": "WR",
+      "proj": 14.8,
+      "injury": "ACTIVE"
+     }
+    ],
+    "risk": []
+   },
+   "home": {
+    "manager": "Angelo Hernandez",
+    "team_name": "Waddle Amon Ra Dawg",
+    "projected": 112.3,
+    "top": [
+     {
+      "player": "Josh Allen",
+      "pos": "QB",
+      "proj": 19.3,
+      "injury": "ACTIVE"
+     },
+     {
+      "player": "Amon-Ra St. Brown",
+      "pos": "WR",
+      "proj": 18.8,
+      "injury": "ACTIVE"
+     },
+     {
+      "player": "Kenneth Walker III",
+      "pos": "RB",
+      "proj": 14.7,
+      "injury": "ACTIVE"
+     },
+     {
+      "player": "David Montgomery",
+      "pos": "RB",
+      "proj": 12.7,
+      "injury": "ACTIVE"
+     }
+    ],
+    "risk": []
+   },
+   "margin": 3.0,
+   "favorite": "Andrew Campbell",
+   "underdog": "Angelo Hernandez"
+  },
+  {
+   "away": {
+    "manager": "Dakota Bender",
+    "team_name": "DaGoata \ud83d\udc10",
+    "projected": 125.7,
+    "top": [
+     {
+      "player": "Jalen Hurts",
+      "pos": "QB",
+      "proj": 21.1,
+      "injury": "ACTIVE"
+     },
+     {
+      "player": "Jonathan Taylor",
+      "pos": "RB",
+      "proj": 17.8,
+      "injury": "ACTIVE"
+     },
+     {
+      "player": "Saquon Barkley",
+      "pos": "RB",
+      "proj": 17.7,
+      "injury": "ACTIVE"
+     },
+     {
+      "player": "Tetairoa McMillan",
+      "pos": "WR",
+      "proj": 14.8,
+      "injury": "ACTIVE"
+     }
+    ],
+    "risk": []
+   },
+   "home": {
+    "manager": "Dustin Gamble",
+    "team_name": "Dishes Nothin",
+    "projected": 118.5,
+    "top": [
+     {
+      "player": "Bijan Robinson",
+      "pos": "RB",
+      "proj": 19.3,
+      "injury": "ACTIVE"
+     },
+     {
+      "player": "Lamar Jackson",
+      "pos": "QB",
+      "proj": 19.1,
+      "injury": "ACTIVE"
+     },
+     {
+      "player": "Nico Collins",
+      "pos": "WR",
+      "proj": 15.6,
+      "injury": "ACTIVE"
+     },
+     {
+      "player": "Jeremiyah Love",
+      "pos": "RB",
+      "proj": 14.7,
+      "injury": "QUESTIONABLE"
+     }
+    ],
+    "risk": []
+   },
+   "margin": 7.2,
+   "favorite": "Dakota Bender",
+   "underdog": "Dustin Gamble"
+  },
+  {
+   "away": {
+    "manager": "Pj Lannon",
+    "team_name": "Chase\u2019n Deez Nutz",
+    "projected": 123.9,
+    "top": [
+     {
+      "player": "Ja'Marr Chase",
+      "pos": "WR",
+      "proj": 19.9,
+      "injury": "QUESTIONABLE"
+     },
+     {
+      "player": "Joe Burrow",
+      "pos": "QB",
+      "proj": 18.1,
+      "injury": "ACTIVE"
+     },
+     {
+      "player": "Breece Hall",
+      "pos": "RB",
+      "proj": 16.5,
+      "injury": "QUESTIONABLE"
+     },
+     {
+      "player": "Drake London",
+      "pos": "WR",
+      "proj": 15.1,
+      "injury": "ACTIVE"
+     }
+    ],
+    "risk": []
+   },
+   "home": {
+    "manager": "Kyle Torpey",
+    "team_name": "Bye Week",
+    "projected": 115.0,
+    "top": [
+     {
+      "player": "Matthew Stafford",
+      "pos": "QB",
+      "proj": 17.5,
+      "injury": "ACTIVE"
+     },
+     {
+      "player": "Derrick Henry",
+      "pos": "RB",
+      "proj": 16.4,
+      "injury": "ACTIVE"
+     },
+     {
+      "player": "Chase Brown",
+      "pos": "RB",
+      "proj": 16.0,
+      "injury": "ACTIVE"
+     },
+     {
+      "player": "Garrett Wilson",
+      "pos": "WR",
+      "proj": 14.8,
+      "injury": "ACTIVE"
+     }
+    ],
+    "risk": []
+   },
+   "margin": 8.9,
+   "favorite": "Pj Lannon",
+   "underdog": "Kyle Torpey"
+  },
+  {
+   "away": {
+    "manager": "Corey Ploss",
+    "team_name": "What that smell like?!!",
+    "projected": 116.5,
+    "top": [
+     {
+      "player": "Christian McCaffrey",
+      "pos": "RB",
+      "proj": 18.4,
+      "injury": "QUESTIONABLE"
+     },
+     {
+      "player": "Patrick Mahomes",
+      "pos": "QB",
+      "proj": 15.5,
+      "injury": "QUESTIONABLE"
+     },
+     {
+      "player": "Rashee Rice",
+      "pos": "WR",
+      "proj": 14.4,
+      "injury": "ACTIVE"
+     },
+     {
+      "player": "Trey McBride",
+      "pos": "TE",
+      "proj": 14.3,
+      "injury": "ACTIVE"
+     }
+    ],
+    "risk": []
+   },
+   "home": {
+    "manager": "Derek Booker",
+    "team_name": "Cookin\u2019 With the Crown \ud83d\udc51",
+    "projected": 106.2,
+    "top": [
+     {
+      "player": "Jaxson Dart",
+      "pos": "QB",
+      "proj": 18.5,
+      "injury": "ACTIVE"
+     },
+     {
+      "player": "Javonte Williams",
+      "pos": "RB",
+      "proj": 15.2,
+      "injury": "ACTIVE"
+     },
+     {
+      "player": "James Cook III",
+      "pos": "RB",
+      "proj": 14.9,
+      "injury": "ACTIVE"
+     },
+     {
+      "player": "Chris Olave",
+      "pos": "WR",
+      "proj": 14.8,
+      "injury": "ACTIVE"
+     }
+    ],
+    "risk": []
+   },
+   "margin": 10.3,
+   "favorite": "Corey Ploss",
+   "underdog": "Derek Booker"
+  }
+ ]
+}

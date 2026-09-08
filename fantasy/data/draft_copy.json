@@ -1,20 +1,20 @@
 {
   "_note": "Hand-written voice for the post-draft section. Generated numbers live in draft_analysis.json; nothing here is computed.",
-  "intro": "One hundred sixty-eight picks. Twelve managers who all believe they nailed it. Every pick below is graded against FantasyPros' pre-draft Expert Consensus Rankings, normalised to this league's own trigger-happy pace, with kickers and defenses thrown out because ranking them 300th and then requiring everyone to draft one is how you end up calling a mandatory round-14 defense the worst pick of the night.",
+  "intro": "One hundred sixty-eight picks. Twelve managers who all believe they nailed it. Every pick below is graded against FantasyPros' pre-draft Expert Consensus Rankings, normalised to this league's own trigger-happy pace, with kickers and defenses thrown out because ranking them 300th and then requiring everyone to draft one is how you end up calling a mandatory round-14 defense the worst pick of the night. Grades reflect draft night. The news since then has opinions of its own.",
   "picks": {
     "Caleb Williams": "Sixty-eight picks of value on a quarterback who will spend all fourteen weeks watching Trevor Lawrence from the bench. Immaculate process, zero points.",
     "KC Concepcion": "The 160th pick of the draft returning WR113 value. At that stage most of the room was drafting kickers with their eyes closed.",
     "Dalton Kincaid": "Round 11 for a top-90 tight end. He already had Jake Ferguson, so this is less a pick than a hostage situation for whoever needs a TE in October.",
     "Isaiah Likely": "Round 11, ECR #91, and Bender didn't even need him. Just quietly hoarding assets like a man who read the room.",
-    "Josh Jacobs": "Bender took the actual starting running back at pick 80. Ploss had taken Jacobs' backup three picks earlier. Read that again.",
+    "Josh Jacobs": "A top-five value on draft night at 38 picks past his ranking. He is now on the Commissioner's Exempt List, barred from playing or practising, facing a possible six-game baseline suspension. The pick was correct. The player is unavailable. Both things are true and only one of them scores points.",
     "Drake Maye": "QB3 by projection in round 6, and Campbell never had to touch his skill core to get him. The single best structural pick of the night.",
     "Travis Kelce": "Round 9 for a name that used to go in round 2. Booker bought the nameplate at clearance and it might actually still work.",
     "Brock Purdy": "A starting quarterback at pick 124. Topham spent rounds 1 through 10 exclusively on skill players and then just... had a QB. Rude.",
     "Tucker Kraft": "Round 8, ECR #64, and Angelo needed a tight end. Sometimes the pick is just correct and there's nothing funny about it.",
     "Jakobi Meyers": "Round 11 value on a receiver ranked 102nd. The one pick on Ploss's card that isn't actively arguing with the other picks.",
-    "MarShawn Lloyd": "The worst pick of the draft, and it's not close. Ninety-nine picks of reach on a handcuff whose entire value proposition is 'if Josh Jacobs gets hurt.' Dakota Bender then drafted Josh Jacobs three picks later. Ploss is holding the insurance policy on a car he does not own.",
+    "MarShawn Lloyd": "Graded the worst pick of the draft at 99 picks of reach \u2014 and then Josh Jacobs landed on the Commissioner's Exempt List and Lloyd became Green Bay's lead back. Ploss drafted the handcuff to a running back he did not own, three picks before that running back stopped existing. Sometimes the process is bad and the outcome is a smash. Enjoy it, and don't pretend you knew.",
     "Keenan Allen": "ECR #215, taken 134th. Drafted a 34-year-old slot receiver in round 12 like it's still 2019 and he's still on the Chargers.",
-    "T.J. Hockenson": "Sixty-two picks early — and he's the starting tight end. Gamble reached into round 12 for the position he was going to have to start anyway.",
+    "T.J. Hockenson": "Sixty-two picks early \u2014 and he's the starting tight end. Gamble reached into round 12 for the position he was going to have to start anyway.",
     "Mike Washington Jr.": "Round 11, projects 67 points. That's four and a half points a week from a roster spot on the team with the league's worst receiving corps.",
     "Justice Hill": "The 167th pick. Second-to-last selection of the entire draft, still somehow a forty-pick reach. Impressive in its way.",
     "Isiah Pacheco": "Thirty-four picks early on a running back who is, at this moment, on injured reserve. The scouting report was written in pencil and the eraser was busy.",
@@ -24,24 +24,109 @@
     "Matthew Golden": "Round 8, ECR #127. The first of three straight reaches that turned a great draft into a merely good one."
   },
   "teams": {
-    "Tyler Scarlett": "The board loved this draft more than the projections did — best expert grade in the league, sixth-best projected lineup. Forty-one percent of his starting points ride on Jeanty, Nabers and Henderson, three players the expert panel has separately flagged as likely to disappoint. Championship ceiling, trapdoor floor, no in-between. On brand for a man who went 3rd, 2nd, then 10th.",
-    "Dakota Bender": "The only roster both the experts and the model agree on — a disagreement gap of 0.04, the tightest in the league. Zero bust flags. Taylor and Barkley. He picked the year he owns the worst career average finish in league history to finally draft like a professional, which is the most Dakota Bender thing imaginable.",
+    "Tyler Scarlett": "The board loved this draft more than the projections did \u2014 best expert grade in the league, sixth-best projected lineup. Forty-one percent of his starting points ride on Jeanty, Nabers and Henderson, three players the expert panel has separately flagged as likely to disappoint. Championship ceiling, trapdoor floor, no in-between. On brand for a man who went 3rd, 2nd, then 10th.",
+    "Dakota Bender": "The one roster the experts and the model actually agree on \u2014 a disagreement gap of 0.14, tightest in the league \u2014 and then the news took a hammer to it. Josh Jacobs is on the exempt list, Zach Charbonnet is out four games. Taylor and Barkley are still excellent. He picked the year he owns the worst career average finish in league history to finally draft like a professional, and the schedule immediately filed an objection.",
     "Pj Lannon": "Highest projected lineup in the league by 57 points and a C on the board. Nobody in this league splits the two views harder. He also has four starters on bye in week 11, and the luckiest career luck index on record, which regression has been circling for three years like a hawk with a spreadsheet.",
-    "Jarett Coy": "Owns the best running back room in the league and the worst receiving corps by 88 points, which sounds like a problem and is actually a business plan — RBs go twelve picks ahead of consensus here, so he's holding the one currency this league overpays for. The 83 points of trade upside is the most in the league. Executing it is a different sport.",
-    "Dustin Gamble": "Bijan and Jeremiyah Love is the best backfield in the league, and then he reached 62 picks for the tight end he was always going to start. Coming off the unluckiest season in league history — four wins on eight expected — which means last year's record was lying about him.",
+    "Jarett Coy": "Best running back room in the league and the worst receiving corps by 88 points. Gibbs is a weekly cheat code and Bowers at pick 24 was genuine value. The problem is that Marvin Harrison Jr. and Mike Evans are the starting receivers on a full-PPR roster, and three of his last five picks \u2014 Washington Jr., Tyson, Johnston \u2014 currently produce somewhere between very little and nothing.",
+    "Dustin Gamble": "Bijan and Jeremiyah Love is the best backfield in the league, and then he reached 62 picks for the tight end he was always going to start. Coming off the unluckiest season in league history \u2014 four wins on eight expected \u2014 which means last year's record was lying about him.",
     "Alex Topham": "One quarterback, one tight end, nothing wasted, and a starting QB acquired at pick 124. The cleanest roster construction of the night, attached to the weakest running back room in the league. Puka Nacua's hamstring is the entire season.",
-    "Angelo Hernandez": "Josh Allen is the biggest single edge anybody bought — 48 projected points clear of the next quarterback. He then drafted seven wide receivers and three running backs in a format that starts two backs plus a flex. Three straight top-3 finishes says he knows something. The depth chart says he's one hamstring from the waiver wire.",
-    "Corey Ploss": "Second-best projected lineup, the league's best tight end, and the single worst pick of the draft. Forty-six percent of his starting points come from expert-flagged busts, which is the highest in the league and begins at pick 5 with a 30-year-old Christian McCaffrey. Fun team. Terrifying team.",
+    "Angelo Hernandez": "Josh Allen is the biggest single edge anybody bought \u2014 48 projected points clear of the next quarterback. He then drafted seven wide receivers and three running backs in a format that starts two backs plus a flex. Three straight top-3 finishes says he knows something. The depth chart says he's one hamstring from the waiver wire.",
+    "Corey Ploss": "Second-best projected lineup and the league's best tight end in McBride. Forty-six percent of his starting points come from expert-flagged busts, the highest in the league, beginning at pick 5 with a 30-year-old Christian McCaffrey. And then the Jacobs news turned his worst pick into a starting running back. Chaotic team. Genuinely dangerous team.",
     "Andrew Campbell": "The Drake Maye pick was the best structural decision anyone made. He is also the only manager in the league with zero tradeable running back surplus, on a roster whose biggest hole is at running back. Back-to-back titles in 2019 and 2020 are doing a lot of load-bearing work in these blurbs.",
-    "Derek Booker": "The defending champion drafted well by the board — A-minus, second-best expert grade — and the model put him dead last at 1,964 projected. That 2.43 disagreement gap is the second-widest in the league. He also has the worst defense in the league by 52 points, which is four points a week he simply chose not to have.",
-    "Johnny Marcks": "Best all-time win percentage in league history. Zero championships. Eleventh-place draft grade. Jefferson and Achane are excellent and then it falls off a cliff — Monangai 26 picks early, Pacheco on IR, and the second-weakest RB2 among the twelve. The Marv Levy tribute act enters its twelfth season.",
-    "Kyle Torpey": "Last in expert grade, last in the composite, and the only D on the board. Reached 33 picks for Kamara, 78 for Keenan Allen, and his best wide receiver — DK Metcalf at 196 projected — is stuck behind two others on his own bench. Renamed the team 'Bye Week' in 2023 and has finished 10th, 8th and 9th since. The name is not the problem, but it is being extremely honest."
+    "Derek Booker": "The defending champion drafted well by the board \u2014 A-minus, second-best expert grade \u2014 and the model put him dead last at 1,964 projected. That 2.43 disagreement gap is the second-widest in the league. He also has the worst defense in the league by 52 points, which is four points a week he simply chose not to have.",
+    "Johnny Marcks": "Best all-time win percentage in league history. Zero championships. Eleventh-place draft grade. Jefferson and Achane are excellent and then it falls off a cliff \u2014 Monangai 26 picks early, Pacheco on IR, and the second-weakest RB2 among the twelve. The Marv Levy tribute act enters its twelfth season.",
+    "Kyle Torpey": "Last in expert grade, last in the composite, and the only D on the board. Reached 33 picks for Kamara, 78 for Keenan Allen, and his best wide receiver \u2014 DK Metcalf at 196 projected \u2014 is stuck behind two others on his own bench. Renamed the team 'Bye Week' in 2023 and has finished 10th, 8th and 9th since. The name is not the problem, but it is being extremely honest."
   },
   "tiers": [
-    { "name": "The Contenders", "ranks": [1, 2], "blurb": "One roster the experts adore and one the experts and the model actually agree on. Everyone else is playing for a bye." },
-    { "name": "Loaded, Pending Vibes", "ranks": [3, 4, 5, 6], "blurb": "Genuine top-half talent attached to at least one structural flaw each — a bye-week crater, an empty receiver room, a tight end reached for in round 12. Any of these four wins it if the flaw stays quiet." },
-    { "name": "Mathematically Alive", "ranks": [7, 8, 9], "blurb": "Eight of twelve make the playoffs, so 'alive' is doing very little work here. All three have a real edge somewhere and a hole you could park a bus in somewhere else." },
-    { "name": "Already Watching Playoffs From Home", "ranks": [10, 11, 12], "blurb": "Contains the defending champion and the best regular-season manager in league history, which should tell you how much a draft grade is worth in September. It should also worry them." }
+    {
+      "name": "The Contenders",
+      "ranks": [
+        1,
+        2
+      ],
+      "blurb": "One roster the experts adore and one the experts and the model actually agree on. Everyone else is playing for a bye."
+    },
+    {
+      "name": "Loaded, Pending Vibes",
+      "ranks": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "blurb": "Genuine top-half talent attached to at least one structural flaw each \u2014 a bye-week crater, an empty receiver room, a tight end reached for in round 12. Any of these wins it if the flaw stays quiet."
+    },
+    {
+      "name": "Mathematically Alive",
+      "ranks": [
+        7,
+        8,
+        9
+      ],
+      "blurb": "Eight of twelve make the playoffs, so 'alive' is doing very little work here. All three have a real edge somewhere and a hole you could park a bus in somewhere else."
+    },
+    {
+      "name": "Already Watching Playoffs From Home",
+      "ranks": [
+        10,
+        11,
+        12
+      ],
+      "blurb": "Contains the defending champion and the best regular-season manager in league history, which should tell you how much a draft grade is worth in September. It should also worry them."
+    }
   ],
-  "playoffs_pending": "Nobody has played a snap. Every team is 0-0 with 0.00 points, eight of twelve make the playoffs, and strength of schedule spans 44 points across fourteen weeks — roughly three points a game, which is noise wearing a lanyard. Elimination scenarios arrive when they mean something, around week 5. Check back when someone has actually lost."
+  "playoffs_pending": "Nobody has played a snap. Every team is 0-0 with 0.00 points, eight of twelve make the playoffs, and strength of schedule spans 44 points across fourteen weeks \u2014 roughly three points a game, which is noise wearing a lanyard. Elimination scenarios arrive when they mean something, around week 5. Check back when someone has actually lost.",
+  "news": {
+    "headline": "The news already broke two of these grades",
+    "items": [
+      {
+        "player": "Josh Jacobs",
+        "manager": "Dakota Bender",
+        "severity": "out",
+        "text": "On the NFL's Commissioner's Exempt List following a battery charge \u2014 barred from playing and practising, with a baseline six-game suspension in play if it goes that way. He was a top-five value pick on draft night. He is currently worth nothing, and ESPN's 164-point projection has not caught up."
+      },
+      {
+        "player": "MarShawn Lloyd",
+        "manager": "Corey Ploss",
+        "severity": "up",
+        "text": "Expected to lead the Green Bay backfield while Jacobs is unavailable. Graded as the worst pick of the draft on the pre-draft board; that grade did not survive contact with reality."
+      },
+      {
+        "player": "Zach Charbonnet",
+        "manager": "Dakota Bender",
+        "severity": "out",
+        "text": "Unavailable for the opening four games. Second Bender running back off the board before week one."
+      },
+      {
+        "player": "Jordyn Tyson",
+        "manager": "Jarett Coy",
+        "severity": "out",
+        "text": "On injured reserve. A round-10 reach that is currently a roster spot with a name on it."
+      },
+      {
+        "player": "Isiah Pacheco",
+        "manager": "Johnny Marcks",
+        "severity": "out",
+        "text": "On injured reserve. Drafted 34 picks early to sit out the start of the season."
+      },
+      {
+        "player": "Ashton Jeanty",
+        "manager": "Tyler Scarlett",
+        "severity": "watch",
+        "text": "Ankle sprain in practice. Not thought to be major, but a genuine week-one question on a first-round pick."
+      },
+      {
+        "player": "Malik Nabers",
+        "manager": "Tyler Scarlett",
+        "severity": "watch",
+        "text": "Still working back from a torn ACL and his week-one availability has drawn conflicting reports all preseason."
+      },
+      {
+        "player": "Puka Nacua",
+        "manager": "Alex Topham",
+        "severity": "up",
+        "text": "Psoas soreness appears behind him after a full week of practice. The one piece of unambiguously good news in this list."
+      }
+    ]
+  }
 }
